@@ -1,0 +1,317 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="LogOut_SQLServer" this:LogOut_SQLServer.In_Int_Timeout="2000" this:LogOut_SQLServer.In_Int_NumIntentos="2" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Out_Str_SystemException" Type="OutArgument(x:String)" />
+    <x:Property Name="In_Int_Timeout" Type="InArgument(x:Int32)" />
+    <x:Property Name="In_Int_NumIntentos" Type="InArgument(x:Int32)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>1070.66666666667,2323.33333333333</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="" DisplayName="LogOut_SQLServer" sap:VirtualizedContainerService.HintSize="1080.66666666667,2258.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="1038.66666666667,2071.33333333333" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+      <ui:RepeatNumberOfTimesX.Body>
+        <ActivityAction x:TypeArguments="x:Int32">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Int32" Name="Intento" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1004.66666666667,1910.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="962.666666666667,1818.66666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <TryCatch.Try>
+                <Sequence sap2010:Annotation.AnnotationText="" sap:VirtualizedContainerService.HintSize="924,1580.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="882,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
+                    <ui:LogMessage.Message>
+                      <InArgument x:TypeArguments="x:Object">
+                        <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">"LogIn SQLServer Intento:"+Intento</mca:CSharpValue>
+                      </InArgument>
+                    </ui:LogMessage.Message>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                  <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Application: Microsoft SQL Server Management Studio" sap:VirtualizedContainerService.HintSize="882,1159.33333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="8d545afe-71cd-4fdd-a631-a2978a8c3ac2" Version="V1">
+                    <uix:NApplicationCard.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="848,864.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ClickType="Single" DisplayName="Click 'graphic'" sap:VirtualizedContainerService.HintSize="806,158" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="157, 227, 24, 24" ElementType="Icon" FriendlyName="'graphic'" FullSelectorArgument="&lt;ctrl automationid='ST:0:0:{d114938f-591c-46cf-a785-500a82d97410}' /&gt;&lt;ctrl name='SQL Server Object Explorer' role='tool bar' /&gt;&lt;ctrl name='Disconnect' role='push button' /&gt;&lt;ctrl role='graphic' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='ST:0:0:{d114938f-591c-46cf-a785-500a82d97410}' /&gt;&lt;ctrl name='SQL Server Object Explorer' role='tool bar' /&gt;&lt;ctrl name='Disconnect' role='push button' /&gt;&lt;ctrl role='graphic' automationid='' /&gt;" Guid="d261a241-8a98-4bd7-9205-5326bca6bd91" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAH9SURBVEhL7ZXBSwJREMY7dws6R12CLkGHCEkiKMJDeIhQokNBBBFSxy51Dg9BZBQRhRVBhZQEZRlCEZJguhGplIIH9e+Y3sz61rfrc7EyO+Tho97MvO/3Zt/s2qQkC1BP/TEwkYd4Qv3/RYzzXBLzRb3lIcaEfxUW53ViXoxzaUA0S2SiEPW4IR1+YGY5FheNCvDxEII33xEZRpQsHB4dw2P0g9YKy+MeY5xyRQ9UCcgSz9trsNbeDLuD3ZB5j9AheC4VuITbmTGIZxVau1wusFgs4HQ6NWNp3NCl8EjzBPGO9hP0dHxIM8euMI6dc2M05eIxadwMiEmE+hzDBA0tTEF8zwObPW2Qur4wN64UrwxUoXgP2NnNtJ2g650tBKU4uyc0qBmQzHDyWOH90hwBN7patUH5iaRAGn3WXXDWQbCrSRs8rS7DVm8HTShuPDsPgNvtrlpYLwXSSRjM7xwh2L6tj14Tiu+sg9c+oN6vPwhWq1X36MyEUDmQPU7+WpQ6woPk6P5eTw7gbn5CPQCTzNwoXisHsmA6FobHlUV653Atfm1wjZPKp1UGMArraC6EwTHcofq1wEJdnIk2U8fqiWUAozhQ9NEDqxCduAEsqqZAUWUQUT8G8s8blwyoy+v3fxkoygwoq0c1gKb6P0Dx56guwDL9FvA7qjOwAJ8oEMINr0MSpAAAAABJRU5ErkJggg==" InformativeScreenshot="9af3e7ef1a76780be095bf7ca25ee40d.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' cls='HwndWrapper*' title='Microsoft SQL Server Management Studio' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Object Explorer'" sap:VirtualizedContainerService.HintSize="806,573.333333333333" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="8d545afe-71cd-4fdd-a631-a2978a8c3ac2" Version="V1">
+                            <uix:NCheckState.IfExists>
+                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,290" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace">
+                                  <ui:LogMessage.Message>
+                                    <InArgument x:TypeArguments="x:Object">
+                                      <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">"Desconexión con SQLServer correcta"</mca:CSharpValue>
+                                    </InArgument>
+                                  </ui:LogMessage.Message>
+                                </ui:LogMessage>
+                                <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">
+                                      <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">Out_Str_SystemException</mca:CSharpReference>
+                                    </OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">OK</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </uix:NCheckState.IfExists>
+                            <uix:NCheckState.IfNotExists>
+                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="376,353.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Warn">
+                                  <ui:LogMessage.Message>
+                                    <InArgument x:TypeArguments="x:Object">
+                                      <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">"Error de desconexion con SQLServer "</mca:CSharpValue>
+                                    </InArgument>
+                                  </ui:LogMessage.Message>
+                                </ui:LogMessage>
+                                <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">
+                                      <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">Out_Str_SystemException</mca:CSharpReference>
+                                    </OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">Error</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <Throw sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Throw_1">
+                                  <InArgument x:TypeArguments="s:Exception">
+                                    <mca:CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">new IOException("Tiempo de espera de validación cumplido")</mca:CSharpValue>
+                                  </InArgument>
+                                </Throw>
+                              </Sequence>
+                            </uix:NCheckState.IfNotExists>
+                            <uix:NCheckState.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="20, 183, 379, 1162" FriendlyName="'Object Explorer'" FullSelectorArgument="&lt;ctrl automationid='ST:0:0:{d114938f-591c-46cf-a785-500a82d97410}' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='ST:0:0:{d114938f-591c-46cf-a785-500a82d97410}' role='pane' check:text='Object Explorer' /&gt;" Guid="aa76c470-fcf1-405a-9fbc-f35e1ec47932" ImageBase64="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zMzske2g+APweIg/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QJD4AwSJP0CQ+AMEiT9AkPgDBIk/QNDB8Tczs8e1a+NvZmaPd+JvZhbcpfibmVln4m9mltt7V38DCAd/auEu+O8AAAAASUVORK5CYII=" InformativeScreenshot="5c1f96a139e1158c17f516905a1fcf9a.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' cls='HwndWrapper*' title='Microsoft SQL Server Management Studio' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                            </uix:NCheckState.Target>
+                          </uix:NCheckState>
+                        </Sequence>
+                      </ActivityAction>
+                    </uix:NApplicationCard.Body>
+                    <uix:NApplicationCard.TargetApp>
+                      <uix:TargetApp Area="-11, -11, 2582, 1402" FilePath="C:\\Program Files (x86)\\Microsoft SQL Server Management Studio 18\\Common7\\IDE\\ssms.exe" IconBase64="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" InformativeScreenshot="d0f784dfcf052f773dd99746db00126d.png" Selector="&lt;wnd app='ssms.exe' cls='HwndWrapper*' title='Microsoft SQL Server Management Studio'/&gt;" />
+                    </uix:NApplicationCard.TargetApp>
+                  </uix:NApplicationCard>
+                  <Assign sap:VirtualizedContainerService.HintSize="882,62" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">Out_Str_SystemException</mca:CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">Ok</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:Break sap:VirtualizedContainerService.HintSize="882,22" sap2010:WorkflowViewState.IdRef="Break_1" />
+                </Sequence>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="si:IOException" sap:VirtualizedContainerService.HintSize="928.666666666667,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="si:IOException">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="si:IOException" Name="exception" />
+                    </ActivityAction.Argument>
+                    <Sequence sap:VirtualizedContainerService.HintSize="376,186.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace">
+                        <ui:LogMessage.Message>
+                          <InArgument x:TypeArguments="x:Object">
+                            <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">"No se pudo realizar la tarea de LogOut, razón: "+exception.Message</mca:CSharpValue>
+                          </InArgument>
+                        </ui:LogMessage.Message>
+                      </ui:LogMessage>
+                    </Sequence>
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+              <TryCatch.Finally>
+                <Sequence sap:VirtualizedContainerService.HintSize="526,466.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If sap:VirtualizedContainerService.HintSize="484,374.666666666667" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If.Condition>
+                      <InArgument x:TypeArguments="x:Boolean">
+                        <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">(Out_Str_SystemException == "Error") &amp;&amp; (Intento == In_Int_NumIntentos)</mca:CSharpValue>
+                      </InArgument>
+                    </If.Condition>
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,185.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93.3333333333333" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Fatal">
+                          <ui:LogMessage.Message>
+                            <InArgument x:TypeArguments="x:Object">
+                              <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">"No se pudo realizar el logeo, terminando proceso"</mca:CSharpValue>
+                            </InArgument>
+                          </ui:LogMessage.Message>
+                        </ui:LogMessage>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </TryCatch.Finally>
+            </TryCatch>
+          </Sequence>
+        </ActivityAction>
+      </ui:RepeatNumberOfTimesX.Body>
+      <ui:RepeatNumberOfTimesX.NumberOfTimes>
+        <InArgument x:TypeArguments="x:Int32">
+          <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">In_Int_NumIntentos</mca:CSharpValue>
+        </InArgument>
+      </ui:RepeatNumberOfTimesX.NumberOfTimes>
+    </ui:RepeatNumberOfTimesX>
+  </Sequence>
+</Activity>
