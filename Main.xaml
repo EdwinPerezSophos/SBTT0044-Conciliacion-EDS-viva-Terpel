@@ -12,9 +12,10 @@
     <x:Property Name="GBL_Str_CarpetaTemporales" Type="InArgument(x:String)" />
     <x:Property Name="GBL_Str_CarpetaEntrada" Type="InArgument(x:String)" />
     <x:Property Name="GBL_Str_CarpetaDescargas" Type="InArgument(x:String)" />
+    <x:Property Name="GBL_Str_ReporteVentasSalesforce" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1035,1376</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1089,1376</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -106,6 +107,7 @@
   <Sequence sap2010:Annotation.AnnotationText="Proceso de Conciliacion EDS Viva Terpel&#xA;&#xA;Proceso de extracción de ventas realizadas de las Estaciones de Servicio de Terpel &#xA;&#xA;Creadores: Edwin Perez, Diego Solano&#xA;" DisplayName="Conciliacion EDS Viva Terpel" sap:VirtualizedContainerService.HintSize="769,1311" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="Bool_ProcessStatus" />
+      <Variable x:TypeArguments="x:String" Name="Str_NombreReporteVentasSalesforce" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -486,22 +488,19 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke LogIn Saleforce workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Libreria Común\\LogIn Saleforce.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="x:Int32" x:Key="In_Int_NumIntentos">
-                            <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_61">GBL_Int_NumIntentos</mca:CSharpValue>
+                          <InArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_NumIntentos">
+                            <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_74">GBL_Int_NumIntentos</mca:CSharpValue>
                           </InArgument>
-                          <InArgument x:TypeArguments="x:Int32" x:Key="In_Int_TiempoEsperaAplicaciones">
-                            <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_60">GBL_Int_TiempoEsperaAplicaciones</mca:CSharpValue>
+                          <InArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_TiempoEsperaAplicaciones">
+                            <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_73">GBL_Int_TiempoEsperaAplicaciones</mca:CSharpValue>
                           </InArgument>
-                          <InArgument x:TypeArguments="x:Int32" x:Key="In_int_TiempoMaxValidaciones">
-                            <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_59">GBL_Int_TiempoMaxValidaciones</mca:CSharpValue>
+                          <InArgument x:TypeArguments="x:Int32" x:Key="In_GBL_int_TiempoMaxValidaciones">
+                            <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_72">GBL_Int_TiempoMaxValidaciones</mca:CSharpValue>
                           </InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </Sequence>
                     <Sequence DisplayName="Extraccion de reporte " sap:VirtualizedContainerService.HintSize="421,235" sap2010:WorkflowViewState.IdRef="Sequence_14">
-                      <Sequence.Variables>
-                        <Variable x:TypeArguments="x:String" Name="Str_NombreReporteVentasSalesforce" />
-                      </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -539,9 +538,15 @@
                           <OutArgument x:TypeArguments="x:String" x:Key="Out_NombreReporteVentasSalesForce">
                             <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_75">Str_NombreReporteVentasSalesforce</mca:CSharpReference>
                           </OutArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CarpetaEntrada" />
-                          <InArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CarpetaTemporales" />
-                          <InArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_NombreInformeVentas_Salesforce" />
+                          <InArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CarpetaEntrada">
+                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_64">GBL_Str_CarpetaEntrada</mca:CSharpValue>
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CarpetaTemporales">
+                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_63">GBL_Str_CarpetaTemporales</mca:CSharpValue>
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_NombreInformeVentas_Salesforce">
+                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_62">GBL_Str_NombreInformeVentasSalesforce</mca:CSharpValue>
+                          </InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -558,7 +563,21 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Depurar Informe ventas SalesForce workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="2. Depurar reporte (Repote fidelizaciones SalesForce)\\Depurar Informe ventas SalesForce.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                          <InArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_NumIntentos">
+                            <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_65">GBL_Int_NumIntentos</mca:CSharpValue>
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CarpetaDescargas">
+                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_66">GBL_Str_CarpetaDescargas</mca:CSharpValue>
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CarpetaTemporales">
+                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_67">GBL_Str_CarpetaTemporales</mca:CSharpValue>
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="In_NombreReporteVentasSalesForce">
+                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_68">Str_NombreReporteVentasSalesforce</mca:CSharpValue>
+                          </InArgument>
+                          <OutArgument x:TypeArguments="x:String" x:Key="Out_GBL_Str_ReporteVentasSalesForce">
+                            <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_76">GBL_Str_ReporteVentasSalesforce</mca:CSharpReference>
+                          </OutArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </Sequence>
@@ -570,7 +589,15 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke LogOut SaleForce workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Libreria Común\\LogOut SaleForce.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                          <InArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_NumIntentos">
+                            <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_77">GBL_Int_NumIntentos</mca:CSharpValue>
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_TiempoMaxValidaciones">
+                            <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_76">GBL_Int_TiempoMaxValidaciones</mca:CSharpValue>
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_TiempoEsperaAplicaciones">
+                            <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_75">GBL_Int_TiempoEsperaAplicaciones</mca:CSharpValue>
+                          </InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </Sequence>

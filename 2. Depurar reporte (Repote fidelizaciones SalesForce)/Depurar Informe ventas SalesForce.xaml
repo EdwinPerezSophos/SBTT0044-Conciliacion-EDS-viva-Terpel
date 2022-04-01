@@ -1,21 +1,13 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Depurar_Informe_ventas_SalesForce" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uue="clr-namespace:UiPath.UIAutomationNext.Exceptions;assembly=UiPath.UIAutomationNext" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Depurar_Informe_ventas_SalesForce" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="In_GBL_Str_ArchivoCalendario" Type="InArgument(x:String)" />
-    <x:Property Name="In_GBL_Int_TiempoEsperaAplicaciones" Type="InArgument(x:Int32)" />
-    <x:Property Name="In_GBL_Str_CarpetaCompartida" Type="InArgument(x:String)" />
     <x:Property Name="In_GBL_Str_CarpetaDescargas" Type="InArgument(x:String)" />
-    <x:Property Name="In_GBL_Int_TiempoMaxValidaciones" Type="InArgument(x:Int32)" />
-    <x:Property Name="In_GBL_StrNombreInformeVentas_Salesforce" Type="InArgument(x:String)" />
-    <x:Property Name="In_GBL_Str_HoraInicial_Salesforce" Type="InArgument(x:String)" />
-    <x:Property Name="In_GBL_Str_HoraFinal_Salesforce" Type="InArgument(x:String)" />
     <x:Property Name="In_GBL_Int_NumIntentos" Type="InArgument(x:Int32)" />
-    <x:Property Name="In_GBL_Dt_Calendario_row" Type="InArgument(sd:DataTable)" />
     <x:Property Name="In_NombreReporteVentasSalesForce" Type="InArgument(x:String)" />
-    <x:Property Name="In_GBL_Str_CarpetaEntrada" Type="InArgument(x:String)" />
     <x:Property Name="In_GBL_Str_CarpetaTemporales" Type="InArgument(x:String)" />
+    <x:Property Name="Out_GBL_Str_ReporteVentasSalesForce" Type="OutArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1455,5732</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1455,6644</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -102,10 +94,10 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -114,7 +106,10 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Depurar el reporte de ventas de SalesForce diario &#xA;&#xA;Precondicion: Nombre del reporte de ventas SalesForce&#xA;&#xA;Acciones: " DisplayName="Depurar_Informe_ventas_SalesForce" sap:VirtualizedContainerService.HintSize="1465,6380" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Depurar el reporte de ventas de SalesForce diario &#xA;&#xA;Precondicion: Nombre del reporte de ventas SalesForce&#xA;&#xA;Acciones: Limpieza y agregacion de datos al archivo de ventas de SalesForce" DisplayName="Depurar_Informe_ventas_SalesForce" sap:VirtualizedContainerService.HintSize="1465,7243" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="Str_ReporteSalesForce" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -122,142 +117,9 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign sap2010:Annotation.AnnotationText="Asignacion de variables de prueba" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1423,472" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
-      <ui:MultipleAssign.AssignOperations>
-        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_18">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:Int32">
-                <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">In_GBL_Int_TiempoEsperaAplicaciones</mca:CSharpReference>
-              </OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:Int32">3000</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_19">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:Int32">
-                <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_24">In_GBL_Int_TiempoMaxValidaciones</mca:CSharpReference>
-              </OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:Int32">5</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:Int32">
-                <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_25">In_GBL_Int_NumIntentos</mca:CSharpReference>
-              </OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:Int32">2</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_21">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">
-                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_26">In_GBL_Str_CarpetaEntrada</mca:CSharpReference>
-              </OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">Data\Input\</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_22">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">
-                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_27">In_GBL_Str_CarpetaCompartida</mca:CSharpReference>
-              </OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">Data\Out\</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_23">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">
-                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_28">In_GBL_Str_CarpetaTemporales</mca:CSharpReference>
-              </OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">Data\Temp\</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_24">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">
-                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_29">In_GBL_Str_ArchivoCalendario</mca:CSharpReference>
-              </OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">Data\Input\Calendario.xlsx</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_25">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">
-                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_30">In_GBL_Str_CarpetaDescargas</mca:CSharpReference>
-              </OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">C:\Users\robot.11\Downloads\</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_26">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">
-                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_31">In_GBL_Str_HoraInicial_Salesforce</mca:CSharpReference>
-              </OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">06:00 a.m.</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_27">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">
-                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_32">In_GBL_Str_HoraFinal_Salesforce</mca:CSharpReference>
-              </OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">06:00 a.m.</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_28">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">
-                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_33">In_GBL_StrNombreInformeVentas_Salesforce</mca:CSharpReference>
-              </OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">Validacion ventas redenciones Robot</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_29">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">
-                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_34">In_NombreReporteVentasSalesForce</mca:CSharpReference>
-              </OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">Validación ventas redenciones Robot-2022-03-31-19-36-45.xlsx</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
-        </scg:List>
-      </ui:MultipleAssign.AssignOperations>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:MultipleAssign>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1423,775" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1423,866" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449,697" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449,788" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -265,7 +127,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:Comment sap:VirtualizedContainerService.HintSize="407,56" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Variables de Prueba" />
-          <Sequence sap2010:Annotation.AnnotationText="Inicialización de Variables de Prueba&#xA;&#xA;Las variables luego serán remplazadas por los argumentos del sistema" DisplayName="Variables de Prueba" sap:VirtualizedContainerService.HintSize="407,509" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence sap2010:Annotation.AnnotationText="Inicialización de Variables de Prueba&#xA;&#xA;Las variables luego serán remplazadas por los argumentos del sistema" DisplayName="Variables de Prueba" sap:VirtualizedContainerService.HintSize="407,600" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -289,15 +151,15 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:InvokeWorkflowFile>
-            <Sequence sap2010:Annotation.AnnotationText="Asignacion de Fecha que depende de la info obtenida en el documento de Calendario " DisplayName="Validación de Fecha en Calendario.xlsx" sap:VirtualizedContainerService.HintSize="365,144" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <Sequence sap2010:Annotation.AnnotationText="Asignacion de Fecha que depende de la info obtenida en el documento de Calendario " DisplayName="Validación de Fecha en Calendario.xlsx" sap:VirtualizedContainerService.HintSize="365,235" sap2010:WorkflowViewState.IdRef="Sequence_7">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="" DisplayName="Asignación Fecha Inicial y Final" sap:VirtualizedContainerService.HintSize="513,810" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+              <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="" DisplayName="Asignación Fecha Inicial y Final" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Switch`1_1">
                 <Switch.Expression>
                   <InArgument x:TypeArguments="x:String">
                     <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">In_GBL_Dt_Calendario_row.Rows[0][1].ToString()</mca:CSharpValue>
@@ -306,7 +168,7 @@
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -347,7 +209,7 @@
                     </ui:MultipleAssign.AssignOperations>
                   </ui:MultipleAssign>
                 </Sequence>
-                <Sequence x:Key="N" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence x:Key="N" sap:VirtualizedContainerService.HintSize="473,223" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -384,7 +246,7 @@
                     </ui:MultipleAssign.AssignOperations>
                   </ui:MultipleAssign>
                 </Sequence>
-                <Sequence x:Key="Y" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence x:Key="Y" sap:VirtualizedContainerService.HintSize="473,223" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -433,7 +295,60 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <Sequence sap2010:Annotation.AnnotationText="Depuracion y extracción de datos del reporte de ventas SalesForce en Excel" DisplayName="Depuración de reporte en Excel" sap:VirtualizedContainerService.HintSize="1423,4869" sap2010:WorkflowViewState.IdRef="Sequence_13">
+    <ui:MultipleAssign sap2010:Annotation.AnnotationText="Asignacion de variables de prueba" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1423,224" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:Int32">
+                <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_25">In_GBL_Int_NumIntentos</mca:CSharpReference>
+              </OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:Int32">2</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_23">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">
+                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_28">In_GBL_Str_CarpetaTemporales</mca:CSharpReference>
+              </OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">Data\Temp\</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_25">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">
+                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_30">In_GBL_Str_CarpetaDescargas</mca:CSharpReference>
+              </OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">C:\Users\robot.11\Downloads\</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_29">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">
+                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_34">In_NombreReporteVentasSalesForce</mca:CSharpReference>
+              </OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">Validación ventas redenciones Robot-2022-03-31-19-36-45.xlsx</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MultipleAssign>
+    <Sequence sap2010:Annotation.AnnotationText="Depuracion y extracción de datos del reporte de ventas SalesForce en Excel" DisplayName="Depuración de reporte en Excel" sap:VirtualizedContainerService.HintSize="1423,5889" sap2010:WorkflowViewState.IdRef="Sequence_13">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="Str_SystemException" />
       </Sequence.Variables>
@@ -444,13 +359,13 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="1381,4746" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="Sistema de reintentos en caso de fallo " DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="1381,5766" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
         <ui:RepeatNumberOfTimesX.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="Intento" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1347,4588" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1347,5577" sap2010:WorkflowViewState.IdRef="Sequence_12">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -469,7 +384,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1305,4332" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1305,5321" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -477,43 +392,40 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <TryCatch.Try>
-                  <Sequence sap2010:Annotation.AnnotationText="Apertura del documento de Excel" sap:VirtualizedContainerService.HintSize="1267,3388" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                  <Sequence sap2010:Annotation.AnnotationText="Apertura del documento de Excel" sap:VirtualizedContainerService.HintSize="1267,4124" sap2010:WorkflowViewState.IdRef="Sequence_17">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="1225,3070" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+                    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="1225,3675" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
                       <ueab:ExcelProcessScopeX.Body>
                         <ActivityAction x:TypeArguments="ui:IExcelProcess">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                           </ActivityAction.Argument>
-                          <Sequence sap2010:Annotation.AnnotationText="Acciones en el documento de Excel" DisplayName="Do" sap:VirtualizedContainerService.HintSize="1191,2984" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                          <Sequence sap2010:Annotation.AnnotationText="Acciones en el documento de Excel" DisplayName="Do" sap:VirtualizedContainerService.HintSize="1191,3589" sap2010:WorkflowViewState.IdRef="Sequence_18">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="1149,2861" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1">
+                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" sap2010:Annotation.AnnotationText="Apertura de Archivo en la carpeta de descargas" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="1149,3466" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1">
                               <ueab:ExcelApplicationCard.Body>
                                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="ReporteSalesforce" />
                                   </ActivityAction.Argument>
-                                  <Sequence sap2010:Annotation.AnnotationText="Acciones en el archico de reportes de Excel" DisplayName="Do" sap:VirtualizedContainerService.HintSize="1115,2589" sap2010:WorkflowViewState.IdRef="Sequence_19">
-                                    <Sequence.Variables>
-                                      <Variable x:TypeArguments="sd:DataTable" Name="Dt_VentasSalesForce" />
-                                    </Sequence.Variables>
+                                  <Sequence sap2010:Annotation.AnnotationText="Acciones en el archico de reportes de Excel" DisplayName="Do" sap:VirtualizedContainerService.HintSize="1115,3163" sap2010:WorkflowViewState.IdRef="Sequence_19">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ueab:InsertColumnX DisplayName="Insert Column" HasHeaders="True" sap:VirtualizedContainerService.HintSize="1073,210" sap2010:WorkflowViewState.IdRef="InsertColumnX_4" NewColumnName="Observación" RelativeColumnName="Venta: Producto Fidelizable (Gal/m3)" RelativePosition="After">
+                                    <ueab:InsertColumnX sap2010:Annotation.AnnotationText="Insertar columna de Observaciones" DisplayName="Insert Column" HasHeaders="True" sap:VirtualizedContainerService.HintSize="1073,241" sap2010:WorkflowViewState.IdRef="InsertColumnX_4" NewColumnName="Observación" RelativeColumnName="Venta: Producto Fidelizable (Gal/m3)" RelativePosition="After">
                                       <ueab:InsertColumnX.ColumnFormat>
                                         <ueab:TextFormat />
                                       </ueab:InsertColumnX.ColumnFormat>
@@ -522,8 +434,13 @@
                                           <mca:CSharpValue x:TypeArguments="ue:IReadWriteRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">ReporteSalesforce.Sheet["Validación ventas redenciones R"]</mca:CSharpValue>
                                         </InArgument>
                                       </ueab:InsertColumnX.Range>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
                                     </ueab:InsertColumnX>
-                                    <ueab:InsertColumnX DisplayName="Insert Column" HasHeaders="True" sap:VirtualizedContainerService.HintSize="1073,210" sap2010:WorkflowViewState.IdRef="InsertColumnX_1" NewColumnName="No. Recibo sin PCC" RelativeColumnName="Venta: Número Tiquete Venta" RelativePosition="After">
+                                    <ueab:InsertColumnX sap2010:Annotation.AnnotationText="Insertar columna de No Recibo sin PC" DisplayName="Insert Column" HasHeaders="True" sap:VirtualizedContainerService.HintSize="1073,241" sap2010:WorkflowViewState.IdRef="InsertColumnX_1" NewColumnName="No. Recibo sin PCC" RelativeColumnName="Venta: Número Tiquete Venta" RelativePosition="After">
                                       <ueab:InsertColumnX.ColumnFormat>
                                         <ueab:TextFormat />
                                       </ueab:InsertColumnX.ColumnFormat>
@@ -532,8 +449,13 @@
                                           <mca:CSharpValue x:TypeArguments="ue:IReadWriteRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37">ReporteSalesforce.Sheet["Validación ventas redenciones R"]</mca:CSharpValue>
                                         </InArgument>
                                       </ueab:InsertColumnX.Range>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
                                     </ueab:InsertColumnX>
-                                    <ueab:InsertColumnX DisplayName="Insert Column" HasHeaders="True" sap:VirtualizedContainerService.HintSize="1073,210" sap2010:WorkflowViewState.IdRef="InsertColumnX_2" NewColumnName="Key" RelativeColumnName="No. Recibo sin PCC" RelativePosition="After">
+                                    <ueab:InsertColumnX sap2010:Annotation.AnnotationText="Insertar columna Key" DisplayName="Insert Column" HasHeaders="True" sap:VirtualizedContainerService.HintSize="1073,241" sap2010:WorkflowViewState.IdRef="InsertColumnX_2" NewColumnName="Key" RelativeColumnName="No. Recibo sin PCC" RelativePosition="After">
                                       <ueab:InsertColumnX.ColumnFormat>
                                         <ueab:TextFormat />
                                       </ueab:InsertColumnX.ColumnFormat>
@@ -542,8 +464,13 @@
                                           <mca:CSharpValue x:TypeArguments="ue:IReadWriteRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">ReporteSalesforce.Sheet["Validación ventas redenciones R"]</mca:CSharpValue>
                                         </InArgument>
                                       </ueab:InsertColumnX.Range>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
                                     </ueab:InsertColumnX>
-                                    <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="1073,1087" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" SaveAfterEachRow="False">
+                                    <ueab:ExcelForEachRowX sap2010:Annotation.AnnotationText="Acciones a realizar por cada una de las filas del documento" DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="1073,1273" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" SaveAfterEachRow="False">
                                       <ueab:ExcelForEachRowX.Body>
                                         <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
                                           <ActivityAction.Argument1>
@@ -552,26 +479,32 @@
                                           <ActivityAction.Argument2>
                                             <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                                           </ActivityAction.Argument2>
-                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1039,903" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1039,1058" sap2010:WorkflowViewState.IdRef="Sequence_20">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <If sap:VirtualizedContainerService.HintSize="997,411" sap2010:WorkflowViewState.IdRef="If_2">
+                                            <If sap2010:Annotation.AnnotationText="Condicion en la Columna &quot;Venta: Número Tiquete Venta&quot;" sap:VirtualizedContainerService.HintSize="997,504" sap2010:WorkflowViewState.IdRef="If_2">
                                               <If.Condition>
                                                 <InArgument x:TypeArguments="x:Boolean">
                                                   <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_48">Row["Venta: Número Tiquete Venta"].StartsWith("PC")</mca:CSharpValue>
                                                 </InArgument>
                                               </If.Condition>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
                                               <If.Then>
-                                                <Sequence sap:VirtualizedContainerService.HintSize="476,252" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                                <Sequence sap2010:Annotation.AnnotationText="Acciones si el dato empieza con &quot;PC&quot;" sap:VirtualizedContainerService.HintSize="476,314" sap2010:WorkflowViewState.IdRef="Sequence_21">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <ueab:WriteCellX DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,160" sap2010:WorkflowViewState.IdRef="WriteCellX_1">
+                                                  <ueab:WriteCellX sap2010:Annotation.AnnotationText="Escritura de datos en la celda &quot;No Recibo sin PCC&quot;" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,191" sap2010:WorkflowViewState.IdRef="WriteCellX_1">
                                                     <ueab:WriteCellX.Cell>
                                                       <InArgument x:TypeArguments="ue:IReadWriteCellRef">
                                                         <mca:CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">Row["No. Recibo sin PCC"]</mca:CSharpValue>
@@ -582,17 +515,23 @@
                                                         <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_50">Row["Venta: Número Tiquete Venta"].Substring(7)</mca:CSharpValue>
                                                       </InArgument>
                                                     </ueab:WriteCellX.Value>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
                                                   </ueab:WriteCellX>
                                                 </Sequence>
                                               </If.Then>
                                               <If.Else>
-                                                <Sequence sap:VirtualizedContainerService.HintSize="476,252" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                                <Sequence sap2010:Annotation.AnnotationText="Acciones si el dato no empieza con &quot;PC&quot;" sap:VirtualizedContainerService.HintSize="476,314" sap2010:WorkflowViewState.IdRef="Sequence_22">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <ueab:WriteCellX DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,160" sap2010:WorkflowViewState.IdRef="WriteCellX_2">
+                                                  <ueab:WriteCellX sap2010:Annotation.AnnotationText="Escritura de datos en la celda &quot;No Recibo sin PCC&quot;" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,191" sap2010:WorkflowViewState.IdRef="WriteCellX_2">
                                                     <ueab:WriteCellX.Cell>
                                                       <InArgument x:TypeArguments="ue:IReadWriteCellRef">
                                                         <mca:CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">Row["No. Recibo sin PCC"]</mca:CSharpValue>
@@ -603,11 +542,16 @@
                                                         <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">Row["Venta: Número Tiquete Venta"]</mca:CSharpValue>
                                                       </InArgument>
                                                     </ueab:WriteCellX.Value>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
                                                   </ueab:WriteCellX>
                                                 </Sequence>
                                               </If.Else>
                                             </If>
-                                            <ueab:WriteCellX DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="997,160" sap2010:WorkflowViewState.IdRef="WriteCellX_3">
+                                            <ueab:WriteCellX sap2010:Annotation.AnnotationText="Escritura de datos en la celda &quot;Key&quot;" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="997,191" sap2010:WorkflowViewState.IdRef="WriteCellX_3">
                                               <ueab:WriteCellX.Cell>
                                                 <InArgument x:TypeArguments="ue:IReadWriteCellRef">
                                                   <mca:CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">Row["Key"]</mca:CSharpValue>
@@ -618,8 +562,13 @@
                                                   <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">Row["No. Recibo sin PCC"]+Row["Venta: Código Unico PDV"]</mca:CSharpValue>
                                                 </InArgument>
                                               </ueab:WriteCellX.Value>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
                                             </ueab:WriteCellX>
-                                            <ueab:WriteCellX AutoIncrementRow="True" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="997,160" sap2010:WorkflowViewState.IdRef="WriteCellX_4">
+                                            <ueab:WriteCellX sap2010:Annotation.AnnotationText="Escritura de datos en la celda &quot;Observacion&quot;" AutoIncrementRow="True" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="997,191" sap2010:WorkflowViewState.IdRef="WriteCellX_4">
                                               <ueab:WriteCellX.Cell>
                                                 <InArgument x:TypeArguments="ue:IReadWriteCellRef">
                                                   <mca:CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_51">Row["Observación"]</mca:CSharpValue>
@@ -630,6 +579,11 @@
                                                   <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_52">"Existe en SalesForce"</mca:CSharpValue>
                                                 </InArgument>
                                               </ueab:WriteCellX.Value>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
                                             </ueab:WriteCellX>
                                           </Sequence>
                                         </ActivityAction>
@@ -639,8 +593,13 @@
                                           <mca:CSharpValue x:TypeArguments="ue:IReadRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_44">ReporteSalesforce.Sheet["Validación ventas redenciones R"]</mca:CSharpValue>
                                         </InArgument>
                                       </ueab:ExcelForEachRowX.Range>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
                                     </ueab:ExcelForEachRowX>
-                                    <ueab:DeleteColumnX DisplayName="Delete Column" HasHeaders="True" sap:VirtualizedContainerService.HintSize="1073,161" sap2010:WorkflowViewState.IdRef="DeleteColumnX_1">
+                                    <ueab:DeleteColumnX sap2010:Annotation.AnnotationText="Borrado de la  columna &quot;Validación  ventas redenciones R&quot;" DisplayName="Delete Column" HasHeaders="True" sap:VirtualizedContainerService.HintSize="1073,192" sap2010:WorkflowViewState.IdRef="DeleteColumnX_1">
                                       <ueab:DeleteColumnX.ColumnName>
                                         <InArgument x:TypeArguments="x:String">
                                           <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_59">ReporteSalesforce.Sheet["Validación ventas redenciones R"].Cell["A1"]</mca:CSharpValue>
@@ -651,8 +610,13 @@
                                           <mca:CSharpValue x:TypeArguments="ue:IReadWriteRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">ReporteSalesforce.Sheet["Validación ventas redenciones R"]</mca:CSharpValue>
                                         </InArgument>
                                       </ueab:DeleteColumnX.Range>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
                                     </ueab:DeleteColumnX>
-                                    <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="1073,139" sap2010:WorkflowViewState.IdRef="FormatRangeX_1">
+                                    <ueab:FormatRangeX sap2010:Annotation.AnnotationText="Formato a toda la tabla " DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="1073,170" sap2010:WorkflowViewState.IdRef="FormatRangeX_1">
                                       <ueab:FormatRangeX.Alignment>
                                         <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
                                       </ueab:FormatRangeX.Alignment>
@@ -667,13 +631,54 @@
                                           <mca:CSharpValue x:TypeArguments="ue:IReadRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_55">ReporteSalesforce.Sheet["Validación ventas redenciones R"]</mca:CSharpValue>
                                         </InArgument>
                                       </ueab:FormatRangeX.Range>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
                                     </ueab:FormatRangeX>
-                                    <ueab:SaveExcelFileAsX DisplayName="Save Excel File As" sap:VirtualizedContainerService.HintSize="1073,209" sap2010:WorkflowViewState.IdRef="SaveExcelFileAsX_1" SaveAsFileType="OpenXmlWorkbook">
+                                    <ui:MultipleAssign sap2010:Annotation.AnnotationText="Asignacion de nombre del documento a variablo local y a variable Global" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1073,162" sap2010:WorkflowViewState.IdRef="MultipleAssign_6">
+                                      <ui:MultipleAssign.AssignOperations>
+                                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_30">
+                                            <ui:AssignOperation.To>
+                                              <OutArgument x:TypeArguments="x:String">
+                                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_36">Str_ReporteSalesForce</mca:CSharpReference>
+                                              </OutArgument>
+                                            </ui:AssignOperation.To>
+                                            <ui:AssignOperation.Value>
+                                              <InArgument x:TypeArguments="x:String">Reporte fidelizaciones Salesforce</InArgument>
+                                            </ui:AssignOperation.Value>
+                                          </ui:AssignOperation>
+                                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_31">
+                                            <ui:AssignOperation.To>
+                                              <OutArgument x:TypeArguments="x:String">
+                                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_37">Out_GBL_Str_ReporteVentasSalesForce</mca:CSharpReference>
+                                              </OutArgument>
+                                            </ui:AssignOperation.To>
+                                            <ui:AssignOperation.Value>
+                                              <InArgument x:TypeArguments="x:String">Reporte fidelizaciones Salesforce.xlsx</InArgument>
+                                            </ui:AssignOperation.Value>
+                                          </ui:AssignOperation>
+                                        </scg:List>
+                                      </ui:MultipleAssign.AssignOperations>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:MultipleAssign>
+                                    <ueab:SaveExcelFileAsX sap2010:Annotation.AnnotationText="Guardado de un nuevo archivo con el nuevo nombre " DisplayName="Save Excel File As" sap:VirtualizedContainerService.HintSize="1073,240" sap2010:WorkflowViewState.IdRef="SaveExcelFileAsX_1" SaveAsFileType="OpenXmlWorkbook">
                                       <ueab:SaveExcelFileAsX.FilePath>
                                         <InArgument x:TypeArguments="x:String">
-                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_57">In_GBL_Str_CarpetaTemporales+"Reporte fidelizaciones Salesforce"</mca:CSharpValue>
+                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_60">In_GBL_Str_CarpetaTemporales+Str_ReporteSalesForce</mca:CSharpValue>
                                         </InArgument>
                                       </ueab:SaveExcelFileAsX.FilePath>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
                                       <ueab:SaveExcelFileAsX.Workbook>
                                         <InArgument x:TypeArguments="ue:IWorkbookQuickHandle">
                                           <mca:CSharpValue x:TypeArguments="ue:IWorkbookQuickHandle" sap2010:WorkflowViewState.IdRef="CSharpValue`1_56">ReporteSalesforce</mca:CSharpValue>
@@ -683,6 +688,11 @@
                                   </Sequence>
                                 </ActivityAction>
                               </ueab:ExcelApplicationCard.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
                               <ueab:ExcelApplicationCard.WorkbookPath>
                                 <InArgument x:TypeArguments="x:String">
                                   <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">In_GBL_Str_CarpetaDescargas+In_NombreReporteVentasSalesForce</mca:CSharpValue>
@@ -693,59 +703,96 @@
                         </ActivityAction>
                       </ueab:ExcelProcessScopeX.Body>
                     </ueab:ExcelProcessScopeX>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1225,93" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Trace">
+                    <ui:LogMessage sap2010:Annotation.AnnotationText="Mensaje de Log" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1225,124" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Trace">
                       <ui:LogMessage.Message>
                         <InArgument x:TypeArguments="x:Object">
                           <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">"Depuración reporte Salesforce ejecutado exitosamente"</mca:CSharpValue>
                         </InArgument>
                       </ui:LogMessage.Message>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                     </ui:LogMessage>
+                    <Assign sap:VirtualizedContainerService.HintSize="1225,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">
+                          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_38">Str_SystemException</mca:CSharpReference>
+                        </OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">OK</InArgument>
+                      </Assign.Value>
+                    </Assign>
                     <ui:Break sap:VirtualizedContainerService.HintSize="1225,22" sap2010:WorkflowViewState.IdRef="Break_2" />
                   </Sequence>
                 </TryCatch.Try>
                 <TryCatch.Catches>
-                  <Catch x:TypeArguments="uue:UiAutomationException" sap:VirtualizedContainerService.HintSize="1271,163" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <Catch x:TypeArguments="s:InvalidOperationException" sap:VirtualizedContainerService.HintSize="1271,415" sap2010:WorkflowViewState.IdRef="Catch`1_2">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ActivityAction x:TypeArguments="uue:UiAutomationException">
+                    <ActivityAction x:TypeArguments="s:InvalidOperationException">
                       <ActivityAction.Argument>
-                        <DelegateInArgument x:TypeArguments="uue:UiAutomationException" Name="exception" />
+                        <DelegateInArgument x:TypeArguments="s:InvalidOperationException" Name="exception" />
                       </ActivityAction.Argument>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Warn">
-                        <ui:LogMessage.Message>
-                          <InArgument x:TypeArguments="x:Object">
-                            <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24" xml:space="preserve">"Error en la ejecución de extraccion de ventas en SalesForce \n  excepción: "+exception.Message</mca:CSharpValue>
-                          </InArgument>
-                        </ui:LogMessage.Message>
-                      </ui:LogMessage>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,345" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage sap2010:Annotation.AnnotationText="mensaje de warning cuando no se puede ejecutar correctamente el depurado del archivo excel&#xA;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,153" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Warn">
+                          <ui:LogMessage.Message>
+                            <InArgument x:TypeArguments="x:Object">
+                              <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_61" xml:space="preserve">"Error en la ejecución de extraccion de ventas en SalesForce \n  excepción: "+exception.Message</mca:CSharpValue>
+                            </InArgument>
+                          </ui:LogMessage.Message>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:LogMessage>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">
+                              <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_39">Str_SystemException</mca:CSharpReference>
+                            </OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">Error</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
                     </ActivityAction>
                   </Catch>
                 </TryCatch.Catches>
                 <TryCatch.Finally>
-                  <Sequence sap:VirtualizedContainerService.HintSize="526,527" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <Sequence sap:VirtualizedContainerService.HintSize="526,528" sap2010:WorkflowViewState.IdRef="Sequence_11">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If sap:VirtualizedContainerService.HintSize="484,435" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If sap:VirtualizedContainerService.HintSize="484,436" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">(Str_SystemException == "Error") &amp;&amp; (Intento == In_GBL_Int_NumIntentos)</mca:CSharpValue>
                         </InArgument>
                       </If.Condition>
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,247" sap2010:WorkflowViewState.IdRef="Sequence_9">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Fatal">
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Fatal">
                             <ui:LogMessage.Message>
                               <InArgument x:TypeArguments="x:Object">
                                 <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">"No se pudo realizar el reporte de ventas en SalesForce "</mca:CSharpValue>
@@ -786,6 +833,7 @@
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:RepeatNumberOfTimesX>
