@@ -15,7 +15,7 @@
     <x:Property Name="In_GBL_Str_NombreInformeVentas_Salesforce" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>987,8545</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>987,9225</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -111,7 +111,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Exportar el reporte de ventas de SalesForce diario &#xA;&#xA;Precondicion: Fecha actual / documento: Calendario.xlsx&#xA;&#xA;Acciones: Extracción de reporte de ventas en SalesForce hacia Excel" DisplayName="Exportar_reporte_ventas_SalesForce" sap:VirtualizedContainerService.HintSize="724,8440" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Exportar el reporte de ventas de SalesForce diario &#xA;&#xA;Precondicion: Fecha actual / documento: Calendario.xlsx&#xA;&#xA;Acciones: Extracción de reporte de ventas en SalesForce hacia Excel" DisplayName="Exportar_reporte_ventas_SalesForce" sap:VirtualizedContainerService.HintSize="724,9120" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Str_SystemException" />
       <Variable x:TypeArguments="x:String" Name="Str_FechaInicio_SalesForce" />
@@ -124,21 +124,21 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="682,704" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="682,1049" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,626" sap2010:WorkflowViewState.IdRef="Sequence_27">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="515,971" sap2010:WorkflowViewState.IdRef="Sequence_27">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:Comment sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Variables de Prueba" />
-          <Sequence sap2010:Annotation.AnnotationText="Inicialización de Variables de Prueba&#xA;&#xA;Las variables luego serán remplazadas por los argumentos del sistema" DisplayName="Variables de Prueba" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="Sequence_15">
+          <ui:Comment sap:VirtualizedContainerService.HintSize="473,55" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Variables de Prueba" />
+          <Sequence sap2010:Annotation.AnnotationText="Inicialización de Variables de Prueba&#xA;&#xA;Las variables luego serán remplazadas por los argumentos del sistema" DisplayName="Variables de Prueba" sap:VirtualizedContainerService.HintSize="473,784" sap2010:WorkflowViewState.IdRef="Sequence_15">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:MultipleAssign sap2010:Annotation.AnnotationText="Asignacion de variables de prueba" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,441" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
@@ -264,7 +264,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:MultipleAssign>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Workflow de validacion de fecha &#xA;" DisplayName="Invoke Validación de Fecha Actual workflow" sap:VirtualizedContainerService.HintSize="431,157" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Libreria Común\\Validación de Fecha Actual.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Workflow de validacion de fecha &#xA;" DisplayName="Invoke Validación de Fecha Actual workflow" sap:VirtualizedContainerService.HintSize="431,154" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Libreria Común\\Validación de Fecha Actual.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <OutArgument x:TypeArguments="sd:DataTable" x:Key="Out_Dt_Calendario_row">
                   <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_60">In_GBL_Dt_Calendario_row</mca:CSharpReference>
@@ -281,144 +281,10 @@
               </sap:WorkflowViewStateService.ViewState>
             </ui:InvokeWorkflowFile>
           </Sequence>
-          <Sequence sap2010:Annotation.AnnotationText="Asignacion de Fecha que depende de la info obtenida en el documento de Calendario " DisplayName="Validación de Fecha en Calendario.xlsx" sap:VirtualizedContainerService.HintSize="334,231" sap2010:WorkflowViewState.IdRef="Sequence_6">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="" DisplayName="Asignación Fecha Inicial y Final" sap:VirtualizedContainerService.HintSize="200,82" sap2010:WorkflowViewState.IdRef="Switch`1_1">
-              <Switch.Expression>
-                <InArgument x:TypeArguments="x:String">
-                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">In_GBL_Dt_Calendario_row.Rows[0][1].ToString()</mca:CSharpValue>
-                </InArgument>
-              </Switch.Expression>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <Sequence x:Key="Cierre" sap:VirtualizedContainerService.HintSize="473,223" sap2010:WorkflowViewState.IdRef="Sequence_7">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,131" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
-                  <ui:MultipleAssign.AssignOperations>
-                    <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_26">
-                        <ui:AssignOperation.To>
-                          <OutArgument x:TypeArguments="x:String">
-                            <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_36">Str_FechaInicio_SalesForce</mca:CSharpReference>
-                          </OutArgument>
-                        </ui:AssignOperation.To>
-                        <ui:AssignOperation.Value>
-                          <InArgument x:TypeArguments="x:String">
-                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">new DateTime(DateTime.Now.Year,DateTime.Now.Month-1,1).ToString("dd/MM/yyyy")</mca:CSharpValue>
-                          </InArgument>
-                        </ui:AssignOperation.Value>
-                      </ui:AssignOperation>
-                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_27">
-                        <ui:AssignOperation.To>
-                          <OutArgument x:TypeArguments="x:String">
-                            <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_37">Str_FechaFinal_SalesForce</mca:CSharpReference>
-                          </OutArgument>
-                        </ui:AssignOperation.To>
-                        <ui:AssignOperation.Value>
-                          <InArgument x:TypeArguments="x:String">
-                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">new DateTime(DateTime.Now.Year,DateTime.Now.Month,1).ToString("dd/MM/yyyy")</mca:CSharpValue>
-                          </InArgument>
-                        </ui:AssignOperation.Value>
-                      </ui:AssignOperation>
-                    </scg:List>
-                  </ui:MultipleAssign.AssignOperations>
-                </ui:MultipleAssign>
-              </Sequence>
-              <Sequence x:Key="N" sap:VirtualizedContainerService.HintSize="473,223" sap2010:WorkflowViewState.IdRef="Sequence_8">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,131" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
-                  <ui:MultipleAssign.AssignOperations>
-                    <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_28">
-                        <ui:AssignOperation.To>
-                          <OutArgument x:TypeArguments="x:String">
-                            <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_38">Str_FechaInicio_SalesForce</mca:CSharpReference>
-                          </OutArgument>
-                        </ui:AssignOperation.To>
-                        <ui:AssignOperation.Value>
-                          <InArgument x:TypeArguments="x:String">
-                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">new DateTime(DateTime.Now.Year,DateTime.Now.Month,1).ToString("dd/MM/yyyy")</mca:CSharpValue>
-                          </InArgument>
-                        </ui:AssignOperation.Value>
-                      </ui:AssignOperation>
-                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_29">
-                        <ui:AssignOperation.To>
-                          <OutArgument x:TypeArguments="x:String">
-                            <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_39">Str_FechaFinal_SalesForce</mca:CSharpReference>
-                          </OutArgument>
-                        </ui:AssignOperation.To>
-                        <ui:AssignOperation.Value>
-                          <InArgument x:TypeArguments="x:String">
-                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">DateTime.Today.ToString("dd/MM/yyyy")</mca:CSharpValue>
-                          </InArgument>
-                        </ui:AssignOperation.Value>
-                      </ui:AssignOperation>
-                    </scg:List>
-                  </ui:MultipleAssign.AssignOperations>
-                </ui:MultipleAssign>
-              </Sequence>
-              <Sequence x:Key="Y" sap:VirtualizedContainerService.HintSize="473,223" sap2010:WorkflowViewState.IdRef="Sequence_9">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,131" sap2010:WorkflowViewState.IdRef="MultipleAssign_6">
-                  <ui:MultipleAssign.AssignOperations>
-                    <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_30">
-                        <ui:AssignOperation.To>
-                          <OutArgument x:TypeArguments="x:String">
-                            <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_40">Str_FechaInicio_SalesForce</mca:CSharpReference>
-                          </OutArgument>
-                        </ui:AssignOperation.To>
-                        <ui:AssignOperation.Value>
-                          <InArgument x:TypeArguments="x:String">
-                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">In_GBL_Dt_Calendario_row.Rows[0][4].ToString()</mca:CSharpValue>
-                          </InArgument>
-                        </ui:AssignOperation.Value>
-                      </ui:AssignOperation>
-                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_31">
-                        <ui:AssignOperation.To>
-                          <OutArgument x:TypeArguments="x:String">
-                            <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_41">Str_FechaFinal_SalesForce</mca:CSharpReference>
-                          </OutArgument>
-                        </ui:AssignOperation.To>
-                        <ui:AssignOperation.Value>
-                          <InArgument x:TypeArguments="x:String">
-                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">In_GBL_Dt_Calendario_row.Rows[0][5].ToString()</mca:CSharpValue>
-                          </InArgument>
-                        </ui:AssignOperation.Value>
-                      </ui:AssignOperation>
-                    </scg:List>
-                  </ui:MultipleAssign.AssignOperations>
-                </ui:MultipleAssign>
-              </Sequence>
-            </Switch>
-          </Sequence>
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <Sequence sap2010:Annotation.AnnotationText="Ingreso en Salefoce y aplicacion de filtros para extraccion de reporte de ventas " DisplayName="Busqueda de Informe de Ventas" sap:VirtualizedContainerService.HintSize="682,7292" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <Sequence sap2010:Annotation.AnnotationText="Ingreso en Salefoce y aplicacion de filtros para extraccion de reporte de ventas " DisplayName="Busqueda de Informe de Ventas" sap:VirtualizedContainerService.HintSize="682,7629" sap2010:WorkflowViewState.IdRef="Sequence_5">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="Str_ValidacionNombreInforme" />
       </Sequence.Variables>
@@ -429,13 +295,13 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="640,7169" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+      <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="640,7506" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
         <ui:RepeatNumberOfTimesX.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="Intento" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="606,7014" sap2010:WorkflowViewState.IdRef="Sequence_23">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="606,7351" sap2010:WorkflowViewState.IdRef="Sequence_23">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -449,7 +315,142 @@
                   </InArgument>
                 </ui:LogMessage.Message>
               </ui:LogMessage>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="564,6791" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+              <Sequence sap2010:Annotation.AnnotationText="Asignacion de Fecha que depende de la info obtenida en el documento de Calendario " DisplayName="Validación de Fecha en Calendario.xlsx" sap:VirtualizedContainerService.HintSize="564,311" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:Comment sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Esta actividad se debe de ejecutar siempre" />
+                <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="" DisplayName="Asignación Fecha Inicial y Final" sap:VirtualizedContainerService.HintSize="334,82" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                  <Switch.Expression>
+                    <InArgument x:TypeArguments="x:String">
+                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">In_GBL_Dt_Calendario_row.Rows[0][1].ToString()</mca:CSharpValue>
+                    </InArgument>
+                  </Switch.Expression>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence x:Key="Cierre" sap:VirtualizedContainerService.HintSize="473,223" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,131" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+                      <ui:MultipleAssign.AssignOperations>
+                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_26">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">
+                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_36">Str_FechaInicio_SalesForce</mca:CSharpReference>
+                              </OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">
+                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">new DateTime(DateTime.Now.Year,DateTime.Now.Month-1,1).ToString("dd/MM/yyyy")</mca:CSharpValue>
+                              </InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_27">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">
+                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_37">Str_FechaFinal_SalesForce</mca:CSharpReference>
+                              </OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">
+                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">new DateTime(DateTime.Now.Year,DateTime.Now.Month,1).ToString("dd/MM/yyyy")</mca:CSharpValue>
+                              </InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                        </scg:List>
+                      </ui:MultipleAssign.AssignOperations>
+                    </ui:MultipleAssign>
+                  </Sequence>
+                  <Sequence x:Key="N" sap:VirtualizedContainerService.HintSize="473,223" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,131" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+                      <ui:MultipleAssign.AssignOperations>
+                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_28">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">
+                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_38">Str_FechaInicio_SalesForce</mca:CSharpReference>
+                              </OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">
+                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">new DateTime(DateTime.Now.Year,DateTime.Now.Month,1).ToString("dd/MM/yyyy")</mca:CSharpValue>
+                              </InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_29">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">
+                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_39">Str_FechaFinal_SalesForce</mca:CSharpReference>
+                              </OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">
+                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">DateTime.Today.ToString("dd/MM/yyyy")</mca:CSharpValue>
+                              </InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                        </scg:List>
+                      </ui:MultipleAssign.AssignOperations>
+                    </ui:MultipleAssign>
+                  </Sequence>
+                  <Sequence x:Key="Y" sap:VirtualizedContainerService.HintSize="473,223" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,131" sap2010:WorkflowViewState.IdRef="MultipleAssign_6">
+                      <ui:MultipleAssign.AssignOperations>
+                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_30">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">
+                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_40">Str_FechaInicio_SalesForce</mca:CSharpReference>
+                              </OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">
+                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">In_GBL_Dt_Calendario_row.Rows[0][4].ToString()</mca:CSharpValue>
+                              </InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_31">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">
+                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_41">Str_FechaFinal_SalesForce</mca:CSharpReference>
+                              </OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">
+                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">In_GBL_Dt_Calendario_row.Rows[0][5].ToString()</mca:CSharpValue>
+                              </InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                        </scg:List>
+                      </ui:MultipleAssign.AssignOperations>
+                    </ui:MultipleAssign>
+                  </Sequence>
+                </Switch>
+              </Sequence>
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="564,6777" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -457,13 +458,13 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <TryCatch.Try>
-                  <uix:NApplicationCard sap2010:Annotation.AnnotationText="navegación en Salesforce &#xA;" AttachMode="ByInstance" DisplayName="Busqueda y extracción de ventas SalesForce" sap:VirtualizedContainerService.HintSize="434,5850" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="b646890d-e415-484e-b581-328f74beaa8b" Timeout="1000" Version="V1">
+                  <uix:NApplicationCard sap2010:Annotation.AnnotationText="navegación en Salesforce &#xA;" AttachMode="ByInstance" DisplayName="Busqueda y extracción de ventas SalesForce" sap:VirtualizedContainerService.HintSize="434,5844" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="b646890d-e415-484e-b581-328f74beaa8b" Version="V1">
                     <uix:NApplicationCard.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,5592" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,5586" sap2010:WorkflowViewState.IdRef="Sequence_18">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="Str_ArchivoDescargado" />
                           </Sequence.Variables>
@@ -794,7 +795,7 @@
                               </uix:TargetAnchorable>
                             </uix:NClick.Target>
                           </uix:NClick>
-                          <uix:NClick ClickType="Single" DisplayName="Click 'Solo detalles'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_27" KeyModifiers="None" MouseButton="Left">
+                          <uix:NClick ClickType="Single" DisplayName="Click 'Solo detalles'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_27" KeyModifiers="None" MouseButton="Left">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable BrowserURL="https://terpel--fullcopy.lightning.force.com/lightning/r/Report/00O04000000OGr0EAG/view?queryScope=userFolders" DesignTimeRectangle="608, 314, 190, 36" ElementType="Text" FriendlyName="'Solo detalles'" FullSelectorArgument="&lt;webctrl aaname='Solo detalles' sfl-path='uiPanelManager2/uiModal:modal/reportsExportDialog/reportsExportFormat:export-format/auraIf/reportsExportVisualPickerOption:data-export-visual-picker/auraHtml' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Solo detalles' sfl-path='uiPanelManager2/uiModal:modal/reportsExportDialog/reportsExportFormat:export-format/auraIf/reportsExportVisualPickerOption:data-export-visual-picker/auraHtml' tag='SPAN' type='' check:text='Solo detalles' /&gt;" Guid="bd2e24e7-d565-41b8-af63-f80782a6adbc" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMIAAAAoCAYAAACsPiXVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALGSURBVHhe7ZnBjcIwFES3DOqhCeiACiiDJuDKnRqogTNHrpwiZf8Asxp9HEiQohXOPCnaBdvftjwvhN2fpmna8/ncGjNFkH04YBHMpLEIxgQWwZjAIhgTWARjAovQg81mc7vGYMzais5zvV7b9Xrd7vf722szARFw2LPZ7O+az+ft6XR6tPZjzLCOWVvReSzCM1WLgIPHgePgyeFw+GoRPg2xzmMRnqlWhMvl0q5Wq8GhLzE0rEMYWtsijEPVIiyXy7eHzVDo49PxeHy03imFFXV1TJ8wc006pk9trgdS49FO27i/3IY9YW9E5+kSAe0cnx8h39X/dqoVASBAOLQcNMJgajsPXEOiIQL4HeMwHjBYr8JREpOB19p4T+twPZShK8S73e5pPXnNfF2qoe0A81EGrl3XsN1u/9ZYA1WLAHiIJSFy6Eh+X0OCYCwWi9tPpet90jWX1sZaS49z2gfjc4hLvNpDroH5MC9FAtrn3d5qoHoRCIXQOzmCUQpUDoaGCHfFUqAZHN41M11zaW3Mq48ferFPDrGCPjpG16nz5BpYs47Ti31YmzVqYzIigBwAHGopUP8pQr4zZ/IeAAViHYB2XafOk2t07SnDcTUKMSkRgAYih4W8ChFC98mjEcbnuRgs1uanVpdMgGNUhNI+Xu0h13i39gzWp5+sNVCtCDgkfIFUcND6xZPBY0BA7gM0RAC/axByoEuwbg5wvrvm2iD/7wN9dEwOJufqKwJfa3/AL+CohzUQi/BF4JBwWHzWxYVwaKBA7lfqk4MH8Fpra8C7YEB1TJ/auV3rcF4dg0Djrzp9RQB8jzW0dl53bRKAakUwZggWwZjAIhgTWARjAotgTGARjAksgjGBRTAmsAjGBBbBmMAiGBNYBGMCi2BMYBGMCSyCMYFFMCawCMYEFsGYwCIYE1gEYwKLYExgEYwJ7iI07S/pPltQg+uQPAAAAABJRU5ErkJggg==" InformativeScreenshot="6691e06bde9551cbdd1c58fe013a15d4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Validación ventas redenciones Robot | Salesforce' /&gt;" SearchSteps="FuzzySelector, Image">
                                 <uix:TargetAnchorable.Anchors>
@@ -805,7 +806,7 @@
                               </uix:TargetAnchorable>
                             </uix:NClick.Target>
                           </uix:NClick>
-                          <uix:NSelectItem DisplayName="Select Item 'Formato'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Formato Excel .xlsx">
+                          <uix:NSelectItem DisplayName="Select Item 'Formato'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Formato Excel .xlsx">
                             <uix:NSelectItem.Items>
                               <scg:List x:TypeArguments="x:String" Capacity="4">
                                 <x:String>Formato Excel .xls</x:String>
@@ -824,7 +825,7 @@
                               </uix:TargetAnchorable>
                             </uix:NSelectItem.Target>
                           </uix:NSelectItem>
-                          <uix:NClick ClickType="Single" DisplayName="Click 'Exportar'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_28" KeyModifiers="None" MouseButton="Left">
+                          <uix:NClick ClickType="Single" DisplayName="Click 'Exportar'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_28" KeyModifiers="None" MouseButton="Left">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable BrowserURL="https://terpel--fullcopy.lightning.force.com/lightning/r/Report/00O04000000OGr0EAG/view?queryScope=userFolders" DesignTimeRectangle="934, 579, 44, 30" ElementType="Text" FriendlyName="'Exportar'" FullSelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/uiModal:modal/reportsExportDialog/reportsExportDialogFooter:export-dialog-footer/uiButton:export-report/auraIf/auraHtml:span' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/uiModal:modal/reportsExportDialog/reportsExportDialogFooter:export-dialog-footer/uiButton:export-report/auraIf/auraHtml:span' tag='SPAN' type='' aaname='Exportar' check:text='Exportar' /&gt;" Guid="361fe7e0-fe84-4d04-8b96-ee513300b8e5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAiCAYAAAAZHFoXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFJSURBVFhH7Zm9DoJADMd9DF/Ax3TzYVhMfAkSJgdHw+LMorCx1GuvB72DIDJQMW3yX67Xj9+1TOyapoEta3c57GHLMgBtGYC2DEBbBqAtA9DWPwFkUIO0J1Sn+PIvKgG4w0M419ERqtfyx/p/gFvxBCgzcccXw/O2yFxx3rgk9lHyMdorhxuf+7jcr2t5FfHOqE68ym1x9DlPObQuT0V5+1oT30C41L8QNlWf/X0CE9+JBKXmO+jY5+Mk7NQExKMigIsM9YPmrRAHp011r0MK8dhQmqfPPYwbAnjIYOzjCYRJBs38BtDnbAUAar6rI3zLAfokgxVKdjsU/rRCUwAY2/lp8l8BxIbNRs2IhNRIeferhRYlx6b4HC0BjQEYEA3rUA02N8l6/gS+01gjGjKAMd+aWgzwKzIAbRmAtgxAW9sHGPtpsB018AYivRafiV9UqwAAAABJRU5ErkJggg==" InformativeScreenshot="a63e20c4350b5cc54816d121b87dd51d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Validación ventas redenciones Robot | Salesforce' /&gt;" SearchSteps="FuzzySelector, Image">
                                 <uix:TargetAnchorable.Anchors>
@@ -835,7 +836,7 @@
                               </uix:TargetAnchorable>
                             </uix:NClick.Target>
                           </uix:NClick>
-                          <uix:NGetText DisplayName="Get Text 'report1648771172549.xls…'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="b646890d-e415-484e-b581-328f74beaa8b" Version="V1">
+                          <uix:NGetText DisplayName="Get Text 'report1648771172549.xls…'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="b646890d-e415-484e-b581-328f74beaa8b" Version="V1">
                             <uix:NGetText.Target>
                               <uix:TargetAnchorable DesignTimeRectangle="12, 680, 233, 56" FriendlyName="'report1648771172549.xls…'" FullSelectorArgument="&lt;ctrl name='Validación ventas redenciones Robot | Salesforce - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Barra de descargas' role='grouping' /&gt;&lt;ctrl name=' report1648771172549.xls' role='grouping' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Validación ventas redenciones Robot | Salesforce - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Barra de descargas' role='grouping' /&gt;&lt;ctrl role='grouping' automationid='' /&gt;" Guid="ad0d5b06-1245-412a-a2ac-ef4c4437219b" InformativeScreenshot="50c3862d7c7520bd8e79b5229f2df4b1.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Validación ventas redenciones Robot | Salesforce - Google Chrome' /&gt;" SearchSteps="FuzzySelector">
                                 <uix:TargetAnchorable.Anchors>
@@ -863,7 +864,7 @@
                               </InArgument>
                             </Assign.Value>
                           </Assign>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Trace">
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Trace">
                             <ui:LogMessage.Message>
                               <InArgument x:TypeArguments="x:Object">
                                 <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_72">"Extraccion de reportes de venta ejecutado exitosamente"</mca:CSharpValue>
@@ -877,6 +878,11 @@
                     <uix:NApplicationCard.TargetApp>
                       <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJGSURBVFhH7ZZBSBRRGMdHYolFJCJEJEQkJERCPISHCAlP0qGT5w7RwUNIhESEiAfxGJ46ONIpwmOIiHiQiAiRiOgUb6JTePLQIUQ6TL//25ndt85jXGmc7eDht2/3zbfv+79vvu+9L4jjuKOdnAv4fwUEq+ZCsBp1wmW4BFXN+Wz/hYwAHMkxDs0I431YgHl+TzHe0LNmu6gfrkEfNl1BGJ1KZJOA2q7NAIs9hm8QNzB/GL/CDAzCTZiFDfgMb+ERjEKnu24exwREPfASHMcZDhDzjvHLsfmUXbgHen1d0JugaGWiUxfAw4ssTJjNId99C58GCXwA0/CCNcFG7jawyUYuuQKUbOvgW7AoDCzCdbAiXAEKP+H1/rFoXkG/T8DvxKAMnkHFFXAFlM0+4+IJ7evotQKUFPxQaX2oG5TD3USADf8y/EoelMWTgA8dPiqXI+dBWcxIAPUffXImy2RcAqokRDt2/wO/3Qgw3HJeg7PmKVTSV/AzmSwJ84axzxYAXyqgCvAYFo35zrgEw+m1nZbhMHysGRVIaHS3vMbxCuNzmASVfPNlpAm4hSHGBd0Hob3YuP2MDjj1GDpp865jexqqs5kAdUJSvAd+Bw32YQt2QD3Ce5gDdVRV15mPuoD6hKIRqv+jRGp3+kn9gRJqDIZATvU6vbv1kRHgwiLqZLSbbJXUzo5NGIeK7/+tkC+ATCWR1KjcAXU126BkXYOHoPd7YpjzyBWQghOVqsJ6FVF0vzaT1fO1FOY8WhJwlpwLaLOAuOMveA1Of+TuOKQAAAAASUVORK5CYII=" InformativeScreenshot="926bb119b5334b2aa95704ec49abff4f.png" Selector="&lt;html app='chrome.exe' title='Inicio | Salesforce'/&gt;" Url="https://terpel--fullcopy.lightning.force.com/lightning/page/home" />
                     </uix:NApplicationCard.TargetApp>
+                    <uix:NApplicationCard.Timeout>
+                      <InArgument x:TypeArguments="x:Double">
+                        <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_74">In_GBL_Int_TiempoEsperaAplicaciones</mca:CSharpValue>
+                      </InArgument>
+                    </uix:NApplicationCard.Timeout>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -887,7 +893,7 @@
                   </uix:NApplicationCard>
                 </TryCatch.Try>
                 <TryCatch.Catches>
-                  <Catch x:TypeArguments="uue:UiAutomationException" sap:VirtualizedContainerService.HintSize="530,163" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                  <Catch x:TypeArguments="uue:UiAutomationException" sap:VirtualizedContainerService.HintSize="530,160" sap2010:WorkflowViewState.IdRef="Catch`1_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -898,7 +904,7 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="uue:UiAutomationException" Name="exception" />
                       </ActivityAction.Argument>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Warn">
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Warn">
                         <ui:LogMessage.Message>
                           <InArgument x:TypeArguments="x:Object">
                             <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_69" xml:space="preserve">"Error en la ejecuci{on de extraccion de ventas en SalesForce \n  excepción: "+exception.Message</mca:CSharpValue>
@@ -909,26 +915,26 @@
                   </Catch>
                 </TryCatch.Catches>
                 <TryCatch.Finally>
-                  <Sequence sap:VirtualizedContainerService.HintSize="526,528" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                  <Sequence sap:VirtualizedContainerService.HintSize="526,523" sap2010:WorkflowViewState.IdRef="Sequence_22">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If sap:VirtualizedContainerService.HintSize="484,436" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If sap:VirtualizedContainerService.HintSize="484,431" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">(Str_SystemException == "Error") &amp;&amp; (Intento == In_GBL_Int_NumIntentos)</mca:CSharpValue>
                         </InArgument>
                       </If.Condition>
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="376,247" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_20">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Fatal">
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Fatal">
                             <ui:LogMessage.Message>
                               <InArgument x:TypeArguments="x:Object">
                                 <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_70">"No se pudo realizar el reporte de ventas en SalesForce "</mca:CSharpValue>
@@ -973,14 +979,14 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:RepeatNumberOfTimesX>
     </Sequence>
-    <Sequence DisplayName="Extraccion de ventas" sap:VirtualizedContainerService.HintSize="682,185" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="Extraccion de ventas" sap:VirtualizedContainerService.HintSize="682,183" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_2">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2">
         <ui:LogMessage.Message>
           <InArgument x:TypeArguments="x:Object">
             <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32">"lol"</mca:CSharpValue>

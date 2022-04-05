@@ -5,7 +5,7 @@
     <x:Property Name="In_GBL_Int_NumIntentos" Type="InArgument(x:Int32)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1070,2772</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1070,3144</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -88,10 +88,9 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="LogOut en SalesForce&#xA;&#xA;Precondicion: LogIn en SalesForce.&#xD;&#xA;&#xA;Acciones: Cierra el sistema de SalesForce en Chrome." DisplayName="LogOut_SaleForce" sap:VirtualizedContainerService.HintSize="1080,2707" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="LogOut en SalesForce&#xA;&#xA;Precondicion: LogIn en SalesForce.&#xA;&#xA;Acciones: Cierra el sistema de SalesForce en Chrome." DisplayName="LogOut_SaleForce" sap:VirtualizedContainerService.HintSize="1080,3079" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Str_SystemException" />
     </Sequence.Variables>
@@ -101,6 +100,53 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1038,332" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="473,254" sap2010:WorkflowViewState.IdRef="Sequence_17">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,162" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+            <ui:MultipleAssign.AssignOperations>
+              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:Int32">
+                      <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">In_GBL_Int_NumIntentos</mca:CSharpReference>
+                    </OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:Int32">2</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:Int32">
+                      <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">In_GBL_Int_TiempoEsperaAplicaciones</mca:CSharpReference>
+                    </OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:Int32">2000</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:Int32">
+                      <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">In_GBL_Int_TiempoMaxValidaciones</mca:CSharpReference>
+                    </OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+              </scg:List>
+            </ui:MultipleAssign.AssignOperations>
+          </ui:MultipleAssign>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
     <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="Sistema de Reintentos " DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="1038,2528" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
       <ui:RepeatNumberOfTimesX.Body>
         <ActivityAction x:TypeArguments="x:Int32">
@@ -143,7 +189,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:LogMessage>
-                  <uix:NApplicationCard sap2010:Annotation.AnnotationText="Apertura del Navegador" AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Vistos recientemente | Contactos | Salesforce" sap:VirtualizedContainerService.HintSize="882,1514" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="5b1e4c1c-6a19-4b55-ad81-58dd44298b7b" Version="V1">
+                  <uix:NApplicationCard sap2010:Annotation.AnnotationText="Apertura del Navegador" AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Validación ventas redenciones Robot | Salesforce" sap:VirtualizedContainerService.HintSize="882,1514" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="5b1e4c1c-6a19-4b55-ad81-58dd44298b7b" Version="V1">
                     <uix:NApplicationCard.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
@@ -156,7 +202,7 @@
                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NClick sap2010:Annotation.AnnotationText="Click en perfil" ClickType="Single" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="806,187" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left">
+                          <uix:NClick sap2010:Annotation.AnnotationText="Click en perfil" ClickType="Single" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="806,187" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5b1e4c1c-6a19-4b55-ad81-58dd44298b7b">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable BrowserURL="https://terpel--fullcopy.lightning.force.com/lightning/o/Contact/list?filterName=Recent" DesignTimeRectangle="2494, 226, 48, 45" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/oneHeader:header/oneUserProfileCardTrigger:userProfileCardTrigger/auraIf/forceSocialPhoto:profileIcon/forceEntityIcon/uiImage/auraHtml:body' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/oneHeader:header/oneUserProfileCardTrigger:userProfileCardTrigger/auraIf/forceSocialPhoto:profileIcon/forceEntityIcon/uiImage/auraHtml:body' tag='SPAN' type='' aaname='' /&gt;" Guid="2d84fbca-b4d1-4797-8c2a-95425e8a6f9d" ImageBase64="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" InformativeScreenshot="ca05376d74b6f980ba9174c9cf608232.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Vistos recientemente | Contactos | Salesforce' /&gt;" SearchSteps="FuzzySelector, Image" />
                             </uix:NClick.Target>
@@ -166,7 +212,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NClick>
-                          <uix:NClick sap2010:Annotation.AnnotationText="Click en cerrar sesión" ClickType="Single" DisplayName="Click 'Cerrar sesión'" sap:VirtualizedContainerService.HintSize="806,187" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left">
+                          <uix:NClick sap2010:Annotation.AnnotationText="Click en cerrar sesión" ClickType="Single" DisplayName="Click 'Cerrar sesión'" sap:VirtualizedContainerService.HintSize="806,187" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5b1e4c1c-6a19-4b55-ad81-58dd44298b7b">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable BrowserURL="https://terpel--fullcopy.lightning.force.com/lightning/o/Contact/list?filterName=Recent" DesignTimeRectangle="2262, 385, 112, 26" ElementType="Text" FriendlyName="'Cerrar sesión'" FullSelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/uiPanel/oneUserProfileCard/uiOutputURL:logout/auraHtml:link' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/uiPanel/oneUserProfileCard/uiOutputURL:logout/auraHtml:link' tag='A' type='' aaname='Cerrar sesión' check:text='Cerrar sesión' /&gt;" Guid="f6bf66c1-4957-47ed-8ea3-4b43032d86b8" ImageBase64="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" InformativeScreenshot="5853d92fbff24ad00bb13cced3307150.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Vistos recientemente | Contactos | Salesforce' /&gt;" SearchSteps="FuzzySelector, Image" />
                             </uix:NClick.Target>
@@ -259,7 +305,7 @@
                       </ActivityAction>
                     </uix:NApplicationCard.Body>
                     <uix:NApplicationCard.TargetApp>
-                      <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAJGSURBVFhH7ZZBSBRRGMdHYolFJCJEJEQkJERCPISHCAlP0qGT5w7RwUNIhESEiAfxGJ46ONIpwmOIiHiQiAiRiOgUb6JTePLQIUQ6TL//25ndt85jXGmc7eDht2/3zbfv+79vvu+9L4jjuKOdnAv4fwUEq+ZCsBp1wmW4BFXN+Wz/hYwAHMkxDs0I431YgHl+TzHe0LNmu6gfrkEfNl1BGJ1KZJOA2q7NAIs9hm8QNzB/GL/CDAzCTZiFDfgMb+ERjEKnu24exwREPfASHMcZDhDzjvHLsfmUXbgHen1d0JugaGWiUxfAw4ssTJjNId99C58GCXwA0/CCNcFG7jawyUYuuQKUbOvgW7AoDCzCdbAiXAEKP+H1/rFoXkG/T8DvxKAMnkHFFXAFlM0+4+IJ7evotQKUFPxQaX2oG5TD3USADf8y/EoelMWTgA8dPiqXI+dBWcxIAPUffXImy2RcAqokRDt2/wO/3Qgw3HJeg7PmKVTSV/AzmSwJ84axzxYAXyqgCvAYFo35zrgEw+m1nZbhMHysGRVIaHS3vMbxCuNzmASVfPNlpAm4hSHGBd0Hob3YuP2MDjj1GDpp865jexqqs5kAdUJSvAd+Bw32YQt2QD3Ce5gDdVRV15mPuoD6hKIRqv+jRGp3+kn9gRJqDIZATvU6vbv1kRHgwiLqZLSbbJXUzo5NGIeK7/+tkC+ATCWR1KjcAXU126BkXYOHoPd7YpjzyBWQghOVqsJ6FVF0vzaT1fO1FOY8WhJwlpwLaLOAuOMveA1Of+TuOKQAAAAASUVORK5CYII=" InformativeScreenshot="ce7f727870156bd2233e1a8560fd1419.png" Selector="&lt;html app='chrome.exe' title='Vistos recientemente | Contactos | Salesforce'/&gt;" Url="https://terpel--fullcopy.lightning.force.com/lightning/o/Contact/list?filterName=Recent" />
+                      <uix:TargetApp Area="-11, -11, 2582, 1402" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJGSURBVFhH7ZZBSBRRGMdHYolFJCJEJEQkJERCPISHCAlP0qGT5w7RwUNIhESEiAfxGJ46ONIpwmOIiHiQiAiRiOgUb6JTePLQIUQ6TL//25ndt85jXGmc7eDht2/3zbfv+79vvu+9L4jjuKOdnAv4fwUEq+ZCsBp1wmW4BFXN+Wz/hYwAHMkxDs0I431YgHl+TzHe0LNmu6gfrkEfNl1BGJ1KZJOA2q7NAIs9hm8QNzB/GL/CDAzCTZiFDfgMb+ERjEKnu24exwREPfASHMcZDhDzjvHLsfmUXbgHen1d0JugaGWiUxfAw4ssTJjNId99C58GCXwA0/CCNcFG7jawyUYuuQKUbOvgW7AoDCzCdbAiXAEKP+H1/rFoXkG/T8DvxKAMnkHFFXAFlM0+4+IJ7evotQKUFPxQaX2oG5TD3USADf8y/EoelMWTgA8dPiqXI+dBWcxIAPUffXImy2RcAqokRDt2/wO/3Qgw3HJeg7PmKVTSV/AzmSwJ84axzxYAXyqgCvAYFo35zrgEw+m1nZbhMHysGRVIaHS3vMbxCuNzmASVfPNlpAm4hSHGBd0Hob3YuP2MDjj1GDpp865jexqqs5kAdUJSvAd+Bw32YQt2QD3Ce5gDdVRV15mPuoD6hKIRqv+jRGp3+kn9gRJqDIZATvU6vbv1kRHgwiLqZLSbbJXUzo5NGIeK7/+tkC+ATCWR1KjcAXU126BkXYOHoPd7YpjzyBWQghOVqsJ6FVF0vzaT1fO1FOY8WhJwlpwLaLOAuOMveA1Of+TuOKQAAAAASUVORK5CYII=" InformativeScreenshot="2bbfcec3f9e60b6228d7d461e182dc4f.png" Selector="&lt;html app='chrome.exe' title='Validación ventas redenciones Robot | Salesforce'/&gt;" Url="https://terpel--fullcopy.lightning.force.com/lightning/r/Report/00O04000000OGr0EAG/view?queryScope=userFolders" />
                     </uix:NApplicationCard.TargetApp>
                     <uix:NApplicationCard.Timeout>
                       <InArgument x:TypeArguments="x:Double">
