@@ -5,7 +5,7 @@
     <x:Property Name="Out_Str_SystemException" Type="OutArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1240,4188</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1220,5504</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -89,12 +89,14 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="LogIn en SAP&#xA;&#xA;Precondicion: ninguna&#xA;Acciones: Abre el sistema de SAP si las credenciales son correctas" DisplayName="LogIn_SQLServer" sap:VirtualizedContainerService.HintSize="1231,4123" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="LogIn en SQL Server&#xA;&#xA;Precondicion: ninguna&#xA;Acciones: Abre el sistema de SAP si las credenciales son correctas" DisplayName="LogIn_SQLServer" sap:VirtualizedContainerService.HintSize="1230,5439" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ss:SecureString" Name="Cred_Password" />
       <Variable x:TypeArguments="x:String" Name="Cred_Username" />
+      <Variable x:TypeArguments="x:String" Name="Asse_Server_DB" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -102,7 +104,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="CV_EDS_Credencial_DBA" DisplayName="Get Credential" FolderPath="Default" sap:VirtualizedContainerService.HintSize="1189,79" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1">
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Obtención de par de llaves para login dentro de la base de datos" AssetName="CV_EDS_Credencial_DBA" DisplayName="Get Credential" FolderPath="Default" sap:VirtualizedContainerService.HintSize="1188,121" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1">
       <ui:GetRobotCredential.Password>
         <OutArgument x:TypeArguments="ss:SecureString">
           <mca:CSharpReference x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">Cred_Password</mca:CSharpReference>
@@ -113,27 +115,44 @@
           <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">Cred_Username</mca:CSharpReference>
         </OutArgument>
       </ui:GetRobotCredential.Username>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotCredential>
-    <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="1189,3840" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Varialble expuesta para diligenciar el hostname del servidor de base de datos" AssetName="CV_EDS_Var_NombreDBA" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="1188,179" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+      <ui:GetRobotAsset.Value>
+        <OutArgument x:TypeArguments="x:String">
+          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">Asse_Server_DB</mca:CSharpReference>
+        </OutArgument>
+      </ui:GetRobotAsset.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:GetRobotAsset>
+    <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="1188,4895" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
       <ui:RepeatNumberOfTimesX.Body>
         <ActivityAction x:TypeArguments="x:Int32">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Int32" Name="Intento" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1155,3685" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1154,4740" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1113,3593" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1112,4648" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <TryCatch.Try>
-                <Sequence sap2010:Annotation.AnnotationText="" sap:VirtualizedContainerService.HintSize="1074,3365.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence sap2010:Annotation.AnnotationText="" sap:VirtualizedContainerService.HintSize="1074,4421" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -141,7 +160,7 @@
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1032,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
+                  <ui:LogMessage sap2010:Annotation.AnnotationText="Log de acceso y pasos." DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1032,122" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
                     <ui:LogMessage.Message>
                       <InArgument x:TypeArguments="x:Object">
                         <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">"LogIn SQLServer Intento:"+Intento</mca:CSharpValue>
@@ -150,22 +169,107 @@
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:LogMessage>
-                  <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Microsoft SQL Server Management Studio" sap:VirtualizedContainerService.HintSize="1032,2944" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="76f32f12-e70e-4c48-8d82-5dad13556ef8" Version="V1">
+                  <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Microsoft SQL Server Management Studio" sap:VirtualizedContainerService.HintSize="1032,3974" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="76f32f12-e70e-4c48-8d82-5dad13556ef8" Version="V1">
                     <uix:NApplicationCard.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="998,2649.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="998,3685" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="Var_Conn_Validate" />
+                          </Sequence.Variables>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '&amp;Login'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="956,220" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Version="V1">
+                          <ui:FindImageMatches sap2010:Annotation.AnnotationText="Identificarsi la pantalla de conexión se encuentra activa" DisplayName="Find Image Matches 'ssms.exe Connect'" sap:VirtualizedContainerService.HintSize="956,137" sap2010:WorkflowViewState.IdRef="FindImageMatches_2">
+                            <ui:FindImageMatches.Image>
+                              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+                            </ui:FindImageMatches.Image>
+                            <ui:FindImageMatches.Matches>
+                              <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">
+                                <mca:CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">Var_Conn_Validate</mca:CSharpReference>
+                              </OutArgument>
+                            </ui:FindImageMatches.Matches>
+                            <ui:FindImageMatches.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="cec6d270-d439-4426-9b6a-f652a629841b">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:FindImageMatches.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:FindImageMatches>
+                          <If sap2010:Annotation.AnnotationText="Si la pantalla de SQL server connections no existe se abre dando clic en 'connect'" sap:VirtualizedContainerService.HintSize="956,469" sap2010:WorkflowViewState.IdRef="If_3">
+                            <If.Condition>
+                              <InArgument x:TypeArguments="x:Boolean">
+                                <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">Var_Conn_Validate.Count() &lt;1</mca:CSharpValue>
+                              </InArgument>
+                            </If.Condition>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <If.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="376,250" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NClick ClickType="Single" DisplayName="Click 'graphic'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="76f32f12-e70e-4c48-8d82-5dad13556ef8" Version="V1">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable DesignTimeRectangle="84, 144, 16, 16" ElementType="Icon" FriendlyName="'graphic'" FullSelectorArgument="&lt;ctrl automationid='ST:0:0:{d114938f-591c-46cf-a785-500a82d97410}' /&gt;&lt;ctrl name='SQL Server Object Explorer' role='tool bar' /&gt;&lt;ctrl name='Connect Object Explorer...' role='push button' /&gt;&lt;ctrl role='graphic' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='ST:0:0:{d114938f-591c-46cf-a785-500a82d97410}' /&gt;&lt;ctrl name='SQL Server Object Explorer' role='tool bar' /&gt;&lt;ctrl name='Connect Object Explorer...' role='push button' /&gt;&lt;ctrl role='graphic' automationid='' /&gt;" Guid="5f92614b-dbcc-4815-bed7-62bab445b70b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACASURBVDhP7dBRCoAgEIThruWdvIJXrKc6QZ7D2GhqsVlNkCDo4YMk5ycapiWmnt4LjvN60M/XmW1EMRhCSN77M6bPbCOKQefcDkF9ZhvxThCBGrY1g/gaS3OwFMV7tn30D3NWTHw8CDoEbCPMIORBdkf7g3cS0dgdrRps1TkY0waZOCNq0hekVQAAAABJRU5ErkJggg==" InformativeScreenshot="6893b7c05b6bf0b4741267727669fb99.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' cls='HwndWrapper*' title='Microsoft SQL Server Management Studio' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                                  </uix:NClick.Target>
+                                </uix:NClick>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                          <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Ingresar variable de hostname base de datos" ClickBeforeMode="Single" DisplayName="Type Into '&amp;Server name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="956,247" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="76f32f12-e70e-4c48-8d82-5dad13556ef8" Version="V1">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="181, 137, 272, 15" ElementType="InputBox" FriendlyName="'COLBDGSRVBDQE01'" FullSelectorArgument="&lt;wnd ctrlname='simpleView' /&gt;&lt;wnd ctrlname='loginHolder' /&gt;&lt;wnd ctrlname='LoginControl' /&gt;&lt;wnd ctrlname='serverInstance' /&gt;&lt;wnd aaname='Server name:' cls='Edit' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='simpleView' /&gt;&lt;wnd ctrlname='loginHolder' /&gt;&lt;wnd ctrlname='LoginControl' /&gt;&lt;wnd ctrlname='serverInstance' /&gt;&lt;wnd aaname='Server name:' cls='Edit' /&gt;" Guid="37f681c1-f2e4-463c-bc46-f51ba4fbea8c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARQAAAATCAYAAABRAvJ1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALqSURBVHhe7ZpBjqMwEEVznDkDB+IMc4PZcgxOkGVOEWkWSOyyiXqVVXaeKlM25bINkdrdIj3/SSU1NoUrtP/HcTg5AABoBAwFANCMaCin338RbxTuzy/5zwFwHGAoR4thdt1QaDcBQwFHJDGU7vJwkxy7+9OdxzlO4G7UfQ836Ek/fLjp/uG6cKzbJcWj82yfS8fjSMYkpqsZQ1+D6h3GQnuEr8/9sxvuTv5WET5Dy5pL90m6NKGW/vqko6c/Z7re1jzJPbuH6+UYhgKOSDSU7kKTmQTVR/HcaAKTSPmYROJ4MifCkr5wXDWUVQSnUZ1nc2g8Fvp0EYGyMEmQcUwKNjwXhabq8/lqrEI9XujSxp81jhP6Q1vLmvkestHt3aesj00v5C0GuLDWBUMBRyQayjqBbejJrYJNJoi7JhQrTm8CddGvbZUxddTGrPZtja3G476WNbPJ7N0nDn0/KfqrXUWpOihgKOCIREOpTvRMYIX2mlBs7tbT3oeIpna9JJYn9/lyy/ccCvl6hZKZpD6/ec3Uv5m/hF015asoGAo4Pq8ZSk0oYYLXzuF2uf5C2MeQvixHhK5FzMFP74Bu568cft+BMQYhrZHs69Mq2ES8rWoO4a+n7pNcdWXpg6GAn8D3rlB2c3ae9rV2Cl6BRLOx5/m9DmUMyTmF1UqTmmfX83i6vZi/BAwF/AS+eQ9FXauUE9sqY24IcnfFZPYo1lrMuXzcpGaqh47PvILCHgr4T4iGwk/EV3/l6Xh5b79ilIRixamPbY78YhJFRGNmv5hwoZLj61U/I2+uUHykgvQ5vAog0ScrgaY1c+4L9ynrKxkqDAUcn2goPEmT91D83oFagrNYpOel9yv4aZu1m/0IaV1Ix+PIxkz2KWZ5b0OwQs6EWxCpr6HUpvlkzVxjqCXLXwiGtvkeCgwFvAGJoSC+JvrRmsNG4E1Z8MbAUN40YCjgiERDAQCAzwJDAQA0A4YCAGgGDAUA0Ajn/gGPU4qsmsNQ+AAAAABJRU5ErkJggg==" InformativeScreenshot="458fdd7e528a25c3cf6af97bb1655e74.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='ssms.exe' ctrlname='ConnectionDialog' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="16, 134, 162, 20" ElementType="Text" FriendlyName="'&amp;Server name'" FullSelectorArgument="&lt;wnd ctrlname='simpleView' /&gt;&lt;wnd ctrlname='loginHolder' /&gt;&lt;wnd ctrlname='LoginControl' /&gt;&lt;wnd ctrlname='serverInstanceLabel' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='simpleView' /&gt;&lt;wnd ctrlname='loginHolder' /&gt;&lt;wnd ctrlname='LoginControl' /&gt;&lt;wnd ctrlname='serverInstanceLabel' check:text='&amp;amp;Server name:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKYAAAAYCAYAAABwSIZyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHMSURBVGhD7ZfdrcMgDEaZink8xt2AYdiF17tGNuDaEFNKSEml3sYPX6Wj8J9InNrgtm3LAFgDYgKTQExgCvfzW5l1AnAXIqX8ICYwBcQEJoGYwCQQE5hkLWYK2TuXneB9DnEyBoAPsxAzZnIsY9rrRVLK8TAOgM/yWkwR0YecZn0A/COLiJly8C5TiDlp1FRYWuK+muKpRtUiMmUiX9vPou1ybheV9/bQrUl6nIj0OGZo+/ANnr+9zpX+dP7t5X2SIZARLHDhjKkbWze/bqIIO0gnkVWeMmYXIJKIUcsp8BoUL89t7O1NKpFxFsXHdVT2vlzmnbx/XA/cylrMjsRSuLb5GqkUkWrY5JkMV+ce1pjUuUy8bltH2of+Q1meT+8WOlGBCd4Ss6W6srmTlNeLUFAhB0EuzT1pb/X9Ytal59Lej5+V5Yl0bZ6XYtb0u2+s1DViFuHk7PlCCp3Da3iWU1P649y6nvvUf6jXP4lGuhS6aK7jp+WT90sZmGF5+YntfMnwRSG2sxmLMb3ADJssbWOqvDq3jB3au7rIqGlZ5L8mppQn75d2XH7M8GYqB+A7QExgEogJTAIxgUkgJjAJxAQmETELs04A7mXLf1atl1qczVAoAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NTypeInto.Target>
+                            <uix:NTypeInto.Text>
+                              <InArgument x:TypeArguments="x:String">
+                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">Asse_Server_DB</mca:CSharpValue>
+                              </InArgument>
+                            </uix:NTypeInto.Text>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NTypeInto>
+                          <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Credencial de usuario de base de datos." ClickBeforeMode="Single" DisplayName="Type Into '&amp;Login'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="956,247" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Version="V1">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable DesignTimeRectangle="293, 283, 383, 22" ElementType="InputBox" FriendlyName="'usr_bots'" FullSelectorArgument="&lt;wnd ctrlname='simpleView' /&gt;&lt;wnd ctrlname='loginHolder' /&gt;&lt;wnd ctrlname='LoginControl' /&gt;&lt;wnd ctrlname='userName' /&gt;&lt;wnd aaname='Login:' cls='Edit' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='simpleView' /&gt;&lt;wnd ctrlname='loginHolder' /&gt;&lt;wnd ctrlname='LoginControl' /&gt;&lt;wnd ctrlname='userName' /&gt;&lt;wnd aaname='Login:' cls='Edit' /&gt;" Guid="253dca20-b8d2-4481-bca2-5d3d63e2880a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAYMAAAAaCAYAAABVejAtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAHVSURBVHhe7dvbkaMwFAVA4lJAiodolAzBaCXeyJjBHm/t1E53FR/Gen3dY8nQZQB+PWEAgDAAQBgAUAgDAIQBAD8mDFKOXZdDP8yf3zf0IXddLCMCcJcwAEAYAHAIg/OC/FBchz7H0JV78xViXruU70K5F1MZa2xztygvc6ecYp1vGjvEPrfxMPRxnGNqE3Isfbbpt75j/2VhV2sG4MUwmIv91maYi/fx+1ps00vFdpq7FvcaCGPXIeW+FvC4xUmKU5tt+rnfrs1ZeF2uGYAXwyDFYzFurTuD+fNt53Mf5ns2drOmhzD4as0AvLczqMW1HuGk9uf/p8NgP96zot7M+Wxn8HTNALzzn0FpF+q9WmCnK2yV+LNhsLv/sI7Vse9pu6s1A/BGGOwt5/ql31hbf+LOoNWuGYBvhkG1L8afDoNP/Gdw5u11AvyfdmFQ62r5xRz6tZDWwlqL5lpcl8K7nrsPOe2L7zfD4DD2yZNCd54masPhyzUDcAyDWij79Tn/6THPtnAen/Mv1+l7BvPn2+adQRkr7N4HqOf6y9CLq/cMJtsx0BISl2sGoA0DAH4jYQDAXw6D+dhoPZ45vXbn+wD8E3YGAAgDAIQBAIUwAEAYAJDzHzDxai8g4DpmAAAAAElFTkSuQmCC" InformativeScreenshot="bcdbba15d885ab023061bc617df356e6.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='ssms.exe' ctrlname='ConnectionDialog' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
                                 <uix:TargetAnchorable.Anchors>
@@ -180,8 +284,13 @@
                                 <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">Cred_Username</mca:CSharpValue>
                               </InArgument>
                             </uix:NTypeInto.Text>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
                           </uix:NTypeInto>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '&amp;Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="956,244.666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Version="V1">
+                          <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Credencial de contraseña para Base de datos" ClickBeforeMode="Single" DisplayName="Type Into '&amp;Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="956,272" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Version="V1">
                             <uix:NTypeInto.SecureText>
                               <InArgument x:TypeArguments="ss:SecureString">
                                 <mca:CSharpValue x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">Cred_Password</mca:CSharpValue>
@@ -196,15 +305,25 @@
                                 </uix:TargetAnchorable.Anchors>
                               </uix:TargetAnchorable>
                             </uix:NTypeInto.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
                           </uix:NTypeInto>
-                          <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="956,158" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+                          <uix:NClick sap2010:Annotation.AnnotationText="Click en connect para acceder a la base de datos con las credenciales obtenidas." ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="956,198" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable DesignTimeRectangle="218, 427, 112, 35" ElementType="Button" FriendlyName="'&amp;Connect'" FullSelectorArgument="&lt;wnd ctrlname='connect' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='connect' check:text='&amp;amp;Connect' /&gt;" Guid="767b27ae-5765-4ff5-9d46-afc5d6ea1f3e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHQAAAAnCAYAAADegGx+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAHgSURBVHhe7ZjNkcMgDEbdE91Qyd5ohVaoYs/pwB2wYLCDEuElEzIB+Tu8mWAU8/MQNl7WdfVADhAqDAgVBhG6/PyCCSEOSYEJBuNDHJJCDrjdbmACIFQYECoMCBUGhAoDQoUBocKAUGEMJNR5a7RXy+KXjFLaW8fFzoMzKowljIOp+wSDCHXeqCCRCIyC42QobyaWekmhZ4O2Ooo23jF1M3BBodbruL0ax9QFrH7KUke2ZuW1sYXw/X6WbuEx+1+KSTy39djPx0dFiLEpJsncr5+MsSPfF+rMNhnaMnUMW8aWgl2Ss2ibY3I5xERhSXTe0l+KKdrKgva+PseEhZD747YFeB/P9TKUycAqNfnkHnv20WygE9sQk9viY3JbbH/owoDQM2qxZGI7CW1pq6Hv1xNayzqG+uSUgvoITb/jdsoT/9siqyWmJ98XWpncgzILRsjQEmQoz9mgybGlls1kYjsJbWmLjbn6M3Tj7MMCnbDWt9y3hR7l0Nbxlhv+t/Xzfi7+7y23KdM7MojQSPunv7Zz6PtC07WHPoWFc28rUj+HJmxarLGuOO58ioGEgh5AqDAgVBgQKgwIFQaECgNChQGhwoBQYTQLBXNBHJICEwzGhzgsC2B+IFQYECqK1f8Br0PwS+mm3kIAAAAASUVORK5CYII=" InformativeScreenshot="12719b10debf709ec37ed351ce7ce8de.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' ctrlname='ConnectionDialog' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
                             </uix:NClick.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
                           </uix:NClick>
-                          <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Object Explorer'" sap:VirtualizedContainerService.HintSize="956,1812" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="76f32f12-e70e-4c48-8d82-5dad13556ef8" Version="V1">
+                          <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Object Explorer'" sap:VirtualizedContainerService.HintSize="956,1781" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="76f32f12-e70e-4c48-8d82-5dad13556ef8" Version="V1">
                             <uix:NCheckState.IfExists>
-                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="526,1592" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="526,1565" sap2010:WorkflowViewState.IdRef="Sequence_9">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="x:String" Name="Str_EsquemaBD" />
                                 </Sequence.Variables>
@@ -213,7 +332,7 @@
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <uix:NClick ClickType="Single" DisplayName="Click '_New Query'" sap:VirtualizedContainerService.HintSize="484,158" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left">
+                                <uix:NClick ClickType="Single" DisplayName="Click '_New Query'" sap:VirtualizedContainerService.HintSize="484,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left">
                                   <uix:NClick.Target>
                                     <uix:TargetAnchorable DesignTimeRectangle="403, 101, 88, 25" ElementType="Text" FriendlyName="'_New Query'" FullSelectorArgument="&lt;ctrl name='ToolBarDockTop' role='pane' /&gt;&lt;ctrl name='Standard' role='tool bar' /&gt;&lt;ctrl name='New Query' role='push button' /&gt;&lt;ctrl name='_New Query' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='ToolBarDockTop' role='pane' /&gt;&lt;ctrl name='Standard' role='tool bar' /&gt;&lt;ctrl name='New Query' role='push button' /&gt;&lt;ctrl name='_New Query' role='text' automationid='' check:text='_New Query' /&gt;" Guid="81e7cf73-2f6c-48c3-b280-5ee2eea7bd3e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFwAAAAdCAYAAAAn6wuRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAKGSURBVGhD7ZVBcsIwDAD7DvoB+gjKnTdwyJknMFzzBGY45gnMcOQHHOiJvoC+w0WKFRRFssMAJu34sFMaO7K0lp23r+8fl0lHFp6YLDwxWXhisvDEZOGJycITk4UnJgtPTEv4sVq6949PN5qt3e50bk3E8dPWFeOJm5aHzlhqNosJ5soZQl4xVOFAUQ1T+HG/dtNLDrIprOdDoyN8NF664tI98HcjEn+18EbqYquP+/ys8SGgCt8Yib9aOFwjWiNw6hrmbrUfZpcbws9uV847iVvCqfPoOuLHGiUZx5/HOZ4ObjW7v3tljlZc83mgFqCpx1+/8Hul1IixaA02ZgrXJmvCpTxZiNZxsJmyGIqtfTtw3K9jjROd9S2xyvNYLQB9rFvvefkyNy1nUzj+L17o3T1MsrZJkHRRQmy2llhb8mzhfWqB/7VrzXoXbwnR+UHhAF+gI9yQIJ9jjKYwiAEFtDtaS47zdOG31KLkWV/BrIGURgOiwvmLlnA4ThqUJI+Lv33CkHwdty5eJsehtaU4SSfHG4VrdQAx4bSuVjOfFxUOXD+gunDZFRI+jyTjc5KP4+17XgOLVfLj1DVcY93b4RJLuBzD30pz9BLeJDebY1Kx7pHQvOnl3q6vEy+DRJdefEAkQFKsk2CdAk2SnNu3lpDwZrMru4F6CccxXywcL14wvMOPHD6DYkRS9R192TD2nIqUMUPQelIM5afJkDnydXmcPrUEhfO4xpzewgFYDIJJOZQoRx5NqzthI7T5IXhhEn6dcGgdoqj0jo7VEhIO0DpWA7WE/3XkRsSuh2dQf+/spv1Xwl8NbXhoo7PwBxLrbiALfwB0b8dkA1l4YrLwxGThSflxv8r4lDFE0np+AAAAAElFTkSuQmCC" InformativeScreenshot="aeb9bb64b962d40ac7fe24958b969179.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' cls='HwndWrapper*' title='Microsoft SQL Server Management Studio' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
                                       <uix:TargetAnchorable.Anchors>
@@ -224,7 +343,7 @@
                                     </uix:TargetAnchorable>
                                   </uix:NClick.Target>
                                 </uix:NClick>
-                                <uix:NGetText DisplayName="Get Text 'GNCCentral'" sap:VirtualizedContainerService.HintSize="484,158" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="76f32f12-e70e-4c48-8d82-5dad13556ef8" Version="V1">
+                                <uix:NGetText DisplayName="Get Text 'GNCCentral'" sap:VirtualizedContainerService.HintSize="484,156" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="76f32f12-e70e-4c48-8d82-5dad13556ef8" Version="V1">
                                   <uix:NGetText.Target>
                                     <uix:TargetAnchorable DesignTimeRectangle="128, 142, 216, 25" ElementType="InputBox" FriendlyName="'GNCCentral'" FullSelectorArgument="&lt;ctrl name='ToolBarDockTop' role='pane' /&gt;&lt;ctrl name='SQL Editor' role='tool bar' /&gt;&lt;ctrl automationid='PART_FocusTarget' /&gt;&lt;ctrl automationid='PART_EditableTextBox' /&gt;" FuzzySelectorArgument="&lt;ctrl name='ToolBarDockTop' role='pane' /&gt;&lt;ctrl name='SQL Editor' role='tool bar' /&gt;&lt;ctrl automationid='PART_FocusTarget' /&gt;&lt;ctrl automationid='PART_EditableTextBox' role='editable text' /&gt;" Guid="12d0f37e-9156-4f7b-a1cd-41cc784caeaf" InformativeScreenshot="1138088d68edb4f0a7ef52f658d9369d.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' cls='HwndWrapper*' title='SQLQuery2.sql - COLBDGSRVBDQE01\EDS.GNCCentral (usr_bots (72)) -*' /&gt;" SearchSteps="Selector, FuzzySelector" />
                                   </uix:NGetText.Target>
@@ -234,32 +353,32 @@
                                     </OutArgument>
                                   </uix:NGetText.Text>
                                 </uix:NGetText>
-                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Trace">
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Trace">
                                   <ui:LogMessage.Message>
                                     <InArgument x:TypeArguments="x:Object">
                                       <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">Str_EsquemaBD</mca:CSharpValue>
                                     </InArgument>
                                   </ui:LogMessage.Message>
                                 </ui:LogMessage>
-                                <If sap:VirtualizedContainerService.HintSize="484,731.333333333333" sap2010:WorkflowViewState.IdRef="If_2">
+                                <If sap:VirtualizedContainerService.HintSize="484,716" sap2010:WorkflowViewState.IdRef="If_2">
                                   <If.Condition>
                                     <InArgument x:TypeArguments="x:Boolean">
                                       <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">Str_EsquemaBD != "GNCCentral"</mca:CSharpValue>
                                     </InArgument>
                                   </If.Condition>
                                   <If.Then>
-                                    <Sequence sap:VirtualizedContainerService.HintSize="376,537.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                    <Sequence sap:VirtualizedContainerService.HintSize="376,528" sap2010:WorkflowViewState.IdRef="Sequence_11">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'GNCCentral'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,220" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="76f32f12-e70e-4c48-8d82-5dad13556ef8" Text="GNCCentral" Version="V1">
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'GNCCentral'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="76f32f12-e70e-4c48-8d82-5dad13556ef8" Text="GNCCentral" Version="V1">
                                         <uix:NTypeInto.Target>
                                           <uix:TargetAnchorable DesignTimeRectangle="128, 142, 216, 25" ElementType="InputBox" FriendlyName="'GNCCentral'" FullSelectorArgument="&lt;ctrl name='ToolBarDockTop' role='pane' /&gt;&lt;ctrl name='SQL Editor' role='tool bar' /&gt;&lt;ctrl automationid='PART_FocusTarget' /&gt;&lt;ctrl automationid='PART_EditableTextBox' /&gt;" FuzzySelectorArgument="&lt;ctrl name='ToolBarDockTop' role='pane' /&gt;&lt;ctrl name='SQL Editor' role='tool bar' /&gt;&lt;ctrl automationid='PART_FocusTarget' /&gt;&lt;ctrl automationid='PART_EditableTextBox' role='editable text' /&gt;" Guid="b839d4d6-1f99-4892-80bd-8465af1797d0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANwAAAAdCAYAAADB7gKQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAKoSURBVHhe7ZpLsqQgEEVdlDtiOS7HcQ97Db69UBG0KGCaZFJQbdEdegdn8IrkV3FPgcYbfv3+cQCAPiThXq8XAODLQDgAOgLhAOgIhAOgIxAOgI5AOAA6AuEA6AiE+wfMZnDDOLnFWrEd3Jcq4ZZpdMOwhoRh5iMwdjb750qQrJ2dWdvHacnaPPIco5uWfKyW2v8RCPdcisJFSYbBuJmFYxPMzOe/Q/ipiKldEa40x2zOErXUXkWcU9rTp0C456IKl8JNpCqxC2ec8WGSBBWEa5mjdT1XYZfJjRAOXIQq3H5ty8XRiMLNihiScC1ztK7nKiAcuBJRuE9Ok0M4G+SQr4NROGsXN411c7TURqIo6RmPBTyFntXRH4SthrRthDWk/vEqHcZPaxX6nMaFcI9EFu6DX3UqXAodCVUmXJiDBlyjpdbD6yVhk0x0jUEeum/tu0j9mUx+DLpO6WSHcM+lSbgYyEQW1uPKx8fQhKuRuqlWOQ339R2n7i4MP4XzvmXh6q64XDAI91w+PuF4aLhwqSadep2EU2r551ros30p45WkEa+VpLbUF9yb4jMcvQZxsmAKwtFxMuEq5og01QZBTmEnfFu47fO1nq6V12p9wf0RhfO8CwVvl4TzHC9QcmlagldbqwnC0cbL9tUgXG1t7V7A/VCFi+HRTpUsmIpwxwuUMRvv3RyU2lrtGY6jhT7b118Kd+z/qIVwz0UVzrNLtIaDv4AQQqQJt7WFIPKr1tYW5xACmP2nSWVtrDsHfz1hK0KfCadcZ0XhQi39vrY6tmYI91yKwnnEFwAbkgyycJ4YPOmE0uconJhvapOcBCqgFnpRJDpWkEnrT39cPH6/vFbrC+7PW+EAANcB4QDoCIQDoCMQDoCOQDgAOgLhAOhIEg4A8G1+3B+Ot8bP73UX3wAAAABJRU5ErkJggg==" InformativeScreenshot="c1868a25a4dd00397ef407dcb6ecc154.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' cls='HwndWrapper*' title='SQLQuery2.sql - COLBDGSRVBDQE01\EDS.GNCCentral (usr_bots (72)) -*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
                                         </uix:NTypeInto.Target>
                                       </uix:NTypeInto>
-                                      <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="334,184" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1" />
+                                      <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="334,178" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1" />
                                     </Sequence>
                                   </If.Then>
                                   <If.Else>
@@ -272,14 +391,14 @@
                                     </Sequence>
                                   </If.Else>
                                 </If>
-                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace">
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace">
                                   <ui:LogMessage.Message>
                                     <InArgument x:TypeArguments="x:Object">
                                       <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">"Conexion con SQLServer correcta"</mca:CSharpValue>
                                     </InArgument>
                                   </ui:LogMessage.Message>
                                 </ui:LogMessage>
-                                <Assign sap:VirtualizedContainerService.HintSize="484,62" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                <Assign sap:VirtualizedContainerService.HintSize="484,61" sap2010:WorkflowViewState.IdRef="Assign_2">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="x:String">
                                       <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">Out_Str_SystemException</mca:CSharpReference>
@@ -292,20 +411,20 @@
                               </Sequence>
                             </uix:NCheckState.IfExists>
                             <uix:NCheckState.IfNotExists>
-                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="376,352" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="376,348" sap2010:WorkflowViewState.IdRef="Sequence_10">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Warn">
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Warn">
                                   <ui:LogMessage.Message>
                                     <InArgument x:TypeArguments="x:Object">
                                       <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">"Error de conexion con SQLServer "</mca:CSharpValue>
                                     </InArgument>
                                   </ui:LogMessage.Message>
                                 </ui:LogMessage>
-                                <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_3">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="x:String">
                                       <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">Out_Str_SystemException</mca:CSharpReference>
@@ -338,7 +457,7 @@
                       </InArgument>
                     </uix:NApplicationCard.Timeout>
                   </uix:NApplicationCard>
-                  <Assign sap:VirtualizedContainerService.HintSize="1032,62" sap2010:WorkflowViewState.IdRef="Assign_1">
+                  <Assign sap:VirtualizedContainerService.HintSize="1032,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">
                         <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">Out_Str_SystemException</mca:CSharpReference>
@@ -352,7 +471,7 @@
                 </Sequence>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="si:IOException" sap:VirtualizedContainerService.HintSize="1078.66666666667,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                <Catch x:TypeArguments="si:IOException" sap:VirtualizedContainerService.HintSize="1078,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -363,13 +482,13 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="si:IOException" Name="exception" />
                     </ActivityAction.Argument>
-                    <Sequence sap:VirtualizedContainerService.HintSize="376,186.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <Sequence sap:VirtualizedContainerService.HintSize="376,187" sap2010:WorkflowViewState.IdRef="Sequence_4">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace">
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace">
                         <ui:LogMessage.Message>
                           <InArgument x:TypeArguments="x:Object">
                             <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">"No se pudo realizar conexión con SQL \n"+exception.Message</mca:CSharpValue>
