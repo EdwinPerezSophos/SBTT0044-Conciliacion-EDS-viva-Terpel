@@ -3,7 +3,7 @@
     <x:Property Name="In_GBL_Int_NumIntentos" Type="InArgument(x:Int32)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1208,5261</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1208,5530</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -95,7 +95,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Exportar datos satelite desde SQL Server mediante query&#xA;&#xA;Precondicion: Fecha actual / documento: Calendario.xlsx&#xA;&#xA;Acciones: Extracción de reporte  de datos satelite  desde SQL hacía Excel" DisplayName="Exportar_datos_Satelite" sap:VirtualizedContainerService.HintSize="831,5196" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Exportar datos satelite desde SQL Server mediante query&#xA;&#xA;Precondicion: Fecha actual / documento: Calendario.xlsx&#xA;&#xA;Acciones: Extracción de reporte  de datos satelite  desde SQL hacía Excel" DisplayName="Exportar_datos_Satelite" sap:VirtualizedContainerService.HintSize="873,5465" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Str_SystemException" />
       <Variable x:TypeArguments="sd:DataTable" Name="DT_DatosSateliteExcel" />
@@ -108,7 +108,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Comment out" sap:VirtualizedContainerService.HintSize="789,254" sap2010:WorkflowViewState.IdRef="Sequence_7">
+    <Sequence DisplayName="Comment out" sap:VirtualizedContainerService.HintSize="831,254" sap2010:WorkflowViewState.IdRef="Sequence_7">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -151,35 +151,35 @@
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Ingreso a SQL studio y descarga de los datos para guardar en excel.&#xA;" sap:VirtualizedContainerService.HintSize="789,4723" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap2010:Annotation.AnnotationText="Ingreso a SQL studio y descarga de los datos para guardar en excel.&#xA;" sap:VirtualizedContainerService.HintSize="831,4992" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="747,4589" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+      <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="789,4858" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
         <ui:RepeatNumberOfTimesX.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="Intento" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="713,4434" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="755,4703" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="671,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="713,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
                 <ui:LogMessage.Message>
                   <InArgument x:TypeArguments="x:Object">
                     <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">"Extraccion de datos satelite SQL - Intento: "+Intento</mca:CSharpValue>
                   </InArgument>
                 </ui:LogMessage.Message>
               </ui:LogMessage>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="671,4211" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="713,4480" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <TryCatch.Try>
-                  <Sequence sap:VirtualizedContainerService.HintSize="633,3984" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence sap:VirtualizedContainerService.HintSize="675,4253" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="Str_query_Datos_Satelite" />
                     </Sequence.Variables>
@@ -188,12 +188,12 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke LogIn SQLServer workflow" sap:VirtualizedContainerService.HintSize="591,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Libreria Común\\LogIn SQLServer.xaml">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke LogIn SQLServer workflow" sap:VirtualizedContainerService.HintSize="633,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Libreria Común\\LogIn SQLServer.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <scg:Dictionary x:TypeArguments="x:String, Argument" />
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
-                    <Assign sap:VirtualizedContainerService.HintSize="591,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign sap:VirtualizedContainerService.HintSize="633,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">
                           <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">Str_query_Datos_Satelite</mca:CSharpReference>
@@ -205,7 +205,7 @@
                         </InArgument>
                       </Assign.Value>
                     </Assign>
-                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: SQLQuery3.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (67))* - Microsoft SQL Server " sap:VirtualizedContainerService.HintSize="591,1601" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="f613a1ff-f1b5-493f-b833-4b316b8b8fc7" Version="V1">
+                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: SQLQuery3.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (67))* - Microsoft SQL Server " sap:VirtualizedContainerService.HintSize="633,1601" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="f613a1ff-f1b5-493f-b833-4b316b8b8fc7" Version="V1">
                       <uix:NApplicationCard.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
@@ -255,110 +255,124 @@
                         <uix:TargetApp Area="-8, -8, 1936, 1056" FilePath="C:\\Program Files (x86)\\Microsoft SQL Server Management Studio 18\\Common7\\IDE\\ssms.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMRSURBVFhH1ZVbSBRRHMYH2mgDo4dE8iGoiHor6sUHoQShxU3xAkV2GyjNRGVps6JdqIeKHnzYICGiSLaLwk66RBe1wK3EzQIVCYoSkVxC6MlYN60tTv//+D96Zj2zl9EH++DHzJw5+33f7JyZUZa1JgPleYALuAFoQIjAfRyDc2V5NN2gWn+Rw9lSFEqCj6YaNfmowjZrXB4BWJrA3DJXJFBsIxvFdc+hQghLQoimGgVmwQTzTAiSjdL4oNByAZlx2pCNqVIWiL2qlBqnw1T3zsUX+Bs5yWYGj7Fo5wFpiIzok91suncD+zOsLE0BTny0iv0aVtl0/xEWe3OIxUKVbKprF4u92M5+9mxlM3257PfAKj2YQzamyqiADDFMBtmYajkUwKcDcdCQUbJQEVmoCNlYlyxURBYqQjbWJQsVkYUCI3yfbKxLFioihHK0odBm2/f3a3x4TDbWJQsVSQy/pZXYFXf40oWW6qzxt+vkH5hMJAsVEcOb2o5iuAYwwHu3vWjuYzQnd3gf8AGYALJp1FyyUBEefuVhrRgebLjtsuM42ejK9T7eAefiAIZvo+HkkoWKYEhH10EbGHoBDGebLmoFd9qdNViObHStPttzmebMF8CtO1yq78sEIfHEUAGtuaPOvtfnV8GkE9ALAMGK61fxH2gjG10rG19fE+ZgiVLa1tGUhZoaq6qBIFmJof53p/HKmwBu+hLgRbQcz1PDGoACWJTP5UwDG2mKXN++HN8SG6vyQeiYWGLic72rwX9zPRh8QrMcz/MTcJ+xFF8L2trz3XoJCM+H4ygRofP4O/kr2Ezx8ersH6O1BV8/ug4PDpxT/c/qs0qaW7FEU7ZnNszeGDKUWHGmdw9seXi+bpRM++87HWprsXoqUKLSUOZy94klkPTCUfhpBPTPJA1ZkzuMV84L4PpY+F6QaUkK4NXO/+0Yrt8OIHWJRRcwhuO+YU3ox8m0qAKJ4VyZlLBcwCycK7GEmcQCJsifjtnX6ghgvtrnS5h/KSHAWgFUqvuLSjUHAnwAljAjs7fX/yNF+QfVJ+SZf2TN5AAAAABJRU5ErkJggg==" InformativeScreenshot="956b9fd09ea50faee0d651a9dd7cd537.png" Selector="&lt;wnd app='ssms.exe' cls='HwndWrapper*' title='SQLQuery3.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (67))* - Mi*'/&gt;" />
                       </uix:NApplicationCard.TargetApp>
                     </uix:NApplicationCard>
-                    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="591,1999" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+                    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="633,2268" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
                       <ueab:ExcelProcessScopeX.Body>
                         <ActivityAction x:TypeArguments="ui:IExcelProcess">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="557,1913" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="599,2182" sap2010:WorkflowViewState.IdRef="Sequence_11">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="515,1821" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" WorkbookPath="Data\\Temp\\“Reporte fidelizaciones Satelite.xlsx">
+                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="557,2090" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" WorkbookPath="Data\\Temp\\Reporte fidelizaciones Satelite.xlsx">
                               <ueab:ExcelApplicationCard.Body>
                                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="ExcelDatosSatelite" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="481,1555" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="523,1824" sap2010:WorkflowViewState.IdRef="Sequence_14">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,137" sap2010:WorkflowViewState.IdRef="FormatRangeX_1">
-                                      <ueab:FormatRangeX.Alignment>
-                                        <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
-                                      </ueab:FormatRangeX.Alignment>
-                                      <ueab:FormatRangeX.Font>
-                                        <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" />
-                                      </ueab:FormatRangeX.Font>
-                                      <ueab:FormatRangeX.Format>
-                                        <ueab:TextFormat />
-                                      </ueab:FormatRangeX.Format>
-                                      <ueab:FormatRangeX.Range>
-                                        <InArgument x:TypeArguments="ue:IReadRangeRef">
-                                          <mca:CSharpValue x:TypeArguments="ue:IReadRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_29">ExcelDatosSatelite.Sheet["Hoja1"].Range["1:1048576"]</mca:CSharpValue>
-                                        </InArgument>
-                                      </ueab:FormatRangeX.Range>
-                                    </ueab:FormatRangeX>
-                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="439,326" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                                      <ui:CommentOut.Body>
-                                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,248" sap2010:WorkflowViewState.IdRef="Sequence_12">
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                          <uix:NClick ClickType="Single" DisplayName="Click 'System'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ExcelDatosSatelite" Version="V1">
-                                            <uix:NClick.InScope>
-                                              <InArgument x:TypeArguments="x:Object">
-                                                <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">ExcelDatosSatelite</mca:CSharpValue>
-                                              </InArgument>
-                                            </uix:NClick.InScope>
-                                            <uix:NClick.Target>
-                                              <uix:TargetAnchorable DesignTimeRectangle="8, 204, 22, 22" FriendlyName="'System'" FullSelectorArgument="&lt;ctrl automationid='MenuBar' idx='19' name='System' role='menu bar' /&gt;&lt;ctrl name='System' role='menu item' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='MenuBar' name='System' role='menu bar' /&gt;&lt;ctrl name='System' role='menu item' automationid='' check:text='System' /&gt;" Guid="a0e5036a-fa40-427a-8d5e-222ae0a76711" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADTSURBVEhL7dL9BoRAFIfhvf97iEQiGVISiWRIJNI9zG38dg/nZK39mBnNP6vhZeKMh2lusvBYxphgMXNB7jFzQXbt+37smTkfIqSu6+ObmXMhQYJCz0gw6BUJAr1DToc+IZTMMOMPfUMomWPGD/qFUDLLjDtkg1Ayz4wbZItQcoYZe8gFoeQcM/6PwTZm/hWi+9+2Deu6YlkWzPOMaZqgtcY4jhiGAX3fo+s6tG2LpmlQVRXKsoRSCkVRIM9zZFmGNE2RJAniOEYURdc/8o+Z0JDBHbM30dhbrU79AAAAAElFTkSuQmCC" InformativeScreenshot="67108e01f95935e8569413b27b884d01.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='ExcelDatosSateliteTemp - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image" SelectionStrategy="AA" />
-                                            </uix:NClick.Target>
-                                          </uix:NClick>
-                                        </Sequence>
-                                      </ui:CommentOut.Body>
-                                    </ui:CommentOut>
-                                    <ueab:WriteCellX DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,157" sap2010:WorkflowViewState.IdRef="WriteCellX_1">
-                                      <ueab:WriteCellX.Cell>
-                                        <InArgument x:TypeArguments="ue:IReadWriteCellRef">
-                                          <mca:CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">ExcelDatosSatelite.Sheet["Hoja1"].Cell["A1"]</mca:CSharpValue>
-                                        </InArgument>
-                                      </ueab:WriteCellX.Cell>
-                                      <ueab:WriteCellX.Value>
-                                        <InArgument x:TypeArguments="x:Object">
-                                          <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">""</mca:CSharpValue>
-                                        </InArgument>
-                                      </ueab:WriteCellX.Value>
-                                    </ueab:WriteCellX>
-                                    <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="439,178" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" ScopeIdentifier="ExcelDatosSatelite" Shortcuts="[d(hk)][d(alt)d(ctrl)]v[u(ctrl)u(alt)][u(hk)]" Version="V1">
-                                      <uix:NKeyboardShortcuts.InScope>
-                                        <InArgument x:TypeArguments="x:Object">
-                                          <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">ExcelDatosSatelite</mca:CSharpValue>
-                                        </InArgument>
-                                      </uix:NKeyboardShortcuts.InScope>
-                                    </uix:NKeyboardShortcuts>
-                                    <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="439,178" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" ScopeIdentifier="ExcelDatosSatelite" Shortcuts="[d(hk)][k(down)][u(hk)][d(hk)][k(enter)][u(hk)]" Version="V1">
-                                      <uix:NKeyboardShortcuts.InScope>
-                                        <InArgument x:TypeArguments="x:Object">
-                                          <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">ExcelDatosSatelite</mca:CSharpValue>
-                                        </InArgument>
-                                      </uix:NKeyboardShortcuts.InScope>
-                                    </uix:NKeyboardShortcuts>
-                                    <uix:NClick ClickType="Single" DisplayName="Click 'Guardar'" sap:VirtualizedContainerService.HintSize="439,156" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ExcelDatosSatelite" Version="V1">
-                                      <uix:NClick.InScope>
-                                        <InArgument x:TypeArguments="x:Object">
-                                          <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">ExcelDatosSatelite</mca:CSharpValue>
-                                        </InArgument>
-                                      </uix:NClick.InScope>
-                                      <uix:NClick.Target>
-                                        <uix:TargetAnchorable DesignTimeRectangle="12, 8, 46, 31" FriendlyName="'Guardar'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIElement' name='Barra de herramientas de acceso rápido' /&gt;&lt;uia cls='NetUIRibbonButton' name='Guardar' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIElement' name='Barra de herramientas de acceso rápido' /&gt;&lt;uia cls='NetUIRibbonButton' name='Guardar' role='Botón' automationid='' check:fulltext='Guardar' /&gt;" Guid="4a7e146b-ccab-449b-a30c-da01a9a83d90" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAAjCAYAAADWtVmPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACNSURBVFhH7c/RDYAgDIRhZnEZF3IJZ3ALF2MEjI82R9JWjBdyJN8ThfQvOmynTXLKsq1tBgphoxA2CmEzLKTWmoL+yhgegu4QhXQoxFIIuMsYHuJZLjLr9UlIBPorQyFWZLnIrJdCLLRcb1k0+5ZCrP08Hgt63G/QXxnDQv6mEDYKYaMQNgphoxAua7sALdY6LnjmbR4AAAAASUVORK5CYII=" InformativeScreenshot="b305874d8f8ce9384b3c6955a4d3afaf.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='ExcelDatosSateliteTemp - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
-                                      </uix:NClick.Target>
-                                    </uix:NClick>
-                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="439,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info">
-                                      <ui:LogMessage.Message>
-                                        <InArgument x:TypeArguments="x:Object">
-                                          <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">"Ejecución de desarga datos satelite finalizado exitosamente"</mca:CSharpValue>
-                                        </InArgument>
-                                      </ui:LogMessage.Message>
-                                    </ui:LogMessage>
+                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="481,1732" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ueab:RenameSheetX DisplayName="Rename Sheet" sap:VirtualizedContainerService.HintSize="439,137" sap2010:WorkflowViewState.IdRef="RenameSheetX_1" To="Reporte ventas Satelite">
+                                        <ueab:RenameSheetX.From>
+                                          <InArgument x:TypeArguments="ue:ISheetRef">
+                                            <mca:CSharpValue x:TypeArguments="ue:ISheetRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">ExcelDatosSatelite.Sheet["Hoja1"]</mca:CSharpValue>
+                                          </InArgument>
+                                        </ueab:RenameSheetX.From>
+                                      </ueab:RenameSheetX>
+                                      <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,137" sap2010:WorkflowViewState.IdRef="FormatRangeX_1">
+                                        <ueab:FormatRangeX.Alignment>
+                                          <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                                        </ueab:FormatRangeX.Alignment>
+                                        <ueab:FormatRangeX.Font>
+                                          <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" />
+                                        </ueab:FormatRangeX.Font>
+                                        <ueab:FormatRangeX.Format>
+                                          <ueab:TextFormat />
+                                        </ueab:FormatRangeX.Format>
+                                        <ueab:FormatRangeX.Range>
+                                          <InArgument x:TypeArguments="ue:IReadRangeRef">
+                                            <mca:CSharpValue x:TypeArguments="ue:IReadRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">ExcelDatosSatelite.Sheet["Reporte ventas Satelite"].Range["1:1048576"]</mca:CSharpValue>
+                                          </InArgument>
+                                        </ueab:FormatRangeX.Range>
+                                      </ueab:FormatRangeX>
+                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="439,326" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                                        <ui:CommentOut.Body>
+                                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,248" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <uix:NClick ClickType="Single" DisplayName="Click 'System'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ExcelDatosSatelite" Version="V1">
+                                              <uix:NClick.InScope>
+                                                <InArgument x:TypeArguments="x:Object">
+                                                  <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">ExcelDatosSatelite</mca:CSharpValue>
+                                                </InArgument>
+                                              </uix:NClick.InScope>
+                                              <uix:NClick.Target>
+                                                <uix:TargetAnchorable DesignTimeRectangle="8, 204, 22, 22" FriendlyName="'System'" FullSelectorArgument="&lt;ctrl automationid='MenuBar' idx='19' name='System' role='menu bar' /&gt;&lt;ctrl name='System' role='menu item' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='MenuBar' name='System' role='menu bar' /&gt;&lt;ctrl name='System' role='menu item' automationid='' check:text='System' /&gt;" Guid="a0e5036a-fa40-427a-8d5e-222ae0a76711" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADTSURBVEhL7dL9BoRAFIfhvf97iEQiGVISiWRIJNI9zG38dg/nZK39mBnNP6vhZeKMh2lusvBYxphgMXNB7jFzQXbt+37smTkfIqSu6+ObmXMhQYJCz0gw6BUJAr1DToc+IZTMMOMPfUMomWPGD/qFUDLLjDtkg1Ayz4wbZItQcoYZe8gFoeQcM/6PwTZm/hWi+9+2Deu6YlkWzPOMaZqgtcY4jhiGAX3fo+s6tG2LpmlQVRXKsoRSCkVRIM9zZFmGNE2RJAniOEYURdc/8o+Z0JDBHbM30dhbrU79AAAAAElFTkSuQmCC" InformativeScreenshot="67108e01f95935e8569413b27b884d01.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='ExcelDatosSateliteTemp - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image" SelectionStrategy="AA" />
+                                              </uix:NClick.Target>
+                                            </uix:NClick>
+                                          </Sequence>
+                                        </ui:CommentOut.Body>
+                                      </ui:CommentOut>
+                                      <ueab:WriteCellX DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,157" sap2010:WorkflowViewState.IdRef="WriteCellX_1">
+                                        <ueab:WriteCellX.Cell>
+                                          <InArgument x:TypeArguments="ue:IReadWriteCellRef">
+                                            <mca:CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">ExcelDatosSatelite.Sheet["Reporte ventas Satelite"].Cell["A1"]</mca:CSharpValue>
+                                          </InArgument>
+                                        </ueab:WriteCellX.Cell>
+                                        <ueab:WriteCellX.Value>
+                                          <InArgument x:TypeArguments="x:Object">
+                                            <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">""</mca:CSharpValue>
+                                          </InArgument>
+                                        </ueab:WriteCellX.Value>
+                                      </ueab:WriteCellX>
+                                      <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="439,178" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" ScopeIdentifier="ExcelDatosSatelite" Shortcuts="[d(hk)][d(alt)d(ctrl)]v[u(ctrl)u(alt)][u(hk)]" Version="V1">
+                                        <uix:NKeyboardShortcuts.InScope>
+                                          <InArgument x:TypeArguments="x:Object">
+                                            <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">ExcelDatosSatelite</mca:CSharpValue>
+                                          </InArgument>
+                                        </uix:NKeyboardShortcuts.InScope>
+                                      </uix:NKeyboardShortcuts>
+                                      <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="439,178" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" ScopeIdentifier="ExcelDatosSatelite" Shortcuts="[d(hk)][k(down)][u(hk)][d(hk)][k(enter)][u(hk)]" Version="V1">
+                                        <uix:NKeyboardShortcuts.InScope>
+                                          <InArgument x:TypeArguments="x:Object">
+                                            <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">ExcelDatosSatelite</mca:CSharpValue>
+                                          </InArgument>
+                                        </uix:NKeyboardShortcuts.InScope>
+                                      </uix:NKeyboardShortcuts>
+                                      <uix:NClick ClickType="Single" DisplayName="Click 'Guardar'" sap:VirtualizedContainerService.HintSize="439,156" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ExcelDatosSatelite" Version="V1">
+                                        <uix:NClick.InScope>
+                                          <InArgument x:TypeArguments="x:Object">
+                                            <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">ExcelDatosSatelite</mca:CSharpValue>
+                                          </InArgument>
+                                        </uix:NClick.InScope>
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable DesignTimeRectangle="12, 8, 46, 31" FriendlyName="'Guardar'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIElement' name='Barra de herramientas de acceso rápido' /&gt;&lt;uia cls='NetUIRibbonButton' name='Guardar' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIElement' name='Barra de herramientas de acceso rápido' /&gt;&lt;uia cls='NetUIRibbonButton' name='Guardar' role='Botón' automationid='' check:fulltext='Guardar' /&gt;" Guid="4a7e146b-ccab-449b-a30c-da01a9a83d90" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAAjCAYAAADWtVmPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACNSURBVFhH7c/RDYAgDIRhZnEZF3IJZ3ALF2MEjI82R9JWjBdyJN8ThfQvOmynTXLKsq1tBgphoxA2CmEzLKTWmoL+yhgegu4QhXQoxFIIuMsYHuJZLjLr9UlIBPorQyFWZLnIrJdCLLRcb1k0+5ZCrP08Hgt63G/QXxnDQv6mEDYKYaMQNgphoxAua7sALdY6LnjmbR4AAAAASUVORK5CYII=" InformativeScreenshot="b305874d8f8ce9384b3c6955a4d3afaf.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='ExcelDatosSateliteTemp - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="439,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info">
+                                        <ui:LogMessage.Message>
+                                          <InArgument x:TypeArguments="x:Object">
+                                            <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">"Ejecución de desarga datos satelite finalizado exitosamente"</mca:CSharpValue>
+                                          </InArgument>
+                                        </ui:LogMessage.Message>
+                                      </ui:LogMessage>
+                                    </Sequence>
                                   </Sequence>
                                 </ActivityAction>
                               </ueab:ExcelApplicationCard.Body>
@@ -370,7 +384,7 @@
                   </Sequence>
                 </TryCatch.Try>
                 <TryCatch.Catches>
-                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="637,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="679,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
