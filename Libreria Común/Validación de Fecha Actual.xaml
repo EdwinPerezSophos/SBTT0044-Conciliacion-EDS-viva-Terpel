@@ -4,7 +4,7 @@
     <x:Property Name="In_Str_ArchivoCalendario" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>879,1539</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1208,1539</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -146,19 +146,19 @@
                             </ueab:FindReplaceValueX.FoundAt>
                             <ueab:FindReplaceValueX.ValueToFind>
                               <InArgument x:TypeArguments="x:Object">
-                                <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">DateTime.Today</mca:CSharpValue>
+                                <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_62">DateTime.Today.ToString("M/d/yyyy")</mca:CSharpValue>
                               </InArgument>
                             </ueab:FindReplaceValueX.ValueToFind>
                             <ueab:FindReplaceValueX.WhereToSearch>
                               <InArgument x:TypeArguments="ue:IReadRangeRef">
-                                <mca:CSharpValue x:TypeArguments="ue:IReadRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">Excel.Sheet["Calendario fidelización"].Range["A2:A366"]</mca:CSharpValue>
+                                <mca:CSharpValue x:TypeArguments="ue:IReadRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">Excel.Sheet["Calendario fidelización"].Range["A:A"]</mca:CSharpValue>
                               </InArgument>
                             </ueab:FindReplaceValueX.WhereToSearch>
                           </ueab:FindReplaceValueX>
                           <ueab:ReadRangeX DisplayName="Read Range" HasHeaders="False" sap:VirtualizedContainerService.HintSize="444,167" sap2010:WorkflowViewState.IdRef="ReadRangeX_4">
                             <ueab:ReadRangeX.Range>
                               <InArgument x:TypeArguments="ue:IReadRangeRef">
-                                <mca:CSharpValue x:TypeArguments="ue:IReadRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">Excel.Sheet["Calendario fidelización"].Range[Str_CeldaFechaActual+":F"+Str_CeldaFechaActual.Substring(1)]</mca:CSharpValue>
+                                <mca:CSharpValue x:TypeArguments="ue:IReadRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_61">Excel.Sheet["Calendario fidelización"].Range[Str_CeldaFechaActual+":F"+Str_CeldaFechaActual.Substring(1)]</mca:CSharpValue>
                               </InArgument>
                             </ueab:ReadRangeX.Range>
                             <ueab:ReadRangeX.SaveTo>
