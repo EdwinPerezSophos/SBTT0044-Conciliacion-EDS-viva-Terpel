@@ -5,7 +5,7 @@
     <x:Property Name="In_GBL_int_TiempoMaxValidaciones" Type="InArgument(x:Int32)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>2056,6134</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2056.66666666667,6168.66666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -96,6 +96,7 @@
       <AssemblyReference>UiPath.CV</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -104,7 +105,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="LogIn en SalesForce&#xA;&#xA;Precondicion: ninguna&#xA;Acciones: Abre el sistema de SalesForce en Chrome si las credenciales son correctas&#xA;" DisplayName="LogIn_Saleforce" sap:VirtualizedContainerService.HintSize="2066,6069" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="LogIn en SalesForce&#xA;&#xA;Precondicion: ninguna&#xA;Acciones: Abre el sistema de SalesForce en Chrome si las credenciales son correctas&#xA;" DisplayName="LogIn_Saleforce" sap:VirtualizedContainerService.HintSize="2066.66666666667,6104" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Cred_Username" />
       <Variable x:TypeArguments="ss:SecureString" Name="Cred_Password" />
@@ -117,7 +118,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Credencial de SalesForce" AssetName="CV_EDS_Credencial_SalesForce" DisplayName="Get Credential" FolderPath="Default" sap:VirtualizedContainerService.HintSize="2024,111" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1">
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Credencial de SalesForce" AssetName="CV_EDS_Credencial_SalesForce" DisplayName="Get Credential" FolderPath="Default" sap:VirtualizedContainerService.HintSize="2024.66666666667,111.333333333333" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1">
       <ui:GetRobotCredential.Password>
         <OutArgument x:TypeArguments="ss:SecureString">
           <mca:CSharpReference x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">Cred_Password</mca:CSharpReference>
@@ -134,27 +135,27 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetRobotCredential>
-    <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="Número de intentos para realizar la tarea &#xA;" DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="2024,5734" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+    <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="Número de intentos para realizar la tarea &#xA;" DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="2024.66666666667,5765.33333333333" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
       <ui:RepeatNumberOfTimesX.Body>
         <ActivityAction x:TypeArguments="x:Int32">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Int32" Name="Intento" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1990,5532" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1990.66666666667,5559.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1948,5440" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1948.66666666667,5467.33333333333" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <TryCatch.Try>
-                <Sequence sap2010:Annotation.AnnotationText="Secuencia de ingreso a SalesForce" sap:VirtualizedContainerService.HintSize="1910,4217" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <Sequence sap2010:Annotation.AnnotationText="Secuencia de ingreso a SalesForce" sap:VirtualizedContainerService.HintSize="1910,4238" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -162,7 +163,7 @@
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1868,93" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1868,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
                     <ui:LogMessage.Message>
                       <InArgument x:TypeArguments="x:Object">
                         <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">"LogIn SalesForce Intento:"+Intento</mca:CSharpValue>
@@ -174,13 +175,13 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:LogMessage>
-                  <uix:NApplicationCard sap2010:Annotation.AnnotationText="Abrir el navegador" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Login | Salesforce" sap:VirtualizedContainerService.HintSize="1868,3768" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="bc920b14-1c5d-4da5-9f2b-4361b31b4961" Version="V1" WindowResize="Maximize">
+                  <uix:NApplicationCard sap2010:Annotation.AnnotationText="Abrir el navegador" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Login | Salesforce" sap:VirtualizedContainerService.HintSize="1868,3788" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="bc920b14-1c5d-4da5-9f2b-4361b31b4961" Version="V1" WindowResize="Maximize">
                     <uix:NApplicationCard.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                         </ActivityAction.Argument>
-                        <Sequence sap2010:Annotation.AnnotationText="Acciones del navegador" sap:VirtualizedContainerService.HintSize="1834,3520" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                        <Sequence sap2010:Annotation.AnnotationText="Acciones del navegador" sap:VirtualizedContainerService.HintSize="1834,3539.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -188,22 +189,22 @@
                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1792,3395" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1792,3414" sap2010:WorkflowViewState.IdRef="Sequence_9">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <uix:NCheckState Exists="{x:Null}" sap2010:Annotation.AnnotationText="Verificación de sesion ya iniciada" DelayBefore="5" DisplayName="Check App State 'Fielo PlatformBuscar...…'" sap:VirtualizedContainerService.HintSize="1750,2416" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="bc920b14-1c5d-4da5-9f2b-4361b31b4961" Version="V1">
+                            <uix:NCheckState Exists="{x:Null}" sap2010:Annotation.AnnotationText="Verificación de sesion ya iniciada" DelayBefore="5" DisplayName="Check App State 'Fielo PlatformBuscar...…'" sap:VirtualizedContainerService.HintSize="1750,2434" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="bc920b14-1c5d-4da5-9f2b-4361b31b4961" Version="V1">
                               <uix:NCheckState.IfExists>
-                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,187" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,189.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_18">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_7">
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_7">
                                     <ui:LogMessage.Message>
                                       <InArgument x:TypeArguments="x:Object">
                                         <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">"Sesion ya iniciada"</mca:CSharpValue>
@@ -213,22 +214,22 @@
                                 </Sequence>
                               </uix:NCheckState.IfExists>
                               <uix:NCheckState.IfNotExists>
-                                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="1320,2167" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="1320,2183.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_19">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1278,93" sap2010:WorkflowViewState.IdRef="LogMessage_8">
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1278,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_8">
                                     <ui:LogMessage.Message>
                                       <InArgument x:TypeArguments="x:Object">
                                         <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">"No se ha Iniciado Sesión"</mca:CSharpValue>
                                       </InArgument>
                                     </ui:LogMessage.Message>
                                   </ui:LogMessage>
-                                  <uix:NCheckState Exists="{x:Null}" sap2010:Annotation.AnnotationText="Acciones en caso de tener que iniciar sesion " DelayBefore="3" DisplayName="Check App State 'Salesforce0 Saved'" sap:VirtualizedContainerService.HintSize="1278,1940" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="bc920b14-1c5d-4da5-9f2b-4361b31b4961" Version="V1">
+                                  <uix:NCheckState Exists="{x:Null}" sap2010:Annotation.AnnotationText="Acciones en caso de tener que iniciar sesion " DelayBefore="3" DisplayName="Check App State 'Salesforce0 Saved'" sap:VirtualizedContainerService.HintSize="1278,1954" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="bc920b14-1c5d-4da5-9f2b-4361b31b4961" Version="V1">
                                     <uix:NCheckState.IfExists>
-                                      <Sequence sap2010:Annotation.AnnotationText="Acciones para inicio de session" DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="848,1691" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                      <Sequence sap2010:Annotation.AnnotationText="Acciones para inicio de session" DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="848,1703.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_11">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -236,7 +237,7 @@
                                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Credencial Usuario de Salesforce" ClickBeforeMode="Single" DisplayName="Usuario" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="806,249" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="bc920b14-1c5d-4da5-9f2b-4361b31b4961" Version="V1">
+                                        <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Credencial Usuario de Salesforce" ClickBeforeMode="Single" DisplayName="Usuario" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="806,250.666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="bc920b14-1c5d-4da5-9f2b-4361b31b4961" Version="V1">
                                           <uix:NTypeInto.Target>
                                             <uix:TargetAnchorable BrowserURL="https://terpel--fullcopy.my.salesforce.com/" DesignTimeRectangle="398, 587, 507, 64" ElementType="InputBox" FriendlyName="'INPUT username'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='email' /&gt;" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='email' aaname='Username' /&gt;" Guid="e7cb6d91-290c-4d47-b355-f90dda195044" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVYAAAAvCAYAAAC49eI+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKtSURBVHhe7dpPalRZGMbhs4lehgsQGnQVit1uKI4cOGrUmUl04gZ0IOqsFXGkIgHB6CDmVhXRklRV6ut+r4FusNs/8cx8HnihoO74x+Hc29brqtVR1Xyxrsl8VW9ny3o1LGrn3WG93DMzs/9aGplWpplpZxqalqapLT/eHx7V7nRZT3Y/1t0XB3X76ay2H09r89GkbvxpZmb/XtqYRqaVaWbamYampWlqS2VfTxf1cOdDXb431LnN/Tp1ZahfNszM7EtLK3+/NYztTEPT0jS15Qib2uaP038MtXF/Xs/2VgXAl6WVaebZ65OxoWlpmtrezJZ15/lBnd/aHx8A4PtcejCvi3+fXNPSNLXl8jX3BDnSOqkCfL+0Mw1NS9PUljdbuYTNfQEAJ5OGpqVpastnA3nDJawAJ5eGpqVp6hjWfD4grAAnl4ampcIK0ImwAnQmrACdCStAZ8IK0JmwAnTWLaytteNfAD83YQXoTFgBOhNWgM6EFaAzYQXoTFgBOhNWgM6EFaAzYQXoTFgBOhNWgM6EFaAzYQXoTFgBOhNWgM6EFaCzbmEF4BNhBehMWAE6E1aAzoQVoDNhBehMWAE6+yysm4+EFeBHpKFp6RjWnXeHtf14KqwAPyANTUvT1PZqWNTtp7M6dWWoZ3ur40cA+FZpZxqalqap7c1sWXeeH9SF7aE27s+PHwPgW116MK/zW8PY0jS1TearerL7sS7fG+rMtcn4gJMrwNellWnmr1eHsaFpaZra5ot1vZ4u6uHOh/GPc1v745E29wVmZvb/Syt/u/kpqmloWpqmttVR1fvDo9qdLsfa3n1xMN4T5BI2b7jy+YCZmf2ztDGNTCvTzLQzDU1L09S2Xtf4I5XNEfbtbDlevubNVj4bMDOzz5dGppVpZtqZhqal63XVXyMyRwuA5RCfAAAAAElFTkSuQmCC" InformativeScreenshot="8feb703672ffa71ff5d4d6e3389eff5a.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login | Salesforce' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
                                               <uix:TargetAnchorable.Anchors>
@@ -257,7 +258,7 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </uix:NTypeInto>
-                                        <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Credencial Contraseña de SalesForce" ClickBeforeMode="Single" DisplayName="Contraseña" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="806,274" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="bc920b14-1c5d-4da5-9f2b-4361b31b4961" Version="V1">
+                                        <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Credencial Contraseña de SalesForce" ClickBeforeMode="Single" DisplayName="Contraseña" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="806,275.333333333333" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="bc920b14-1c5d-4da5-9f2b-4361b31b4961" Version="V1">
                                           <uix:NTypeInto.SecureText>
                                             <InArgument x:TypeArguments="ss:SecureString">
                                               <mca:CSharpValue x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">Cred_Password</mca:CSharpValue>
@@ -278,23 +279,23 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </uix:NTypeInto>
-                                        <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" sap2010:Annotation.AnnotationText="Enter" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="806,210" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1">
+                                        <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" sap2010:Annotation.AnnotationText="Enter" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="806,214.666666666667" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V1">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </uix:NKeyboardShortcuts>
-                                        <uix:NCheckState Exists="{x:Null}" sap2010:Annotation.AnnotationText="Validacion de ingreso exitoso" DelayBefore="3" DisplayName="Check App State 'Fielo PlatformBuscar...…'" sap:VirtualizedContainerService.HintSize="806,713" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="bc920b14-1c5d-4da5-9f2b-4361b31b4961" Version="V1">
+                                        <uix:NCheckState Exists="{x:Null}" sap2010:Annotation.AnnotationText="Validacion de ingreso exitoso" DelayBefore="3" DisplayName="Check App State 'Fielo PlatformBuscar...…'" sap:VirtualizedContainerService.HintSize="806,717.333333333333" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="bc920b14-1c5d-4da5-9f2b-4361b31b4961" Version="V1">
                                           <uix:NCheckState.IfExists>
-                                            <Sequence sap2010:Annotation.AnnotationText="Acciones para cuando se logra el logueo" DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,282" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                            <Sequence sap2010:Annotation.AnnotationText="Acciones para cuando se logra el logueo" DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,283.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_20">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <uix:NClick ClickType="Single" DisplayName="Click 'Inicio'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bc920b14-1c5d-4da5-9f2b-4361b31b4961" Version="V1">
+                                              <uix:NClick ClickType="Single" DisplayName="Click 'Inicio'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="bc920b14-1c5d-4da5-9f2b-4361b31b4961" Version="V1">
                                                 <uix:NClick.Target>
                                                   <uix:TargetAnchorable BrowserURL="https://terpel--fullcopy.lightning.force.com/lightning/o/Contact/list?filterName=Recent" DesignTimeRectangle="332, 304, 46, 26" ElementType="Text" FriendlyName="'Inicio'" FullSelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/navexContentRegionNavContainer:contentRegionNavContainer/navexStandardManager/oneAppNavContainer:appnav/auraIf/oneAppnav:oneAppNav' tag='ONE-APPNAV' /&gt;&lt;webctrl aaname='Inicio' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/navexContentRegionNavContainer:contentRegionNavContainer/navexStandardManager/oneAppNavContainer:appnav/auraIf/oneAppnav:oneAppNav' tag='ONE-APPNAV' /&gt;&lt;webctrl aaname='Inicio' tag='SPAN' type='' check:text='Inicio' /&gt;" Guid="4833a166-10b8-4411-ac27-2e14bd54824b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAAeCAYAAABuUU38AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHmSURBVFhH7ZarkoMwFIb3MXiJOGRdHQ5XGYeLi8T1CeKQuDpcZFxcXd+gDleH/PcE0pbbdujOtpvd4ZupSJpDzpfLgQ/8E1aR0FhFQmMVCY1VJDR+VuRiIGOGtDih8V1LuBiJmKUoTs9EDRmK1BV4FIFXte94klpDfEOk1iIwkV9kFQmNBSJHqGtfbVGIBDG1I7bBLtc4+1EdvbEjaltCch9LvzgRKI6X7s+joj6OaVgNW0rwJG5joihGwiXKa1yP5SJ7hWzDUWgLay202oFRP9vb3sWeE2koz4SSoCIgSmiKbeMpwVz7cXMiDT0rZbRgKUSp2xhrKijupBiyariEi0UilmEY28DmNFEkYW4LNBVxpZXNTDxgIuLktzNzOq4LI6B7G7NcZH/07TsuyTaB22RjkRoVp1ihMT0MPcYijUVOz9lSGZ/F55ldd5R47o6MaROIoG6O47FdOz082A3HWMTnkduv3ivdc5m6i75FhD86Vo7wRU4otnS0pHnJ0ZL3y/lqEeB82NGYhMY8+PwYi7hCsncV68FlZ/0i8wYRUkGVueoWg6sKpi2/BlWxoPwmrlrOld/pwrxBxDF6sdHLNBUK5uyTmRNxNGeYQiDduIXo4nayvMf1GIr8YVaR0FhFQuOfiACfsjjcjh08O5UAAAAASUVORK5CYII=" InformativeScreenshot="212312124487609bec44055613a1618f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Vistos recientemente | Contactos | Salesforce' /&gt;" SearchSteps="FuzzySelector, Image">
                                                     <uix:TargetAnchorable.Anchors>
@@ -308,14 +309,14 @@
                                             </Sequence>
                                           </uix:NCheckState.IfExists>
                                           <uix:NCheckState.IfNotExists>
-                                            <Sequence sap2010:Annotation.AnnotationText="Acciones  cuando el tiempo Maximo es cumplido" DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="376,464" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                            <Sequence sap2010:Annotation.AnnotationText="Acciones  cuando el tiempo Maximo es cumplido" DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="376,466.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_21">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <ui:LogMessage sap2010:Annotation.AnnotationText="Mensaje de Log" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,124" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Warn">
+                                              <ui:LogMessage sap2010:Annotation.AnnotationText="Mensaje de Log" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,125.333333333333" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Warn">
                                                 <ui:LogMessage.Message>
                                                   <InArgument x:TypeArguments="x:Object">
                                                     <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">"No se pudo realizar la conexion a SalesForce"</mca:CSharpValue>
@@ -327,7 +328,7 @@
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </ui:LogMessage>
-                                              <uix:NNavigateBrowser Action="CloseTab" sap2010:Annotation.AnnotationText="Cierre de navegador" DisplayName="Navigate Browser - Close Tab" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_3" Version="V1">
+                                              <uix:NNavigateBrowser Action="CloseTab" sap2010:Annotation.AnnotationText="Cierre de navegador" DisplayName="Navigate Browser - Close Tab" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_3" Version="V1">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -366,7 +367,7 @@
                                       </Sequence>
                                     </uix:NCheckState.IfExists>
                                     <uix:NCheckState.IfNotExists>
-                                      <Sequence sap2010:Annotation.AnnotationText="Acciones de Tiempo de espera máximo " DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="376,596" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                      <Sequence sap2010:Annotation.AnnotationText="Acciones de Tiempo de espera máximo " DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="376,599.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_12">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -374,7 +375,7 @@
                                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:LogMessage sap2010:Annotation.AnnotationText="Mensaje de Log" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,124" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn">
+                                        <ui:LogMessage sap2010:Annotation.AnnotationText="Mensaje de Log" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,125.333333333333" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn">
                                           <ui:LogMessage.Message>
                                             <InArgument x:TypeArguments="x:Object">
                                               <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">"No se abrió correctamente la página de SalesForce \n"+"Tiempo de espera completado"</mca:CSharpValue>
@@ -386,7 +387,7 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </ui:LogMessage>
-                                        <Assign sap2010:Annotation.AnnotationText="Asignacion de sistema " sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                        <Assign sap2010:Annotation.AnnotationText="Asignacion de sistema " sap:VirtualizedContainerService.HintSize="334,92.6666666666667" sap2010:WorkflowViewState.IdRef="Assign_3">
                                           <Assign.To>
                                             <OutArgument x:TypeArguments="x:String">
                                               <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">Str_SystemException</mca:CSharpReference>
@@ -401,7 +402,7 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </Assign>
-                                        <uix:NNavigateBrowser Action="CloseTab" sap2010:Annotation.AnnotationText="Cierre del navegador" DisplayName="Navigate Browser - Close Tab" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_2" Version="V1">
+                                        <uix:NNavigateBrowser Action="CloseTab" sap2010:Annotation.AnnotationText="Cierre del navegador" DisplayName="Navigate Browser - Close Tab" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_2" Version="V1">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -577,6 +578,11 @@
                         <mca:CSharpValue x:TypeArguments="uix:NAppCloseMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32">NAppCloseMode.Never</mca:CSharpValue>
                       </InArgument>
                     </uix:NApplicationCard.CloseMode>
+                    <uix:NApplicationCard.OpenMode>
+                      <InArgument x:TypeArguments="uix:NAppOpenMode">
+                        <mca:CSharpValue x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">NAppOpenMode.IfNotOpen</mca:CSharpValue>
+                      </InArgument>
+                    </uix:NApplicationCard.OpenMode>
                     <uix:NApplicationCard.TargetApp>
                       <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJGSURBVFhH7ZZBSBRRGMdHYolFJCJEJEQkJERCPISHCAlP0qGT5w7RwUNIhESEiAfxGJ46ONIpwmOIiHiQiAiRiOgUb6JTePLQIUQ6TL//25ndt85jXGmc7eDht2/3zbfv+79vvu+9L4jjuKOdnAv4fwUEq+ZCsBp1wmW4BFXN+Wz/hYwAHMkxDs0I431YgHl+TzHe0LNmu6gfrkEfNl1BGJ1KZJOA2q7NAIs9hm8QNzB/GL/CDAzCTZiFDfgMb+ERjEKnu24exwREPfASHMcZDhDzjvHLsfmUXbgHen1d0JugaGWiUxfAw4ssTJjNId99C58GCXwA0/CCNcFG7jawyUYuuQKUbOvgW7AoDCzCdbAiXAEKP+H1/rFoXkG/T8DvxKAMnkHFFXAFlM0+4+IJ7evotQKUFPxQaX2oG5TD3USADf8y/EoelMWTgA8dPiqXI+dBWcxIAPUffXImy2RcAqokRDt2/wO/3Qgw3HJeg7PmKVTSV/AzmSwJ84axzxYAXyqgCvAYFo35zrgEw+m1nZbhMHysGRVIaHS3vMbxCuNzmASVfPNlpAm4hSHGBd0Hob3YuP2MDjj1GDpp865jexqqs5kAdUJSvAd+Bw32YQt2QD3Ce5gDdVRV15mPuoD6hKIRqv+jRGp3+kn9gRJqDIZATvU6vbv1kRHgwiLqZLSbbJXUzo5NGIeK7/+tkC+ATCWR1KjcAXU126BkXYOHoPd7YpjzyBWQghOVqsJ6FVF0vzaT1fO1FOY8WhJwlpwLaLOAuOMveA1Of+TuOKQAAAAASUVORK5CYII=" InformativeScreenshot="7c5828e9361edb717a45d308acbccb29.png" Selector="&lt;html app='chrome.exe' title='Login | Salesforce'/&gt;" Url="https://terpel--fullcopy.my.salesforce.com/" />
                     </uix:NApplicationCard.TargetApp>
