@@ -1,14 +1,17 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="LogIn_Email" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="Out_Str_SystemException" Type="OutArgument(x:String)" />
     <x:Property Name="In_Int_Timeout" Type="InArgument(x:Int32)" />
     <x:Property Name="In_Int_NumIntentos" Type="InArgument(x:Int32)" />
     <x:Property Name="In_Str_CorreoDestino" Type="InArgument(x:String)" />
     <x:Property Name="In_Str_Subject" Type="InArgument(x:String)" />
     <x:Property Name="In_Str_Body" Type="InArgument(x:String)" />
+    <x:Property Name="In_Str_Documento1" Type="InArgument(x:String)" />
+    <x:Property Name="In_Str_Documento2" Type="InArgument(x:String)" />
+    <x:Property Name="In_Str_Documento3" Type="InArgument(x:String)" />
+    <x:Property Name="In_Str_Documento4" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>986,1542.66666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1294,1542.66666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -86,12 +89,15 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="LogIn_Email" sap:VirtualizedContainerService.HintSize="632.666666666667,1478" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="Out_Str_SystemException" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -165,7 +171,20 @@
                               </InArgument>
                             </ui:SendOutlookMail.Body>
                             <ui:SendOutlookMail.Files>
-                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                                <InArgument x:TypeArguments="x:String">
+                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">In_Str_Documento1</mca:CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:String">
+                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">In_Str_Documento2</mca:CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:String">
+                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">In_Str_Documento3</mca:CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:String">
+                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">In_Str_Documento4</mca:CSharpValue>
+                                </InArgument>
+                              </scg:List>
                             </ui:SendOutlookMail.Files>
                             <ui:SendOutlookMail.Subject>
                               <InArgument x:TypeArguments="x:String">
@@ -190,7 +209,7 @@
                   <Assign sap:VirtualizedContainerService.HintSize="434,62" sap2010:WorkflowViewState.IdRef="Assign_1">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">
-                        <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">Out_Str_SystemException</mca:CSharpReference>
+                        <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">Out_Str_SystemException</mca:CSharpReference>
                       </OutArgument>
                     </Assign.To>
                     <Assign.Value>
