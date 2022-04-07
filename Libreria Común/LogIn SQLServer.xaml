@@ -3,9 +3,10 @@
     <x:Property Name="In_Int_NumIntentos" Type="InArgument(x:Int32)" />
     <x:Property Name="In_Int_Timeout" Type="InArgument(x:Int32)" />
     <x:Property Name="Out_Str_SystemException" Type="OutArgument(x:String)" />
+    <x:Property Name="In_Bool_Ejecucion_SP" Type="OutArgument(x:Boolean)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1220,5504</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1220,5931</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -92,11 +93,12 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="LogIn en SQL Server&#xA;&#xA;Precondicion: ninguna&#xA;Acciones: Abre el sistema de SAP si las credenciales son correctas" DisplayName="LogIn_SQLServer" sap:VirtualizedContainerService.HintSize="1230,5439" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="LogIn en SQL Server&#xA;&#xA;Precondicion: ninguna&#xA;Acciones: Abre el sistema de SAP si las credenciales son correctas" DisplayName="LogIn_SQLServer" sap:VirtualizedContainerService.HintSize="1230,5866" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ss:SecureString" Name="Cred_Password" />
       <Variable x:TypeArguments="x:String" Name="Cred_Username" />
       <Variable x:TypeArguments="x:String" Name="Asse_Server_DB" />
+      <Variable x:TypeArguments="x:String" Name="Str_EsquemaBD" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -104,35 +106,67 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Obtención de par de llaves para login dentro de la base de datos" AssetName="CV_EDS_Credencial_DBA" DisplayName="Get Credential" FolderPath="Default" sap:VirtualizedContainerService.HintSize="1188,121" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1">
-      <ui:GetRobotCredential.Password>
-        <OutArgument x:TypeArguments="ss:SecureString">
-          <mca:CSharpReference x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">Cred_Password</mca:CSharpReference>
-        </OutArgument>
-      </ui:GetRobotCredential.Password>
-      <ui:GetRobotCredential.Username>
-        <OutArgument x:TypeArguments="x:String">
-          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">Cred_Username</mca:CSharpReference>
-        </OutArgument>
-      </ui:GetRobotCredential.Username>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:GetRobotCredential>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Varialble expuesta para diligenciar el hostname del servidor de base de datos" AssetName="CV_EDS_Var_NombreDBA" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="1188,179" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
-      <ui:GetRobotAsset.Value>
-        <OutArgument x:TypeArguments="x:String">
-          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">Asse_Server_DB</mca:CSharpReference>
-        </OutArgument>
-      </ui:GetRobotAsset.Value>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:GetRobotAsset>
+    <If sap:VirtualizedContainerService.HintSize="1188,767" sap2010:WorkflowViewState.IdRef="If_4">
+      <If.Condition>
+        <InArgument x:TypeArguments="x:Boolean">
+          <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">!!In_Bool_Ejecucion_SP</mca:CSharpValue>
+        </InArgument>
+      </If.Condition>
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="242,83" sap2010:WorkflowViewState.IdRef="Sequence_15">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap:VirtualizedContainerService.HintSize="376,609" sap2010:WorkflowViewState.IdRef="Sequence_16">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:GetRobotCredential TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Obtención de par de llaves para login dentro de la base de datos" AssetName="CV_EDS_Credencial_DBA" DisplayName="Get Credential" FolderPath="Default" sap:VirtualizedContainerService.HintSize="334,121" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1">
+            <ui:GetRobotCredential.Password>
+              <OutArgument x:TypeArguments="ss:SecureString">
+                <mca:CSharpReference x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">Cred_Password</mca:CSharpReference>
+              </OutArgument>
+            </ui:GetRobotCredential.Password>
+            <ui:GetRobotCredential.Username>
+              <OutArgument x:TypeArguments="x:String">
+                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">Cred_Username</mca:CSharpReference>
+              </OutArgument>
+            </ui:GetRobotCredential.Username>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:GetRobotCredential>
+          <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Varialble expuesta para diligenciar el hostname del servidor de base de datos" AssetName="CV_EDS_Var_NombreDBA" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,179" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+            <ui:GetRobotAsset.Value>
+              <OutArgument x:TypeArguments="x:String">
+                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">Asse_Server_DB</mca:CSharpReference>
+              </OutArgument>
+            </ui:GetRobotAsset.Value>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:GetRobotAsset>
+          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CV_EDS_Var_EsquemaDB" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+            <ui:GetRobotAsset.Value>
+              <OutArgument x:TypeArguments="x:String">
+                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">Str_EsquemaBD</mca:CSharpReference>
+              </OutArgument>
+            </ui:GetRobotAsset.Value>
+          </ui:GetRobotAsset>
+        </Sequence>
+      </If.Else>
+    </If>
     <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="1188,4895" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
       <ui:RepeatNumberOfTimesX.Body>
         <ActivityAction x:TypeArguments="x:Int32">
@@ -324,9 +358,6 @@
                           <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Object Explorer'" sap:VirtualizedContainerService.HintSize="956,1781" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="76f32f12-e70e-4c48-8d82-5dad13556ef8" Version="V1">
                             <uix:NCheckState.IfExists>
                               <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="526,1565" sap2010:WorkflowViewState.IdRef="Sequence_9">
-                                <Sequence.Variables>
-                                  <Variable x:TypeArguments="x:String" Name="Str_EsquemaBD" />
-                                </Sequence.Variables>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -349,7 +380,7 @@
                                   </uix:NGetText.Target>
                                   <uix:NGetText.Text>
                                     <OutArgument x:TypeArguments="x:String">
-                                      <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">Str_EsquemaBD</mca:CSharpReference>
+                                      <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">Str_EsquemaBD</mca:CSharpReference>
                                     </OutArgument>
                                   </uix:NGetText.Text>
                                 </uix:NGetText>
