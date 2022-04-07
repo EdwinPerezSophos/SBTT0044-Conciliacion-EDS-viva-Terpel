@@ -6,7 +6,7 @@
     <x:Property Name="In_Bool_Ejecucion_SP" Type="OutArgument(x:Boolean)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1745,5367</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1172,5367</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -93,7 +93,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="LogIn en SQL Server&#xA;&#xA;Precondicion: ninguna&#xA;Acciones: Abre el sistema de SAP si las credenciales son correctas" DisplayName="LogIn_SQLServer" sap:VirtualizedContainerService.HintSize="1755,5302" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="LogIn en SQL Server&#xA;&#xA;Precondicion: ninguna&#xA;Acciones: Abre el sistema de SAP si las credenciales son correctas" DisplayName="LogIn_SQLServer" sap:VirtualizedContainerService.HintSize="839,5302" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ss:SecureString" Name="Cred_Password" />
       <Variable x:TypeArguments="x:String" Name="Cred_Username" />
@@ -106,20 +106,20 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If sap:VirtualizedContainerService.HintSize="1713,767" sap2010:WorkflowViewState.IdRef="If_4">
+    <If sap:VirtualizedContainerService.HintSize="797,767" sap2010:WorkflowViewState.IdRef="If_4">
       <If.Condition>
         <InArgument x:TypeArguments="x:Boolean">
           <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">!!In_Bool_Ejecucion_SP</mca:CSharpValue>
         </InArgument>
       </If.Condition>
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="834,609" sap2010:WorkflowViewState.IdRef="Sequence_15">
+        <Sequence sap:VirtualizedContainerService.HintSize="376,609" sap2010:WorkflowViewState.IdRef="Sequence_15">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:GetRobotCredential TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Obtención de par de llaves para login dentro de la base de datos" AssetName="CV_EDS_Credencial_DBA_SP" DisplayName="Get Credential" FolderPath="Default" sap:VirtualizedContainerService.HintSize="792,121" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2">
+          <ui:GetRobotCredential TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Obtención de par de llaves para login dentro de la base de datos" AssetName="CV_EDS_Credencial_DBA_SP" DisplayName="Get Credential" FolderPath="Default" sap:VirtualizedContainerService.HintSize="334,121" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2">
             <ui:GetRobotCredential.Password>
               <OutArgument x:TypeArguments="ss:SecureString">
                 <mca:CSharpReference x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpReference`1_15">Cred_Password</mca:CSharpReference>
@@ -136,7 +136,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:GetRobotCredential>
-          <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Varialble expuesta para diligenciar el hostname del servidor de base de datos" AssetName="CV_EDS_Var_NombreDBA_SP" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="792,179" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
+          <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Varialble expuesta para diligenciar el hostname del servidor de base de datos" AssetName="CV_EDS_Var_NombreDBA_SP" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,179" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
             <ui:GetRobotAsset.Value>
               <OutArgument x:TypeArguments="x:String">
                 <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">Asse_Server_DB</mca:CSharpReference>
@@ -148,7 +148,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:GetRobotAsset>
-          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CV_EDS_Var_EsquemaDB_SP" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="792,137" sap2010:WorkflowViewState.IdRef="GetRobotAsset_4">
+          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CV_EDS_Var_EsquemaDB_SP" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="GetRobotAsset_4">
             <ui:GetRobotAsset.Value>
               <OutArgument x:TypeArguments="x:String">
                 <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">Str_EsquemaBD</mca:CSharpReference>
@@ -158,13 +158,13 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="834,609" sap2010:WorkflowViewState.IdRef="Sequence_16">
+        <Sequence sap:VirtualizedContainerService.HintSize="376,609" sap2010:WorkflowViewState.IdRef="Sequence_16">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:GetRobotCredential TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Obtención de par de llaves para login dentro de la base de datos" AssetName="CV_EDS_Credencial_DBA" DisplayName="Get Credential" FolderPath="Default" sap:VirtualizedContainerService.HintSize="792,121" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1">
+          <ui:GetRobotCredential TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Obtención de par de llaves para login dentro de la base de datos" AssetName="CV_EDS_Credencial_DBA" DisplayName="Get Credential" FolderPath="Default" sap:VirtualizedContainerService.HintSize="334,121" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1">
             <ui:GetRobotCredential.Password>
               <OutArgument x:TypeArguments="ss:SecureString">
                 <mca:CSharpReference x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">Cred_Password</mca:CSharpReference>
@@ -181,7 +181,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:GetRobotCredential>
-          <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Varialble expuesta para diligenciar el hostname del servidor de base de datos" AssetName="CV_EDS_Var_NombreDBA" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="792,179" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+          <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Varialble expuesta para diligenciar el hostname del servidor de base de datos" AssetName="CV_EDS_Var_NombreDBA" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,179" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
             <ui:GetRobotAsset.Value>
               <OutArgument x:TypeArguments="x:String">
                 <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">Asse_Server_DB</mca:CSharpReference>
@@ -193,7 +193,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:GetRobotAsset>
-          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CV_EDS_Var_EsquemaDB" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="792,137" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CV_EDS_Var_EsquemaDB" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
             <ui:GetRobotAsset.Value>
               <OutArgument x:TypeArguments="x:String">
                 <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">Str_EsquemaBD</mca:CSharpReference>
@@ -203,7 +203,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="1713,4331" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+    <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="797,4331" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
       <ui:RepeatNumberOfTimesX.Body>
         <ActivityAction x:TypeArguments="x:Int32">
           <ActivityAction.Argument>
@@ -286,7 +286,7 @@
                           <If sap2010:Annotation.AnnotationText="Si la pantalla de SQL server connections no existe se abre dando clic en 'connect'" sap:VirtualizedContainerService.HintSize="484,469" sap2010:WorkflowViewState.IdRef="If_3">
                             <If.Condition>
                               <InArgument x:TypeArguments="x:Boolean">
-                                <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">Var_Conn_Validate.Count() &lt;1</mca:CSharpValue>
+                                <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">Var_Conn_Validate.Count() &lt; 1</mca:CSharpValue>
                               </InArgument>
                             </If.Condition>
                             <sap:WorkflowViewStateService.ViewState>
