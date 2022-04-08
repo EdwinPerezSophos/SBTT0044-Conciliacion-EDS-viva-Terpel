@@ -4,7 +4,7 @@
     <x:Property Name="In_GBL_Dt_Calendario_row" Type="InArgument(sd:DataTable)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1056,2823</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1348,3216</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -96,10 +96,10 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Exportar datos satelite desde SQL Server mediante query&#xA;&#xA;Precondicion: Fecha actual / documento: Calendario.xlsx&#xA;&#xA;Acciones: Extracción de reporte  de datos satelite  desde SQL hacía Excel" DisplayName="Exportar_datos_Satelite" sap:VirtualizedContainerService.HintSize="671,2758" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Exportar datos satelite desde SQL Server mediante query&#xA;&#xA;Precondicion: Fecha actual / documento: Calendario.xlsx&#xA;&#xA;Acciones: Extracción de reporte  de datos satelite  desde SQL hacía Excel" DisplayName="Exportar_datos_Satelite" sap:VirtualizedContainerService.HintSize="795,3151" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Str_SystemException" />
-      <Variable x:TypeArguments="x:String" Name="Str_FechaFin" />
+      <Variable x:TypeArguments="x:String" Name="Str_Fecha_Fin" />
       <Variable x:TypeArguments="x:String" Name="Str_Fecha_Inicio" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -108,7 +108,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Comment out" sap:VirtualizedContainerService.HintSize="629,192" sap2010:WorkflowViewState.IdRef="Sequence_7">
+    <Sequence DisplayName="Comment out" sap:VirtualizedContainerService.HintSize="753,192" sap2010:WorkflowViewState.IdRef="Sequence_7">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -131,26 +131,26 @@
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Ingreso a SQL studio y descarga de los datos para guardar en excel.&#xA;" sap:VirtualizedContainerService.HintSize="629,2347" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap2010:Annotation.AnnotationText="Ingreso a SQL studio y descarga de los datos para guardar en excel.&#xA;" sap:VirtualizedContainerService.HintSize="753,2740" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="De acuerdo al numero de reintentos estipulado se hacen las ejecuciones necesarias." DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="587,2213" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="De acuerdo al numero de reintentos estipulado se hacen las ejecuciones necesarias." DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="711,2606" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
         <ui:RepeatNumberOfTimesX.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="Intento" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="553,2027" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="677,2420" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage sap2010:Annotation.AnnotationText="Se imprime en logs para traza" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="511,122" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
+              <ui:LogMessage sap2010:Annotation.AnnotationText="Se imprime en logs para traza" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="635,122" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
                 <ui:LogMessage.Message>
                   <InArgument x:TypeArguments="x:Object">
                     <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">"Extraccion de datos satelite SQL - Intento: "+Intento</mca:CSharpValue>
@@ -162,9 +162,9 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="511,1773" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="635,2166" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <TryCatch.Try>
-                  <Sequence sap:VirtualizedContainerService.HintSize="473,1546" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence sap:VirtualizedContainerService.HintSize="597,1939" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="Str_query_Datos_Satelite" />
                     </Sequence.Variables>
@@ -174,7 +174,7 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Invocar para determinar que fila de archivo de calendario corresponde al día actual." DisplayName="Invoke Validación de Fecha Actual workflow" sap:VirtualizedContainerService.HintSize="431,154" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Libreria Común\\Validación de Fecha Actual.xaml">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Invocar para determinar que fila de archivo de calendario corresponde al día actual." DisplayName="Invoke Validación de Fecha Actual workflow" sap:VirtualizedContainerService.HintSize="555,154" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Libreria Común\\Validación de Fecha Actual.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <OutArgument x:TypeArguments="sd:DataTable" x:Key="Out_Dt_Calendario_row">
                           <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_22">In_GBL_Dt_Calendario_row</mca:CSharpReference>
@@ -187,7 +187,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:InvokeWorkflowFile>
-                    <Sequence sap2010:Annotation.AnnotationText="Asignacion de Fecha que depende de la info obtenida en el documento de Calendario " DisplayName="Validación de Fecha en Calendario.xlsx" sap:VirtualizedContainerService.HintSize="431,337" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                    <Sequence sap2010:Annotation.AnnotationText="Asignacion de Fecha que depende de la info obtenida en el documento de Calendario " DisplayName="Validación de Fecha en Calendario.xlsx" sap:VirtualizedContainerService.HintSize="555,730" sap2010:WorkflowViewState.IdRef="Sequence_18">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -195,8 +195,8 @@
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:Comment sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Esta actividad se debe de ejecutar siempre" />
-                      <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Todas las fechas se dan en formato yyyMMdd (19870426)" DisplayName="Asignación Fecha Inicial y Final" sap:VirtualizedContainerService.HintSize="334,108" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                      <ui:Comment sap:VirtualizedContainerService.HintSize="513,55" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Esta actividad se debe de ejecutar siempre" />
+                      <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Todas las fechas se dan en formato yyyyMMdd (19870426)" DisplayName="Asignación Fecha Inicial y Final" sap:VirtualizedContainerService.HintSize="513,512" sap2010:WorkflowViewState.IdRef="Switch`1_1">
                         <Switch.Expression>
                           <InArgument x:TypeArguments="x:String">
                             <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37">In_GBL_Dt_Calendario_row.Rows[0][1].ToString()</mca:CSharpValue>
@@ -204,12 +204,12 @@
                         </Switch.Expression>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Sequence x:Key="Cierre" sap2010:Annotation.AnnotationText="Si es Cierre se toma el primer dia del mes anterior - el ultimo día del mes anterior" sap:VirtualizedContainerService.HintSize="473,254" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                        <Sequence x:Key="Cierre" sap2010:Annotation.AnnotationText="Si es Cierre se toma el primer dia del mes anterior - el ultimo día del mes anterior" sap:VirtualizedContainerService.HintSize="473,286" sap2010:WorkflowViewState.IdRef="Sequence_15">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -235,7 +235,7 @@
                                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
                                   <ui:AssignOperation.To>
                                     <OutArgument x:TypeArguments="x:String">
-                                      <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">Str_FechaFin</mca:CSharpReference>
+                                      <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">Str_Fecha_Fin</mca:CSharpReference>
                                     </OutArgument>
                                   </ui:AssignOperation.To>
                                   <ui:AssignOperation.Value>
@@ -248,7 +248,7 @@
                             </ui:MultipleAssign.AssignOperations>
                           </ui:MultipleAssign>
                         </Sequence>
-                        <Sequence x:Key="N" sap2010:Annotation.AnnotationText="Se determina el promer dia del mes actual - el dia anterior a la fecha actual." sap:VirtualizedContainerService.HintSize="473,254" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                        <Sequence x:Key="N" sap2010:Annotation.AnnotationText="Se determina el promer dia del mes actual - el dia anterior a la fecha actual." sap:VirtualizedContainerService.HintSize="473,286" sap2010:WorkflowViewState.IdRef="Sequence_16">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -273,7 +273,7 @@
                                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
                                   <ui:AssignOperation.To>
                                     <OutArgument x:TypeArguments="x:String">
-                                      <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">Str_FechaFin</mca:CSharpReference>
+                                      <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">Str_Fecha_Fin</mca:CSharpReference>
                                     </OutArgument>
                                   </ui:AssignOperation.To>
                                   <ui:AssignOperation.Value>
@@ -304,19 +304,19 @@
                                   </ui:AssignOperation.To>
                                   <ui:AssignOperation.Value>
                                     <InArgument x:TypeArguments="x:String">
-                                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42">In_GBL_Dt_Calendario_row.Rows[0][4].ToString()</mca:CSharpValue>
+                                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">DateTime.ParseExact(In_GBL_Dt_Calendario_row.Rows[0][4].ToString(),"d/M/yyyy", null).ToString("yyyyMMdd")</mca:CSharpValue>
                                     </InArgument>
                                   </ui:AssignOperation.Value>
                                 </ui:AssignOperation>
                                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
                                   <ui:AssignOperation.To>
                                     <OutArgument x:TypeArguments="x:String">
-                                      <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_21">Str_FechaFin</mca:CSharpReference>
+                                      <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_21">Str_Fecha_Fin</mca:CSharpReference>
                                     </OutArgument>
                                   </ui:AssignOperation.To>
                                   <ui:AssignOperation.Value>
                                     <InArgument x:TypeArguments="x:String">
-                                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_43">In_GBL_Dt_Calendario_row.Rows[0][5].ToString()</mca:CSharpValue>
+                                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">DateTime.ParseExact(In_GBL_Dt_Calendario_row.Rows[0][5].ToString(),"d/M/yyyy", null).ToString("yyyyMMdd")</mca:CSharpValue>
                                     </InArgument>
                                   </ui:AssignOperation.Value>
                                 </ui:AssignOperation>
@@ -326,7 +326,7 @@
                         </Sequence>
                       </Switch>
                     </Sequence>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Flujo para realizar el login en el servidor de base de datos y deja abierto un espacio para scripts SQL." DisplayName="Invoke LogIn SQLServer workflow" sap:VirtualizedContainerService.HintSize="431,154" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Libreria Común\\LogIn SQLServer.xaml">
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Flujo para realizar el login en el servidor de base de datos y deja abierto un espacio para scripts SQL." DisplayName="Invoke LogIn SQLServer workflow" sap:VirtualizedContainerService.HintSize="555,154" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Libreria Común\\LogIn SQLServer.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <scg:Dictionary x:TypeArguments="x:String, Argument" />
                       </ui:InvokeWorkflowFile.Arguments>
@@ -336,7 +336,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:InvokeWorkflowFile>
-                    <ui:MultipleAssign DisplayName="ELIMINAR" sap:VirtualizedContainerService.HintSize="431,131" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+                    <ui:MultipleAssign DisplayName="ELIMINAR" sap:VirtualizedContainerService.HintSize="555,131" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
                       <ui:MultipleAssign.AssignOperations>
                         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
@@ -352,7 +352,7 @@
                           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
                             <ui:AssignOperation.To>
                               <OutArgument x:TypeArguments="x:String">
-                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_24">Str_FechaFin</mca:CSharpReference>
+                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_24">Str_Fecha_Fin</mca:CSharpReference>
                               </OutArgument>
                             </ui:AssignOperation.To>
                             <ui:AssignOperation.Value>
@@ -370,7 +370,7 @@
                       </Assign.To>
                       <Assign.Value>
                         <InArgument x:TypeArguments="x:String">
-                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32">"SELECT IDVENTAEDS 'No. Recibo sin PPC', CONCAT(IDVENTAEDS,O.CODIGOUNICO) 'Key', NOMBREESTACION 'Venta: Nombre PDV', O.CODIGOUNICO 'Venta: Código Unico PDV', IdDocumento, IdFormaPago, IdIslero, VALOR AS 'Monto', V.FECHA 'Venta: Fecha de Transacción' FROM VNT_VENTAGAS V INNER JOIN EDS_ESTACIONES E ON V.IDESTACION = E.IDESTACION INNER JOIN OT_EDS O ON E.IDESTACION = O.IDESTACION INNER JOIN VNT_PAGOSVENTAGAS P ON V.IDVENTA = P.IDVENTA WHERE V.FECHATURNOVENTA BETWEEN '" + Str_Fecha_Inicio + "' AND '" + Str_FechaFin + "' AND IDFORMAPAGO IN (253,254) AND P.VALOR &gt; 0 ORDER BY V.FECHA;"</mca:CSharpValue>
+                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32">"SELECT IDVENTAEDS 'No. Recibo sin PPC', CONCAT(IDVENTAEDS,O.CODIGOUNICO) 'Key', NOMBREESTACION 'Venta: Nombre PDV', O.CODIGOUNICO 'Venta: Código Unico PDV', IdDocumento, IdFormaPago, IdIslero, VALOR AS 'Monto', V.FECHA 'Venta: Fecha de Transacción' FROM VNT_VENTAGAS V INNER JOIN EDS_ESTACIONES E ON V.IDESTACION = E.IDESTACION INNER JOIN OT_EDS O ON E.IDESTACION = O.IDESTACION INNER JOIN VNT_PAGOSVENTAGAS P ON V.IDVENTA = P.IDVENTA WHERE V.FECHATURNOVENTA BETWEEN '" + Str_Fecha_Inicio + "' AND '" + Str_Fecha_Fin + "' AND IDFORMAPAGO IN (253,254) AND P.VALOR &gt; 0 ORDER BY V.FECHA;"</mca:CSharpValue>
                         </InArgument>
                       </Assign.Value>
                       <sap:WorkflowViewStateService.ViewState>
