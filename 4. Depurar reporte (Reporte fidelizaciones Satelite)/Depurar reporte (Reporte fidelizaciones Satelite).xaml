@@ -3,7 +3,7 @@
     <x:Property Name="In_GBL_Int_NumIntentos" Type="InArgument(x:Int32)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1208,1913</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1208,2704</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -93,7 +93,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Filtrar y depurar datos necesarios para futuros pasos en documento de excel&#xA;&#xA;Precondicion:  documento: Reporte fidelizaciones Satelite.xlsx&#xA;&#xA;Acciones:Filtrado de datos archivo Excel 'Reporte fidelizaciones Satelite' preparación para movimientos futuros" DisplayName="Depurar_reporte__Reporte_fidelizaciones_Satelite_" sap:VirtualizedContainerService.HintSize="724,1808" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Filtrar y depurar datos necesarios para futuros pasos en documento de excel&#xA;&#xA;Precondicion:  documento: Reporte fidelizaciones Satelite.xlsx&#xA;&#xA;Acciones:Filtrado de datos archivo Excel 'Reporte fidelizaciones Satelite' preparación para movimientos futuros" DisplayName="Depurar_reporte__Reporte_fidelizaciones_Satelite_" sap:VirtualizedContainerService.HintSize="873,2639" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Str_SystemException" />
     </Sequence.Variables>
@@ -103,7 +103,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Comment out" sap:VirtualizedContainerService.HintSize="682,192" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Comment out" sap:VirtualizedContainerService.HintSize="831,192" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -127,7 +127,7 @@
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Ingreso a Excel para hacer la depuración y arreglos necesarios para futuras actividades.&#xA;" sap:VirtualizedContainerService.HintSize="682,1397" sap2010:WorkflowViewState.IdRef="Sequence_11">
+    <Sequence sap2010:Annotation.AnnotationText="Ingreso a Excel para hacer la depuración y arreglos necesarios para futuras actividades.&#xA;" sap:VirtualizedContainerService.HintSize="831,2228" sap2010:WorkflowViewState.IdRef="Sequence_11">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -135,19 +135,19 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="De acuerdo al numero de reintentos estipulado se hacen las ejecuciones necesarias." DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="640,1263" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="De acuerdo al numero de reintentos estipulado se hacen las ejecuciones necesarias." DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="789,2094" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
         <ui:RepeatNumberOfTimesX.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="Intento" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="606,1077" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="755,1908" sap2010:WorkflowViewState.IdRef="Sequence_10">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage sap2010:Annotation.AnnotationText="Se imprime en logs para traza" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="564,122" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
+              <ui:LogMessage sap2010:Annotation.AnnotationText="Se imprime en logs para traza" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="713,122" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
                 <ui:LogMessage.Message>
                   <InArgument x:TypeArguments="x:Object">
                     <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">"Depuración de datos satelite SQL - Intento: "+Intento</mca:CSharpValue>
@@ -159,7 +159,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="564,823" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="713,1654" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <TryCatch.Try>
                   <Sequence sap:VirtualizedContainerService.HintSize="675,1427" sap2010:WorkflowViewState.IdRef="Sequence_6">
                     <Sequence.Variables>
@@ -203,7 +203,7 @@
                                       <ueab:FindReplaceValueX FoundAt="{x:Null}" sap2010:Annotation.AnnotationText="en la fila de valor y consecuentes se debe cambiar el . por , para controlar que sean decimales y no puntos de unidades." DisplayName="Find/Replace Value" sap:VirtualizedContainerService.HintSize="439,275" sap2010:WorkflowViewState.IdRef="FindReplaceValueX_1" LookIn="Values" Operation="ReplaceAll">
                                         <ueab:FindReplaceValueX.ReplaceWith>
                                           <InArgument x:TypeArguments="x:Object">
-                                            <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">","</mca:CSharpValue>
+                                            <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">","</mca:CSharpValue>
                                           </InArgument>
                                         </ueab:FindReplaceValueX.ReplaceWith>
                                         <ueab:FindReplaceValueX.ValueToFind>
