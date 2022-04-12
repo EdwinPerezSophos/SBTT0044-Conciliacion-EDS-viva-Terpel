@@ -2,11 +2,10 @@
   <x:Members>
     <x:Property Name="In_Int_NumIntentos" Type="InArgument(x:Int32)" />
     <x:Property Name="In_Int_Timeout" Type="InArgument(x:Int32)" />
-    <x:Property Name="Out_Str_SystemException" Type="OutArgument(x:String)" />
     <x:Property Name="In_Bool_Ejecucion_SP" Type="InArgument(x:Boolean)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>986,5391.33333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>986,5426</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -92,12 +91,13 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="LogIn en SQL Server&#xA;&#xA;Precondicion: ninguna&#xA;Acciones: Abre el sistema de SAP si las credenciales son correctas" DisplayName="LogIn_SQLServer" sap:VirtualizedContainerService.HintSize="840,5326.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="LogIn en SQL Server&#xA;&#xA;Precondicion: ninguna&#xA;Acciones: Abre el sistema de SAP si las credenciales son correctas" DisplayName="LogIn_SQLServer" sap:VirtualizedContainerService.HintSize="840,5361.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ss:SecureString" Name="Cred_Password" />
       <Variable x:TypeArguments="x:String" Name="Cred_Username" />
       <Variable x:TypeArguments="x:String" Name="Asse_Server_DB" />
       <Variable x:TypeArguments="x:String" Name="Str_EsquemaBD" />
+      <Variable x:TypeArguments="x:String" Name="Out_Str_SystemException" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -105,14 +105,14 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If sap:VirtualizedContainerService.HintSize="798,785.333333333333" sap2010:WorkflowViewState.IdRef="If_4">
+    <If sap:VirtualizedContainerService.HintSize="798,788.666666666667" sap2010:WorkflowViewState.IdRef="If_4">
       <If.Condition>
         <InArgument x:TypeArguments="x:Boolean">
           <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">!!In_Bool_Ejecucion_SP</mca:CSharpValue>
         </InArgument>
       </If.Condition>
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="376,621.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_15">
+        <Sequence sap:VirtualizedContainerService.HintSize="376,624.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_15">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -147,7 +147,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:GetRobotAsset>
-          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CV_EDS_Var_EsquemaDB_SP" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="GetRobotAsset_4">
+          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CV_EDS_Var_EsquemaDB_SP" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,140.666666666667" sap2010:WorkflowViewState.IdRef="GetRobotAsset_4">
             <ui:GetRobotAsset.Value>
               <OutArgument x:TypeArguments="x:String">
                 <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">Str_EsquemaBD</mca:CSharpReference>
@@ -157,7 +157,7 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="376,621.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_16">
+        <Sequence sap:VirtualizedContainerService.HintSize="376,624.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_16">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -192,7 +192,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:GetRobotAsset>
-          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CV_EDS_Var_EsquemaDB" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CV_EDS_Var_EsquemaDB" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,140.666666666667" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
             <ui:GetRobotAsset.Value>
               <OutArgument x:TypeArguments="x:String">
                 <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">Str_EsquemaBD</mca:CSharpReference>
@@ -202,26 +202,26 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="797,4331" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+    <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="798,4362" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
       <ui:RepeatNumberOfTimesX.Body>
         <ActivityAction x:TypeArguments="x:Int32">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Int32" Name="Intento" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="682,4176" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="682.666666666667,4201.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="640,4084" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="640.666666666667,4109.33333333333" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <TryCatch.Try>
-                <Sequence sap2010:Annotation.AnnotationText="" sap:VirtualizedContainerService.HintSize="602,3857" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence sap2010:Annotation.AnnotationText="" sap:VirtualizedContainerService.HintSize="602,3872" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -229,7 +229,7 @@
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage sap2010:Annotation.AnnotationText="Log de acceso y pasos." DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="560,122" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
+                  <ui:LogMessage sap2010:Annotation.AnnotationText="Log de acceso y pasos." DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="560,125.333333333333" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
                     <ui:LogMessage.Message>
                       <InArgument x:TypeArguments="x:Object">
                         <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">"LogIn SQLServer Intento:"+Intento</mca:CSharpValue>
@@ -242,13 +242,13 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:LogMessage>
-                  <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Microsoft SQL Server Management Studio" sap:VirtualizedContainerService.HintSize="560,3410" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="76f32f12-e70e-4c48-8d82-5dad13556ef8" Version="V1">
+                  <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: Microsoft SQL Server Management Studio" sap:VirtualizedContainerService.HintSize="560,3422" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="76f32f12-e70e-4c48-8d82-5dad13556ef8" Version="V1">
                     <uix:NApplicationCard.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,3121" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,3127.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_8">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="Var_Conn_Validate" />
                           </Sequence.Variables>
@@ -257,7 +257,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:FindImageMatches sap2010:Annotation.AnnotationText="Identificarsi la pantalla de conexión se encuentra activa" DisplayName="Find Image Matches 'ssms.exe Connect'" sap:VirtualizedContainerService.HintSize="484,137" sap2010:WorkflowViewState.IdRef="FindImageMatches_2">
+                          <ui:FindImageMatches sap2010:Annotation.AnnotationText="Identificarsi la pantalla de conexión se encuentra activa" DisplayName="Find Image Matches 'ssms.exe Connect'" sap:VirtualizedContainerService.HintSize="484,136.666666666667" sap2010:WorkflowViewState.IdRef="FindImageMatches_2">
                             <ui:FindImageMatches.Image>
                               <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
                             </ui:FindImageMatches.Image>
@@ -282,7 +282,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:FindImageMatches>
-                          <If sap2010:Annotation.AnnotationText="Si la pantalla de SQL server connections no existe se abre dando clic en 'connect'" sap:VirtualizedContainerService.HintSize="484,469" sap2010:WorkflowViewState.IdRef="If_3">
+                          <If sap2010:Annotation.AnnotationText="Si la pantalla de SQL server connections no existe se abre dando clic en 'connect'" sap:VirtualizedContainerService.HintSize="484,475.333333333333" sap2010:WorkflowViewState.IdRef="If_3">
                             <If.Condition>
                               <InArgument x:TypeArguments="x:Boolean">
                                 <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">Var_Conn_Validate.Count() &lt; 1</mca:CSharpValue>
@@ -294,7 +294,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <If.Then>
-                              <Sequence sap:VirtualizedContainerService.HintSize="376,250" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                              <Sequence sap:VirtualizedContainerService.HintSize="376,250.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_13">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -428,7 +428,7 @@
                             <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_4">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">
-                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">Out_Str_SystemException</mca:CSharpReference>
+                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">Out_Str_SystemException</mca:CSharpReference>
                                 </OutArgument>
                               </Assign.To>
                               <Assign.Value>
@@ -521,7 +521,7 @@
                                       <Assign sap:VirtualizedContainerService.HintSize="484,61" sap2010:WorkflowViewState.IdRef="Assign_2">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="x:String">
-                                            <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">Out_Str_SystemException</mca:CSharpReference>
+                                            <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">Out_Str_SystemException</mca:CSharpReference>
                                           </OutArgument>
                                         </Assign.To>
                                         <Assign.Value>
@@ -547,7 +547,7 @@
                                       <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_3">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="x:String">
-                                            <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">Out_Str_SystemException</mca:CSharpReference>
+                                            <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">Out_Str_SystemException</mca:CSharpReference>
                                           </OutArgument>
                                         </Assign.To>
                                         <Assign.Value>
@@ -589,7 +589,7 @@
                   <Assign sap:VirtualizedContainerService.HintSize="560,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">
-                        <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">Out_Str_SystemException</mca:CSharpReference>
+                        <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_21">Out_Str_SystemException</mca:CSharpReference>
                       </OutArgument>
                     </Assign.To>
                     <Assign.Value>
