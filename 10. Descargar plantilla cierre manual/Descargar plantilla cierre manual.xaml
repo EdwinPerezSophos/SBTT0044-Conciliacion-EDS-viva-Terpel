@@ -23,7 +23,7 @@
     <x:Property Name="In_GBL_Str_CorreosFinalizaciónEjecución" Type="InOutArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>953.333333333333,2899.33333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1294,6793.33333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -138,7 +138,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Cierre manual de EDS&#xA;&#xA;Precondicion:&#xA;&#xA;Acciones: " DisplayName="Descargar_plantilla_cierre_manual" sap:VirtualizedContainerService.HintSize="724.666666666667,2834.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Descarga de documento de cierre manual dentro del correo &#xA;&#xA;Precondicion: Ninguno&#xA;&#xA;Acciones: Ingreso de correo y descarga de documento de cierre manual " DisplayName="Descargar_plantilla_cierre_manual" sap:VirtualizedContainerService.HintSize="989.333333333333,6728.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="Dt_CierreManual" />
       <Variable x:TypeArguments="x:String" Name="Str_TextoSP" />
@@ -151,17 +151,17 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="682.666666666667,52.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="947.333333333333,52.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="580.666666666667,754.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="597.333333333333,1472.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:Comment sap:VirtualizedContainerService.HintSize="555.333333333333,55.3333333333333" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Variables de Prueba" />
-          <Sequence sap2010:Annotation.AnnotationText="Asignacion de Fecha que depende de la info obtenida en el documento de Calendario " DisplayName="Validación de Fecha en Calendario.xlsx" sap:VirtualizedContainerService.HintSize="555.333333333333,1253.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <ui:Comment sap:VirtualizedContainerService.HintSize="538.666666666667,55.3333333333333" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Variables de Prueba" />
+          <Sequence sap2010:Annotation.AnnotationText="Asignacion de Fecha que depende de la info obtenida en el documento de Calendario " DisplayName="Validación de Fecha en Calendario.xlsx" sap:VirtualizedContainerService.HintSize="538.666666666667,535.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -169,8 +169,8 @@
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:Comment sap:VirtualizedContainerService.HintSize="513.333333333333,55.3333333333333" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// siempre se debe ejecutar este script" />
-            <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Asignación de fecha Actual en documento Calendario.xlsx" DisplayName="Asignación Fecha Inicial y Final" sap:VirtualizedContainerService.HintSize="513.333333333333,1035.33333333333" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+            <ui:Comment sap:VirtualizedContainerService.HintSize="496.666666666667,55.3333333333333" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// siempre se debe ejecutar este script" />
+            <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Asignación de fecha Actual en documento Calendario.xlsx" DisplayName="Asignación Fecha Inicial y Final" sap:VirtualizedContainerService.HintSize="496.666666666667,317.333333333333" sap2010:WorkflowViewState.IdRef="Switch`1_1">
               <Switch.Expression>
                 <InArgument x:TypeArguments="x:String">
                   <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">In_GBL_Dt_Calendario_row.Rows[0][1].ToString()</mca:CSharpValue>
@@ -270,7 +270,7 @@ DateTime.Now.ToString("yyyy")+".xlsx"</mca:CSharpValue>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <Sequence sap2010:Annotation.AnnotationText="Inicialización de Variables de Prueba&#xA;&#xA;Las variables luego serán remplazadas por los argumentos del sistema" DisplayName="Variables de Prueba" sap:VirtualizedContainerService.HintSize="682.666666666667,181.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence sap2010:Annotation.AnnotationText="Inicialización de Variables de Prueba&#xA;&#xA;Las variables luego serán remplazadas por los argumentos del sistema" DisplayName="Variables de Prueba" sap:VirtualizedContainerService.HintSize="947.333333333333,181.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -428,7 +428,7 @@ DateTime.Now.ToString("yyyy")+".xlsx"</mca:CSharpValue>
         </sap:WorkflowViewStateService.ViewState>
       </ui:InvokeWorkflowFile>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Descarga de plantilla en correo de robot.11" DisplayName="Descaarga de plantilla cierre manual" sap:VirtualizedContainerService.HintSize="682.666666666667,2333.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_55">
+    <Sequence sap2010:Annotation.AnnotationText="Descarga de plantilla en correo de robot.11" DisplayName="Descaarga de plantilla cierre manual" sap:VirtualizedContainerService.HintSize="947.333333333333,6227.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_55">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="Str_RespuestaSP" />
         <Variable x:TypeArguments="x:String" Name="Str_FechaTurnoVenta" />
@@ -441,20 +441,20 @@ DateTime.Now.ToString("yyyy")+".xlsx"</mca:CSharpValue>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="Sistema de reintentos en caso de fallo " DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="640.666666666667,2210.66666666667" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="Sistema de reintentos en caso de fallo " DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="905.333333333333,6104.66666666667" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
         <ui:RepeatNumberOfTimesX.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="Intento" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="606.666666666667,2019.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_54">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="871.333333333333,5913.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_54">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage sap2010:Annotation.AnnotationText="Traza inicial" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="564.666666666667,125.333333333333" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
+              <ui:LogMessage sap2010:Annotation.AnnotationText="Traza inicial" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="829.333333333333,125.333333333333" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
                 <ui:LogMessage.Message>
                   <InArgument x:TypeArguments="x:Object">
                     <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_105">"Cierre EDS por solicitud manual Intento:"+Intento</mca:CSharpValue>
@@ -467,7 +467,7 @@ DateTime.Now.ToString("yyyy")+".xlsx"</mca:CSharpValue>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="564.666666666667,1762" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="829.333333333333,5656" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -475,7 +475,7 @@ DateTime.Now.ToString("yyyy")+".xlsx"</mca:CSharpValue>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <TryCatch.Try>
-                  <Sequence sap2010:Annotation.AnnotationText="Busqueda de EDS por cerrar en el correo&#xA;" sap:VirtualizedContainerService.HintSize="376,548.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                  <Sequence sap2010:Annotation.AnnotationText="Busqueda de EDS por cerrar en el correo&#xA;" sap:VirtualizedContainerService.HintSize="790.666666666667,4442.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_57">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -483,19 +483,20 @@ DateTime.Now.ToString("yyyy")+".xlsx"</mca:CSharpValue>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <umab:OutlookApplicationCard Account="" DisplayName="Use Desktop Outlook App" sap:VirtualizedContainerService.HintSize="334,82" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_1">
+                    <umab:OutlookApplicationCard Account="" sap2010:Annotation.AnnotationText="Logeo a cuento Default de Email" DisplayName="Use Desktop Outlook App" sap:VirtualizedContainerService.HintSize="748.666666666667,3976" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_1">
                       <umab:OutlookApplicationCard.Body>
                         <ActivityAction x:TypeArguments="um:IMailQuickHandle">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="CorreoRobot" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="714.666666666667,3238.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_79">
+                          <Sequence sap2010:Annotation.AnnotationText="Acciones para realizar dentro del correo " DisplayName="Do" sap:VirtualizedContainerService.HintSize="714.666666666667,3758.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_79">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <umab:ForEachEmailX MailFilter="{x:Null}" DisplayName="For Each Email" sap:VirtualizedContainerService.HintSize="672.666666666667,3146.66666666667" sap2010:WorkflowViewState.IdRef="ForEachEmailX_3" IncludeSubfolders="False" NumberOfEmailsLimit="100" UnreadOnly="True" WithAttachmentsOnly="True">
+                            <umab:ForEachEmailX MailFilter="{x:Null}" sap2010:Annotation.AnnotationText="Busqueda de correos que contengan archivos adjuntos " DisplayName="For Each Email" sap:VirtualizedContainerService.HintSize="672.666666666667,3636" sap2010:WorkflowViewState.IdRef="ForEachEmailX_3" IncludeSubfolders="False" NumberOfEmailsLimit="100" UnreadOnly="True" WithAttachmentsOnly="True">
                               <umab:ForEachEmailX.Body>
                                 <ActivityAction x:TypeArguments="snm:MailMessage, x:Int32">
                                   <ActivityAction.Argument1>
@@ -504,13 +505,14 @@ DateTime.Now.ToString("yyyy")+".xlsx"</mca:CSharpValue>
                                   <ActivityAction.Argument2>
                                     <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                                   </ActivityAction.Argument2>
-                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="638.666666666667,2966" sap2010:WorkflowViewState.IdRef="Sequence_86">
+                                  <Sequence sap2010:Annotation.AnnotationText="Acciones para realizar por cada correo que contenga un archivo adjunto " DisplayName="Do" sap:VirtualizedContainerService.HintSize="638.666666666667,3364.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_86">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Sequence sap2010:Annotation.AnnotationText="Validacion de Creacion de carpeta temporal y descarga de archivos de Plantilla Cierre día manual&#xA;" sap:VirtualizedContainerService.HintSize="596.666666666667,958.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_83">
+                                    <Sequence sap2010:Annotation.AnnotationText="Validacion de Creacion de carpeta temporal y descarga de archivos de Plantilla Cierre día manual&#xA;" sap:VirtualizedContainerService.HintSize="596.666666666667,1113.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_83">
                                       <Sequence.Variables>
                                         <Variable x:TypeArguments="x:Boolean" Name="Bool_ExisteCarpetaCierreManual" />
                                         <Variable x:TypeArguments="scg:IEnumerable(x:String)" Name="List_Adjuntos" />
@@ -522,7 +524,7 @@ DateTime.Now.ToString("yyyy")+".xlsx"</mca:CSharpValue>
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:FolderExistsX DisplayName="Folder Exists" sap:VirtualizedContainerService.HintSize="484,135.333333333333" sap2010:WorkflowViewState.IdRef="FolderExistsX_3">
+                                      <ui:FolderExistsX sap2010:Annotation.AnnotationText="Validacion de existencia de Carpeta &quot;Archivos Cierre EDS Manuales&quot;" DisplayName="Folder Exists" sap:VirtualizedContainerService.HintSize="484,180.666666666667" sap2010:WorkflowViewState.IdRef="FolderExistsX_3">
                                         <ui:FolderExistsX.Exists>
                                           <OutArgument x:TypeArguments="x:Boolean">
                                             <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_64">Bool_ExisteCarpetaCierreManual</mca:CSharpReference>
@@ -533,26 +535,42 @@ DateTime.Now.ToString("yyyy")+".xlsx"</mca:CSharpValue>
                                             <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_148">In_GBL_Str_CarpetaTemporales+"Archivos Cierre EDS Manuales\\"</mca:CSharpValue>
                                           </InArgument>
                                         </ui:FolderExistsX.Path>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
                                       </ui:FolderExistsX>
-                                      <If sap:VirtualizedContainerService.HintSize="484,367.333333333333" sap2010:WorkflowViewState.IdRef="If_13">
+                                      <If sap2010:Annotation.AnnotationText="Validacion de existencia de Carpeta " sap:VirtualizedContainerService.HintSize="484,456" sap2010:WorkflowViewState.IdRef="If_13">
                                         <If.Condition>
                                           <InArgument x:TypeArguments="x:Boolean">
                                             <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_149">Bool_ExisteCarpetaCierreManual == false</mca:CSharpValue>
                                           </InArgument>
                                         </If.Condition>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
                                         <If.Then>
-                                          <Sequence sap:VirtualizedContainerService.HintSize="376,172.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                                          <Sequence sap2010:Annotation.AnnotationText="Acciones a realizar si no existe la carpeta " sap:VirtualizedContainerService.HintSize="376,234" sap2010:WorkflowViewState.IdRef="Sequence_81">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:CreateDirectory ContinueOnError="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="334,80.6666666666667" sap2010:WorkflowViewState.IdRef="CreateDirectory_2">
+                                            <ui:CreateDirectory ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Creacion de Carpeta &quot;Archivos Cierre EDS Manuales&quot;" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="334,111.333333333333" sap2010:WorkflowViewState.IdRef="CreateDirectory_2">
                                               <ui:CreateDirectory.Path>
                                                 <InArgument x:TypeArguments="x:String">
                                                   <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_150">In_GBL_Str_CarpetaTemporales+"Archivos Cierre EDS Manuales\\"</mca:CSharpValue>
                                                 </InArgument>
                                               </ui:CreateDirectory.Path>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
                                             </ui:CreateDirectory>
                                           </Sequence>
                                         </If.Then>
@@ -566,7 +584,7 @@ DateTime.Now.ToString("yyyy")+".xlsx"</mca:CSharpValue>
                                           </Sequence>
                                         </If.Else>
                                       </If>
-                                      <umab:SaveMailAttachmentsX DisplayName="Save Email Attachments" Filter="Plantilla cierre día manual.xlsx" sap:VirtualizedContainerService.HintSize="484,222" sap2010:WorkflowViewState.IdRef="SaveMailAttachmentsX_2" OverwriteExisting="True">
+                                      <umab:SaveMailAttachmentsX sap2010:Annotation.AnnotationText="Guardado de documentos en la carpeta &quot;Archivos Cierre EDS Manuales&quot;" DisplayName="Save Email Attachments" Filter="Plantilla cierre día manual.xlsx" sap:VirtualizedContainerService.HintSize="484,242.666666666667" sap2010:WorkflowViewState.IdRef="SaveMailAttachmentsX_2" OverwriteExisting="True">
                                         <umab:SaveMailAttachmentsX.Attachments>
                                           <OutArgument x:TypeArguments="scg:IEnumerable(x:String)">
                                             <mca:CSharpReference x:TypeArguments="scg:IEnumerable(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_65">List_Adjuntos</mca:CSharpReference>
@@ -582,9 +600,14 @@ DateTime.Now.ToString("yyyy")+".xlsx"</mca:CSharpValue>
                                             <mca:CSharpValue x:TypeArguments="snm:MailMessage" sap2010:WorkflowViewState.IdRef="CSharpValue`1_152">CurrentMail</mca:CSharpValue>
                                           </InArgument>
                                         </umab:SaveMailAttachmentsX.Message>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
                                       </umab:SaveMailAttachmentsX>
                                     </Sequence>
-                                    <Sequence sap2010:Annotation.AnnotationText="Validacion de carpeta con archivos para procesar&#xA;" sap:VirtualizedContainerService.HintSize="596.666666666667,1754.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_74">
+                                    <Sequence sap2010:Annotation.AnnotationText="Validacion de carpeta con archivos para procesar&#xA;" sap:VirtualizedContainerService.HintSize="596.666666666667,1937.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_74">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -592,7 +615,7 @@ DateTime.Now.ToString("yyyy")+".xlsx"</mca:CSharpValue>
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:FileExistsX DisplayName="File Exists" sap:VirtualizedContainerService.HintSize="554.666666666667,135.333333333333" sap2010:WorkflowViewState.IdRef="FileExistsX_1">
+                                      <ui:FileExistsX sap2010:Annotation.AnnotationText="Validacion de existencia del documento &quot;Plantilla cierre día Manual&quot;" DisplayName="File Exists" sap:VirtualizedContainerService.HintSize="554.666666666667,180.666666666667" sap2010:WorkflowViewState.IdRef="FileExistsX_1">
                                         <ui:FileExistsX.Exists>
                                           <OutArgument x:TypeArguments="x:Boolean">
                                             <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_67">Bool_ExisteArchivoCierreManual</mca:CSharpReference>
@@ -603,8 +626,13 @@ DateTime.Now.ToString("yyyy")+".xlsx"</mca:CSharpValue>
                                             <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_159">In_GBL_Str_CarpetaTemporales+"Archivos Cierre EDS Manuales\\"+In_GBL_Str_PlantillaCierreManual</mca:CSharpValue>
                                           </InArgument>
                                         </ui:FileExistsX.Path>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
                                       </ui:FileExistsX>
-                                      <If sap:VirtualizedContainerService.HintSize="554.666666666667,1442" sap2010:WorkflowViewState.IdRef="If_12">
+                                      <If sap2010:Annotation.AnnotationText="Validacion de documento &quot;Plantilla cierre día manual.xlsx&quot;" sap:VirtualizedContainerService.HintSize="554.666666666667,1579.33333333333" sap2010:WorkflowViewState.IdRef="If_12">
                                         <If.Condition>
                                           <InArgument x:TypeArguments="x:Boolean">
                                             <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_127">Bool_ExisteArchivoCierreManual == true</mca:CSharpValue>
@@ -614,10 +642,11 @@ DateTime.Now.ToString("yyyy")+".xlsx"</mca:CSharpValue>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                         <If.Then>
-                                          <Sequence sap:VirtualizedContainerService.HintSize="518,1247.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                                          <Sequence sap2010:Annotation.AnnotationText="Acciones a realizar si existe el documento " sap:VirtualizedContainerService.HintSize="518,1357.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_72">
                                             <Sequence.Variables>
                                               <Variable x:TypeArguments="scg:Dictionary(x:String, s:String[])" Name="Dic_GroupByFecha" />
                                             </Sequence.Variables>
@@ -625,9 +654,10 @@ DateTime.Now.ToString("yyyy")+".xlsx"</mca:CSharpValue>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke LogIn SQLServer workflow" sap:VirtualizedContainerService.HintSize="476,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Libreria Común\\LogIn SQLServer.xaml">
+                                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="logIn en SQLServer con credenciales de SP" DisplayName="Invoke LogIn SQLServer workflow" sap:VirtualizedContainerService.HintSize="476,144.666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Libreria Común\\LogIn SQLServer.xaml">
                                               <ui:InvokeWorkflowFile.Arguments>
                                                 <InArgument x:TypeArguments="x:Int32" x:Key="In_Int_NumIntentos">
                                                   <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_163">In_GBL_Int_NumIntentos</mca:CSharpValue>
@@ -635,15 +665,27 @@ DateTime.Now.ToString("yyyy")+".xlsx"</mca:CSharpValue>
                                                 <InArgument x:TypeArguments="x:Int32" x:Key="In_Int_Timeout">
                                                   <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_162">In_GBL_Int_TiempoEsperaAplicaciones</mca:CSharpValue>
                                                 </InArgument>
-                                                <InArgument x:TypeArguments="x:Boolean" x:Key="In_Bool_Ejecucion_SP">True</InArgument>
+                                                <InArgument x:TypeArguments="x:Boolean" x:Key="In_Bool_Ejecucion_SP">
+                                                  <Literal x:TypeArguments="x:Boolean" Value="True" />
+                                                </InArgument>
                                               </ui:InvokeWorkflowFile.Arguments>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
                                             </ui:InvokeWorkflowFile>
-                                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Ejecutar SP Cierre, exportar, consolidar workflow" sap:VirtualizedContainerService.HintSize="476,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="11. Ejecutar SP Cierre, exportar, consolidar y enviar reporte de cierre de solicitud manual\\Ejecutar SP Cierre, exportar, consolidar.xaml">
+                                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Ejecucion de procesamiento del archivo " DisplayName="Invoke Ejecutar SP Cierre, exportar, consolidar workflow" sap:VirtualizedContainerService.HintSize="476,144.666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="11. Ejecutar SP Cierre, exportar, consolidar y enviar reporte de cierre de solicitud manual\\Ejecutar SP Cierre, exportar, consolidar.xaml">
                                               <ui:InvokeWorkflowFile.Arguments>
                                                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                               </ui:InvokeWorkflowFile.Arguments>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
                                             </ui:InvokeWorkflowFile>
-                                            <Sequence sap2010:Annotation.AnnotationText="Envio de correo al remitente" sap:VirtualizedContainerService.HintSize="476,754.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_99">
+                                            <Sequence sap2010:Annotation.AnnotationText="Envio de correo al remitente" sap:VirtualizedContainerService.HintSize="476,772.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_99">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -651,7 +693,7 @@ DateTime.Now.ToString("yyyy")+".xlsx"</mca:CSharpValue>
                                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <umab:ReplyToMailX AdditionalCc="{x:Null}" AdditionalTo="{x:Null}" Bcc="{x:Null}" HtmlBodyFromText="{x:Null}" BodyType="Text" DisplayName="Reply To Email" sap:VirtualizedContainerService.HintSize="434,444" sap2010:WorkflowViewState.IdRef="ReplyToMailX_2" MaxBodyDocumentSizeMB="2" ReplyToAll="False" UseDocumentAsBody="False">
+                                              <umab:ReplyToMailX AdditionalCc="{x:Null}" AdditionalTo="{x:Null}" Bcc="{x:Null}" HtmlBodyFromText="{x:Null}" sap2010:Annotation.AnnotationText="Respuesta al correo Actual " BodyType="Text" DisplayName="Reply To Email" sap:VirtualizedContainerService.HintSize="434,434.666666666667" sap2010:WorkflowViewState.IdRef="ReplyToMailX_2" MaxBodyDocumentSizeMB="2" ReplyToAll="False" UseDocumentAsBody="False">
                                                 <umab:ReplyToMailX.Body>
                                                   <InArgument x:TypeArguments="x:String">
                                                     <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_200" xml:space="preserve">"Estimado usuario,\n\n"+
@@ -685,24 +727,34 @@ DateTime.Now.ToString("yyyy")+".xlsx"</mca:CSharpValue>
                                                     <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_198">"Solicitud cierre Eds manual procesado "+DateTime.Today.ToString("dd/MM/yyyy")</mca:CSharpValue>
                                                   </InArgument>
                                                 </umab:ReplyToMailX.NewSubject>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
                                               </umab:ReplyToMailX>
-                                              <ui:MarkOutlookMailAsRead DisplayName="Mark Outlook Mail As Read/Unread" sap:VirtualizedContainerService.HintSize="434,148" sap2010:WorkflowViewState.IdRef="MarkOutlookMailAsRead_1" MarkAs="Read">
+                                              <ui:MarkOutlookMailAsRead sap2010:Annotation.AnnotationText="Marcar como leido" DisplayName="Mark Outlook Mail As Read/Unread" sap:VirtualizedContainerService.HintSize="434,175.333333333333" sap2010:WorkflowViewState.IdRef="MarkOutlookMailAsRead_1" MarkAs="Read">
                                                 <ui:MarkOutlookMailAsRead.MailMessage>
                                                   <InArgument x:TypeArguments="snm:MailMessage">
                                                     <mca:CSharpValue x:TypeArguments="snm:MailMessage" sap2010:WorkflowViewState.IdRef="CSharpValue`1_201">CurrentMail</mca:CSharpValue>
                                                   </InArgument>
                                                 </ui:MarkOutlookMailAsRead.MailMessage>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
                                               </ui:MarkOutlookMailAsRead>
                                             </Sequence>
                                             <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="476,52.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_6">
                                               <ui:CommentOut.Body>
-                                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="638,1401.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_98">
+                                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="638,1361.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_98">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" sap2010:Annotation.AnnotationText="Lectura de plantilla &quot;Cierre  día manual &quot; para lectura de columnas " DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="596,789.333333333333" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_8">
+                                                  <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" sap2010:Annotation.AnnotationText="Lectura de plantilla &quot;Cierre  día manual &quot; para lectura de columnas " DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="596,749.333333333333" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_8">
                                                     <ueab:ExcelProcessScopeX.Body>
                                                       <ActivityAction x:TypeArguments="ui:IExcelProcess">
                                                         <ActivityAction.Argument>
@@ -1322,12 +1374,17 @@ DateTime.Now.ToString("yyyy")+".xlsx"</mca:CSharpValue>
                                         </If.Else>
                                       </If>
                                     </Sequence>
-                                    <ui:DeleteFolderX DisplayName="Delete Folder" sap:VirtualizedContainerService.HintSize="596.666666666667,80.6666666666667" sap2010:WorkflowViewState.IdRef="DeleteFolderX_1" Recursive="True">
+                                    <ui:DeleteFolderX sap2010:Annotation.AnnotationText="Borrado de documentos temporales " DisplayName="Delete Folder" sap:VirtualizedContainerService.HintSize="596.666666666667,111.333333333333" sap2010:WorkflowViewState.IdRef="DeleteFolderX_1" Recursive="True">
                                       <ui:DeleteFolderX.Path>
                                         <InArgument x:TypeArguments="x:String">
                                           <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_205">In_GBL_Str_CarpetaTemporales+"Archivos Cierre EDS Manuales"</mca:CSharpValue>
                                         </InArgument>
                                       </ui:DeleteFolderX.Path>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
                                     </ui:DeleteFolderX>
                                   </Sequence>
                                 </ActivityAction>
@@ -1341,6 +1398,7 @@ DateTime.Now.ToString("yyyy")+".xlsx"</mca:CSharpValue>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </umab:ForEachEmailX>
@@ -1349,15 +1407,16 @@ DateTime.Now.ToString("yyyy")+".xlsx"</mca:CSharpValue>
                       </umab:OutlookApplicationCard.Body>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </umab:OutlookApplicationCard>
-                    <ui:LogMessage sap2010:Annotation.AnnotationText="Mensaje de Log" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,125.333333333333" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Trace">
+                    <ui:LogMessage sap2010:Annotation.AnnotationText="Mensaje de Log" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="748.666666666667,125.333333333333" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Trace">
                       <ui:LogMessage.Message>
                         <InArgument x:TypeArguments="x:Object">
-                          <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_202">"Ejecutar Script EDS pendientes por cerrar ejecutado exitosamente"</mca:CSharpValue>
+                          <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_206">"Ejecutar Script Descarga plantilla cierre manual ejecutado exitosamente"</mca:CSharpValue>
                         </InArgument>
                       </ui:LogMessage.Message>
                       <sap:WorkflowViewStateService.ViewState>
@@ -1366,7 +1425,7 @@ DateTime.Now.ToString("yyyy")+".xlsx"</mca:CSharpValue>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:LogMessage>
-                    <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_17">
+                    <Assign sap:VirtualizedContainerService.HintSize="748.666666666667,62" sap2010:WorkflowViewState.IdRef="Assign_17">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">
                           <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_77">Str_SystemException</mca:CSharpReference>
@@ -1376,7 +1435,7 @@ DateTime.Now.ToString("yyyy")+".xlsx"</mca:CSharpValue>
                         <InArgument x:TypeArguments="x:String">OK</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:Break sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Break_1" />
+                    <ui:Break sap:VirtualizedContainerService.HintSize="748.666666666667,22" sap2010:WorkflowViewState.IdRef="Break_1" />
                   </Sequence>
                 </TryCatch.Try>
                 <TryCatch.Catches>
