@@ -143,7 +143,7 @@
       </sap:WorkflowViewStateService.ViewState>
       <State x:Name="__ReferenceID12" sap2010:Annotation.AnnotationText="Inicializacion de variables y arcivo de Configuración del robot &#xA;&#xA;Precondicion: ninguna&#xA;&#xA;Acciones: Lee el archivo Config y extrae rutas y variables del sistema" DisplayName="Inicialización" sap:VirtualizedContainerService.HintSize="431,172" sap2010:WorkflowViewState.IdRef="State_1">
         <State.Entry>
-          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="498,4485" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="498,6365" sap2010:WorkflowViewState.IdRef="TryCatch_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -151,7 +151,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <TryCatch.Try>
-              <Sequence sap2010:Annotation.AnnotationText="Acciones de llamada de variables Iniciales&#xA;" sap:VirtualizedContainerService.HintSize="460,4258" sap2010:WorkflowViewState.IdRef="Sequence_11">
+              <Sequence sap2010:Annotation.AnnotationText="Acciones de llamada de variables Iniciales&#xA;" sap:VirtualizedContainerService.HintSize="460,6138" sap2010:WorkflowViewState.IdRef="Sequence_11">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -252,10 +252,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:CommentOut>
-                <Sequence sap2010:Annotation.AnnotationText="Variables del Orquestrador" DisplayName="Variables del Orquestrador" sap:VirtualizedContainerService.HintSize="418,3785" sap2010:WorkflowViewState.IdRef="Sequence_12">
-                  <Sequence.Variables>
-                    <Variable x:TypeArguments="x:String" Name="GBL_Str_PlantillaCierreManual" />
-                  </Sequence.Variables>
+                <Sequence sap2010:Annotation.AnnotationText="Variables del Orquestrador" DisplayName="Variables del Orquestrador" sap:VirtualizedContainerService.HintSize="418,5665" sap2010:WorkflowViewState.IdRef="Sequence_12">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -344,7 +341,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:GetRobotAsset>
                   </Sequence>
-                  <Sequence sap2010:Annotation.AnnotationText="Variables Generales" sap:VirtualizedContainerService.HintSize="376,2132" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                  <Sequence sap2010:Annotation.AnnotationText="Variables Generales" sap:VirtualizedContainerService.HintSize="376,3172" sap2010:WorkflowViewState.IdRef="Sequence_28">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -448,6 +445,66 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:GetRobotAsset>
+                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Ultimo estado de ejecución" AssetName="CV_EDS_Var_ReporteCruceSAPvsSalesforce" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="GetRobotAsset_23">
+                      <ui:GetRobotAsset.Value>
+                        <OutArgument x:TypeArguments="x:String">
+                          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_178">GBL_Str_ReporteCruceSAPvsSalesforce</mca:CSharpReference>
+                        </OutArgument>
+                      </ui:GetRobotAsset.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:GetRobotAsset>
+                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Ultimo estado de ejecución" AssetName="CV_EDS_Var_ReporteSAP" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="GetRobotAsset_24">
+                      <ui:GetRobotAsset.Value>
+                        <OutArgument x:TypeArguments="x:String">
+                          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_179">GBL_Str_ReporteSAP</mca:CSharpReference>
+                        </OutArgument>
+                      </ui:GetRobotAsset.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:GetRobotAsset>
+                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Ultimo estado de ejecución" AssetName="CV_EDS_Var_ReporteCierreEDSAutomatico" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="GetRobotAsset_25">
+                      <ui:GetRobotAsset.Value>
+                        <OutArgument x:TypeArguments="x:String">
+                          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_180">GBL_Str_ReporteCierreEDSAutomatico</mca:CSharpReference>
+                        </OutArgument>
+                      </ui:GetRobotAsset.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:GetRobotAsset>
+                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Ultimo estado de ejecución" AssetName="CV_EDS_Var_ReporteVentasSalesforce" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="GetRobotAsset_26">
+                      <ui:GetRobotAsset.Value>
+                        <OutArgument x:TypeArguments="x:String">
+                          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_181">GBL_Str_ReporteVentasSalesforce</mca:CSharpReference>
+                        </OutArgument>
+                      </ui:GetRobotAsset.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:GetRobotAsset>
+                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Ultimo estado de ejecución" AssetName="CV_EDS_Var_ReporteVentasSatelite" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="GetRobotAsset_27">
+                      <ui:GetRobotAsset.Value>
+                        <OutArgument x:TypeArguments="x:String">
+                          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_182">GBL_Str_ReporteVentasSatelite</mca:CSharpReference>
+                        </OutArgument>
+                      </ui:GetRobotAsset.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:GetRobotAsset>
                     <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="CV_EDS_Var_ReporteFidelizacionesSF" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="GetRobotAsset_20">
                       <ui:GetRobotAsset.Value>
                         <OutArgument x:TypeArguments="x:String">
@@ -468,21 +525,15 @@
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:GetRobotAsset>
                   </Sequence>
-                  <Sequence sap2010:Annotation.AnnotationText="Variables para uso en Correo Electronico" sap:VirtualizedContainerService.HintSize="376,108" sap2010:WorkflowViewState.IdRef="Sequence_30">
-                    <Sequence.Variables>
-                      <Variable x:TypeArguments="x:String" Name="GBL_Str_CorreoEDSsinCerrar" />
-                      <Variable x:TypeArguments="x:String" Name="GBL_Str_CorreoEDsinCrearInterfaz" />
-                      <Variable x:TypeArguments="x:String" Name="GBL_Str_CorreoFinalizaciónEjecución" />
-                      <Variable x:TypeArguments="x:String" Name="GBL_Str_CorreoVentasConNovedades" />
-                    </Sequence.Variables>
+                  <Sequence sap2010:Annotation.AnnotationText="Variables para uso en Correo Electronico" sap:VirtualizedContainerService.HintSize="376,948" sap2010:WorkflowViewState.IdRef="Sequence_30">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Lista de correos para notificacion &quot;ventas con novedades&quot;" AssetName="CV_EDS_Correos_VentasConNovedades" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,183" sap2010:WorkflowViewState.IdRef="GetRobotAsset_15">
+                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Lista de correos para notificacion &quot;ventas con novedades&quot;" AssetName="CV_EDS_Correos_VentasConNovedades" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,179" sap2010:WorkflowViewState.IdRef="GetRobotAsset_15">
                       <ui:GetRobotAsset.Value>
                         <OutArgument x:TypeArguments="x:String">
                           <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_84">GBL_Str_CorreoVentasConNovedades</mca:CSharpReference>
@@ -494,7 +545,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:GetRobotAsset>
-                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Lista de correos para notificacion &quot;EDS si cerrar&quot;" AssetName="CV_EDS_Correos_EDSsinCerrar" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,170" sap2010:WorkflowViewState.IdRef="GetRobotAsset_18">
+                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Lista de correos para notificacion &quot;EDS si cerrar&quot;" AssetName="CV_EDS_Correos_EDSsinCerrar" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="GetRobotAsset_18">
                       <ui:GetRobotAsset.Value>
                         <OutArgument x:TypeArguments="x:String">
                           <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_85">GBL_Str_CorreoEDSsinCerrar</mca:CSharpReference>
@@ -506,7 +557,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:GetRobotAsset>
-                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Lista de correos para notificacion &quot;EDS sin crear en Interfaz&quot;" AssetName="CV_EDS_Correos_EDSsinCrearInterfaz" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,183" sap2010:WorkflowViewState.IdRef="GetRobotAsset_16">
+                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Lista de correos para notificacion &quot;EDS sin crear en Interfaz&quot;" AssetName="CV_EDS_Correos_EDSsinCrearInterfaz" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,179" sap2010:WorkflowViewState.IdRef="GetRobotAsset_16">
                       <ui:GetRobotAsset.Value>
                         <OutArgument x:TypeArguments="x:String">
                           <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_82">GBL_Str_CorreoEDsinCrearInterfaz</mca:CSharpReference>
@@ -518,7 +569,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:GetRobotAsset>
-                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Lista de correos para notificacion &quot;Finalización de proceso de Conciliación&quot;" AssetName="CV_EDS_Correos_FinalizaciónEjecución" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,183" sap2010:WorkflowViewState.IdRef="GetRobotAsset_17">
+                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Lista de correos para notificacion &quot;Finalización de proceso de Conciliación&quot;" AssetName="CV_EDS_Correos_FinalizaciónEjecución" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,179" sap2010:WorkflowViewState.IdRef="GetRobotAsset_17">
                       <ui:GetRobotAsset.Value>
                         <OutArgument x:TypeArguments="x:String">
                           <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_83">GBL_Str_CorreoFinalizaciónEjecución</mca:CSharpReference>
@@ -636,7 +687,7 @@
               <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_145">Bool_ProcessStatus == true &amp;&amp; GBL_Str_EstadoActual == "B"</mca:CSharpValue>
             </Transition.Condition>
             <Transition.To>
-              <State x:Name="__ReferenceID9" sap2010:Annotation.AnnotationText="Ingreso a  Satelite para extraccion de reporte de ventas &#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Ingreso a SQLServer para extracción de ventas en Excel" DisplayName="B. Extracción de ventas fidelización Satelite" sap:VirtualizedContainerService.HintSize="524,1272" sap2010:WorkflowViewState.IdRef="State_4">
+              <State x:Name="__ReferenceID9" sap2010:Annotation.AnnotationText="Ingreso a  Satelite para extraccion de reporte de ventas &#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Ingreso a SQLServer para extracción de ventas en Excel" DisplayName="B. Extracción de ventas fidelización Satelite" sap:VirtualizedContainerService.HintSize="429,155" sap2010:WorkflowViewState.IdRef="State_4">
                 <State.Entry>
                   <Sequence sap:VirtualizedContainerService.HintSize="478,798" sap2010:WorkflowViewState.IdRef="Sequence_21">
                     <sap:WorkflowViewStateService.ViewState>
@@ -743,7 +794,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <Transition.To>
-                      <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="Ingreso a Salesforce y a Satelite para extraccion de reporte de ventas &#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Ingreso a Salesforce y SQL para extracción de ventas en Excel" DisplayName="C. Extracción y Consolidación ventas Inconsistentes" sap:VirtualizedContainerService.HintSize="423,157" sap2010:WorkflowViewState.IdRef="State_6">
+                      <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="Ingreso a Salesforce y a Satelite para extraccion de reporte de ventas &#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Ingreso a Salesforce y SQL para extracción de ventas en Excel" DisplayName="C. Extracción y Consolidación ventas Inconsistentes" sap:VirtualizedContainerService.HintSize="524,1120" sap2010:WorkflowViewState.IdRef="State_6">
                         <State.Entry>
                           <Sequence sap:VirtualizedContainerService.HintSize="478,646" sap2010:WorkflowViewState.IdRef="Sequence_26">
                             <sap:WorkflowViewStateService.ViewState>
@@ -1564,7 +1615,7 @@
                                                                                       </scg:Dictionary>
                                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                                     <Transition.To>
-                                                                                      <State x:Name="__ReferenceID11" sap2010:Annotation.AnnotationText="Finalizacion del proceso de Conciliacion EDS&#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Movimiento de archivos a carpeta de salida y envio de archivos " DisplayName="K. Finalización Conciliación" sap:VirtualizedContainerService.HintSize="524,1093" sap2010:WorkflowViewState.IdRef="State_20">
+                                                                                      <State x:Name="__ReferenceID11" sap2010:Annotation.AnnotationText="Finalizacion del proceso de Conciliacion EDS&#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Movimiento de archivos a carpeta de salida y envio de archivos " DisplayName="K. Finalización Conciliación" sap:VirtualizedContainerService.HintSize="429,148" sap2010:WorkflowViewState.IdRef="State_20">
                                                                                         <State.Entry>
                                                                                           <Sequence sap:VirtualizedContainerService.HintSize="478,646" sap2010:WorkflowViewState.IdRef="Sequence_41">
                                                                                             <sap:WorkflowViewStateService.ViewState>
@@ -2083,7 +2134,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:InvokeWorkflowFile>
                     </Sequence>
-                    <Sequence DisplayName="Depurar reporte ventas" sap:VirtualizedContainerService.HintSize="421,204" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                    <Sequence DisplayName="Depurar reporte ventas" sap:VirtualizedContainerService.HintSize="436,204" sap2010:WorkflowViewState.IdRef="Sequence_24">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
