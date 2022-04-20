@@ -136,9 +136,9 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="755,4186" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,556" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <TryCatch.Try>
-                  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="717,3959" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="717,3971" sap2010:WorkflowViewState.IdRef="Sequence_9">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="sd:DataTable" Name="Dt_Reporte_SAP" />
                       <Variable x:TypeArguments="sd:DataTable" Name="Dt_Relacion_EDS" />
@@ -581,7 +581,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </ueab:ExcelProcessScopeX>
                     </Sequence>
-                    <Sequence DisplayName="Actualización Excel" sap:VirtualizedContainerService.HintSize="675,3493" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                    <Sequence DisplayName="Actualización Excel" sap:VirtualizedContainerService.HintSize="675,3505" sap2010:WorkflowViewState.IdRef="Sequence_38">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="sd:DataTable" Name="Dt_EDS_Id_Codigo" />
                       </Sequence.Variables>
@@ -603,13 +603,13 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:BuildDataTable>
-                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Se recorre la tabla de ids de SAP para identificar el respectivo codigo y agregarlo en el archivo Excel." DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="633,2143" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Se recorre la tabla de ids de SAP para identificar el respectivo codigo y agregarlo en el archivo Excel." DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="633,2155" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                         <ui:ForEachRow.Body>
                           <ActivityAction x:TypeArguments="sd:DataRow">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="FilaActualSAP" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="586,1993" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="493,1993" sap2010:WorkflowViewState.IdRef="Sequence_39">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:Int32" Name="Int_Coord_Id_Cod" />
                                 <Variable x:TypeArguments="sd:DataRow" Name="Dr_Fila_Codigo_SAP" />
@@ -619,7 +619,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Assign sap2010:Annotation.AnnotationText="Se realiza la inicialización de la coordenada apra evitar errores en el lookup" sap:VirtualizedContainerService.HintSize="544,117" sap2010:WorkflowViewState.IdRef="Assign_3">
+                              <Assign sap2010:Annotation.AnnotationText="Se realiza la inicialización de la coordenada apra evitar errores en el lookup" sap:VirtualizedContainerService.HintSize="451,117" sap2010:WorkflowViewState.IdRef="Assign_3">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Int32">
                                     <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_32">Int_Coord_Id_Cod</mca:CSharpReference>
@@ -634,7 +634,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </Assign>
-                              <ui:LookupDataTable CellValue="{x:Null}" LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" TargetColumnIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" sap2010:Annotation.AnnotationText="Con la fila actual de SAP ids se busca dentro del datatable de SQL y se identifica el codigo a partir de la coordenada en donde se halló" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="544,348" sap2010:WorkflowViewState.IdRef="LookupDataTable_1" LookupColumnName="IdEstacion">
+                              <ui:LookupDataTable CellValue="{x:Null}" LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" TargetColumnIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" sap2010:Annotation.AnnotationText="Con la fila actual de SAP ids se busca dentro del datatable de SQL y se identifica el codigo a partir de la coordenada en donde se halló" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="451,348" sap2010:WorkflowViewState.IdRef="LookupDataTable_1" LookupColumnName="IdEstacion">
                                 <ui:LookupDataTable.DataTable>
                                   <InArgument x:TypeArguments="sd:DataTable">
                                     <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_73">Dt_Relacion_EDS</mca:CSharpValue>
@@ -656,7 +656,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:LookupDataTable>
-                              <Assign sap2010:Annotation.AnnotationText="Se instancia el data row como una fila del datatable de los codigos SAP" sap:VirtualizedContainerService.HintSize="544,102" sap2010:WorkflowViewState.IdRef="Assign_4">
+                              <Assign sap2010:Annotation.AnnotationText="Se instancia el data row como una fila del datatable de los codigos SAP" sap:VirtualizedContainerService.HintSize="451,102" sap2010:WorkflowViewState.IdRef="Assign_4">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="sd:DataRow">
                                     <mca:CSharpReference x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpReference`1_35">Dr_Fila_Codigo_SAP</mca:CSharpReference>
@@ -673,7 +673,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </Assign>
-                              <ui:IfElseIf sap2010:Annotation.AnnotationText="Existen 3 escenarios, que encuentre el index, que no encuentre el index pero existe información de id y que no tenga información de id." DisplayName="Else If" sap:VirtualizedContainerService.HintSize="544,958" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+                              <ui:IfElseIf sap2010:Annotation.AnnotationText="Existen 3 escenarios, que encuentre el index, que no encuentre el index pero existe información de id y que no tenga información de id." DisplayName="Else If" sap:VirtualizedContainerService.HintSize="451,958" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
                                 <ui:IfElseIf.ConditionBlocks>
                                   <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                                     <ui:IfElseIfBlock BlockType="If">
@@ -778,7 +778,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:IfElseIf>
-                              <ui:AddDataRow ArrayRow="{x:Null}" sap2010:Annotation.AnnotationText="Se agrega la fila enla tabla de codigos de EDS" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="544,216" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
+                              <ui:AddDataRow ArrayRow="{x:Null}" sap2010:Annotation.AnnotationText="Se agrega la fila enla tabla de codigos de EDS" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="451,216" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
                                 <ui:AddDataRow.DataRow>
                                   <InArgument x:TypeArguments="sd:DataRow">
                                     <mca:CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_83">Dr_Fila_Codigo_SAP</mca:CSharpValue>
@@ -914,10 +914,10 @@
                   </Sequence>
                 </TryCatch.Try>
                 <TryCatch.Catches>
-                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="721,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,394" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
@@ -925,18 +925,35 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                       </ActivityAction.Argument>
-                      <ui:LogMessage sap2010:Annotation.AnnotationText="Se imprime en logs para traza&#xA;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,133" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Warn">
-                        <ui:LogMessage.Message>
-                          <InArgument x:TypeArguments="x:Object">
-                            <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_78" xml:space="preserve">"Generar Código único EDS \n  excepción: "+exception.Message</mca:CSharpValue>
-                          </InArgument>
-                        </ui:LogMessage.Message>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,325" sap2010:WorkflowViewState.IdRef="Sequence_44">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                      </ui:LogMessage>
+                        <ui:LogMessage sap2010:Annotation.AnnotationText="Se imprime en logs para traza&#xA;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,133" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Warn">
+                          <ui:LogMessage.Message>
+                            <InArgument x:TypeArguments="x:Object">
+                              <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_78" xml:space="preserve">"Generar Código único EDS \n  excepción: "+exception.Message</mca:CSharpValue>
+                            </InArgument>
+                          </ui:LogMessage.Message>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:LogMessage>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">
+                              <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_41">Str_SystemException</mca:CSharpReference>
+                            </OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">Error</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
                     </ActivityAction>
                   </Catch>
                 </TryCatch.Catches>

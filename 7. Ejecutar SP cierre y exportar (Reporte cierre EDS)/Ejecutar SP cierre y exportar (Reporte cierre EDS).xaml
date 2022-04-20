@@ -4,7 +4,7 @@
     <x:Property Name="In_GBL_Int_NumIntentos" Type="InArgument(x:Int32)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1274,6749</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1274,3128</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -99,7 +99,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Ejecutar SP de Cierre y obtener los resultados para enviarlos posteriormente, por lo que es necesario guardar estos resultados de SQL en un archivo de SQL de cierre de ventas EDS&#xA;&#xA;Precondicion:  Query construido 'In_GBL_Str_Query_Cierre'&#xA;&#xA;Acciones: A partir del query concatenado previamente, se debe de hacer la ejecución del SP en SQL Management Studio&#xA;" DisplayName="Ejecutar_SP_cierre_y_exportar__Reporte_cierre_EDS_" sap:VirtualizedContainerService.HintSize="878,6684" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Ejecutar SP de Cierre y obtener los resultados para enviarlos posteriormente, por lo que es necesario guardar estos resultados de SQL en un archivo de SQL de cierre de ventas EDS&#xA;&#xA;Precondicion:  Query construido 'In_GBL_Str_Query_Cierre'&#xA;&#xA;Acciones: A partir del query concatenado previamente, se debe de hacer la ejecución del SP en SQL Management Studio&#xA;" DisplayName="Ejecutar_SP_cierre_y_exportar__Reporte_cierre_EDS_" sap:VirtualizedContainerService.HintSize="724,3063" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Str_SystemException" />
       <Variable x:TypeArguments="x:String" Name="Str_MensajeError" />
@@ -110,26 +110,26 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Ingreso a SQL studio y descarga de los datos para guardar en excel.&#xA;" sap:VirtualizedContainerService.HintSize="836,6475" sap2010:WorkflowViewState.IdRef="Sequence_12">
+    <Sequence sap2010:Annotation.AnnotationText="Ingreso a SQL studio y descarga de los datos para guardar en excel.&#xA;" sap:VirtualizedContainerService.HintSize="682,2854" sap2010:WorkflowViewState.IdRef="Sequence_12">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="De acuerdo al numero de reintentos estipulado se hacen las ejecuciones necesarias." DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="794,6341" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="De acuerdo al numero de reintentos estipulado se hacen las ejecuciones necesarias." DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="640,2720" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
         <ui:RepeatNumberOfTimesX.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="Intento" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="760,6155" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="606,2534" sap2010:WorkflowViewState.IdRef="Sequence_11">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage sap2010:Annotation.AnnotationText="Se imprime en logs para traza" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="718,122" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
+              <ui:LogMessage sap2010:Annotation.AnnotationText="Se imprime en logs para traza" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="564,122" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
                 <ui:LogMessage.Message>
                   <InArgument x:TypeArguments="x:Object">
                     <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">"Ejecutar SP cierre y exportar (Reporte cierre EDS) - Intento: "+Intento</mca:CSharpValue>
@@ -141,9 +141,9 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="718,5901" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="564,2280" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <TryCatch.Try>
-                  <Sequence sap:VirtualizedContainerService.HintSize="680,4561" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <Sequence sap:VirtualizedContainerService.HintSize="526,1040" sap2010:WorkflowViewState.IdRef="Sequence_7">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="Str_query_Datos_Satelite" />
                     </Sequence.Variables>
@@ -153,235 +153,260 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Flujo para realizar el login en el servidor de base de datos y deja abierto un espacio para scripts SQL." DisplayName="Invoke LogIn SQLServer workflow" sap:VirtualizedContainerService.HintSize="638,154" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Libreria Común\\LogIn SQLServer.xaml">
-                      <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:Int32" x:Key="In_Int_NumIntentos">2</InArgument>
-                        <InArgument x:TypeArguments="x:Int32" x:Key="In_Int_Timeout">2000</InArgument>
-                        <InArgument x:TypeArguments="x:Boolean" x:Key="In_Bool_Ejecucion_SP">True</InArgument>
-                      </ui:InvokeWorkflowFile.Arguments>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ui:InvokeWorkflowFile>
-                    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Se debe usar la aplicación de SQL Management para consultar y exportar datos basado en el query." AttachMode="ByInstance" DisplayName="Use Application: SQLQuery3.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (67))* - Microsoft SQL Server " sap:VirtualizedContainerService.HintSize="638,2169" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="f613a1ff-f1b5-493f-b833-4b316b8b8fc7" Version="V1">
-                      <uix:NApplicationCard.Body>
-                        <ActivityAction x:TypeArguments="x:Object">
-                          <ActivityAction.Argument>
-                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-                          </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1838" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <If sap:VirtualizedContainerService.HintSize="484,686" sap2010:WorkflowViewState.IdRef="If_2">
+                      <If.Condition>
+                        <InArgument x:TypeArguments="x:Boolean">
+                          <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">In_GBL_Str_Query_Cierre != "" &amp;&amp; In_GBL_Str_Query_Cierre != null</mca:CSharpValue>
+                        </InArgument>
+                      </If.Condition>
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,500" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Flujo para realizar el login en el servidor de base de datos y deja abierto un espacio para scripts SQL." DisplayName="Invoke LogIn SQLServer workflow" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Libreria Común\\LogIn SQLServer.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InArgument x:TypeArguments="x:Int32" x:Key="In_Int_NumIntentos">2</InArgument>
+                              <InArgument x:TypeArguments="x:Int32" x:Key="In_Int_Timeout">2000</InArgument>
+                              <InArgument x:TypeArguments="x:Boolean" x:Key="In_Bool_Ejecucion_SP">True</InArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:SetToClipboard sap2010:Annotation.AnnotationText="Agregar el query al clipboard" DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="SetToClipboard_1">
-                              <ui:SetToClipboard.Text>
-                                <InArgument x:TypeArguments="x:String">
-                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">In_GBL_Str_Query_Cierre</mca:CSharpValue>
-                                </InArgument>
-                              </ui:SetToClipboard.Text>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </ui:SetToClipboard>
-                            <uix:NClick sap2010:Annotation.AnnotationText="Hacer clic en el lienzo para poder agregar el query mediante ctrl + v" ClickType="Single" DisplayName="Click 'Text Editor'" sap:VirtualizedContainerService.HintSize="334,198" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f613a1ff-f1b5-493f-b833-4b316b8b8fc7" Version="V1">
-                              <uix:NClick.Target>
-                                <uix:TargetAnchorable DesignTimeRectangle="607, 138, 1297, 840" ElementType="InputBox" FriendlyName="'Text Editor'" FullSelectorArgument="&lt;wnd cls='GenericPane' title='SQLQuery1.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (87))' /&gt;&lt;wnd ctrlname='SqlScriptEditorControl' /&gt;&lt;wnd ctrlname='m_Editor' /&gt;&lt;wnd cls='HwndWrapper*' /&gt;&lt;ctrl automationid='WpfTextView' /&gt;" FuzzySelectorArgument="&lt;wnd cls='GenericPane' title='SQLQuery1.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (87))' /&gt;&lt;wnd ctrlname='SqlScriptEditorControl' /&gt;&lt;wnd ctrlname='m_Editor' /&gt;&lt;wnd cls='HwndWrapper*' /&gt;&lt;ctrl automationid='WpfTextView' role='editable text' /&gt;" Guid="802b9a15-b688-4270-8e38-ca5055bced3c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABRUAAANMCAYAAADCKUp2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAABhzSURBVHhe7dsxSkNBGEbR2f8WxNolWFla2ruE8EghqR+MRKMImvhuoaCcA18x1d9fmDEP19PMzMzMzMzMzMxs60RFMzMzMzMzMzMzSxvzZFkOZmZmZmZmZmZmZmd3dXM7l6cpKpqZmZmZmZmZmdm2nY2KAAAAAAAfiYoAAAAAQCIqAgAAAACJqAgAAAAAJKIiAAAAAJCIigAAAABAIioCAAAAAImoCAAAAAAkoiIAAAAAkIiKAAAAAEAiKgIAAAAAiagIAAAAACTfRkUzMzMzMzMzMzOzryYqmpmZmZmZmZmZWdqnqAgAAAAAcMkxKh4nKgIAAAAAm+x2+5eJigAAAADAJqIiAAAAAJCIigAAAABAIioCAAAAAImoCAAAAAAkoiIAAAAAkIiKAAAAAEAiKgIAAAAAiagIAAAAACSiIgAAAACQiIoAAAAAQCIqAgAAAACJqAgAAAAAJKIiAAAAAJCIigAAAABAIioCAAAAAImoCAAAAAAkoiIAAAAAkIiKAAAAAEAiKgIAAAAAiagIAAAAACSiIgAAAACQiIoAAAAAQDLGw+tObwAAAACAi0RFAAAAACDx/RkAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABI3qPi3f3j/I29HTQzMzMzMzMzM7O/vbGu6/zpiYpmZmZmZmZmZmb/Zfv5DOSBrv2HyYaxAAAAAElFTkSuQmCC" InformativeScreenshot="9621246be012c843df18abcbb3340603.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' cls='HwndWrapper*' title='SQLQuery1.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (87)) - Mic*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
-                              </uix:NClick.Target>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </uix:NClick>
-                            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" sap2010:Annotation.AnnotationText="Pegar todo lo contenido en el clipboard" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="334,209" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_5" Shortcuts="[d(hk)][d(ctrl)]v[u(ctrl)][u(hk)]" Version="V1">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </uix:NKeyboardShortcuts>
-                            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" sap2010:Annotation.AnnotationText="Se oprime F5 para ejecutar el script que se contiene en el lienzo." ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="334,220" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(f5)][u(hk)]" Version="V1">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </uix:NKeyboardShortcuts>
-                            <uix:NClick sap2010:Annotation.AnnotationText="Se selecciona todo el grid de ressultados." ClickType="Single" DisplayName="Click 'column header'" sap:VirtualizedContainerService.HintSize="334,187" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f613a1ff-f1b5-493f-b833-4b316b8b8fc7" Version="V1">
-                              <uix:NClick.Target>
-                                <uix:TargetAnchorable DesignTimeRectangle="279, 606, 31, 18" FriendlyName="'column header'" FullSelectorArgument="&lt;wnd cls='GenericPane' title='SQLQuery4.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (66))*' /&gt;&lt;wnd ctrlname='SqlScriptEditorControl' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Results' /&gt;&lt;wnd cls='WindowsForms10.Window.*' idx='3' /&gt;&lt;ctrl name='GridControl' role='table' /&gt;&lt;ctrl name='Column # 0' role='column' /&gt;&lt;ctrl role='column header' /&gt;" FuzzySelectorArgument="&lt;wnd cls='GenericPane' title='SQLQuery4.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (66))*' /&gt;&lt;wnd ctrlname='SqlScriptEditorControl' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Results' /&gt;&lt;wnd cls='WindowsForms10.Window.*' /&gt;&lt;ctrl name='GridControl' role='table' /&gt;&lt;ctrl name='Column # 0' role='column' /&gt;&lt;ctrl role='column header' automationid='' /&gt;" Guid="df4de101-86d6-466d-9286-efe5f8c0e5ca" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACMAAAAWCAYAAABKbiVHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVEhL7c6xCQAgDETR7L+KWDlTwEYILhDRQlC4Oinuw5EyTzxRB1NqS7GLiUxVzyXmjxgUMShiUMSgiEERgyIGlRtjZqETkRcT1f7dx/QF41266fPceakAAAAASUVORK5CYII=" InformativeScreenshot="3e9c10ed1b4d12fb8e12f6cf25ae5099.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' cls='HwndWrapper*' title='SQLQuery4.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (66))* - Mi*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
-                              </uix:NClick.Target>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </uix:NClick>
-                            <uix:NClick sap2010:Annotation.AnnotationText="Click derecho para desplegar el menu contextual." ClickType="Single" DisplayName="Click 'column header'" sap:VirtualizedContainerService.HintSize="334,187" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Right" ScopeIdentifier="f613a1ff-f1b5-493f-b833-4b316b8b8fc7" Version="V1">
-                              <uix:NClick.Target>
-                                <uix:TargetAnchorable DesignTimeRectangle="279, 606, 31, 18" FriendlyName="'column header'" FullSelectorArgument="&lt;wnd cls='GenericPane' title='SQLQuery4.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (66))*' /&gt;&lt;wnd ctrlname='SqlScriptEditorControl' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Results' /&gt;&lt;wnd cls='WindowsForms10.Window.*' idx='3' /&gt;&lt;ctrl name='GridControl' role='table' /&gt;&lt;ctrl name='Column # 0' role='column' /&gt;&lt;ctrl role='column header' /&gt;" FuzzySelectorArgument="&lt;wnd cls='GenericPane' title='SQLQuery4.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (66))*' /&gt;&lt;wnd ctrlname='SqlScriptEditorControl' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Results' /&gt;&lt;wnd cls='WindowsForms10.Window.*' /&gt;&lt;ctrl name='GridControl' role='table' /&gt;&lt;ctrl name='Column # 0' role='column' /&gt;&lt;ctrl role='column header' automationid='' /&gt;" Guid="df4de101-86d6-466d-9286-efe5f8c0e5ca" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACMAAAAWCAYAAABKbiVHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVEhL7c6xCQAgDETR7L+KWDlTwEYILhDRQlC4Oinuw5EyTzxRB1NqS7GLiUxVzyXmjxgUMShiUMSgiEERgyIGlRtjZqETkRcT1f7dx/QF41266fPceakAAAAASUVORK5CYII=" InformativeScreenshot="3e9c10ed1b4d12fb8e12f6cf25ae5099.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' cls='HwndWrapper*' title='SQLQuery4.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (66))* - Mi*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
-                              </uix:NClick.Target>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </uix:NClick>
-                            <uix:NClick sap2010:Annotation.AnnotationText="Se copia con cabeceras para usarlas en excel" ClickType="Single" DisplayName="Click 'Copy with Headers'" sap:VirtualizedContainerService.HintSize="334,187" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f613a1ff-f1b5-493f-b833-4b316b8b8fc7" Version="V1">
-                              <uix:NClick.Target>
-                                <uix:TargetAnchorable DesignTimeRectangle="3, 25, 259, 22" FriendlyName="'Copy with Headers'" FullSelectorArgument="&lt;ctrl name='Copy with Headers' role='menu item' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Copy with Headers' role='menu item' automationid='' check:text='Copy with Headers' /&gt;" Guid="77e9a005-aeb1-436f-ba57-374b250654cf" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQcAAAAaCAYAAAC6lJlWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOuSURBVHhe7Zg7ciMhEIb3Hj6BLuFMuc6gVKmuoEyhjqBQmY7g0Jlv4NSRa2vjZWkeQwMNzMyOp5D9B19peEwD3c0Pml+///xVa/HxqQAADwLEAQAgAnEAAIhAHAAAIhAHAIAIxAEAIAJxAACIQBwAACIQBwCASMfi8K7Ou2f1tHHsrupV7Lcyb1e13ezV+U1o+3xRh2Ibp9Rv7PtjWNJW78zNlYk+up/CGJuTupn6io00V/z7/5XL6+2LPsXBOPVZHe5x3ZmXuyBNjLHJVuo3MVmrLGmrY6q50vLBBB+Zcbwg2PK4MTzUj89zRnyqa12eDsXBKmPkgG5JAzwlUaR+MxKmyJK2eqWVKy0fTPARnfriKT3WRtpvanzW3xf9iUOq0BJOQf3VKlPje2jfXt51veBYIdi3o2DLB4/GPL6wevoNc3jibdn43qYnsV2qj9YZfELzjMfN+28v1xG27HiH497VxVfWNRNxFmZNpVwpxyesV4oD+UCyae3l8XQ2xJh7+/ZdPxcbm1COYlgav7rWr6FPcaj+j7KOHhLXOM0H2AXBv8/bSAxYEGIhcPA++nm72w+Bfr34Zx9weoc/+zIbn+yJAXX9RAq2aT6lxBz6hzXRfNu27DuDXb7+R2BUrrB1p+vN2omSOPg2G6f4ENF1Ysy5fWku6dhERRyqa12ex7s5CO1ho+cOj9tY0CRHswDc9OliTgNTpoBJQU7Ha5Un1Jt1ctHQMOEK9ax/tKYxtpJ5uH65CHWKmW8lVzI/V8qSjzTZAUK4vnLO8XLpWSi3xm+udXke75uD4KSyOMS2/OkfbgG+H+9P72s7gyjosWjMYeNNCHhWnlBfSoaonolWNEdihK3CPOytoxKDbmjkSra+VplwMR/KMsZHksBG5dKzVPaUxm+tdXk6FAeNOxkjR+gED1+HWVuU+LZt2PjppjAb6KQ3vhQUixGO5O/E4civ9FMCnpan1NOzcIqTb7wImPXF/b1f7AZv2CrOw/kh698hzVzh62uVicLm1LfI0M9uVOufms3Ss1T2VMSputbl6VMcCJP47IrFT8WoLXe4/eBk2yNHaszHvNr/6mjDCeUkqMYejdU8RTgj61MfmDFsYppyKnTs70b9g6RGmi97X/5W0inp2liuzIuPBPVlYww5VLNZerbEcwv1VSprXZp+xWEWeQBSwl8QAECNnyUOpLpfqLQAfCd+iDj4q3j9VgEACHwzcQAALAXEAQAgAnEAAIhAHAAAIhAHAICAUv8AzcM1Pe9blvgAAAAASUVORK5CYII=" InformativeScreenshot="5b1066509ed950ec1d4b1395da4bae5e.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' cls='HwndWrapper*' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
-                              </uix:NClick.Target>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </uix:NClick>
-                            <uix:NClick sap2010:Annotation.AnnotationText="Se desconecta la base de datos del sql management" ClickType="Single" DisplayName="Click 'graphic'" sap:VirtualizedContainerService.HintSize="334,187" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f613a1ff-f1b5-493f-b833-4b316b8b8fc7" Version="V1">
-                              <uix:NClick.Target>
-                                <uix:TargetAnchorable DesignTimeRectangle="106, 144, 16, 16" ElementType="Icon" FriendlyName="'graphic'" FullSelectorArgument="&lt;ctrl automationid='ST:0:0:{d114938f-591c-46cf-a785-500a82d97410}' /&gt;&lt;ctrl name='SQL Server Object Explorer' role='tool bar' /&gt;&lt;ctrl name='Disconnect' role='push button' /&gt;&lt;ctrl role='graphic' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='ST:0:0:{d114938f-591c-46cf-a785-500a82d97410}' /&gt;&lt;ctrl name='SQL Server Object Explorer' role='tool bar' /&gt;&lt;ctrl name='Disconnect' role='push button' /&gt;&lt;ctrl role='graphic' automationid='' /&gt;" Guid="b5940a5a-3c32-4a1a-bfae-2fff4d58dcf7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAElSURBVDhPYzh/7el/amLaGnju6hMgBtLXniDxMfF5oPzZK4+R+FgMBBm0Ndrj/4nuBrAGkMI7N0/+P1ybD2bX1tb+z8nJgRuCzMdqIAgfb6/5P0FN8P+FBdP/3zq49/+2GB+woSBNlpaWYAwzEJmPbAbChWBvPvl/Znrv/ymGcv8X+Fj/v7VvJ1YDiDLwwvWn/89effz/0oqF/6eZKkIMvHAMbgAhjGHgORCeOeH/JE2R/6f6mv5f37Ye7OVz98//9/X1hbsIG8Zh4JP/i/wd/h8oz4DbeuPA3v+H64vAbGwGgTBMLaaBUAlQbIPCEiYGSx7YDANhZMNAGG4gPjw0DIRhZINgGFktUQbCMLqB2NSMGogfgwxBxtjUkGQgMZjKBj79DwBwDgz2KKqzkQAAAABJRU5ErkJggg==" InformativeScreenshot="ad0fcc6958938b570138a9e75b014e5b.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' cls='HwndWrapper*' title='SQLQuery5.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (68))* - Mi*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
-                              </uix:NClick.Target>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </uix:NClick>
-                          </Sequence>
-                        </ActivityAction>
-                      </uix:NApplicationCard.Body>
-                      <uix:NApplicationCard.TargetApp>
-                        <uix:TargetApp Area="-8, -8, 1936, 1056" FilePath="C:\\Program Files (x86)\\Microsoft SQL Server Management Studio 18\\Common7\\IDE\\ssms.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMRSURBVFhH1ZVbSBRRHMYH2mgDo4dE8iGoiHor6sUHoQShxU3xAkV2GyjNRGVps6JdqIeKHnzYICGiSLaLwk66RBe1wK3EzQIVCYoSkVxC6MlYN60tTv//+D96Zj2zl9EH++DHzJw5+33f7JyZUZa1JgPleYALuAFoQIjAfRyDc2V5NN2gWn+Rw9lSFEqCj6YaNfmowjZrXB4BWJrA3DJXJFBsIxvFdc+hQghLQoimGgVmwQTzTAiSjdL4oNByAZlx2pCNqVIWiL2qlBqnw1T3zsUX+Bs5yWYGj7Fo5wFpiIzok91suncD+zOsLE0BTny0iv0aVtl0/xEWe3OIxUKVbKprF4u92M5+9mxlM3257PfAKj2YQzamyqiADDFMBtmYajkUwKcDcdCQUbJQEVmoCNlYlyxURBYqQjbWJQsVkYUCI3yfbKxLFioihHK0odBm2/f3a3x4TDbWJQsVSQy/pZXYFXf40oWW6qzxt+vkH5hMJAsVEcOb2o5iuAYwwHu3vWjuYzQnd3gf8AGYALJp1FyyUBEefuVhrRgebLjtsuM42ejK9T7eAefiAIZvo+HkkoWKYEhH10EbGHoBDGebLmoFd9qdNViObHStPttzmebMF8CtO1yq78sEIfHEUAGtuaPOvtfnV8GkE9ALAMGK61fxH2gjG10rG19fE+ZgiVLa1tGUhZoaq6qBIFmJof53p/HKmwBu+hLgRbQcz1PDGoACWJTP5UwDG2mKXN++HN8SG6vyQeiYWGLic72rwX9zPRh8QrMcz/MTcJ+xFF8L2trz3XoJCM+H4ygRofP4O/kr2Ezx8ersH6O1BV8/ug4PDpxT/c/qs0qaW7FEU7ZnNszeGDKUWHGmdw9seXi+bpRM++87HWprsXoqUKLSUOZy94klkPTCUfhpBPTPJA1ZkzuMV84L4PpY+F6QaUkK4NXO/+0Yrt8OIHWJRRcwhuO+YU3ox8m0qAKJ4VyZlLBcwCycK7GEmcQCJsifjtnX6ghgvtrnS5h/KSHAWgFUqvuLSjUHAnwAljAjs7fX/yNF+QfVJ+SZf2TN5AAAAABJRU5ErkJggg==" InformativeScreenshot="956b9fd09ea50faee0d651a9dd7cd537.png" Selector="&lt;wnd app='ssms.exe' cls='HwndWrapper*' title='SQLQuery3.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (67))* - Mi*'/&gt;" />
-                      </uix:NApplicationCard.TargetApp>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </uix:NApplicationCard>
-                    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="638,1742" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
-                      <ueab:ExcelProcessScopeX.Body>
-                        <ActivityAction x:TypeArguments="ui:IExcelProcess">
-                          <ActivityAction.Argument>
-                            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
-                          </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="604,1656" sap2010:WorkflowViewState.IdRef="Sequence_6">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" sap2010:Annotation.AnnotationText="Se empieza a usar un archivo de excel que se filtrará y usará en posteriores pasos y actividades para enviarlo." DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="562,1564" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" WorkbookPath="Data\\Temp\\Reporte cierre Eds.xlsx">
-                              <ueab:ExcelApplicationCard.Body>
-                                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
-                                  <ActivityAction.Argument>
-                                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="ExcelReporteCierre" />
-                                  </ActivityAction.Argument>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="528,1256" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          </ui:InvokeWorkflowFile>
+                          <uix:NApplicationCard sap2010:Annotation.AnnotationText="Se debe usar la aplicación de SQL Management para consultar y exportar datos basado en el query." AttachMode="ByInstance" DisplayName="Use Application: SQLQuery3.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (67))* - Microsoft SQL Server " sap:VirtualizedContainerService.HintSize="334,123" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="f613a1ff-f1b5-493f-b833-4b316b8b8fc7" Version="V1">
+                            <uix:NApplicationCard.Body>
+                              <ActivityAction x:TypeArguments="x:Object">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1839" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:SetToClipboard sap2010:Annotation.AnnotationText="Agregar el query al clipboard" DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="SetToClipboard_1">
+                                    <ui:SetToClipboard.Text>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">In_GBL_Str_Query_Cierre</mca:CSharpValue>
+                                      </InArgument>
+                                    </ui:SetToClipboard.Text>
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,1164" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <ueab:FormatRangeX sap2010:Annotation.AnnotationText="Todas las celdas se aplican en formato tezxto para poder pegar la tabla contenida en memoria de 'solo texto'." DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="444,179" sap2010:WorkflowViewState.IdRef="FormatRangeX_1">
-                                        <ueab:FormatRangeX.Alignment>
-                                          <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
-                                        </ueab:FormatRangeX.Alignment>
-                                        <ueab:FormatRangeX.Font>
-                                          <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" />
-                                        </ueab:FormatRangeX.Font>
-                                        <ueab:FormatRangeX.Format>
-                                          <ueab:TextFormat />
-                                        </ueab:FormatRangeX.Format>
-                                        <ueab:FormatRangeX.Range>
-                                          <InArgument x:TypeArguments="ue:IReadRangeRef">
-                                            <mca:CSharpValue x:TypeArguments="ue:IReadRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">ExcelReporteCierre.Sheet["Reporte Cierre"].Range["1:1048576"]</mca:CSharpValue>
-                                          </InArgument>
-                                        </ueab:FormatRangeX.Range>
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                      </ueab:FormatRangeX>
-                                      <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" sap2010:Annotation.AnnotationText="Se selecciona la celda A1 para empezar el pegado desde esta celda (inicial)" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="444,220" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" ScopeIdentifier="ExcelReporteCierre" Shortcuts="[d(hk)][d(ctrl)][k(home)][u(ctrl)][u(hk)]" Version="V1">
-                                        <uix:NKeyboardShortcuts.InScope>
-                                          <InArgument x:TypeArguments="x:Object">
-                                            <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">ExcelReporteCierre</mca:CSharpValue>
-                                          </InArgument>
-                                        </uix:NKeyboardShortcuts.InScope>
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                      </uix:NKeyboardShortcuts>
-                                      <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" sap2010:Annotation.AnnotationText="shortcut para pegado especial." ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="444,209" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" ScopeIdentifier="ExcelDatosSatelite" Shortcuts="[d(hk)][d(alt)d(ctrl)]v[u(ctrl)u(alt)][u(hk)]" Version="V1">
-                                        <uix:NKeyboardShortcuts.InScope>
-                                          <InArgument x:TypeArguments="x:Object">
-                                            <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">ExcelReporteCierre</mca:CSharpValue>
-                                          </InArgument>
-                                        </uix:NKeyboardShortcuts.InScope>
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                      </uix:NKeyboardShortcuts>
-                                      <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" sap2010:Annotation.AnnotationText="en el menu de pegado especial se selecciona el segundo apartado que es 'solo texto'" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="444,220" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_4" ScopeIdentifier="ExcelDatosSatelite" Shortcuts="[d(hk)][k(down)][u(hk)][d(hk)][k(enter)][u(hk)]" Version="V1">
-                                        <uix:NKeyboardShortcuts.InScope>
-                                          <InArgument x:TypeArguments="x:Object">
-                                            <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">ExcelReporteCierre</mca:CSharpValue>
-                                          </InArgument>
-                                        </uix:NKeyboardShortcuts.InScope>
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                      </uix:NKeyboardShortcuts>
-                                      <ueab:SaveExcelFileX DisplayName="Save Excel File" sap:VirtualizedContainerService.HintSize="444,84" sap2010:WorkflowViewState.IdRef="SaveExcelFileX_1">
-                                        <ueab:SaveExcelFileX.Workbook>
-                                          <InArgument x:TypeArguments="ue:IWorkbookQuickHandle">
-                                            <mca:CSharpValue x:TypeArguments="ue:IWorkbookQuickHandle" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">ExcelReporteCierre</mca:CSharpValue>
-                                          </InArgument>
-                                        </ueab:SaveExcelFileX.Workbook>
-                                      </ueab:SaveExcelFileX>
-                                    </Sequence>
-                                  </Sequence>
-                                </ActivityAction>
-                              </ueab:ExcelApplicationCard.Body>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </ueab:ExcelApplicationCard>
-                          </Sequence>
-                        </ActivityAction>
-                      </ueab:ExcelProcessScopeX.Body>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ueab:ExcelProcessScopeX>
-                    <ui:LogMessage sap2010:Annotation.AnnotationText="Se imprime en logs para traza" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="638,122" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info">
+                                  </ui:SetToClipboard>
+                                  <uix:NClick sap2010:Annotation.AnnotationText="Hacer clic en el lienzo para poder agregar el query mediante ctrl + v" ClickType="Single" DisplayName="Click 'Text Editor'" sap:VirtualizedContainerService.HintSize="334,198" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f613a1ff-f1b5-493f-b833-4b316b8b8fc7" Version="V1">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="607, 138, 1297, 840" ElementType="InputBox" FriendlyName="'Text Editor'" FullSelectorArgument="&lt;wnd cls='GenericPane' title='SQLQuery1.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (87))' /&gt;&lt;wnd ctrlname='SqlScriptEditorControl' /&gt;&lt;wnd ctrlname='m_Editor' /&gt;&lt;wnd cls='HwndWrapper*' /&gt;&lt;ctrl automationid='WpfTextView' /&gt;" FuzzySelectorArgument="&lt;wnd cls='GenericPane' title='SQLQuery1.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (87))' /&gt;&lt;wnd ctrlname='SqlScriptEditorControl' /&gt;&lt;wnd ctrlname='m_Editor' /&gt;&lt;wnd cls='HwndWrapper*' /&gt;&lt;ctrl automationid='WpfTextView' role='editable text' /&gt;" Guid="802b9a15-b688-4270-8e38-ca5055bced3c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABRUAAANMCAYAAADCKUp2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAABhzSURBVHhe7dsxSkNBGEbR2f8WxNolWFla2ruE8EghqR+MRKMImvhuoaCcA18x1d9fmDEP19PMzMzMzMzMzMxs60RFMzMzMzMzMzMzSxvzZFkOZmZmZmZmZmZmZmd3dXM7l6cpKpqZmZmZmZmZmdm2nY2KAAAAAAAfiYoAAAAAQCIqAgAAAACJqAgAAAAAJKIiAAAAAJCIigAAAABAIioCAAAAAImoCAAAAAAkoiIAAAAAkIiKAAAAAEAiKgIAAAAAiagIAAAAACTfRkUzMzMzMzMzMzOzryYqmpmZmZmZmZmZWdqnqAgAAAAAcMkxKh4nKgIAAAAAm+x2+5eJigAAAADAJqIiAAAAAJCIigAAAABAIioCAAAAAImoCAAAAAAkoiIAAAAAkIiKAAAAAEAiKgIAAAAAiagIAAAAACSiIgAAAACQiIoAAAAAQCIqAgAAAACJqAgAAAAAJKIiAAAAAJCIigAAAABAIioCAAAAAImoCAAAAAAkoiIAAAAAkIiKAAAAAEAiKgIAAAAAiagIAAAAACSiIgAAAACQiIoAAAAAQDLGw+tObwAAAACAi0RFAAAAACDx/RkAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABIREUAAAAAIBEVAQAAAIBEVAQAAAAAElERAAAAAEhERQAAAAAgERUBAAAAgERUBAAAAAASUREAAAAASERFAAAAACARFQEAAACARFQEAAAAABJREQAAAABI3qPi3f3j/I29HTQzMzMzMzMzM7O/vbGu6/zpiYpmZmZmZmZmZmb/Zfv5DOSBrv2HyYaxAAAAAElFTkSuQmCC" InformativeScreenshot="9621246be012c843df18abcbb3340603.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' cls='HwndWrapper*' title='SQLQuery1.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (87)) - Mic*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                                    </uix:NClick.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NClick>
+                                  <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" sap2010:Annotation.AnnotationText="Pegar todo lo contenido en el clipboard" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="334,209" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_5" Shortcuts="[d(hk)][d(ctrl)]v[u(ctrl)][u(hk)]" Version="V1">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NKeyboardShortcuts>
+                                  <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" sap2010:Annotation.AnnotationText="Se oprime F5 para ejecutar el script que se contiene en el lienzo." ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="334,220" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(f5)][u(hk)]" Version="V1">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NKeyboardShortcuts>
+                                  <uix:NClick sap2010:Annotation.AnnotationText="Se selecciona todo el grid de ressultados." ClickType="Single" DisplayName="Click 'column header'" sap:VirtualizedContainerService.HintSize="334,187" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f613a1ff-f1b5-493f-b833-4b316b8b8fc7" Version="V1">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="279, 606, 31, 18" FriendlyName="'column header'" FullSelectorArgument="&lt;wnd cls='GenericPane' title='SQLQuery4.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (66))*' /&gt;&lt;wnd ctrlname='SqlScriptEditorControl' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Results' /&gt;&lt;wnd cls='WindowsForms10.Window.*' idx='3' /&gt;&lt;ctrl name='GridControl' role='table' /&gt;&lt;ctrl name='Column # 0' role='column' /&gt;&lt;ctrl role='column header' /&gt;" FuzzySelectorArgument="&lt;wnd cls='GenericPane' title='SQLQuery4.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (66))*' /&gt;&lt;wnd ctrlname='SqlScriptEditorControl' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Results' /&gt;&lt;wnd cls='WindowsForms10.Window.*' /&gt;&lt;ctrl name='GridControl' role='table' /&gt;&lt;ctrl name='Column # 0' role='column' /&gt;&lt;ctrl role='column header' automationid='' /&gt;" Guid="df4de101-86d6-466d-9286-efe5f8c0e5ca" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACMAAAAWCAYAAABKbiVHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVEhL7c6xCQAgDETR7L+KWDlTwEYILhDRQlC4Oinuw5EyTzxRB1NqS7GLiUxVzyXmjxgUMShiUMSgiEERgyIGlRtjZqETkRcT1f7dx/QF41266fPceakAAAAASUVORK5CYII=" InformativeScreenshot="3e9c10ed1b4d12fb8e12f6cf25ae5099.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' cls='HwndWrapper*' title='SQLQuery4.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (66))* - Mi*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                                    </uix:NClick.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NClick>
+                                  <uix:NClick sap2010:Annotation.AnnotationText="Click derecho para desplegar el menu contextual." ClickType="Single" DisplayName="Click 'column header'" sap:VirtualizedContainerService.HintSize="334,187" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Right" ScopeIdentifier="f613a1ff-f1b5-493f-b833-4b316b8b8fc7" Version="V1">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="279, 606, 31, 18" FriendlyName="'column header'" FullSelectorArgument="&lt;wnd cls='GenericPane' title='SQLQuery4.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (66))*' /&gt;&lt;wnd ctrlname='SqlScriptEditorControl' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Results' /&gt;&lt;wnd cls='WindowsForms10.Window.*' idx='3' /&gt;&lt;ctrl name='GridControl' role='table' /&gt;&lt;ctrl name='Column # 0' role='column' /&gt;&lt;ctrl role='column header' /&gt;" FuzzySelectorArgument="&lt;wnd cls='GenericPane' title='SQLQuery4.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (66))*' /&gt;&lt;wnd ctrlname='SqlScriptEditorControl' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Results' /&gt;&lt;wnd cls='WindowsForms10.Window.*' /&gt;&lt;ctrl name='GridControl' role='table' /&gt;&lt;ctrl name='Column # 0' role='column' /&gt;&lt;ctrl role='column header' automationid='' /&gt;" Guid="df4de101-86d6-466d-9286-efe5f8c0e5ca" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACMAAAAWCAYAAABKbiVHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVEhL7c6xCQAgDETR7L+KWDlTwEYILhDRQlC4Oinuw5EyTzxRB1NqS7GLiUxVzyXmjxgUMShiUMSgiEERgyIGlRtjZqETkRcT1f7dx/QF41266fPceakAAAAASUVORK5CYII=" InformativeScreenshot="3e9c10ed1b4d12fb8e12f6cf25ae5099.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' cls='HwndWrapper*' title='SQLQuery4.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (66))* - Mi*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                                    </uix:NClick.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NClick>
+                                  <uix:NClick sap2010:Annotation.AnnotationText="Se copia con cabeceras para usarlas en excel" ClickType="Single" DisplayName="Click 'Copy with Headers'" sap:VirtualizedContainerService.HintSize="334,187" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f613a1ff-f1b5-493f-b833-4b316b8b8fc7" Version="V1">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="3, 25, 259, 22" FriendlyName="'Copy with Headers'" FullSelectorArgument="&lt;ctrl name='Copy with Headers' role='menu item' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Copy with Headers' role='menu item' automationid='' check:text='Copy with Headers' /&gt;" Guid="77e9a005-aeb1-436f-ba57-374b250654cf" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQcAAAAaCAYAAAC6lJlWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOuSURBVHhe7Zg7ciMhEIb3Hj6BLuFMuc6gVKmuoEyhjqBQmY7g0Jlv4NSRa2vjZWkeQwMNzMyOp5D9B19peEwD3c0Pml+///xVa/HxqQAADwLEAQAgAnEAAIhAHAAAIhAHAIAIxAEAIAJxAACIQBwAACIQBwCASMfi8K7Ou2f1tHHsrupV7Lcyb1e13ezV+U1o+3xRh2Ibp9Rv7PtjWNJW78zNlYk+up/CGJuTupn6io00V/z7/5XL6+2LPsXBOPVZHe5x3ZmXuyBNjLHJVuo3MVmrLGmrY6q50vLBBB+Zcbwg2PK4MTzUj89zRnyqa12eDsXBKmPkgG5JAzwlUaR+MxKmyJK2eqWVKy0fTPARnfriKT3WRtpvanzW3xf9iUOq0BJOQf3VKlPje2jfXt51veBYIdi3o2DLB4/GPL6wevoNc3jibdn43qYnsV2qj9YZfELzjMfN+28v1xG27HiH497VxVfWNRNxFmZNpVwpxyesV4oD+UCyae3l8XQ2xJh7+/ZdPxcbm1COYlgav7rWr6FPcaj+j7KOHhLXOM0H2AXBv8/bSAxYEGIhcPA++nm72w+Bfr34Zx9weoc/+zIbn+yJAXX9RAq2aT6lxBz6hzXRfNu27DuDXb7+R2BUrrB1p+vN2omSOPg2G6f4ENF1Ysy5fWku6dhERRyqa12ex7s5CO1ho+cOj9tY0CRHswDc9OliTgNTpoBJQU7Ha5Un1Jt1ctHQMOEK9ax/tKYxtpJ5uH65CHWKmW8lVzI/V8qSjzTZAUK4vnLO8XLpWSi3xm+udXke75uD4KSyOMS2/OkfbgG+H+9P72s7gyjosWjMYeNNCHhWnlBfSoaonolWNEdihK3CPOytoxKDbmjkSra+VplwMR/KMsZHksBG5dKzVPaUxm+tdXk6FAeNOxkjR+gED1+HWVuU+LZt2PjppjAb6KQ3vhQUixGO5O/E4civ9FMCnpan1NOzcIqTb7wImPXF/b1f7AZv2CrOw/kh698hzVzh62uVicLm1LfI0M9uVOufms3Ss1T2VMSputbl6VMcCJP47IrFT8WoLXe4/eBk2yNHaszHvNr/6mjDCeUkqMYejdU8RTgj61MfmDFsYppyKnTs70b9g6RGmi97X/5W0inp2liuzIuPBPVlYww5VLNZerbEcwv1VSprXZp+xWEWeQBSwl8QAECNnyUOpLpfqLQAfCd+iDj4q3j9VgEACHwzcQAALAXEAQAgAnEAAIhAHAAAIhAHAICAUv8AzcM1Pe9blvgAAAAASUVORK5CYII=" InformativeScreenshot="5b1066509ed950ec1d4b1395da4bae5e.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' cls='HwndWrapper*' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                                    </uix:NClick.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NClick>
+                                  <uix:NClick sap2010:Annotation.AnnotationText="Se desconecta la base de datos del sql management" ClickType="Single" DisplayName="Click 'graphic'" sap:VirtualizedContainerService.HintSize="334,187" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f613a1ff-f1b5-493f-b833-4b316b8b8fc7" Version="V1">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="106, 144, 16, 16" ElementType="Icon" FriendlyName="'graphic'" FullSelectorArgument="&lt;ctrl automationid='ST:0:0:{d114938f-591c-46cf-a785-500a82d97410}' /&gt;&lt;ctrl name='SQL Server Object Explorer' role='tool bar' /&gt;&lt;ctrl name='Disconnect' role='push button' /&gt;&lt;ctrl role='graphic' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='ST:0:0:{d114938f-591c-46cf-a785-500a82d97410}' /&gt;&lt;ctrl name='SQL Server Object Explorer' role='tool bar' /&gt;&lt;ctrl name='Disconnect' role='push button' /&gt;&lt;ctrl role='graphic' automationid='' /&gt;" Guid="b5940a5a-3c32-4a1a-bfae-2fff4d58dcf7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAElSURBVDhPYzh/7el/amLaGnju6hMgBtLXniDxMfF5oPzZK4+R+FgMBBm0Ndrj/4nuBrAGkMI7N0/+P1ybD2bX1tb+z8nJgRuCzMdqIAgfb6/5P0FN8P+FBdP/3zq49/+2GB+woSBNlpaWYAwzEJmPbAbChWBvPvl/Znrv/ymGcv8X+Fj/v7VvJ1YDiDLwwvWn/89effz/0oqF/6eZKkIMvHAMbgAhjGHgORCeOeH/JE2R/6f6mv5f37Ye7OVz98//9/X1hbsIG8Zh4JP/i/wd/h8oz4DbeuPA3v+H64vAbGwGgTBMLaaBUAlQbIPCEiYGSx7YDANhZMNAGG4gPjw0DIRhZINgGFktUQbCMLqB2NSMGogfgwxBxtjUkGQgMZjKBj79DwBwDgz2KKqzkQAAAABJRU5ErkJggg==" InformativeScreenshot="ad0fcc6958938b570138a9e75b014e5b.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' cls='HwndWrapper*' title='SQLQuery5.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (68))* - Mi*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                                    </uix:NClick.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NClick>
+                                </Sequence>
+                              </ActivityAction>
+                            </uix:NApplicationCard.Body>
+                            <uix:NApplicationCard.TargetApp>
+                              <uix:TargetApp Area="-8, -8, 1936, 1056" FilePath="C:\\Program Files (x86)\\Microsoft SQL Server Management Studio 18\\Common7\\IDE\\ssms.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMRSURBVFhH1ZVbSBRRHMYH2mgDo4dE8iGoiHor6sUHoQShxU3xAkV2GyjNRGVps6JdqIeKHnzYICGiSLaLwk66RBe1wK3EzQIVCYoSkVxC6MlYN60tTv//+D96Zj2zl9EH++DHzJw5+33f7JyZUZa1JgPleYALuAFoQIjAfRyDc2V5NN2gWn+Rw9lSFEqCj6YaNfmowjZrXB4BWJrA3DJXJFBsIxvFdc+hQghLQoimGgVmwQTzTAiSjdL4oNByAZlx2pCNqVIWiL2qlBqnw1T3zsUX+Bs5yWYGj7Fo5wFpiIzok91suncD+zOsLE0BTny0iv0aVtl0/xEWe3OIxUKVbKprF4u92M5+9mxlM3257PfAKj2YQzamyqiADDFMBtmYajkUwKcDcdCQUbJQEVmoCNlYlyxURBYqQjbWJQsVkYUCI3yfbKxLFioihHK0odBm2/f3a3x4TDbWJQsVSQy/pZXYFXf40oWW6qzxt+vkH5hMJAsVEcOb2o5iuAYwwHu3vWjuYzQnd3gf8AGYALJp1FyyUBEefuVhrRgebLjtsuM42ejK9T7eAefiAIZvo+HkkoWKYEhH10EbGHoBDGebLmoFd9qdNViObHStPttzmebMF8CtO1yq78sEIfHEUAGtuaPOvtfnV8GkE9ALAMGK61fxH2gjG10rG19fE+ZgiVLa1tGUhZoaq6qBIFmJof53p/HKmwBu+hLgRbQcz1PDGoACWJTP5UwDG2mKXN++HN8SG6vyQeiYWGLic72rwX9zPRh8QrMcz/MTcJ+xFF8L2trz3XoJCM+H4ygRofP4O/kr2Ezx8ersH6O1BV8/ug4PDpxT/c/qs0qaW7FEU7ZnNszeGDKUWHGmdw9seXi+bpRM++87HWprsXoqUKLSUOZy94klkPTCUfhpBPTPJA1ZkzuMV84L4PpY+F6QaUkK4NXO/+0Yrt8OIHWJRRcwhuO+YU3ox8m0qAKJ4VyZlLBcwCycK7GEmcQCJsifjtnX6ghgvtrnS5h/KSHAWgFUqvuLSjUHAnwAljAjs7fX/yNF+QfVJ+SZf2TN5AAAAABJRU5ErkJggg==" InformativeScreenshot="956b9fd09ea50faee0d651a9dd7cd537.png" Selector="&lt;wnd app='ssms.exe' cls='HwndWrapper*' title='SQLQuery3.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (67))* - Mi*'/&gt;" />
+                            </uix:NApplicationCard.TargetApp>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NApplicationCard>
+                          <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+                            <ueab:ExcelProcessScopeX.Body>
+                              <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="604,1656" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" sap2010:Annotation.AnnotationText="Se empieza a usar un archivo de excel que se filtrará y usará en posteriores pasos y actividades para enviarlo." DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="562,1564" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" WorkbookPath="Data\\Temp\\Reporte cierre Eds.xlsx">
+                                    <ueab:ExcelApplicationCard.Body>
+                                      <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="ExcelReporteCierre" />
+                                        </ActivityAction.Argument>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="528,1256" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,1164" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ueab:FormatRangeX sap2010:Annotation.AnnotationText="Todas las celdas se aplican en formato tezxto para poder pegar la tabla contenida en memoria de 'solo texto'." DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="444,179" sap2010:WorkflowViewState.IdRef="FormatRangeX_1">
+                                              <ueab:FormatRangeX.Alignment>
+                                                <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
+                                              </ueab:FormatRangeX.Alignment>
+                                              <ueab:FormatRangeX.Font>
+                                                <ui:FontOptions Color="Black" FillColor="Transparent" FontFamilyName="Calibri" Size="11" Style="Regular" />
+                                              </ueab:FormatRangeX.Font>
+                                              <ueab:FormatRangeX.Format>
+                                                <ueab:TextFormat />
+                                              </ueab:FormatRangeX.Format>
+                                              <ueab:FormatRangeX.Range>
+                                                <InArgument x:TypeArguments="ue:IReadRangeRef">
+                                                  <mca:CSharpValue x:TypeArguments="ue:IReadRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">ExcelReporteCierre.Sheet["Reporte Cierre"].Range["1:1048576"]</mca:CSharpValue>
+                                                </InArgument>
+                                              </ueab:FormatRangeX.Range>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ueab:FormatRangeX>
+                                            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" sap2010:Annotation.AnnotationText="Se selecciona la celda A1 para empezar el pegado desde esta celda (inicial)" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="444,220" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" ScopeIdentifier="ExcelReporteCierre" Shortcuts="[d(hk)][d(ctrl)][k(home)][u(ctrl)][u(hk)]" Version="V1">
+                                              <uix:NKeyboardShortcuts.InScope>
+                                                <InArgument x:TypeArguments="x:Object">
+                                                  <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">ExcelReporteCierre</mca:CSharpValue>
+                                                </InArgument>
+                                              </uix:NKeyboardShortcuts.InScope>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NKeyboardShortcuts>
+                                            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" sap2010:Annotation.AnnotationText="shortcut para pegado especial." ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="444,209" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" ScopeIdentifier="ExcelDatosSatelite" Shortcuts="[d(hk)][d(alt)d(ctrl)]v[u(ctrl)u(alt)][u(hk)]" Version="V1">
+                                              <uix:NKeyboardShortcuts.InScope>
+                                                <InArgument x:TypeArguments="x:Object">
+                                                  <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">ExcelReporteCierre</mca:CSharpValue>
+                                                </InArgument>
+                                              </uix:NKeyboardShortcuts.InScope>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NKeyboardShortcuts>
+                                            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" sap2010:Annotation.AnnotationText="en el menu de pegado especial se selecciona el segundo apartado que es 'solo texto'" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="444,220" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_4" ScopeIdentifier="ExcelDatosSatelite" Shortcuts="[d(hk)][k(down)][u(hk)][d(hk)][k(enter)][u(hk)]" Version="V1">
+                                              <uix:NKeyboardShortcuts.InScope>
+                                                <InArgument x:TypeArguments="x:Object">
+                                                  <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">ExcelReporteCierre</mca:CSharpValue>
+                                                </InArgument>
+                                              </uix:NKeyboardShortcuts.InScope>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NKeyboardShortcuts>
+                                            <ueab:SaveExcelFileX DisplayName="Save Excel File" sap:VirtualizedContainerService.HintSize="444,84" sap2010:WorkflowViewState.IdRef="SaveExcelFileX_1">
+                                              <ueab:SaveExcelFileX.Workbook>
+                                                <InArgument x:TypeArguments="ue:IWorkbookQuickHandle">
+                                                  <mca:CSharpValue x:TypeArguments="ue:IWorkbookQuickHandle" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">ExcelReporteCierre</mca:CSharpValue>
+                                                </InArgument>
+                                              </ueab:SaveExcelFileX.Workbook>
+                                            </ueab:SaveExcelFileX>
+                                          </Sequence>
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </ueab:ExcelApplicationCard.Body>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ueab:ExcelApplicationCard>
+                                </Sequence>
+                              </ActivityAction>
+                            </ueab:ExcelProcessScopeX.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ueab:ExcelProcessScopeX>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_15">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <ui:LogMessage sap2010:Annotation.AnnotationText="Se imprime en logs para traza" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,122" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info">
                       <ui:LogMessage.Message>
                         <InArgument x:TypeArguments="x:Object">
                           <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">"Ejecución de Ejecutar SP cierre y exportar (Reporte cierre EDS) finalizado exitosamente"</mca:CSharpValue>
@@ -393,7 +418,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:LogMessage>
-                    <Assign sap:VirtualizedContainerService.HintSize="638,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">
                           <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">Str_SystemException</mca:CSharpReference>
@@ -403,14 +428,13 @@
                         <InArgument x:TypeArguments="x:String">OK</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:Break sap:VirtualizedContainerService.HintSize="638,22" sap2010:WorkflowViewState.IdRef="Break_1" />
                   </Sequence>
                 </TryCatch.Try>
                 <TryCatch.Catches>
-                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="684,494" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="530,394" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
@@ -418,7 +442,7 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                       </ActivityAction.Argument>
-                      <Sequence sap:VirtualizedContainerService.HintSize="376,425" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,325" sap2010:WorkflowViewState.IdRef="Sequence_13">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -436,18 +460,6 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:LogMessage>
-                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:String">
-                              <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">Str_MensajeError</mca:CSharpReference>
-                            </OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:String">
-                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21" xml:space="preserve">"Error en la ejecución D. Cierre día Eds Automático, Ejecutar SP cierre y exportar (Reporte cierre EDS) \n  excepción: "+exception.Message</mca:CSharpValue>
-                            </InArgument>
-                          </Assign.Value>
-                        </Assign>
                         <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_3">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:String">

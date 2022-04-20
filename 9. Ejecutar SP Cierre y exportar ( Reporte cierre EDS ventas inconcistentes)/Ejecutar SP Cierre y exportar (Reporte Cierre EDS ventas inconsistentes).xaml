@@ -4,7 +4,7 @@
     <x:Property Name="In_GBL_Str_Query_Cierre_Inco" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>946,7070</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1274,3113</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -98,7 +98,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Ejecutar SP de Cierre y obtener los resultados para enviarlos posteriormente, por lo que es necesario guardar estos resultados de SQL en un archivo de SQL de Reporte cierre Eds ventas inconsistentes&#xA;&#xA;Precondicion:  Query construido 'In_GBL_Str_Query_Cierre'&#xA;&#xA;Acciones: A partir del query concatenado previamente, se debe de hacer la ejecución del SP en SQL Management Studio" DisplayName="Ejecutar_SP_Cierre_y_exportar__Reporte_Cierre_EDS_ventas_inconsistentes_" sap:VirtualizedContainerService.HintSize="956,7005" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Ejecutar SP de Cierre y obtener los resultados para enviarlos posteriormente, por lo que es necesario guardar estos resultados de SQL en un archivo de SQL de Reporte cierre Eds ventas inconsistentes&#xA;&#xA;Precondicion:  Query construido 'In_GBL_Str_Query_Cierre'&#xA;&#xA;Acciones: A partir del query concatenado previamente, se debe de hacer la ejecución del SP en SQL Management Studio" DisplayName="Ejecutar_SP_Cierre_y_exportar__Reporte_Cierre_EDS_ventas_inconsistentes_" sap:VirtualizedContainerService.HintSize="724,3048" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Str_MensajeError" />
       <Variable x:TypeArguments="x:String" Name="Str_SystemException" />
@@ -109,7 +109,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Ingreso a SQL studio y descarga de los datos para guardar en excel.&#xA;" sap:VirtualizedContainerService.HintSize="914,6811" sap2010:WorkflowViewState.IdRef="Sequence_12">
+    <Sequence sap2010:Annotation.AnnotationText="Ingreso a SQL studio y descarga de los datos para guardar en excel.&#xA;" sap:VirtualizedContainerService.HintSize="682,2854" sap2010:WorkflowViewState.IdRef="Sequence_12">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -117,19 +117,19 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="De acuerdo al numero de reintentos estipulado se hacen las ejecuciones necesarias." DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="872,6677" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="De acuerdo al numero de reintentos estipulado se hacen las ejecuciones necesarias." DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="640,2720" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
         <ui:RepeatNumberOfTimesX.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="Intento" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="838,6491" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="606,2534" sap2010:WorkflowViewState.IdRef="Sequence_11">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage sap2010:Annotation.AnnotationText="Se imprime en logs para traza" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="796,122" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
+              <ui:LogMessage sap2010:Annotation.AnnotationText="Se imprime en logs para traza" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="564,122" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
                 <ui:LogMessage.Message>
                   <InArgument x:TypeArguments="x:Object">
                     <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">"Ejecutar SP cierre y exportar (Reporte cierre EDS) - Intento: "+Intento</mca:CSharpValue>
@@ -141,9 +141,9 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="796,6237" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="564,2280" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <TryCatch.Try>
-                  <Sequence sap:VirtualizedContainerService.HintSize="758,4897" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <Sequence sap:VirtualizedContainerService.HintSize="526,1040" sap2010:WorkflowViewState.IdRef="Sequence_7">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="Str_query_Datos_Satelite" />
                     </Sequence.Variables>
@@ -153,20 +153,20 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If sap:VirtualizedContainerService.HintSize="716,4481" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If sap:VirtualizedContainerService.HintSize="484,686" sap2010:WorkflowViewState.IdRef="If_2">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
-                          <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">In_GBL_Str_Query_Cierre_Inco != "" || In_GBL_Str_Query_Cierre_Inco != null</mca:CSharpValue>
+                          <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">In_GBL_Str_Query_Cierre_Inco != "" &amp;&amp; In_GBL_Str_Query_Cierre_Inco != null</mca:CSharpValue>
                         </InArgument>
                       </If.Condition>
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="680,4295" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,500" sap2010:WorkflowViewState.IdRef="Sequence_13">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Flujo para realizar el login en el servidor de base de datos y deja abierto un espacio para scripts SQL." DisplayName="Invoke LogIn SQLServer workflow" sap:VirtualizedContainerService.HintSize="638,154" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Libreria Común\\LogIn SQLServer.xaml">
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Flujo para realizar el login en el servidor de base de datos y deja abierto un espacio para scripts SQL." DisplayName="Invoke LogIn SQLServer workflow" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Libreria Común\\LogIn SQLServer.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
                               <InArgument x:TypeArguments="x:Int32" x:Key="In_Int_NumIntentos">2</InArgument>
                               <InArgument x:TypeArguments="x:Int32" x:Key="In_Int_Timeout">2000</InArgument>
@@ -178,7 +178,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:InvokeWorkflowFile>
-                          <uix:NApplicationCard sap2010:Annotation.AnnotationText="Se debe usar la aplicación de SQL Management para consultar y exportar datos basado en el query." AttachMode="ByInstance" DisplayName="Use Application: SQLQuery3.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (67))* - Microsoft SQL Server " sap:VirtualizedContainerService.HintSize="638,2227" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="f613a1ff-f1b5-493f-b833-4b316b8b8fc7" Version="V1">
+                          <uix:NApplicationCard sap2010:Annotation.AnnotationText="Se debe usar la aplicación de SQL Management para consultar y exportar datos basado en el query." AttachMode="ByInstance" DisplayName="Use Application: SQLQuery3.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (67))* - Microsoft SQL Server " sap:VirtualizedContainerService.HintSize="334,123" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="f613a1ff-f1b5-493f-b833-4b316b8b8fc7" Version="V1">
                             <uix:NApplicationCard.Body>
                               <ActivityAction x:TypeArguments="x:Object">
                                 <ActivityAction.Argument>
@@ -206,7 +206,7 @@
                                     <uix:NClick.Target>
                                       <uix:TargetAnchorable DesignTimeRectangle="310, 138, 1040, 528" ElementType="InputBox" FriendlyName="'Text Editor'" FullSelectorArgument="&lt;wnd cls='GenericPane' title='SQLQuery1.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (54))' /&gt;&lt;wnd ctrlname='SqlScriptEditorControl' /&gt;&lt;wnd ctrlname='m_Editor' /&gt;&lt;wnd cls='HwndWrapper*' /&gt;&lt;ctrl automationid='WpfTextView' /&gt;" FuzzyAccuracy="0.89" FuzzySelectorArgument="&lt;wnd cls='GenericPane' title='SQLQuery1.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (54))' /&gt;&lt;wnd ctrlname='SqlScriptEditorControl' /&gt;&lt;wnd ctrlname='m_Editor' /&gt;&lt;wnd cls='HwndWrapper*' /&gt;&lt;ctrl automationid='WpfTextView' role='editable text' /&gt;" Guid="29b2c12b-5b62-4f7e-a612-79d63f99769b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABBQAAAIUCAYAAACqz3+mAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAA2BSURBVHhe7dsxSgNRGEbR2f8WJLVLsLJMae8SwpBCUg88iUYLJc7cQiFyDnzFq/7+wpvGaTfMzMzMzMzMzMoEBTMzMzMzMzPLm8bFPJ/MzMzMzMzMzH7c3f3DmF+GoGBmZmZmZmZm23c1KAAAAAB8JSgAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQrQYFMzMzMzMzM7NrExTMzMzMzMzMLO9bUAAAAABYcw4K5wkKAAAAwGaHw/FtggIAAACwmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQTdPT+y5vAAAAgFWCAgAAAJD58gAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZJ9B4XH/PP5iHwfNzMzMzMzM7PY3LcsyfnuCgpmZmZmZmdl/2nG8AkGdC5UyukXuAAAAAElFTkSuQmCC" InformativeScreenshot="8c46fd13e1bdefd4026f3c65bb1f794e.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' cls='HwndWrapper*' title='SQLQuery1.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (54)) - Mic*' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
                                         <uix:TargetAnchorable.Anchors>
-                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                             <uix:Target DesignTimeRectangle="275, 118, 219, 19" ElementType="Text" FriendlyName="'SQLQuery1.sql -'" FullSelectorArgument="&lt;ctrl name='SQLQuery1.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (54))' role='page tab' /&gt;&lt;ctrl name='SQLQuery1.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (54))' role='title bar' /&gt;&lt;ctrl name='SQLQuery1.sql - COL…tral (usr_bots (54))' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='SQLQuery1.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (54))' role='page tab' /&gt;&lt;ctrl name='SQLQuery1.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (54))' role='title bar' /&gt;&lt;ctrl name='SQLQuery1.sql - COL…tral (usr_bots (54))' role='text' automationid='' check:text='SQLQuery1.sql - COL…tral (usr_bots (54))' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANsAAAATCAYAAAAZOHiZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARhSURBVHhe7VjNWeNADE0p1MCXa+rgyCV3usiNDnY74Eod3OmCLQCvNbKsJ41kO04cYHcO7yPzo78naWbwrvvzu2toaNgerdkaGm6E1mwNDTdCa7aGhhuhNVtDw41gmu3z5dDtdrsBh+7149e49n66g7Uej08q9/HUHXd33fOb7kdMyd4CHJeNZy3mYp3D58epe74HLu4funfwy+Zg1+1PJ5C9zPYaLMrtRvm8dbwYi63ZunbK+pC710ebJz8WjM32+fbQ7UEpjZ9f+DcbtgZJoTg2Rcqc7JYYC/vx0Pv39c3GHO+648CrzAnP3GiqW/yXxF1ke6XslFyJxx0W18QWPmfwsVCNYp4QrL+vq2E/50nt+bFAm40SHRDHBVIXKirMglsii/Nbgf372maTxskTGK8jh2ttE9b7ncvRQRqd4NfCFj5n8LG8PubytPd4ss1Z+gcuED8maLMVB+vrLxISyHWZBbdGthqXYqOrnGCL7tgTQjfB3hWpPzh4f9xsUuTyZBA9aHffEys+ZbHOITt45taXHGpzYDmNkXJiOWS75cUBe1S2tukPTL8PxxHHkX3Ub3S8YC60Pm1toF6d41jjHKsdH4vdX9kknfQXa2xmTLD/s4ERcag8A5OGkdPAE43r58riuFrrm0hllATf1P4JwPuThAYHgug3HCQ+LUVE/pJ1yYkW0vm2CV5WYsRCivZmNnleOY31DzomOI7sC2TP+FwjjoxfmqN6DXwJ7CN4/0zDF73alD5fXkek0zSbgB0fEjzh6FyzrZE1wQ1+yAlT0OuLZTiw8tsVLa7L3Lg22MCkx0QOPjnbRmb0s7bF67EPU+smwYntJfCyka6SrzGGaZs8r/5O6Q85TvQioj1ykEZ8jWvel8A+gvfnuZFXmNQszRWdpkY0T9GYEDYboZzmVNgXFMEaWRzn8rU9IQIJsftzMgkl3j4hYyLPbLY5cMx6Ei9dRw7W2iZ42Wps7CzIbZlXTuf0EwzHiV5ErVM5imojazYB2sd53p/XB+ulPXIQAYY68ToinfCB5KEKSoqWjNn/gXhdbq0sOMK8rBJYxuV0ZV2stz6RInvcIIf+Vqv9iImIk0G2xK74xElCn2rZJZCbA5NNftuvkd5PjT+zbRol++1kqzHZlsIpctPxct5QX55HlLMc1+sI3gPxV/GAvYlYEWIf53wsZg24qOaxrmfGhOoDydix7vknp4JCHahke2BAU7JFfijCgvKZHnSXYEE2eEYKSmM7vwm8nxOhY5Y3tnEPzF/jA4mgisclxPrjGjPhmXUOhZb8JvnCD8kFHI6HIK3DoTUVry/cLI8Rx0t4lD38EYXl/UGlXFpdJtYkxwiMxfOMNgXFNjYX2YDa82NC+oycgwY6TViES2SnQARHxFyKJYXxP8IX3E/GJbHEt3xdL6ub7bthy8S3ZstRXi3Ba+Ic+Jtk6gbaEmtj8S+q7IX145tNnz/bNUNrtoZr4J+52RoavjtaszU03AS/u7/GovHUIO7GZQAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
                                           </scg:List>
                                         </uix:TargetAnchorable.Anchors>
@@ -222,7 +222,7 @@
                                     <uix:NKeyboardShortcuts.Target>
                                       <uix:TargetAnchorable DesignTimeRectangle="310, 138, 1040, 528" ElementType="InputBox" FriendlyName="'Text Editor'" FullSelectorArgument="&lt;wnd cls='GenericPane' title='SQLQuery4.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (94))' /&gt;&lt;wnd ctrlname='SqlScriptEditorControl' /&gt;&lt;wnd ctrlname='m_Editor' /&gt;&lt;wnd cls='HwndWrapper*' /&gt;&lt;ctrl automationid='WpfTextView' /&gt;" FuzzySelectorArgument="&lt;wnd cls='GenericPane' title='SQLQuery4.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (94))' /&gt;&lt;wnd ctrlname='SqlScriptEditorControl' /&gt;&lt;wnd ctrlname='m_Editor' /&gt;&lt;wnd cls='HwndWrapper*' /&gt;&lt;ctrl automationid='WpfTextView' role='editable text' /&gt;" Guid="8e193b3b-3af0-404a-a373-3d02182729bd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABBQAAAIUCAYAAACqz3+mAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAA2JSURBVHhe7dsxSkNBAEXR2f8WxNolWFla2ruEEFJI6sBIYhICEvNvoRA5Bx7MVNNfmDG3j9PMzMzMzMzMrExQMDMzMzMzM7O8MY/W6+1hY4zz2czMzMzMzMzscg9Pz3P9MQUFMzMzMzMzM1u+H4MCAAAAwCVBAQAAAMgEBQAAACATFAAAAIBMUAAAAAAyQQEAAADIBAUAAAAgExQAAACATFAAAAAAMkEBAAAAyAQFAAAAIBMUAAAAgGxRUDidzczMzMzMzMwudzUomJmZmZmZmZld27egAAAAAHDLPijsJygAAAAAi61Wm8MEBQAAAGAxQQEAAADIBAUAAAAgExQAAACATFAAAAAAMkEBAAAAyAQFAAAAIBMUAAAAgExQAAAAADJBAQAAAMgEBQAAACATFAAAAIBMUAAAAAAyQQEAAADIBAUAAAAgExQAAACATFAAAAAAMkEBAAAAyAQFAAAAIBMUAAAAgExQAAAAADJBAQAAAMgEBQAAACAb4+1rxzsAAADATYICAAAAkPnyAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABkggIAAACQCQoAAABAJigAAAAAmaAAAAAAZIICAAAAkAkKAAAAQCYoAAAAAJmgAAAAAGSCAgAAAJAJCgAAAEAmKAAAAACZoAAAAABk56Dw8vo+/2KnB83MzMzMzMzs/jd2u9387QkKZmZmZmZmZv9pm/kJl17fWLWR/8IAAAAASUVORK5CYII=" InformativeScreenshot="b327eba159ba1ef984304ffd0795c70c.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' cls='HwndWrapper*' title='SQLQuery4.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (94)) - Mic*' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
                                         <uix:TargetAnchorable.Anchors>
-                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                             <uix:Target DesignTimeRectangle="274, 668, 47, 13" ElementType="InputBox" FriendlyName="'100 %'" FullSelectorArgument="&lt;wnd cls='GenericPane' title='SQLQuery4.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (94))' /&gt;&lt;wnd ctrlname='SqlScriptEditorControl' /&gt;&lt;wnd ctrlname='m_Editor' /&gt;&lt;wnd cls='HwndWrapper*' /&gt;&lt;ctrl automationid='ZoomComtrol' /&gt;&lt;ctrl automationid='PART_EditableTextBox' /&gt;" FuzzySelectorArgument="&lt;wnd cls='GenericPane' title='SQLQuery4.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (94))' /&gt;&lt;wnd ctrlname='SqlScriptEditorControl' /&gt;&lt;wnd ctrlname='m_Editor' /&gt;&lt;wnd cls='HwndWrapper*' /&gt;&lt;ctrl automationid='ZoomComtrol' /&gt;&lt;ctrl automationid='PART_EditableTextBox' role='editable text' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADMAAAARCAYAAABwxZQXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADqSURBVEhL7ZTBDcMgDEVZp3cuHaQTMA5SF+gYXNtjZyC7gOQWSKkhOEmTCAU1hydhgyGf78BO5wtcb3d4PLvmScRYa5vmELNX/kOMMQoEl6CN+caMAfMIUBN5DFmrJXCiZglFMVrycDASowQDocLYzws1mscYJZL1XOo4/tRuAe2Mu7VeTLjZ7Eb9HJVPP7Akhlq7hmViYkzlMzFGg+Rpm23tiqOKmJzU2eG/tJQqbYYJLnGQ+r1v1n5rnZolxsX4sF8fAAwWUEVMfM163CHBnWFLUPkS2JUQo9oJR+dAOtMih5i9kohpmw5eDw4M8UeXK08AAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
                                           </scg:List>
                                         </uix:TargetAnchorable.Anchors>
@@ -301,11 +301,11 @@
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NApplicationCard>
-                          <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="638,1742" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+                          <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
                             <ueab:ExcelProcessScopeX.Body>
                               <ActivityAction x:TypeArguments="ui:IExcelProcess">
                                 <ActivityAction.Argument>
@@ -416,7 +416,7 @@
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ueab:ExcelProcessScopeX>
@@ -432,7 +432,7 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <ui:LogMessage sap2010:Annotation.AnnotationText="Se imprime en logs para traza" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="716,122" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info">
+                    <ui:LogMessage sap2010:Annotation.AnnotationText="Se imprime en logs para traza" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,122" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info">
                       <ui:LogMessage.Message>
                         <InArgument x:TypeArguments="x:Object">
                           <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">"Ejecutar SP Cierre y exportar (Reporte Cierre EDS ventas inconsistentes) finalizado exitosamente"</mca:CSharpValue>
@@ -444,7 +444,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:LogMessage>
-                    <Assign sap:VirtualizedContainerService.HintSize="716,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">
                           <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">Str_SystemException</mca:CSharpReference>
@@ -454,14 +454,13 @@
                         <InArgument x:TypeArguments="x:String">OK</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:Break sap:VirtualizedContainerService.HintSize="716,22" sap2010:WorkflowViewState.IdRef="Break_1" />
                   </Sequence>
                 </TryCatch.Try>
                 <TryCatch.Catches>
-                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="762,494" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="530,394" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
@@ -469,7 +468,7 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                       </ActivityAction.Argument>
-                      <Sequence sap:VirtualizedContainerService.HintSize="376,425" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,325" sap2010:WorkflowViewState.IdRef="Sequence_15">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -487,18 +486,6 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:LogMessage>
-                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:String">
-                              <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">Str_MensajeError</mca:CSharpReference>
-                            </OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:String">
-                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22" xml:space="preserve">"Error en la ejecución E. Revalidación y cierre Eds incosistentes, Ejecutar SP Cierre y exportar (Reporte Cierre EDS ventas inconsistentes) \n  excepción: "+exception.Message</mca:CSharpValue>
-                            </InArgument>
-                          </Assign.Value>
-                        </Assign>
                         <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_3">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:String">

@@ -5,7 +5,7 @@
     <x:Property Name="Out_GBL_Str_Query_Inconsistentes" Type="OutArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>956,11393</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1274,12051</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="70">
@@ -93,7 +93,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Revisar si existen diferencias entre los reportes obtenidos en las actividades Extracción de ventas fidelización Salesforce y Extracción de ventas fidelización Satelite&#xA;&#xA;Precondicion:  documento: Reporte fidelizaciones Salesforce.xlsx -- Reporte fidelizaciones Satelite.xlsx&#xA;&#xA;Acciones:Comparaciones entre archivos y movimiento de datos a nuevos archivos consolidados" DisplayName="Validar_ventas_gestionadas" sap:VirtualizedContainerService.HintSize="966,11328" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Revisar si existen diferencias entre los reportes obtenidos en las actividades Extracción de ventas fidelización Salesforce y Extracción de ventas fidelización Satelite&#xA;&#xA;Precondicion:  documento: Reporte fidelizaciones Salesforce.xlsx -- Reporte fidelizaciones Satelite.xlsx&#xA;&#xA;Acciones:Comparaciones entre archivos y movimiento de datos a nuevos archivos consolidados" DisplayName="Validar_ventas_gestionadas" sap:VirtualizedContainerService.HintSize="966,11986" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Str_MensajeError" />
       <Variable x:TypeArguments="x:String" Name="Str_SystemException" />
@@ -104,7 +104,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="924,11149" sap2010:WorkflowViewState.IdRef="Sequence_22">
+    <Sequence sap:VirtualizedContainerService.HintSize="924,11807" sap2010:WorkflowViewState.IdRef="Sequence_22">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="Str_Fecha_Inicio" />
         <Variable x:TypeArguments="x:String" Name="Str_Fecha_Fin" />
@@ -120,13 +120,13 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="De acuerdo al numero de reintentos estipulado se hacen las ejecuciones necesarias." DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="882,11057" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="De acuerdo al numero de reintentos estipulado se hacen las ejecuciones necesarias." DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="882,11715" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
         <ui:RepeatNumberOfTimesX.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="Intento" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="848,10871" sap2010:WorkflowViewState.IdRef="Sequence_21">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="848,11529" sap2010:WorkflowViewState.IdRef="Sequence_21">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -146,9 +146,9 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="806,10617" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="806,11275" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <TryCatch.Try>
-                  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="768,9288" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="768,10046" sap2010:WorkflowViewState.IdRef="Sequence_17">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="sd:DataTable" Name="Dt_Key_Salesforce" />
                       <Variable x:TypeArguments="sd:DataTable" Name="Dt_Key_Satelite" />
@@ -159,7 +159,7 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence sap2010:Annotation.AnnotationText="Asignacion de Fecha que depende de la info obtenida en el documento de Calendario " DisplayName="Validación de Fecha en Calendario.xlsx" sap:VirtualizedContainerService.HintSize="726,1196" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <Sequence sap2010:Annotation.AnnotationText="Asignacion de Fecha que depende de la info obtenida en el documento de Calendario " DisplayName="Validación de Fecha en Calendario.xlsx" sap:VirtualizedContainerService.HintSize="726,1914" sap2010:WorkflowViewState.IdRef="Sequence_6">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -193,7 +193,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:CommentOut>
                       <ui:Comment sap:VirtualizedContainerService.HintSize="513,55" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Esta actividad se debe de ejecutar siempre" />
-                      <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Todas las fechas se dan en formato yyyy-MM-dd (1987-04-26)" DisplayName="Asignación Fecha Inicial y Final" sap:VirtualizedContainerService.HintSize="513,656" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                      <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Todas las fechas se dan en formato yyyy-MM-dd (1987-04-26)" DisplayName="Asignación Fecha Inicial y Final" sap:VirtualizedContainerService.HintSize="513,1374" sap2010:WorkflowViewState.IdRef="Switch`1_1">
                         <Switch.Expression>
                           <InArgument x:TypeArguments="x:String">
                             <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">In_GBL_Dt_Calendario_row.Rows[0][1].ToString()</mca:CSharpValue>
@@ -359,7 +359,7 @@
                         </Sequence>
                       </Switch>
                     </Sequence>
-                    <Sequence sap2010:Annotation.AnnotationText="Se deben crear datatables a partir de la información en el archivo del mes para poder hacer las comparaciones respectivas" DisplayName="Creación de tablas" sap:VirtualizedContainerService.HintSize="726,3415" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                    <Sequence sap2010:Annotation.AnnotationText="Se deben crear datatables a partir de la información en el archivo del mes para poder hacer las comparaciones respectivas" DisplayName="Creación de tablas" sap:VirtualizedContainerService.HintSize="726,3455" sap2010:WorkflowViewState.IdRef="Sequence_41">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -367,7 +367,7 @@
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" sap2010:Annotation.AnnotationText="Mantener el Excel en memoria para hacer todas las implementaciones." DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="684,818" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+                      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" sap2010:Annotation.AnnotationText="Mantener el Excel en memoria para hacer todas las implementaciones." DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="684,858" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
                         <ueab:ExcelProcessScopeX.Body>
                           <ActivityAction x:TypeArguments="ui:IExcelProcess">
                             <ActivityAction.Argument>
@@ -1254,10 +1254,10 @@
                   </Sequence>
                 </TryCatch.Try>
                 <TryCatch.Catches>
-                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="772,483" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="772,383" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
@@ -1265,7 +1265,7 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                       </ActivityAction.Argument>
-                      <Sequence sap:VirtualizedContainerService.HintSize="376,414" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,314" sap2010:WorkflowViewState.IdRef="Sequence_49">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1283,18 +1283,6 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:LogMessage>
-                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_15">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:String">
-                              <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_83">Str_MensajeError</mca:CSharpReference>
-                            </OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:String">
-                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_119" xml:space="preserve">"Error en la ejecución E. Revalidación y cierre Eds incosistentes, Validar ventas gestionadas \n  excepción: "+exception.Message</mca:CSharpValue>
-                            </InArgument>
-                          </Assign.Value>
-                        </Assign>
                         <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_16">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:String">
