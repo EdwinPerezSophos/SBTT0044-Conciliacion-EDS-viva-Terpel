@@ -13,12 +13,19 @@
     <x:Property Name="GBL_Str_CarpetaDescargas" Type="InOutArgument(x:String)" />
     <x:Property Name="GBL_Str_ReporteVentasSalesforce" Type="InOutArgument(x:String)" />
     <x:Property Name="GBL_Str_ReporteVentasSatelite" Type="InOutArgument(x:String)" />
-    <x:Property Name="GBL_Str_CorreoDestinatario" Type="InOutArgument(x:String)" />
     <x:Property Name="GBL_Str_PlantillaNovedades" Type="InOutArgument(x:String)" />
     <x:Property Name="GBL_Dt_Calendario_row" Type="InOutArgument(sd:DataTable)" />
+    <x:Property Name="GBL_Str_PlantillaCierreManual" Type="InOutArgument(x:String)" />
+    <x:Property Name="GBL_Str_CorreoVentasConNovedades" Type="InOutArgument(x:String)" />
+    <x:Property Name="GBL_Str_CorreoFinalizaciónEjecución" Type="InOutArgument(x:String)" />
+    <x:Property Name="GBL_Str_CorreoEDsinCrearInterfaz" Type="InOutArgument(x:String)" />
+    <x:Property Name="GBL_Str_CorreoEDSsinCerrar" Type="InOutArgument(x:String)" />
+    <x:Property Name="GBL_Str_ReporteSAP" Type="InOutArgument(x:String)" />
+    <x:Property Name="GBL_Str_ReporteCruceSAPvsSalesforce" Type="InOutArgument(x:String)" />
+    <x:Property Name="GBL_Str_ReporteCierreEDSAutomatico" Type="InOutArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1295,2515</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1294,2525.33333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -107,7 +114,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Proceso de Conciliacion EDS Viva Terpel&#xA;&#xA;Proceso de extracción de ventas realizadas de las Estaciones de Servicio de Terpel &#xA;&#xA;Creadores: Edwin Perez, Diego Solano&#xA;" DisplayName="Conciliacion EDS Viva Terpel" sap:VirtualizedContainerService.HintSize="820,2450" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Proceso de Conciliacion EDS Viva Terpel&#xA;&#xA;Proceso de extracción de ventas realizadas de las Estaciones de Servicio de Terpel &#xA;&#xA;Creadores: Edwin Perez, Diego Solano&#xA;" DisplayName="Conciliacion EDS Viva Terpel" sap:VirtualizedContainerService.HintSize="770.666666666667,2720.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="Bool_ProcessStatus" />
       <Variable x:TypeArguments="x:String" Name="Str_NombreReporteVentasSalesforce" />
@@ -118,20 +125,20 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <StateMachine InitialState="{x:Reference __ReferenceID11}" DisplayName="Proceso Conciliacion EDS" sap:VirtualizedContainerService.HintSize="778,2256" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+    <StateMachine InitialState="{x:Reference __ReferenceID12}" DisplayName="Proceso Conciliacion EDS" sap:VirtualizedContainerService.HintSize="728.666666666667,2796.66666666667" sap2010:WorkflowViewState.IdRef="StateMachine_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
-          <x:Double x:Key="StateContainerWidth">744</x:Double>
-          <x:Double x:Key="StateContainerHeight">2220.5</x:Double>
+          <x:Double x:Key="StateContainerWidth">694.66666666666652</x:Double>
+          <x:Double x:Key="StateContainerHeight">2760.666666666667</x:Double>
           <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,101.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <State x:Name="__ReferenceID11" sap2010:Annotation.AnnotationText="Inicializacion de variables y arcivo de Configuración del robot &#xA;&#xA;Precondicion: ninguna&#xA;&#xA;Acciones: Lee el archivo Config y extrae rutas y variables del sistema" DisplayName="Inicialización" sap:VirtualizedContainerService.HintSize="537,1679" sap2010:WorkflowViewState.IdRef="State_1">
+      <State x:Name="__ReferenceID12" sap2010:Annotation.AnnotationText="Inicializacion de variables y arcivo de Configuración del robot &#xA;&#xA;Precondicion: ninguna&#xA;&#xA;Acciones: Lee el archivo Config y extrae rutas y variables del sistema" DisplayName="Inicialización" sap:VirtualizedContainerService.HintSize="431.333333333333,180.666666666667" sap2010:WorkflowViewState.IdRef="State_1">
         <State.Entry>
-          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="491,1232" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="498.666666666667,2119.33333333333" sap2010:WorkflowViewState.IdRef="TryCatch_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -139,22 +146,22 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <TryCatch.Try>
-              <Sequence sap2010:Annotation.AnnotationText="Acciones de llamada de variables Iniciales&#xA;" sap:VirtualizedContainerService.HintSize="453,1005" sap2010:WorkflowViewState.IdRef="Sequence_11">
+              <Sequence sap2010:Annotation.AnnotationText="Acciones de llamada de variables Iniciales&#xA;" sap:VirtualizedContainerService.HintSize="460,1881.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_11">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="411,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="418,52.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                   <ui:CommentOut.Body>
-                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="931,774" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="930.666666666667,774.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_15">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Lectura de archivo Configuracion" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                      <Sequence DisplayName="Lectura de archivo Configuracion" sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:Boolean" Name="Bool_ConfigExiste" />
                         </Sequence.Variables>
@@ -240,10 +247,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:CommentOut>
-                <Sequence sap2010:Annotation.AnnotationText="Variables del Orquestrador" DisplayName="Variables del Orquestrador" sap:VirtualizedContainerService.HintSize="411,505" sap2010:WorkflowViewState.IdRef="Sequence_12">
-                  <Sequence.Variables>
-                    <Variable x:TypeArguments="x:String" Name="GBL_Str_PlantillaCierreManual" />
-                  </Sequence.Variables>
+                <Sequence sap2010:Annotation.AnnotationText="Variables del Orquestrador" DisplayName="Variables del Orquestrador" sap:VirtualizedContainerService.HintSize="418,1374.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_12">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -251,7 +255,7 @@
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence sap2010:Annotation.AnnotationText="Rutas de Carpetas y archivos" sap:VirtualizedContainerService.HintSize="200,97" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                  <Sequence sap2010:Annotation.AnnotationText="Rutas de Carpetas y archivos" sap:VirtualizedContainerService.HintSize="376,100" sap2010:WorkflowViewState.IdRef="Sequence_27">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -259,7 +263,7 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Ruta Carpeta Entrada" AssetName="CV_EDS_Path_CarpetaEntrada" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="GetRobotAsset_9">
+                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Ruta Carpeta Entrada" AssetName="CV_EDS_Path_CarpetaEntrada" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,171.333333333333" sap2010:WorkflowViewState.IdRef="GetRobotAsset_9">
                       <ui:GetRobotAsset.Value>
                         <OutArgument x:TypeArguments="x:String">
                           <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_37">GBL_Str_CarpetaEntrada</mca:CSharpReference>
@@ -271,7 +275,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:GetRobotAsset>
-                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Ruta Carpeta Compartida&#xA;" AssetName="CV_EDS_Path_CarpetaCompartida" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,179" sap2010:WorkflowViewState.IdRef="GetRobotAsset_8">
+                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Ruta Carpeta Compartida&#xA;" AssetName="CV_EDS_Path_CarpetaCompartida" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,186" sap2010:WorkflowViewState.IdRef="GetRobotAsset_8">
                       <ui:GetRobotAsset.Value>
                         <OutArgument x:TypeArguments="x:String">
                           <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_38">GBL_Str_CarpetaCompartida</mca:CSharpReference>
@@ -283,7 +287,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:GetRobotAsset>
-                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Ruta Carpeta Temporales " AssetName="CV_EDS_Path_CarpetaTemporales" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="GetRobotAsset_7">
+                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Ruta Carpeta Temporales " AssetName="CV_EDS_Path_CarpetaTemporales" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,171.333333333333" sap2010:WorkflowViewState.IdRef="GetRobotAsset_7">
                       <ui:GetRobotAsset.Value>
                         <OutArgument x:TypeArguments="x:String">
                           <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_39">GBL_Str_CarpetaTemporales</mca:CSharpReference>
@@ -295,7 +299,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:GetRobotAsset>
-                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Ruta Carpeta Descargas" AssetName="CV_EDS_Path_CarpetaDescargas" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="GetRobotAsset_6">
+                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Ruta Carpeta Descargas" AssetName="CV_EDS_Path_CarpetaDescargas" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,171.333333333333" sap2010:WorkflowViewState.IdRef="GetRobotAsset_6">
                       <ui:GetRobotAsset.Value>
                         <OutArgument x:TypeArguments="x:String">
                           <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_40">GBL_Str_CarpetaDescargas</mca:CSharpReference>
@@ -307,7 +311,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:GetRobotAsset>
-                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Ruta Archivo Calendario" AssetName="CV_EDS_Path_ArchivoCalendario" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="GetRobotAsset_5">
+                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Ruta Archivo Calendario" AssetName="CV_EDS_Path_ArchivoCalendario" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,171.333333333333" sap2010:WorkflowViewState.IdRef="GetRobotAsset_5">
                       <ui:GetRobotAsset.Value>
                         <OutArgument x:TypeArguments="x:String">
                           <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_41">GBL_Str_ArchivoCalendario</mca:CSharpReference>
@@ -344,7 +348,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:GetRobotAsset>
                   </Sequence>
-                  <Sequence sap2010:Annotation.AnnotationText="Variables Generales" sap:VirtualizedContainerService.HintSize="200,97" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                  <Sequence sap2010:Annotation.AnnotationText="Variables Generales" sap:VirtualizedContainerService.HintSize="376,100" sap2010:WorkflowViewState.IdRef="Sequence_28">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -352,7 +356,7 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Hora Inicial SalesForce" AssetName="CV_EDS_Var_HoraInicialSalesForce" DisplayName="Get Asset" FolderPath="Default" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Hora Inicial SalesForce" AssetName="CV_EDS_Var_HoraInicialSalesForce" DisplayName="Get Asset" FolderPath="Default" sap:VirtualizedContainerService.HintSize="334,171.333333333333" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
                       <ui:GetRobotAsset.Value>
                         <OutArgument x:TypeArguments="x:String">
                           <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_34">GBL_Str_HoraInicialSalesforce</mca:CSharpReference>
@@ -364,7 +368,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:GetRobotAsset>
-                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Hora Final SalesForce" AssetName="CV_EDS_Var_HoraFinalSalesForce" DisplayName="Get Asset" FolderPath="Default" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Hora Final SalesForce" AssetName="CV_EDS_Var_HoraFinalSalesForce" DisplayName="Get Asset" FolderPath="Default" sap:VirtualizedContainerService.HintSize="334,171.333333333333" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
                       <ui:GetRobotAsset.Value>
                         <OutArgument x:TypeArguments="x:String">
                           <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_35">GBL_Str_HoraFinalSalesforce</mca:CSharpReference>
@@ -376,7 +380,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:GetRobotAsset>
-                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Numero de Intentos de Actividades " AssetName="CV_EDS_Var_NumIntentos" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="GetRobotAsset_10">
+                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Numero de Intentos de Actividades " AssetName="CV_EDS_Var_NumIntentos" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,171.333333333333" sap2010:WorkflowViewState.IdRef="GetRobotAsset_10">
                       <ui:GetRobotAsset.Value>
                         <OutArgument x:TypeArguments="x:Int32">
                           <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_43">GBL_Int_NumIntentos</mca:CSharpReference>
@@ -388,7 +392,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:GetRobotAsset>
-                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Tiempo maximo de actividades de Validacion " AssetName="CV_EDS_Var_TiempoMaxValidacion" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="GetRobotAsset_12">
+                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Tiempo maximo de actividades de Validacion " AssetName="CV_EDS_Var_TiempoMaxValidacion" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,171.333333333333" sap2010:WorkflowViewState.IdRef="GetRobotAsset_12">
                       <ui:GetRobotAsset.Value>
                         <OutArgument x:TypeArguments="x:Int32">
                           <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_44">GBL_Int_TiempoMaxValidaciones</mca:CSharpReference>
@@ -425,21 +429,15 @@
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:GetRobotAsset>
                   </Sequence>
-                  <Sequence sap2010:Annotation.AnnotationText="Variables para uso en Correo Electronico" sap:VirtualizedContainerService.HintSize="200,108" sap2010:WorkflowViewState.IdRef="Sequence_30">
-                    <Sequence.Variables>
-                      <Variable x:TypeArguments="x:String" Name="GBL_Str_CorreoEDSsinCerrar" />
-                      <Variable x:TypeArguments="x:String" Name="GBL_Str_CorreoEDsinCrearInterfaz" />
-                      <Variable x:TypeArguments="x:String" Name="GBL_Str_CorreoFinalizaciónEjecución" />
-                      <Variable x:TypeArguments="x:String" Name="GBL_Str_CorreoVentasConNovedades" />
-                    </Sequence.Variables>
+                  <Sequence sap2010:Annotation.AnnotationText="Variables para uso en Correo Electronico" sap:VirtualizedContainerService.HintSize="376,972" sap2010:WorkflowViewState.IdRef="Sequence_30">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Lista de correos para notificacion &quot;ventas con novedades&quot;" AssetName="CV_EDS_Correos_VentasConNovedades" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,179" sap2010:WorkflowViewState.IdRef="GetRobotAsset_15">
+                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Lista de correos para notificacion &quot;ventas con novedades&quot;" AssetName="CV_EDS_Correos_VentasConNovedades" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,186" sap2010:WorkflowViewState.IdRef="GetRobotAsset_15">
                       <ui:GetRobotAsset.Value>
                         <OutArgument x:TypeArguments="x:String">
                           <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_84">GBL_Str_CorreoVentasConNovedades</mca:CSharpReference>
@@ -451,7 +449,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:GetRobotAsset>
-                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Lista de correos para notificacion &quot;EDS si cerrar&quot;" AssetName="CV_EDS_Correos_EDSsinCerrar" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="GetRobotAsset_18">
+                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Lista de correos para notificacion &quot;EDS si cerrar&quot;" AssetName="CV_EDS_Correos_EDSsinCerrar" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,171.333333333333" sap2010:WorkflowViewState.IdRef="GetRobotAsset_18">
                       <ui:GetRobotAsset.Value>
                         <OutArgument x:TypeArguments="x:String">
                           <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_85">GBL_Str_CorreoEDSsinCerrar</mca:CSharpReference>
@@ -463,7 +461,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:GetRobotAsset>
-                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Lista de correos para notificacion &quot;EDS sin crear en Interfaz&quot;" AssetName="CV_EDS_Correos_EDSsinCrearInterfaz" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,179" sap2010:WorkflowViewState.IdRef="GetRobotAsset_16">
+                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Lista de correos para notificacion &quot;EDS sin crear en Interfaz&quot;" AssetName="CV_EDS_Correos_EDSsinCrearInterfaz" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,186" sap2010:WorkflowViewState.IdRef="GetRobotAsset_16">
                       <ui:GetRobotAsset.Value>
                         <OutArgument x:TypeArguments="x:String">
                           <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_82">GBL_Str_CorreoEDsinCrearInterfaz</mca:CSharpReference>
@@ -475,7 +473,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:GetRobotAsset>
-                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Lista de correos para notificacion &quot;Finalización de proceso de Conciliación&quot;" AssetName="CV_EDS_Correos_FinalizaciónEjecución" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,179" sap2010:WorkflowViewState.IdRef="GetRobotAsset_17">
+                    <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Lista de correos para notificacion &quot;Finalización de proceso de Conciliación&quot;" AssetName="CV_EDS_Correos_FinalizaciónEjecución" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="334,186" sap2010:WorkflowViewState.IdRef="GetRobotAsset_17">
                       <ui:GetRobotAsset.Value>
                         <OutArgument x:TypeArguments="x:String">
                           <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_83">GBL_Str_CorreoFinalizaciónEjecución</mca:CSharpReference>
@@ -489,14 +487,14 @@
                     </ui:GetRobotAsset>
                   </Sequence>
                 </Sequence>
-                <Sequence sap2010:Annotation.AnnotationText="Lectura de Archivo Calendario.xlsx" DisplayName="Lectura de Archivo Calendario" sap:VirtualizedContainerService.HintSize="411,235" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <Sequence sap2010:Annotation.AnnotationText="Lectura de Archivo Calendario.xlsx" DisplayName="Lectura de Archivo Calendario" sap:VirtualizedContainerService.HintSize="418,236.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_10">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Validación de Fecha Actual workflow" sap:VirtualizedContainerService.HintSize="369,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Libreria Común\\Validación de Fecha Actual.xaml">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Validación de Fecha Actual workflow" sap:VirtualizedContainerService.HintSize="364,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Libreria Común\\Validación de Fecha Actual.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <OutArgument x:TypeArguments="sd:DataTable" x:Key="Out_Dt_Calendario_row">
                         <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_46">GBL_Dt_Calendario_row</mca:CSharpReference>
@@ -510,7 +508,7 @@
               </Sequence>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="457,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="452.666666666667,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -521,13 +519,13 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                   </ActivityAction.Argument>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <Sequence sap:VirtualizedContainerService.HintSize="376,248.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_6">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
                       <ui:LogMessage.Message>
                         <InArgument x:TypeArguments="x:Object">
                           <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">"No se ha leido correctamente el archivo de Configuración"</mca:CSharpValue>
@@ -546,7 +544,7 @@
               </Catch>
             </TryCatch.Catches>
             <TryCatch.Finally>
-              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_1">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Boolean">
                     <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_48">Bool_ProcessStatus</mca:CSharpReference>
@@ -562,7 +560,7 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">84.5,101.5</av:Point>
-            <av:Size x:Key="ShapeSize">431,172</av:Size>
+            <av:Size x:Key="ShapeSize">431.333333333333,180.666666666667</av:Size>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             <x:Double x:Key="StateContainerWidth">397.41891065688151</x:Double>
@@ -570,34 +568,31 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <State.Transitions>
-          <Transition DisplayName="T1" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Transition_1">
+          <Transition DisplayName="T1" sap:VirtualizedContainerService.HintSize="451.333333333333,521.333333333333" sap2010:WorkflowViewState.IdRef="Transition_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <av:PointCollection x:Key="ConnectorLocation">515.5,230.5 545.5,230.5 545.5,385.85 519,385.85</av:PointCollection>
+                <av:PointCollection x:Key="ConnectorLocation">515.833333333333,237 545.833333333333,237 545.833333333333,390.433333333333 519,390.433333333333</av:PointCollection>
                 <x:Int32 x:Key="SrcConnectionPointIndex">56</x:Int32>
                 <x:Int32 x:Key="DestConnectionPointIndex">40</x:Int32>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Transition.Condition>
-              <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_29">Bool_ProcessStatus == true</mca:CSharpValue>
-            </Transition.Condition>
             <Transition.To>
-              <State x:Name="__ReferenceID0" sap2010:Annotation.AnnotationText="Ingreso a Salesforce para extraccion de reporte de ventas &#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Ingreso a Salesforce para extracción de ventas en Excel" DisplayName="Extracción de ventas fidelización Salesforce" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="State_2">
+              <State x:Name="__ReferenceID0" sap2010:Annotation.AnnotationText="Ingreso a Salesforce para extraccion de reporte de ventas &#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Ingreso a Salesforce para extracción de ventas en Excel" DisplayName="Extracción de ventas fidelización Salesforce" sap:VirtualizedContainerService.HintSize="434,165.333333333333" sap2010:WorkflowViewState.IdRef="State_2">
                 <State.Entry>
-                  <Sequence sap:VirtualizedContainerService.HintSize="463,1190" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                  <Sequence sap:VirtualizedContainerService.HintSize="463.333333333333,1230" sap2010:WorkflowViewState.IdRef="Sequence_23">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence sap2010:Annotation.AnnotationText="Logeo en Salesforce" DisplayName="Log en Salesforce" sap:VirtualizedContainerService.HintSize="421,235" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                    <Sequence sap2010:Annotation.AnnotationText="Logeo en Salesforce" DisplayName="Log en Salesforce" sap:VirtualizedContainerService.HintSize="421.333333333333,236.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_22">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke LogIn Saleforce workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Libreria Común\\LogIn Saleforce.xaml">
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke LogIn Saleforce workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Libreria Común\\LogIn Saleforce.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <InArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_NumIntentos">
                             <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_74">GBL_Int_NumIntentos</mca:CSharpValue>
@@ -611,13 +606,13 @@
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </Sequence>
-                    <Sequence DisplayName="Extraccion de reporte " sap:VirtualizedContainerService.HintSize="421,235" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                    <Sequence DisplayName="Extraccion de reporte " sap:VirtualizedContainerService.HintSize="421.333333333333,236.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_14">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Exportacion de reporte de ventas SalesForce" DisplayName="Invoke Exportar reporte ventas SalesForce workflow" sap:VirtualizedContainerService.HintSize="379,143" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="1. Exportar reporte ventas SalesForce\\Exportar reporte ventas SalesForce.xaml">
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Exportacion de reporte de ventas SalesForce" DisplayName="Invoke Exportar reporte ventas SalesForce workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,144.666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="1. Exportar reporte ventas SalesForce\\Exportar reporte ventas SalesForce.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <InArgument x:TypeArguments="sd:DataTable" x:Key="In_GBL_Dt_Calendario_row">
                             <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">GBL_Dt_Calendario_row</mca:CSharpValue>
@@ -666,13 +661,13 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:InvokeWorkflowFile>
                     </Sequence>
-                    <Sequence DisplayName="Depurar reporte ventas" sap:VirtualizedContainerService.HintSize="421,204" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                    <Sequence DisplayName="Depurar reporte ventas" sap:VirtualizedContainerService.HintSize="421.333333333333,206" sap2010:WorkflowViewState.IdRef="Sequence_24">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Depurar Informe ventas SalesForce workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="2. Depurar reporte (Repote fidelizaciones SalesForce)\\Depurar Informe ventas SalesForce.xaml">
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Depurar Informe ventas SalesForce workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="2. Depurar reporte (Repote fidelizaciones SalesForce)\\Depurar Informe ventas SalesForce.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <InArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_NumIntentos">
                             <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_65">GBL_Int_NumIntentos</mca:CSharpValue>
@@ -692,13 +687,14 @@
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </Sequence>
-                    <Sequence sap:VirtualizedContainerService.HintSize="421,204" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                    <Sequence sap2010:Annotation.AnnotationText="" DisplayName="LogOut de Salesforce" sap:VirtualizedContainerService.HintSize="421.333333333333,236.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_25">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke LogOut SaleForce workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Libreria Común\\LogOut SaleForce.xaml">
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke LogOut SaleForce workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Libreria Común\\LogOut SaleForce.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <InArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_NumIntentos">
                             <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_77">GBL_Int_NumIntentos</mca:CSharpValue>
@@ -712,7 +708,7 @@
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </Sequence>
-                    <Assign sap:VirtualizedContainerService.HintSize="421,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign sap:VirtualizedContainerService.HintSize="421.333333333333,62" sap2010:WorkflowViewState.IdRef="Assign_2">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Boolean">
                           <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_74">Bool_ProcessStatus</mca:CSharpReference>
@@ -727,7 +723,7 @@
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">85,299.5</av:Point>
-                    <av:Size x:Key="ShapeSize">434,157</av:Size>
+                    <av:Size x:Key="ShapeSize">434,165.333333333333</av:Size>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     <x:Double x:Key="StateContainerWidth">400</x:Double>
                     <x:Double x:Key="StateContainerHeight">34.080000000000013</x:Double>
@@ -735,360 +731,54 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <State.Transitions>
-                  <Transition DisplayName="T2" sap2010:WorkflowViewState.IdRef="Transition_3">
+                  <Transition DisplayName="T2" sap:VirtualizedContainerService.HintSize="451.333333333333,521.333333333333" sap2010:WorkflowViewState.IdRef="Transition_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <av:PointCollection x:Key="ConnectorLocation">519,425.1 549,425.1 549,566.25 518,566.25</av:PointCollection>
+                        <av:PointCollection x:Key="ConnectorLocation">519,431.766666666667 549,431.766666666667 549,570.833333333333 517.666666666667,570.833333333333</av:PointCollection>
                         <x:Int32 x:Key="SrcConnectionPointIndex">60</x:Int32>
                         <x:Int32 x:Key="DestConnectionPointIndex">40</x:Int32>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <Transition.To>
-                      <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="Ingreso a  Satelite para extraccion de reporte de ventas &#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Ingreso a SQLServer para extracción de ventas en Excel" DisplayName="Extracción de ventas fidelización Satelite" sap:VirtualizedContainerService.HintSize="429,155" sap2010:WorkflowViewState.IdRef="State_4">
+                      <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="Ingreso a  Satelite para extraccion de reporte de ventas &#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Ingreso a SQLServer para extracción de ventas en Excel" DisplayName="Extracción de ventas fidelización Satelite" sap:VirtualizedContainerService.HintSize="428.666666666667,163.333333333333" sap2010:WorkflowViewState.IdRef="State_4">
                         <State.Entry>
-                          <Sequence sap:VirtualizedContainerService.HintSize="478,314" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                          <Sequence sap:VirtualizedContainerService.HintSize="421.333333333333,462" sap2010:WorkflowViewState.IdRef="Sequence_21">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,222" sap2010:WorkflowViewState.IdRef="CommentOut_3">
-                              <ui:CommentOut.Body>
-                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,144" sap2010:WorkflowViewState.IdRef="Sequence_20">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <Switch x:TypeArguments="x:String" DisplayName="Asignación Fecha Inicial y Final" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Switch`1_2">
-                                    <Switch.Expression>
-                                      <InArgument x:TypeArguments="x:String">
-                                        <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42">Dt_FilaCalendarioActual.Rows[0][1].ToString()</mca:CSharpValue>
-                                      </InArgument>
-                                    </Switch.Expression>
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                    <Sequence x:Key="Cierre" sap:VirtualizedContainerService.HintSize="473,440" sap2010:WorkflowViewState.IdRef="Sequence_16">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,348" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
-                                        <ui:MultipleAssign.AssignOperations>
-                                          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
-                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_26">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_49">Out_Date_FechaInicio_Salesforce</mca:CSharpReference>
-                                                </OutArgument>
-                                              </ui:AssignOperation.To>
-                                              <ui:AssignOperation.Value>
-                                                <InArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_43">new DateTime(DateTime.Now.Year,DateTime.Now.Month-1,1).ToString("dd/MM/yyyy")</mca:CSharpValue>
-                                                </InArgument>
-                                              </ui:AssignOperation.Value>
-                                            </ui:AssignOperation>
-                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_27">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_50">Out_Date_FechaFin_Salesforce</mca:CSharpReference>
-                                                </OutArgument>
-                                              </ui:AssignOperation.To>
-                                              <ui:AssignOperation.Value>
-                                                <InArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_44">new DateTime(DateTime.Now.Year,DateTime.Now.Month,1).ToString("dd/MM/yyyy")</mca:CSharpValue>
-                                                </InArgument>
-                                              </ui:AssignOperation.Value>
-                                            </ui:AssignOperation>
-                                            <ui:AssignOperation Value="{x:Null}" sap2010:WorkflowViewState.IdRef="AssignOperation_28">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_51">Out_Date_FechaInicio_SQL</mca:CSharpReference>
-                                                </OutArgument>
-                                              </ui:AssignOperation.To>
-                                            </ui:AssignOperation>
-                                            <ui:AssignOperation Value="{x:Null}" sap2010:WorkflowViewState.IdRef="AssignOperation_29">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_52">Out_Date_FechaFin_SQL</mca:CSharpReference>
-                                                </OutArgument>
-                                              </ui:AssignOperation.To>
-                                            </ui:AssignOperation>
-                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_30">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_53">Out_Date_FechaInicio_Correo</mca:CSharpReference>
-                                                </OutArgument>
-                                              </ui:AssignOperation.To>
-                                              <ui:AssignOperation.Value>
-                                                <InArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">new DateTime(DateTime.Now.Year,DateTime.Now.Month-1,1).ToString("dd/MM/yyyy")</mca:CSharpValue>
-                                                </InArgument>
-                                              </ui:AssignOperation.Value>
-                                            </ui:AssignOperation>
-                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_31">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_54">Out_Date_FechaFin_Correo</mca:CSharpReference>
-                                                </OutArgument>
-                                              </ui:AssignOperation.To>
-                                              <ui:AssignOperation.Value>
-                                                <InArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">new DateTime(DateTime.Now.Year,DateTime.Now.Month,1).AddDays(-1).ToString("dd/MM/yyyy")</mca:CSharpValue>
-                                                </InArgument>
-                                              </ui:AssignOperation.Value>
-                                            </ui:AssignOperation>
-                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_32">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_55">Out_Date_FechaInicio_SAP</mca:CSharpReference>
-                                                </OutArgument>
-                                              </ui:AssignOperation.To>
-                                              <ui:AssignOperation.Value>
-                                                <InArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_47" xml:space="preserve">new DateTime(DateTime.Now.Year,DateTime.Now.Month,1).Date +"."+
-new DateTime(DateTime.Now.Year,DateTime.Now.Month,1).AddMonths(-1).Month +"."+
-new DateTime(DateTime.Now.Year,DateTime.Now.Month,1).Year</mca:CSharpValue>
-                                                </InArgument>
-                                              </ui:AssignOperation.Value>
-                                            </ui:AssignOperation>
-                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_33">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_56">Out_Date_FechaFin_SAP</mca:CSharpReference>
-                                                </OutArgument>
-                                              </ui:AssignOperation.To>
-                                              <ui:AssignOperation.Value>
-                                                <InArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_48" xml:space="preserve">new DateTime(DateTime.Now.Year,DateTime.Now.Month,1).AddDays(-1).Day.ToString()+"."+
-new DateTime(DateTime.Now.Year,DateTime.Now.Month,1).Month +"."+
-new DateTime(DateTime.Now.Year,DateTime.Now.Month,1).Year</mca:CSharpValue>
-                                                </InArgument>
-                                              </ui:AssignOperation.Value>
-                                            </ui:AssignOperation>
-                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_34">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:Boolean">
-                                                  <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_57">Out_Bool_Ejecutar_SAP</mca:CSharpReference>
-                                                </OutArgument>
-                                              </ui:AssignOperation.To>
-                                              <ui:AssignOperation.Value>
-                                                <InArgument x:TypeArguments="x:Boolean">True</InArgument>
-                                              </ui:AssignOperation.Value>
-                                            </ui:AssignOperation>
-                                          </scg:List>
-                                        </ui:MultipleAssign.AssignOperations>
-                                      </ui:MultipleAssign>
-                                    </Sequence>
-                                    <Sequence x:Key="N" sap:VirtualizedContainerService.HintSize="473,378" sap2010:WorkflowViewState.IdRef="Sequence_17">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,286" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
-                                        <ui:MultipleAssign.AssignOperations>
-                                          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
-                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_35">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_58">Out_Date_FechaInicio_Salesforce</mca:CSharpReference>
-                                                </OutArgument>
-                                              </ui:AssignOperation.To>
-                                              <ui:AssignOperation.Value>
-                                                <InArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">new DateTime(DateTime.Now.Year,DateTime.Now.Month,1).ToString("dd/MM/yyyy")</mca:CSharpValue>
-                                                </InArgument>
-                                              </ui:AssignOperation.Value>
-                                            </ui:AssignOperation>
-                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_36">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_59">Out_Date_FechaFin_Salesforce</mca:CSharpReference>
-                                                </OutArgument>
-                                              </ui:AssignOperation.To>
-                                              <ui:AssignOperation.Value>
-                                                <InArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_50">DateTime.Today.ToString("dd/MM/yyyy")</mca:CSharpValue>
-                                                </InArgument>
-                                              </ui:AssignOperation.Value>
-                                            </ui:AssignOperation>
-                                            <ui:AssignOperation Value="{x:Null}" sap2010:WorkflowViewState.IdRef="AssignOperation_37">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_60">Out_Date_FechaInicio_SQL</mca:CSharpReference>
-                                                </OutArgument>
-                                              </ui:AssignOperation.To>
-                                            </ui:AssignOperation>
-                                            <ui:AssignOperation Value="{x:Null}" sap2010:WorkflowViewState.IdRef="AssignOperation_38">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_61">Out_Date_FechaFin_SQL</mca:CSharpReference>
-                                                </OutArgument>
-                                              </ui:AssignOperation.To>
-                                            </ui:AssignOperation>
-                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_39">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_62">Out_Date_FechaInicio_Correo</mca:CSharpReference>
-                                                </OutArgument>
-                                              </ui:AssignOperation.To>
-                                              <ui:AssignOperation.Value>
-                                                <InArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_51">new DateTime(DateTime.Now.Year,DateTime.Now.Month,1).ToString("dd/MM/yyyy")</mca:CSharpValue>
-                                                </InArgument>
-                                              </ui:AssignOperation.Value>
-                                            </ui:AssignOperation>
-                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_40">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_63">Out_Date_FechaFin_Correo</mca:CSharpReference>
-                                                </OutArgument>
-                                              </ui:AssignOperation.To>
-                                              <ui:AssignOperation.Value>
-                                                <InArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_52">DateTime.Today.AddDays(-1).ToString("dd/MM/yyyy")</mca:CSharpValue>
-                                                </InArgument>
-                                              </ui:AssignOperation.Value>
-                                            </ui:AssignOperation>
-                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_41">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:Boolean">
-                                                  <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_64">Out_Bool_Ejecutar_SAP</mca:CSharpReference>
-                                                </OutArgument>
-                                              </ui:AssignOperation.To>
-                                              <ui:AssignOperation.Value>
-                                                <InArgument x:TypeArguments="x:Boolean">False</InArgument>
-                                              </ui:AssignOperation.Value>
-                                            </ui:AssignOperation>
-                                          </scg:List>
-                                        </ui:MultipleAssign.AssignOperations>
-                                      </ui:MultipleAssign>
-                                    </Sequence>
-                                    <Sequence x:Key="Y" sap:VirtualizedContainerService.HintSize="473,440" sap2010:WorkflowViewState.IdRef="Sequence_18">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,348" sap2010:WorkflowViewState.IdRef="MultipleAssign_6">
-                                        <ui:MultipleAssign.AssignOperations>
-                                          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
-                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_42">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_65">Out_Date_FechaInicio_Salesforce</mca:CSharpReference>
-                                                </OutArgument>
-                                              </ui:AssignOperation.To>
-                                              <ui:AssignOperation.Value>
-                                                <InArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">Dt_FilaCalendarioActual.Rows[0][4].ToString()</mca:CSharpValue>
-                                                </InArgument>
-                                              </ui:AssignOperation.Value>
-                                            </ui:AssignOperation>
-                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_43">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_66">Out_Date_FechaFin_Salesforce</mca:CSharpReference>
-                                                </OutArgument>
-                                              </ui:AssignOperation.To>
-                                              <ui:AssignOperation.Value>
-                                                <InArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">Dt_FilaCalendarioActual.Rows[0][5].ToString()</mca:CSharpValue>
-                                                </InArgument>
-                                              </ui:AssignOperation.Value>
-                                            </ui:AssignOperation>
-                                            <ui:AssignOperation Value="{x:Null}" sap2010:WorkflowViewState.IdRef="AssignOperation_44">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_67">Out_Date_FechaInicio_SQL</mca:CSharpReference>
-                                                </OutArgument>
-                                              </ui:AssignOperation.To>
-                                            </ui:AssignOperation>
-                                            <ui:AssignOperation Value="{x:Null}" sap2010:WorkflowViewState.IdRef="AssignOperation_45">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_68">Out_Date_FechaFin_SQL</mca:CSharpReference>
-                                                </OutArgument>
-                                              </ui:AssignOperation.To>
-                                            </ui:AssignOperation>
-                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_46">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_69">Out_Date_FechaInicio_Correo</mca:CSharpReference>
-                                                </OutArgument>
-                                              </ui:AssignOperation.To>
-                                              <ui:AssignOperation.Value>
-                                                <InArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_55">Dt_FilaCalendarioActual.Rows[0][4].ToString()</mca:CSharpValue>
-                                                </InArgument>
-                                              </ui:AssignOperation.Value>
-                                            </ui:AssignOperation>
-                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_47">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_70">Out_Date_FechaFin_Correo</mca:CSharpReference>
-                                                </OutArgument>
-                                              </ui:AssignOperation.To>
-                                              <ui:AssignOperation.Value>
-                                                <InArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_56">Dt_FilaCalendarioActual.Rows[0][5].ToString()</mca:CSharpValue>
-                                                </InArgument>
-                                              </ui:AssignOperation.Value>
-                                            </ui:AssignOperation>
-                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_48">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_71">Out_Date_FechaInicio_SAP</mca:CSharpReference>
-                                                </OutArgument>
-                                              </ui:AssignOperation.To>
-                                              <ui:AssignOperation.Value>
-                                                <InArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_57">Dt_FilaCalendarioActual.Rows[0][4].ToString()</mca:CSharpValue>
-                                                </InArgument>
-                                              </ui:AssignOperation.Value>
-                                            </ui:AssignOperation>
-                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_49">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_72">Out_Date_FechaFin_SAP</mca:CSharpReference>
-                                                </OutArgument>
-                                              </ui:AssignOperation.To>
-                                              <ui:AssignOperation.Value>
-                                                <InArgument x:TypeArguments="x:String">
-                                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_58">Dt_FilaCalendarioActual.Rows[0][5].ToString()</mca:CSharpValue>
-                                                </InArgument>
-                                              </ui:AssignOperation.Value>
-                                            </ui:AssignOperation>
-                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_50">
-                                              <ui:AssignOperation.To>
-                                                <OutArgument x:TypeArguments="x:Boolean">
-                                                  <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_73">Out_Bool_Ejecutar_SAP</mca:CSharpReference>
-                                                </OutArgument>
-                                              </ui:AssignOperation.To>
-                                              <ui:AssignOperation.Value>
-                                                <InArgument x:TypeArguments="x:Boolean">True</InArgument>
-                                              </ui:AssignOperation.Value>
-                                            </ui:AssignOperation>
-                                          </scg:List>
-                                        </ui:MultipleAssign.AssignOperations>
-                                      </ui:MultipleAssign>
-                                    </Sequence>
-                                  </Switch>
-                                </Sequence>
-                              </ui:CommentOut.Body>
-                            </ui:CommentOut>
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Exportar datos Satelite workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="3. Exportar datos Satelite\\Exportar datos Satelite.xaml">
+                              <ui:InvokeWorkflowFile.Arguments>
+                                <InArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_NumIntentos">
+                                  <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_80">GBL_Int_NumIntentos</mca:CSharpValue>
+                                </InArgument>
+                                <InArgument x:TypeArguments="sd:DataTable" x:Key="In_GBL_Dt_Calendario_row">
+                                  <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_79">GBL_Dt_Calendario_row</mca:CSharpValue>
+                                </InArgument>
+                              </ui:InvokeWorkflowFile.Arguments>
+                            </ui:InvokeWorkflowFile>
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Depurar reporte (Reporte fidelizaciones Satelite) workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="4. Depurar reporte (Reporte fidelizaciones Satelite)\\Depurar reporte (Reporte fidelizaciones Satelite).xaml">
+                              <ui:InvokeWorkflowFile.Arguments>
+                                <InArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_NumIntentos" />
+                              </ui:InvokeWorkflowFile.Arguments>
+                            </ui:InvokeWorkflowFile>
+                            <Assign sap:VirtualizedContainerService.HintSize="379.333333333333,62" sap2010:WorkflowViewState.IdRef="Assign_6">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Boolean">
+                                  <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_88">Bool_ProcessStatus</mca:CSharpReference>
+                                </OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                              </Assign.Value>
+                            </Assign>
                           </Sequence>
                         </State.Entry>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">89,481</av:Point>
-                            <av:Size x:Key="ShapeSize">429,155</av:Size>
+                            <av:Size x:Key="ShapeSize">428.666666666667,163.333333333333</av:Size>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             <x:Double x:Key="StateContainerWidth">395</x:Double>
                             <x:Double x:Key="StateContainerHeight">32.000000000000114</x:Double>
@@ -1099,26 +789,52 @@ new DateTime(DateTime.Now.Year,DateTime.Now.Month,1).Year</mca:CSharpValue>
                           <Transition DisplayName="T3" sap2010:WorkflowViewState.IdRef="Transition_2">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <av:PointCollection x:Key="ConnectorLocation">518,589.5 548,589.5 548,723.65 518,723.65</av:PointCollection>
+                                <av:PointCollection x:Key="ConnectorLocation">517.666666666667,595.333333333333 547.666666666667,595.333333333333 547.666666666667,737.4 518.333333333333,737.4</av:PointCollection>
                                 <x:Int32 x:Key="SrcConnectionPointIndex">52</x:Int32>
                                 <x:Int32 x:Key="DestConnectionPointIndex">32</x:Int32>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <Transition.To>
-                              <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Ingreso a Salesforce y a Satelite para extraccion de reporte de ventas &#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Ingreso a Salesforce y SQL para extracción de ventas en Excel" DisplayName="Extracción y Consolidación ventas Inconsistentes" sap:VirtualizedContainerService.HintSize="423,157" sap2010:WorkflowViewState.IdRef="State_6">
+                              <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Ingreso a Salesforce y a Satelite para extraccion de reporte de ventas &#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Ingreso a Salesforce y SQL para extracción de ventas en Excel" DisplayName="Extracción y Consolidación ventas Inconsistentes" sap:VirtualizedContainerService.HintSize="423.333333333333,165.333333333333" sap2010:WorkflowViewState.IdRef="State_6">
                                 <State.Entry>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="421,304" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="421.333333333333,308" sap2010:WorkflowViewState.IdRef="Sequence_26">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Extracción y consolidación ventas inconsistentes workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="5. Extracción y consolidcación ventas inconsistentes\\Extracción y consolidación ventas inconsistentes.xaml">
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Extracción y consolidación ventas inconsistentes workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="5. Extracción y consolidcación ventas inconsistentes\\Extracción y consolidación ventas inconsistentes.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
-                                        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                        <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_ReporteVentasSalesforce">
+                                          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_96">GBL_Str_ReporteVentasSalesforce</mca:CSharpReference>
+                                        </InOutArgument>
+                                        <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CarpetaCompartida">
+                                          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_95">GBL_Str_CarpetaCompartida</mca:CSharpReference>
+                                        </InOutArgument>
+                                        <InOutArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_NumIntentos">
+                                          <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_94">GBL_Int_NumIntentos</mca:CSharpReference>
+                                        </InOutArgument>
+                                        <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CarpetaTemporales">
+                                          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_93">GBL_Str_CarpetaTemporales</mca:CSharpReference>
+                                        </InOutArgument>
+                                        <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CarpetaEntrada">
+                                          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_92">GBL_Str_CarpetaEntrada</mca:CSharpReference>
+                                        </InOutArgument>
+                                        <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_ReporteVentasSatelite">
+                                          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_91">GBL_Str_ReporteVentasSatelite</mca:CSharpReference>
+                                        </InOutArgument>
+                                        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="In_GBL_Dt_Calendario_row">
+                                          <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_90">GBL_Dt_Calendario_row</mca:CSharpReference>
+                                        </InOutArgument>
+                                        <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_PlantillaNovedades">
+                                          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_89">GBL_Str_PlantillaNovedades</mca:CSharpReference>
+                                        </InOutArgument>
+                                        <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CorreosVentasConNovedades">
+                                          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_97">GBL_Str_CorreoVentasConNovedades</mca:CSharpReference>
+                                        </InOutArgument>
                                       </ui:InvokeWorkflowFile.Arguments>
                                     </ui:InvokeWorkflowFile>
-                                    <Assign sap:VirtualizedContainerService.HintSize="379,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                    <Assign sap:VirtualizedContainerService.HintSize="379.333333333333,62" sap2010:WorkflowViewState.IdRef="Assign_3">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="x:Boolean">
                                           <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_77">Bool_ProcessStatus</mca:CSharpReference>
@@ -1132,8 +848,8 @@ new DateTime(DateTime.Now.Year,DateTime.Now.Month,1).Year</mca:CSharpValue>
                                 </State.Entry>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <av:Point x:Key="ShapeLocation">95,653</av:Point>
-                                    <av:Size x:Key="ShapeSize">423,157</av:Size>
+                                    <av:Point x:Key="ShapeLocation">95,663</av:Point>
+                                    <av:Size x:Key="ShapeSize">423.333333333333,165.333333333333</av:Size>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     <x:Double x:Key="StateContainerWidth">389</x:Double>
                                     <x:Double x:Key="StateContainerHeight">34</x:Double>
@@ -1141,163 +857,476 @@ new DateTime(DateTime.Now.Year,DateTime.Now.Month,1).Year</mca:CSharpValue>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <State.Transitions>
-                                  <Transition DisplayName="T4" sap2010:WorkflowViewState.IdRef="Transition_12">
+                                  <Transition DisplayName="T4" sap:VirtualizedContainerService.HintSize="451.333333333333,521.333333333333" sap2010:WorkflowViewState.IdRef="Transition_12">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <av:PointCollection x:Key="ConnectorLocation">518,747.2 548,747.2 548,877.3 525,877.3</av:PointCollection>
+                                        <av:PointCollection x:Key="ConnectorLocation">518.333333333333,762.2 548.333333333333,762.2 548.333333333333,912.633333333333 519,912.633333333333</av:PointCollection>
                                         <x:Int32 x:Key="SrcConnectionPointIndex">44</x:Int32>
                                         <x:Int32 x:Key="DestConnectionPointIndex">28</x:Int32>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                     <Transition.To>
-                                      <State x:Name="__ReferenceID5" DisplayName="Cierre día EDS Automático" sap:VirtualizedContainerService.HintSize="430,127" sap2010:WorkflowViewState.IdRef="State_9">
+                                      <State x:Name="__ReferenceID5" sap2010:Annotation.AnnotationText="&#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones:" DisplayName="Cierre día EDS Automático" sap:VirtualizedContainerService.HintSize="424,165.333333333333" sap2010:WorkflowViewState.IdRef="State_9">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <av:Point x:Key="ShapeLocation">95,826.5</av:Point>
-                                            <av:Size x:Key="ShapeSize">430,127</av:Size>
+                                            <av:Point x:Key="ShapeLocation">95,846.5</av:Point>
+                                            <av:Size x:Key="ShapeSize">424,165.333333333333</av:Size>
                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                            <x:Double x:Key="StateContainerWidth">396</x:Double>
-                                            <x:Double x:Key="StateContainerHeight">91.000000000000057</x:Double>
+                                            <x:Double x:Key="StateContainerWidth">389.99999999999977</x:Double>
+                                            <x:Double x:Key="StateContainerHeight">34.000000000000455</x:Double>
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                         <State.Transitions>
                                           <Transition DisplayName="T5" sap2010:WorkflowViewState.IdRef="Transition_13">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <av:PointCollection x:Key="ConnectorLocation">310,953.5 310,963.5</av:PointCollection>
-                                                <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
-                                                <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
+                                                <av:PointCollection x:Key="ConnectorLocation">519,962.233333333333 549,962.233333333333 549,1142.66666666667 521.666666666667,1142.66666666667</av:PointCollection>
+                                                <x:Int32 x:Key="SrcConnectionPointIndex">52</x:Int32>
+                                                <x:Int32 x:Key="DestConnectionPointIndex">36</x:Int32>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                             <Transition.To>
-                                              <State x:Name="__ReferenceID4" DisplayName="State" sap:VirtualizedContainerService.HintSize="430,127" sap2010:WorkflowViewState.IdRef="State_8">
+                                              <State x:Name="__ReferenceID4" sap2010:Annotation.AnnotationText="&#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones:" DisplayName="Revalidación y cierre Eds inconsistentes" sap:VirtualizedContainerService.HintSize="427.333333333333,162.666666666667" sap2010:WorkflowViewState.IdRef="State_8">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <av:Point x:Key="ShapeLocation">95,963.5</av:Point>
-                                                    <av:Size x:Key="ShapeSize">430,127</av:Size>
+                                                    <av:Point x:Key="ShapeLocation">94.3333333333333,1061.33333333333</av:Point>
+                                                    <av:Size x:Key="ShapeSize">427.333333333333,162.666666666667</av:Size>
                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                    <x:Double x:Key="StateContainerWidth">396</x:Double>
-                                                    <x:Double x:Key="StateContainerHeight">91.000000000000057</x:Double>
+                                                    <x:Double x:Key="StateContainerWidth">393.33333333333314</x:Double>
+                                                    <x:Double x:Key="StateContainerHeight">31.333333333333087</x:Double>
+                                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                                 <State.Transitions>
                                                   <Transition DisplayName="T6" sap2010:WorkflowViewState.IdRef="Transition_14">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <av:PointCollection x:Key="ConnectorLocation">310,1090.5 310,1140.5</av:PointCollection>
-                                                        <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
-                                                        <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
+                                                        <av:PointCollection x:Key="ConnectorLocation">521.666666666667,1167.06666666667 551.666666666667,1167.06666666667 551.666666666667,1283.33333333333 522.333333333333,1283.33333333333</av:PointCollection>
+                                                        <x:Int32 x:Key="SrcConnectionPointIndex">48</x:Int32>
+                                                        <x:Int32 x:Key="DestConnectionPointIndex">12</x:Int32>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                     <Transition.To>
-                                                      <State x:Name="__ReferenceID8" DisplayName="State" sap:VirtualizedContainerService.HintSize="430,127" sap2010:WorkflowViewState.IdRef="State_13">
+                                                      <State x:Name="__ReferenceID8" sap2010:Annotation.AnnotationText="Cierre EDS por solicitud manual&#xA;&#xA;Precondicion: Variables Globales del proyecto, conexion al correo local&#xA;&#xA;Acciones: Revision de correo en busca de documento de reporte cierre eds manual y ejecucion de cierre por SP's en SQLServer" DisplayName="Cierre Eds por solicitud manual" sap:VirtualizedContainerService.HintSize="427.333333333333,173.333333333333" sap2010:WorkflowViewState.IdRef="State_13">
+                                                        <State.Entry>
+                                                          <Sequence sap:VirtualizedContainerService.HintSize="421.333333333333,308" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Descargar plantilla cierre manual workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="10. Descargar plantilla cierre manual\\Descargar plantilla cierre manual.xaml">
+                                                              <ui:InvokeWorkflowFile.Arguments>
+                                                                <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CarpetaCompartida">
+                                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_104">GBL_Str_CarpetaCompartida</mca:CSharpReference>
+                                                                </InOutArgument>
+                                                                <InOutArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_TiempoEsperaAplicaciones">
+                                                                  <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_103">GBL_Int_TiempoEsperaAplicaciones</mca:CSharpReference>
+                                                                </InOutArgument>
+                                                                <InOutArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_TiempoMaxValidaciones">
+                                                                  <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_102">GBL_Int_TiempoMaxValidaciones</mca:CSharpReference>
+                                                                </InOutArgument>
+                                                                <InOutArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_NumIntentos">
+                                                                  <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_101">GBL_Int_NumIntentos</mca:CSharpReference>
+                                                                </InOutArgument>
+                                                                <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CarpetaTemporales">
+                                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_100">GBL_Str_CarpetaTemporales</mca:CSharpReference>
+                                                                </InOutArgument>
+                                                                <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CarpetaEntrada">
+                                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_99">GBL_Str_CarpetaEntrada</mca:CSharpReference>
+                                                                </InOutArgument>
+                                                                <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_PlantillaCierreManual">
+                                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_98">GBL_Str_PlantillaCierreManual</mca:CSharpReference>
+                                                                </InOutArgument>
+                                                              </ui:InvokeWorkflowFile.Arguments>
+                                                            </ui:InvokeWorkflowFile>
+                                                            <Assign sap:VirtualizedContainerService.HintSize="379.333333333333,62" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                                              <Assign.To>
+                                                                <OutArgument x:TypeArguments="x:Boolean">
+                                                                  <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_105">Bool_ProcessStatus</mca:CSharpReference>
+                                                                </OutArgument>
+                                                              </Assign.To>
+                                                              <Assign.Value>
+                                                                <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                                              </Assign.Value>
+                                                            </Assign>
+                                                          </Sequence>
+                                                        </State.Entry>
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                            <av:Point x:Key="ShapeLocation">95,1140.5</av:Point>
-                                                            <av:Size x:Key="ShapeSize">430,127</av:Size>
+                                                            <av:Point x:Key="ShapeLocation">95,1248.66666666667</av:Point>
+                                                            <av:Size x:Key="ShapeSize">427.333333333333,173.333333333333</av:Size>
                                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                            <x:Double x:Key="StateContainerWidth">396</x:Double>
-                                                            <x:Double x:Key="StateContainerHeight">91.000000000000057</x:Double>
+                                                            <x:Double x:Key="StateContainerWidth">393.33333333333314</x:Double>
+                                                            <x:Double x:Key="StateContainerHeight">25</x:Double>
+                                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
                                                         <State.Transitions>
                                                           <Transition DisplayName="T7" sap2010:WorkflowViewState.IdRef="Transition_15">
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                <av:PointCollection x:Key="ConnectorLocation">310,1267.5 310,1317.5</av:PointCollection>
-                                                                <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
-                                                                <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
+                                                                <av:PointCollection x:Key="ConnectorLocation">522.333333333333,1352.66666666667 552.333333333333,1352.66666666667 552.333333333333,1603 523.666666666667,1603</av:PointCollection>
+                                                                <x:Int32 x:Key="SrcConnectionPointIndex">44</x:Int32>
+                                                                <x:Int32 x:Key="DestConnectionPointIndex">36</x:Int32>
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
                                                             <Transition.To>
-                                                              <State x:Name="__ReferenceID7" DisplayName="State" sap:VirtualizedContainerService.HintSize="430,127" sap2010:WorkflowViewState.IdRef="State_12">
+                                                              <State x:Name="__ReferenceID7" sap2010:Annotation.AnnotationText="Notificación de EDS pendiente por cerrar&#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: ejecucion de QUERY en SQL, depuracion excel y envio de correo con documento de cierre" DisplayName="Notificación Eds pendientes por cerrar" sap:VirtualizedContainerService.HintSize="428.666666666667,173.333333333333" sap2010:WorkflowViewState.IdRef="State_12">
+                                                                <State.Entry>
+                                                                  <Sequence sap:VirtualizedContainerService.HintSize="421.333333333333,616" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                      </scg:Dictionary>
+                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke LogIn SQLServer workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Libreria Común\\LogIn SQLServer.xaml">
+                                                                      <ui:InvokeWorkflowFile.Arguments>
+                                                                        <InArgument x:TypeArguments="x:Int32" x:Key="In_Int_NumIntentos">
+                                                                          <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_82">GBL_Int_NumIntentos</mca:CSharpValue>
+                                                                        </InArgument>
+                                                                        <InArgument x:TypeArguments="x:Int32" x:Key="In_Int_Timeout">
+                                                                          <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_81">GBL_Int_TiempoEsperaAplicaciones</mca:CSharpValue>
+                                                                        </InArgument>
+                                                                        <InArgument x:TypeArguments="x:Boolean" x:Key="In_Bool_Ejecucion_SP">
+                                                                          <Literal x:TypeArguments="x:Boolean" />
+                                                                        </InArgument>
+                                                                      </ui:InvokeWorkflowFile.Arguments>
+                                                                    </ui:InvokeWorkflowFile>
+                                                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Ejecutar Script y exportar resultado workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="12. Ejecutar Script y exportar resultado\\Ejecutar Script y exportar resultado.xaml">
+                                                                      <ui:InvokeWorkflowFile.Arguments>
+                                                                        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="In_GBL_Dt_Calendario_row">
+                                                                          <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_110">GBL_Dt_Calendario_row</mca:CSharpReference>
+                                                                        </InOutArgument>
+                                                                        <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CarpetaTemporales">
+                                                                          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_109">GBL_Str_CarpetaTemporales</mca:CSharpReference>
+                                                                        </InOutArgument>
+                                                                        <InOutArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_NumIntentos">
+                                                                          <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_108">GBL_Int_NumIntentos</mca:CSharpReference>
+                                                                        </InOutArgument>
+                                                                        <InOutArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_TiempoMaxValidaciones">
+                                                                          <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_107">GBL_Int_TiempoMaxValidaciones</mca:CSharpReference>
+                                                                        </InOutArgument>
+                                                                        <InOutArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_TiempoEsperaAplicaciones">
+                                                                          <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_106">GBL_Int_TiempoEsperaAplicaciones</mca:CSharpReference>
+                                                                        </InOutArgument>
+                                                                      </ui:InvokeWorkflowFile.Arguments>
+                                                                    </ui:InvokeWorkflowFile>
+                                                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Depurar y notificar reporte (EDS pendientes por cerrar corte) workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="13. Depurar y notificar reporte (EDS pendientes por cerrar corte)\\Depurar y notificar reporte (EDS pendientes por cerrar corte).xaml">
+                                                                      <ui:InvokeWorkflowFile.Arguments>
+                                                                        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="In_GBL_Dt_Calendario_row">
+                                                                          <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_115">GBL_Dt_Calendario_row</mca:CSharpReference>
+                                                                        </InOutArgument>
+                                                                        <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CarpetaTemporales">
+                                                                          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_114">GBL_Str_CarpetaTemporales</mca:CSharpReference>
+                                                                        </InOutArgument>
+                                                                        <InOutArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_NumIntentos">
+                                                                          <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_113">GBL_Int_NumIntentos</mca:CSharpReference>
+                                                                        </InOutArgument>
+                                                                        <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CarpetaCompartida">
+                                                                          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_112">GBL_Str_CarpetaCompartida</mca:CSharpReference>
+                                                                        </InOutArgument>
+                                                                        <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CorreoEDSsinCerrar">
+                                                                          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_111">GBL_Str_CorreoEDSsinCerrar</mca:CSharpReference>
+                                                                        </InOutArgument>
+                                                                      </ui:InvokeWorkflowFile.Arguments>
+                                                                    </ui:InvokeWorkflowFile>
+                                                                    <Assign sap:VirtualizedContainerService.HintSize="379.333333333333,62" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                                                      <Assign.To>
+                                                                        <OutArgument x:TypeArguments="x:Boolean">
+                                                                          <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_116">Bool_ProcessStatus</mca:CSharpReference>
+                                                                        </OutArgument>
+                                                                      </Assign.To>
+                                                                      <Assign.Value>
+                                                                        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                                                      </Assign.Value>
+                                                                    </Assign>
+                                                                  </Sequence>
+                                                                </State.Entry>
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                    <av:Point x:Key="ShapeLocation">95,1317.5</av:Point>
-                                                                    <av:Size x:Key="ShapeSize">430,127</av:Size>
+                                                                    <av:Point x:Key="ShapeLocation">95,1516.33333333333</av:Point>
+                                                                    <av:Size x:Key="ShapeSize">428.666666666667,173.333333333333</av:Size>
                                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                    <x:Double x:Key="StateContainerWidth">396</x:Double>
-                                                                    <x:Double x:Key="StateContainerHeight">91.000000000000057</x:Double>
+                                                                    <x:Double x:Key="StateContainerWidth">394.66666666666652</x:Double>
+                                                                    <x:Double x:Key="StateContainerHeight">25</x:Double>
+                                                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
                                                                 <State.Transitions>
                                                                   <Transition DisplayName="T8" sap2010:WorkflowViewState.IdRef="Transition_16">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                        <av:PointCollection x:Key="ConnectorLocation">310,1444.5 310,1494.5</av:PointCollection>
-                                                                        <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
-                                                                        <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
+                                                                        <av:PointCollection x:Key="ConnectorLocation">523.666666666667,1646.33333333333 553.666666666667,1646.33333333333 553.666666666667,1821.2 524.333333333333,1821.2</av:PointCollection>
+                                                                        <x:Int32 x:Key="SrcConnectionPointIndex">56</x:Int32>
+                                                                        <x:Int32 x:Key="DestConnectionPointIndex">24</x:Int32>
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                     <Transition.To>
-                                                                      <State x:Name="__ReferenceID9" DisplayName="State" sap:VirtualizedContainerService.HintSize="430,127" sap2010:WorkflowViewState.IdRef="State_14">
+                                                                      <State x:Name="__ReferenceID9" sap2010:Annotation.AnnotationText="Notificación EDS no incluidas en la interfaz&#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: ejecucion de QUERY en SQL, depuracion excel y envio de correo con documento de cierre" DisplayName="Notificación Eds no incluidas en la interfaz" sap:VirtualizedContainerService.HintSize="429.333333333333,185.333333333333" sap2010:WorkflowViewState.IdRef="State_14">
+                                                                        <State.Entry>
+                                                                          <Sequence sap:VirtualizedContainerService.HintSize="421.333333333333,616" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                                                            <sap:WorkflowViewStateService.ViewState>
+                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                              </scg:Dictionary>
+                                                                            </sap:WorkflowViewStateService.ViewState>
+                                                                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke LogIn SQLServer workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="Libreria Común\\LogIn SQLServer.xaml">
+                                                                              <ui:InvokeWorkflowFile.Arguments>
+                                                                                <InArgument x:TypeArguments="x:Int32" x:Key="In_Int_NumIntentos">
+                                                                                  <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_84">GBL_Int_NumIntentos</mca:CSharpValue>
+                                                                                </InArgument>
+                                                                                <InArgument x:TypeArguments="x:Int32" x:Key="In_Int_Timeout">
+                                                                                  <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_83">GBL_Int_TiempoEsperaAplicaciones</mca:CSharpValue>
+                                                                                </InArgument>
+                                                                                <InArgument x:TypeArguments="x:Boolean" x:Key="In_Bool_Ejecucion_SP">
+                                                                                  <Literal x:TypeArguments="x:Boolean" />
+                                                                                </InArgument>
+                                                                              </ui:InvokeWorkflowFile.Arguments>
+                                                                            </ui:InvokeWorkflowFile>
+                                                                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Exportar EDS no incluidas workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="14. Exportar EDS no incluidas\\Exportar EDS no incluidas.xaml">
+                                                                              <ui:InvokeWorkflowFile.Arguments>
+                                                                                <InOutArgument x:TypeArguments="sd:DataTable" x:Key="In_GBL_Dt_Calendario_row">
+                                                                                  <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_121">GBL_Dt_Calendario_row</mca:CSharpReference>
+                                                                                </InOutArgument>
+                                                                                <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CarpetaTemporales">
+                                                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_120">GBL_Str_CarpetaTemporales</mca:CSharpReference>
+                                                                                </InOutArgument>
+                                                                                <InOutArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_NumIntentos">
+                                                                                  <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_119">GBL_Int_NumIntentos</mca:CSharpReference>
+                                                                                </InOutArgument>
+                                                                                <InOutArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_TiempoMaxValidaciones">
+                                                                                  <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_118">GBL_Int_TiempoMaxValidaciones</mca:CSharpReference>
+                                                                                </InOutArgument>
+                                                                                <InOutArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_TiempoEsperaAplicaciones">
+                                                                                  <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_117">GBL_Int_TiempoEsperaAplicaciones</mca:CSharpReference>
+                                                                                </InOutArgument>
+                                                                              </ui:InvokeWorkflowFile.Arguments>
+                                                                            </ui:InvokeWorkflowFile>
+                                                                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Generar reporte de EDS no incluidas y enviar notificación workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="15. Generar reporte de EDS no incluidas y enviar notificación\\Generar reporte de EDS no incluidas y enviar notificación.xaml">
+                                                                              <ui:InvokeWorkflowFile.Arguments>
+                                                                                <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_ReporteVentasSalesforce">
+                                                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_122">GBL_Str_ReporteVentasSalesforce</mca:CSharpReference>
+                                                                                </InOutArgument>
+                                                                                <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CarpetaEntrada">
+                                                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_123">GBL_Str_CarpetaEntrada</mca:CSharpReference>
+                                                                                </InOutArgument>
+                                                                                <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CarpetaTemporales">
+                                                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_124">GBL_Str_CarpetaTemporales</mca:CSharpReference>
+                                                                                </InOutArgument>
+                                                                                <InOutArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_NumIntentos">
+                                                                                  <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_125">GBL_Int_NumIntentos</mca:CSharpReference>
+                                                                                </InOutArgument>
+                                                                                <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CarpetaCompartida">
+                                                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_126">GBL_Str_CarpetaCompartida</mca:CSharpReference>
+                                                                                </InOutArgument>
+                                                                                <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CorreosEDSnoIncluidas">
+                                                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_127">GBL_Str_CorreoEDsinCrearInterfaz</mca:CSharpReference>
+                                                                                </InOutArgument>
+                                                                              </ui:InvokeWorkflowFile.Arguments>
+                                                                            </ui:InvokeWorkflowFile>
+                                                                            <Assign sap:VirtualizedContainerService.HintSize="379.333333333333,62" sap2010:WorkflowViewState.IdRef="Assign_9">
+                                                                              <Assign.To>
+                                                                                <OutArgument x:TypeArguments="x:Boolean">
+                                                                                  <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_128">Bool_ProcessStatus</mca:CSharpReference>
+                                                                                </OutArgument>
+                                                                              </Assign.To>
+                                                                              <Assign.Value>
+                                                                                <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                                                              </Assign.Value>
+                                                                            </Assign>
+                                                                          </Sequence>
+                                                                        </State.Entry>
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                            <av:Point x:Key="ShapeLocation">95,1494.5</av:Point>
-                                                                            <av:Size x:Key="ShapeSize">430,127</av:Size>
+                                                                            <av:Point x:Key="ShapeLocation">95,1756.33333333333</av:Point>
+                                                                            <av:Size x:Key="ShapeSize">429.333333333333,185.333333333333</av:Size>
                                                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                            <x:Double x:Key="StateContainerWidth">396</x:Double>
-                                                                            <x:Double x:Key="StateContainerHeight">91.000000000000057</x:Double>
+                                                                            <x:Double x:Key="StateContainerWidth">395.33333333333314</x:Double>
+                                                                            <x:Double x:Key="StateContainerHeight">37.333333333334394</x:Double>
+                                                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                                                           </scg:Dictionary>
                                                                         </sap:WorkflowViewStateService.ViewState>
                                                                         <State.Transitions>
                                                                           <Transition DisplayName="T9" sap2010:WorkflowViewState.IdRef="Transition_17">
                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                <av:PointCollection x:Key="ConnectorLocation">310,1621.5 310,1671.5</av:PointCollection>
-                                                                                <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
-                                                                                <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
+                                                                                <av:PointCollection x:Key="ConnectorLocation">524.333333333333,1876.8 554.333333333333,1876.8 554.333333333333,2031.16666666667 523.666666666667,2031.16666666667</av:PointCollection>
+                                                                                <x:Int32 x:Key="SrcConnectionPointIndex">48</x:Int32>
+                                                                                <x:Int32 x:Key="DestConnectionPointIndex">24</x:Int32>
                                                                               </scg:Dictionary>
                                                                             </sap:WorkflowViewStateService.ViewState>
                                                                             <Transition.To>
-                                                                              <State x:Name="__ReferenceID10" DisplayName="State" sap:VirtualizedContainerService.HintSize="430,127" sap2010:WorkflowViewState.IdRef="State_15">
+                                                                              <State x:Name="__ReferenceID10" sap2010:Annotation.AnnotationText="&#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones:" DisplayName="Obtener listado notas crédito SAP" sap:VirtualizedContainerService.HintSize="428.666666666667,156.666666666667" sap2010:WorkflowViewState.IdRef="State_15">
                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                    <av:Point x:Key="ShapeLocation">95,1671.5</av:Point>
-                                                                                    <av:Size x:Key="ShapeSize">430,127</av:Size>
+                                                                                    <av:Point x:Key="ShapeLocation">95,1976.33333333333</av:Point>
+                                                                                    <av:Size x:Key="ShapeSize">428.666666666667,156.666666666667</av:Size>
                                                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                                    <x:Double x:Key="StateContainerWidth">396</x:Double>
-                                                                                    <x:Double x:Key="StateContainerHeight">91.000000000000057</x:Double>
+                                                                                    <x:Double x:Key="StateContainerWidth">394.66666666666652</x:Double>
+                                                                                    <x:Double x:Key="StateContainerHeight">25</x:Double>
+                                                                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                                                                   </scg:Dictionary>
                                                                                 </sap:WorkflowViewStateService.ViewState>
                                                                                 <State.Transitions>
                                                                                   <Transition DisplayName="T10" sap2010:WorkflowViewState.IdRef="Transition_18">
                                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                        <av:PointCollection x:Key="ConnectorLocation">310,1798.5 310,1848.5</av:PointCollection>
-                                                                                        <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
-                                                                                        <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
+                                                                                        <av:PointCollection x:Key="ConnectorLocation">523.666666666667,2070.33333333333 553.666666666667,2070.33333333333 553.666666666667,2238.33333333333 524.333333333333,2238.33333333333</av:PointCollection>
+                                                                                        <x:Int32 x:Key="SrcConnectionPointIndex">44</x:Int32>
+                                                                                        <x:Int32 x:Key="DestConnectionPointIndex">20</x:Int32>
                                                                                       </scg:Dictionary>
                                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                                     <Transition.To>
-                                                                                      <State x:Name="__ReferenceID6" DisplayName="State" sap:VirtualizedContainerService.HintSize="430,127" sap2010:WorkflowViewState.IdRef="State_11">
+                                                                                      <State x:Name="__ReferenceID6" sap2010:Annotation.AnnotationText="Cruce SAP vs Salesforce&#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Depuracion y acciones para cruce de totales e inconsistencias en ventas entre SAP y Salesforce" DisplayName="Cruce SAP vs Salesforce" sap:VirtualizedContainerService.HintSize="429.333333333333,173.333333333333" sap2010:WorkflowViewState.IdRef="State_11">
+                                                                                        <State.Entry>
+                                                                                          <Sequence sap:VirtualizedContainerService.HintSize="421.333333333333,308" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                                                                            <sap:WorkflowViewStateService.ViewState>
+                                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                              </scg:Dictionary>
+                                                                                            </sap:WorkflowViewStateService.ViewState>
+                                                                                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Cruce SAP y Salesforce workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="18. Cruce SAP y Salesforce\\Cruce SAP y Salesforce.xaml">
+                                                                                              <ui:InvokeWorkflowFile.Arguments>
+                                                                                                <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_ReporteVentasSalesforce">
+                                                                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_129">GBL_Str_ReporteVentasSalesforce</mca:CSharpReference>
+                                                                                                </InOutArgument>
+                                                                                                <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CarpetaCompartida">
+                                                                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_130">GBL_Str_CarpetaCompartida</mca:CSharpReference>
+                                                                                                </InOutArgument>
+                                                                                                <InOutArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_NumIntentos">
+                                                                                                  <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_131">GBL_Int_NumIntentos</mca:CSharpReference>
+                                                                                                </InOutArgument>
+                                                                                                <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CarpetaTemporales">
+                                                                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_132">GBL_Str_CarpetaTemporales</mca:CSharpReference>
+                                                                                                </InOutArgument>
+                                                                                                <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CarpetaEntrada">
+                                                                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_133">GBL_Str_CarpetaEntrada</mca:CSharpReference>
+                                                                                                </InOutArgument>
+                                                                                                <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_ReporteSAPvsSalesforce">
+                                                                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_134">GBL_Str_ReporteCruceSAPvsSalesforce</mca:CSharpReference>
+                                                                                                </InOutArgument>
+                                                                                                <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_ReporteSAP">
+                                                                                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_135">GBL_Str_ReporteSAP</mca:CSharpReference>
+                                                                                                </InOutArgument>
+                                                                                              </ui:InvokeWorkflowFile.Arguments>
+                                                                                            </ui:InvokeWorkflowFile>
+                                                                                            <Assign sap:VirtualizedContainerService.HintSize="379.333333333333,62" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                                                                              <Assign.To>
+                                                                                                <OutArgument x:TypeArguments="x:Boolean">
+                                                                                                  <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_136">Bool_ProcessStatus</mca:CSharpReference>
+                                                                                                </OutArgument>
+                                                                                              </Assign.To>
+                                                                                              <Assign.Value>
+                                                                                                <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                                                                              </Assign.Value>
+                                                                                            </Assign>
+                                                                                          </Sequence>
+                                                                                        </State.Entry>
                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                            <av:Point x:Key="ShapeLocation">95,1848.5</av:Point>
-                                                                                            <av:Size x:Key="ShapeSize">430,127</av:Size>
+                                                                                            <av:Point x:Key="ShapeLocation">95,2186.33333333333</av:Point>
+                                                                                            <av:Size x:Key="ShapeSize">429.333333333333,173.333333333333</av:Size>
                                                                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                                            <x:Double x:Key="StateContainerWidth">396</x:Double>
-                                                                                            <x:Double x:Key="StateContainerHeight">91.000000000000057</x:Double>
+                                                                                            <x:Double x:Key="StateContainerWidth">395.33333333333326</x:Double>
+                                                                                            <x:Double x:Key="StateContainerHeight">25</x:Double>
+                                                                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                                                                           </scg:Dictionary>
                                                                                         </sap:WorkflowViewStateService.ViewState>
                                                                                         <State.Transitions>
-                                                                                          <Transition DisplayName="T11" sap2010:WorkflowViewState.IdRef="Transition_19">
+                                                                                          <Transition DisplayName="T11" sap:VirtualizedContainerService.HintSize="451.333333333333,521.333333333333" sap2010:WorkflowViewState.IdRef="Transition_19">
                                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                <av:PointCollection x:Key="ConnectorLocation">310,1975.5 310,2025.5</av:PointCollection>
-                                                                                                <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
-                                                                                                <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
+                                                                                                <av:PointCollection x:Key="ConnectorLocation">524.333333333333,2307.66666666667 554.333333333333,2307.66666666667 554.333333333333,2500 524.666666666667,2500</av:PointCollection>
+                                                                                                <x:Int32 x:Key="SrcConnectionPointIndex">52</x:Int32>
+                                                                                                <x:Int32 x:Key="DestConnectionPointIndex">36</x:Int32>
                                                                                               </scg:Dictionary>
                                                                                             </sap:WorkflowViewStateService.ViewState>
                                                                                             <Transition.To>
-                                                                                              <State x:Name="__ReferenceID2" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="134,61" sap2010:WorkflowViewState.IdRef="State_5" IsFinal="True">
+                                                                                              <State x:Name="__ReferenceID11" sap2010:Annotation.AnnotationText="Finalizacion del proceso de Conciliacion EDS&#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Movimiento de archivos a carpeta de salida y envio de archivos " DisplayName="Finalización Conciliación" sap:VirtualizedContainerService.HintSize="468,792.666666666667" sap2010:WorkflowViewState.IdRef="State_16">
+                                                                                                <State.Entry>
+                                                                                                  <Sequence sap:VirtualizedContainerService.HintSize="421.333333333333,308" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                      </scg:Dictionary>
+                                                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Finalización conciliación workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="19. Finalización Conciliación\\Finalización conciliación.xaml">
+                                                                                                      <ui:InvokeWorkflowFile.Arguments>
+                                                                                                        <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_ReporteVentasSalesforce">
+                                                                                                          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_137">GBL_Str_ReporteVentasSalesforce</mca:CSharpReference>
+                                                                                                        </InOutArgument>
+                                                                                                        <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CarpetaCompartida">
+                                                                                                          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_138">GBL_Str_CarpetaCompartida</mca:CSharpReference>
+                                                                                                        </InOutArgument>
+                                                                                                        <InOutArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_NumIntentos">
+                                                                                                          <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_139">GBL_Int_NumIntentos</mca:CSharpReference>
+                                                                                                        </InOutArgument>
+                                                                                                        <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CarpetaTemporales">
+                                                                                                          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_140">GBL_Str_CarpetaTemporales</mca:CSharpReference>
+                                                                                                        </InOutArgument>
+                                                                                                        <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_ReporteVentasSatelite">
+                                                                                                          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_141">GBL_Str_ReporteVentasSatelite</mca:CSharpReference>
+                                                                                                        </InOutArgument>
+                                                                                                        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="In_GBL_Dt_Calendario_row">
+                                                                                                          <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_142">GBL_Dt_Calendario_row</mca:CSharpReference>
+                                                                                                        </InOutArgument>
+                                                                                                        <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_ReporteSAPvsSalesforce">
+                                                                                                          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_143">GBL_Str_ReporteCruceSAPvsSalesforce</mca:CSharpReference>
+                                                                                                        </InOutArgument>
+                                                                                                        <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CorreosFinalizaciónEjecución">
+                                                                                                          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_144">GBL_Str_CorreoFinalizaciónEjecución</mca:CSharpReference>
+                                                                                                        </InOutArgument>
+                                                                                                        <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_ReporteCierreEDSAutomatico">
+                                                                                                          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_145">GBL_Str_ReporteCierreEDSAutomatico</mca:CSharpReference>
+                                                                                                        </InOutArgument>
+                                                                                                      </ui:InvokeWorkflowFile.Arguments>
+                                                                                                    </ui:InvokeWorkflowFile>
+                                                                                                    <Assign sap:VirtualizedContainerService.HintSize="379.333333333333,62" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                                                                                      <Assign.To>
+                                                                                                        <OutArgument x:TypeArguments="x:Boolean">
+                                                                                                          <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_146">Bool_ProcessStatus</mca:CSharpReference>
+                                                                                                        </OutArgument>
+                                                                                                      </Assign.To>
+                                                                                                      <Assign.Value>
+                                                                                                        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                                                                                      </Assign.Value>
+                                                                                                    </Assign>
+                                                                                                  </Sequence>
+                                                                                                </State.Entry>
                                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                    <av:Point x:Key="ShapeLocation">243,2025.5</av:Point>
-                                                                                                    <av:Size x:Key="ShapeSize">134,61</av:Size>
+                                                                                                    <av:Point x:Key="ShapeLocation">95.3333333333334,2421.66666666667</av:Point>
+                                                                                                    <av:Size x:Key="ShapeSize">429.333333333333,156.666666666667</av:Size>
                                                                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                                    <x:Double x:Key="StateContainerWidth">395.33333333333326</x:Double>
+                                                                                                    <x:Double x:Key="StateContainerHeight">25</x:Double>
+                                                                                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                                                                                   </scg:Dictionary>
                                                                                                 </sap:WorkflowViewStateService.ViewState>
+                                                                                                <State.Transitions>
+                                                                                                  <Transition DisplayName="T12" sap2010:WorkflowViewState.IdRef="Transition_20">
+                                                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                        <av:PointCollection x:Key="ConnectorLocation">310,2578.33333333333 310,2608.33333333333 316.7,2608.33333333333 316.7,2699.33333333333</av:PointCollection>
+                                                                                                        <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
+                                                                                                        <x:Int32 x:Key="DestConnectionPointIndex">42</x:Int32>
+                                                                                                      </scg:Dictionary>
+                                                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                                                    <Transition.To>
+                                                                                                      <State x:Name="__ReferenceID2" DisplayName="Final State" sap:VirtualizedContainerService.HintSize="134,61.3333333333333" sap2010:WorkflowViewState.IdRef="State_5" IsFinal="True">
+                                                                                                        <sap:WorkflowViewStateService.ViewState>
+                                                                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                            <av:Point x:Key="ShapeLocation">243,2699.33333333333</av:Point>
+                                                                                                            <av:Size x:Key="ShapeSize">134,61.3333333333333</av:Size>
+                                                                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                                          </scg:Dictionary>
+                                                                                                        </sap:WorkflowViewStateService.ViewState>
+                                                                                                      </State>
+                                                                                                    </Transition.To>
+                                                                                                  </Transition>
+                                                                                                </State.Transitions>
                                                                                               </State>
                                                                                             </Transition.To>
                                                                                           </Transition>
@@ -1336,10 +1365,40 @@ new DateTime(DateTime.Now.Year,DateTime.Now.Month,1).Year</mca:CSharpValue>
                         </State.Transitions>
                       </State>
                     </Transition.To>
+                    <Transition.Action>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_5">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Boolean">
+                            <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_87">Bool_ProcessStatus</mca:CSharpReference>
+                          </OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </Transition.Action>
+                    <Transition.Condition>
+                      <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_78">!!Bool_ProcessStatus</mca:CSharpValue>
+                    </Transition.Condition>
                   </Transition>
                 </State.Transitions>
               </State>
             </Transition.To>
+            <Transition.Action>
+              <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_4">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Boolean">
+                    <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_86">Bool_ProcessStatus</mca:CSharpReference>
+                  </OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                </Assign.Value>
+              </Assign>
+            </Transition.Action>
+            <Transition.Condition>
+              <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_29">Bool_ProcessStatus == true</mca:CSharpValue>
+            </Transition.Condition>
           </Transition>
         </State.Transitions>
       </State>
@@ -1354,6 +1413,7 @@ new DateTime(DateTime.Now.Year,DateTime.Now.Month,1).Year</mca:CSharpValue>
       <x:Reference>__ReferenceID8</x:Reference>
       <x:Reference>__ReferenceID9</x:Reference>
       <x:Reference>__ReferenceID10</x:Reference>
+      <x:Reference>__ReferenceID11</x:Reference>
     </StateMachine>
   </Sequence>
 </Activity>

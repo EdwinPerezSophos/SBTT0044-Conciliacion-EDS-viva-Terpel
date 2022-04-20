@@ -2,20 +2,16 @@
   <x:Members>
     <x:Property Name="In_GBL_Str_ReporteVentasSalesforce" Type="InOutArgument(x:String)" />
     <x:Property Name="In_GBL_Str_CarpetaCompartida" Type="InOutArgument(x:String)" />
-    <x:Property Name="In_GBL_Int_TiempoEsperaAplicaciones" Type="InOutArgument(x:Int32)" />
-    <x:Property Name="In_GBL_Int_TiempoMaxValidaciones" Type="InOutArgument(x:Int32)" />
     <x:Property Name="In_GBL_Int_NumIntentos" Type="InOutArgument(x:Int32)" />
-    <x:Property Name="In_GBL_Str_ArchivoCalendario" Type="InOutArgument(x:String)" />
     <x:Property Name="In_GBL_Str_CarpetaTemporales" Type="InOutArgument(x:String)" />
     <x:Property Name="In_GBL_Str_CarpetaEntrada" Type="InOutArgument(x:String)" />
-    <x:Property Name="In_GBL_Str_CarpetaDescargas" Type="InOutArgument(x:String)" />
     <x:Property Name="In_GBL_Str_ReporteVentasSatelite" Type="InOutArgument(x:String)" />
     <x:Property Name="In_GBL_Dt_Calendario_row" Type="InOutArgument(sd:DataTable)" />
     <x:Property Name="In_GBL_Str_PlantillaNovedades" Type="InOutArgument(x:String)" />
     <x:Property Name="In_GBL_Str_CorreosVentasConNovedades" Type="InOutArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1810.66666666667,22514</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1810.66666666667,21874.6666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -105,7 +101,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Extracción y consolidación de ventas inconsistentes&#xA;&#xA;Precondicion:Documento de reporte de ventas SalesForce, Documento de reporte de fidelizaciones Satelite&#xA;&#xA;Acciones: Comparación de documentos y extracción de ventas inconsistentes&#xA;" DisplayName="Extracción_y_consolidación_ventas_inconsistentes" sap:VirtualizedContainerService.HintSize="1820.66666666667,22449.3333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Extracción y consolidación de ventas inconsistentes&#xA;&#xA;Precondicion:Documento de reporte de ventas SalesForce, Documento de reporte de fidelizaciones Satelite&#xA;&#xA;Acciones: Comparación de documentos y extracción de ventas inconsistentes&#xA;" DisplayName="Extracción_y_consolidación_ventas_inconsistentes" sap:VirtualizedContainerService.HintSize="1820.66666666667,21810" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Str_ValidacionMes" />
       <Variable x:TypeArguments="scg:List(x:String)" Name="List_Meses">
@@ -121,9 +117,9 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1778.66666666667,226" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1778.66666666667,447.333333333333" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,147.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,368.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -131,6 +127,164 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:Comment sap:VirtualizedContainerService.HintSize="334,55.3333333333333" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Variables de Prueba" />
+          <Sequence sap2010:Annotation.AnnotationText="Inicialización de Variables de Prueba&#xA;&#xA;Las variables luego serán remplazadas por los argumentos del sistema" DisplayName="Variables de Prueba" sap:VirtualizedContainerService.HintSize="334,181.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MultipleAssign sap2010:Annotation.AnnotationText="Asignacion de variables de prueba" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431.333333333333,467.333333333333" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:Int32">
+                        <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_25">In_GBL_Int_TiempoEsperaAplicaciones</mca:CSharpReference>
+                      </OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:Int32">3000</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:Int32">
+                        <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_26">In_GBL_Int_TiempoMaxValidaciones</mca:CSharpReference>
+                      </OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:Int32">5</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:Int32">
+                        <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_27">In_GBL_Int_NumIntentos</mca:CSharpReference>
+                      </OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:Int32">2</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_28">In_GBL_Str_CarpetaEntrada</mca:CSharpReference>
+                      </OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">Data\Input\</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_17">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_29">In_GBL_Str_CarpetaCompartida</mca:CSharpReference>
+                      </OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">Data\Out\</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_18">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_30">In_GBL_Str_CarpetaTemporales</mca:CSharpReference>
+                      </OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">Data\Temp\</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_19">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_31">In_GBL_Str_ArchivoCalendario</mca:CSharpReference>
+                      </OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">Data\Input\Calendario.xlsx</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_32">In_GBL_Str_CarpetaDescargas</mca:CSharpReference>
+                      </OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">C:\Users\robot.11\Downloads</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_21">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_33">In_GBL_Str_ReporteVentasSalesforce</mca:CSharpReference>
+                      </OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">Data\Temp\Reporte fidelizaciones Salesforce.xlsx</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_22">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_34">In_GBL_Str_ReporteVentasSatelite</mca:CSharpReference>
+                      </OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">Data\Temp\Reporte fidelizaciones Satelite.xlsx</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_23">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_35">In_GBL_Str_PlantillaNovedades</mca:CSharpReference>
+                      </OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">Data\Input\Plantilla reporte novedades.xlsx</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_58">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_175">In_GBL_Str_CorreosVentasConNovedades</mca:CSharpReference>
+                      </OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">edwin.perez@sophossolutions.com</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:MultipleAssign>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Workflow de validacion de fecha &#xA;" DisplayName="Invoke Validación de Fecha Actual workflow" sap:VirtualizedContainerService.HintSize="431.333333333333,159.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Libreria Común\\Validación de Fecha Actual.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <OutArgument x:TypeArguments="sd:DataTable" x:Key="Out_Dt_Calendario_row">
+                  <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">In_GBL_Dt_Calendario_row</mca:CSharpReference>
+                </OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="In_Str_ArchivoCalendario">
+                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">In_GBL_Str_ArchivoCalendario</mca:CSharpValue>
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:InvokeWorkflowFile>
+          </Sequence>
         </Sequence>
       </ui:CommentOut.Body>
       <sap:WorkflowViewStateService.ViewState>
@@ -140,164 +294,6 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <Sequence sap2010:Annotation.AnnotationText="Inicialización de Variables de Prueba&#xA;&#xA;Las variables luego serán remplazadas por los argumentos del sistema" DisplayName="Variables de Prueba" sap:VirtualizedContainerService.HintSize="1778.66666666667,820.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_6">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:MultipleAssign sap2010:Annotation.AnnotationText="Asignacion de variables de prueba" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431.333333333333,467.333333333333" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
-        <ui:MultipleAssign.AssignOperations>
-          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:Int32">
-                  <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_25">In_GBL_Int_TiempoEsperaAplicaciones</mca:CSharpReference>
-                </OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:Int32">3000</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:Int32">
-                  <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_26">In_GBL_Int_TiempoMaxValidaciones</mca:CSharpReference>
-                </OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:Int32">5</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:Int32">
-                  <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_27">In_GBL_Int_NumIntentos</mca:CSharpReference>
-                </OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:Int32">2</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">
-                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_28">In_GBL_Str_CarpetaEntrada</mca:CSharpReference>
-                </OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">Data\Input\</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_17">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">
-                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_29">In_GBL_Str_CarpetaCompartida</mca:CSharpReference>
-                </OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">Data\Out\</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_18">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">
-                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_30">In_GBL_Str_CarpetaTemporales</mca:CSharpReference>
-                </OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">Data\Temp\</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_19">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">
-                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_31">In_GBL_Str_ArchivoCalendario</mca:CSharpReference>
-                </OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">Data\Input\Calendario.xlsx</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">
-                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_32">In_GBL_Str_CarpetaDescargas</mca:CSharpReference>
-                </OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">C:\Users\robot.11\Downloads</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_21">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">
-                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_33">In_GBL_Str_ReporteVentasSalesforce</mca:CSharpReference>
-                </OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">Data\Temp\Reporte fidelizaciones Salesforce.xlsx</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_22">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">
-                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_34">In_GBL_Str_ReporteVentasSatelite</mca:CSharpReference>
-                </OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">Data\Temp\Reporte fidelizaciones Satelite.xlsx</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_23">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">
-                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_35">In_GBL_Str_PlantillaNovedades</mca:CSharpReference>
-                </OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">Data\Input\Plantilla reporte novedades.xlsx</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_58">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">
-                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_175">In_GBL_Str_CorreosVentasConNovedades</mca:CSharpReference>
-                </OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">edwin.perez@sophossolutions.com</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-          </scg:List>
-        </ui:MultipleAssign.AssignOperations>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:MultipleAssign>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Workflow de validacion de fecha &#xA;" DisplayName="Invoke Validación de Fecha Actual workflow" sap:VirtualizedContainerService.HintSize="431.333333333333,159.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Libreria Común\\Validación de Fecha Actual.xaml">
-        <ui:InvokeWorkflowFile.Arguments>
-          <OutArgument x:TypeArguments="sd:DataTable" x:Key="Out_Dt_Calendario_row">
-            <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">In_GBL_Dt_Calendario_row</mca:CSharpReference>
-          </OutArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="In_Str_ArchivoCalendario">
-            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">In_GBL_Str_ArchivoCalendario</mca:CSharpValue>
-          </InArgument>
-        </ui:InvokeWorkflowFile.Arguments>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:InvokeWorkflowFile>
-    </Sequence>
     <Sequence sap2010:Annotation.AnnotationText="Depuracion y extracción de datos del reporte de ventas SalesForce en Excel" DisplayName="Depuración de reporte en Excel" sap:VirtualizedContainerService.HintSize="1778.66666666667,21118.6666666667" sap2010:WorkflowViewState.IdRef="Sequence_19">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="Str_SystemException" />
@@ -581,7 +577,7 @@
                                 </sap:WorkflowViewStateService.ViewState>
                                 <ueab:ExcelApplicationCard.WorkbookPath>
                                   <InArgument x:TypeArguments="x:String">
-                                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_198">In_GBL_Str_ReporteVentasSalesforce</mca:CSharpValue>
+                                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_403">In_GBL_Str_CarpetaTemporales+ In_GBL_Str_ReporteVentasSalesforce</mca:CSharpValue>
                                   </InArgument>
                                 </ueab:ExcelApplicationCard.WorkbookPath>
                               </ueab:ExcelApplicationCard>
@@ -697,7 +693,7 @@
                                 </sap:WorkflowViewStateService.ViewState>
                                 <ueab:ExcelApplicationCard.WorkbookPath>
                                   <InArgument x:TypeArguments="x:String">
-                                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_256">In_GBL_Str_ReporteVentasSatelite</mca:CSharpValue>
+                                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_404">In_GBL_Str_CarpetaTemporales+In_GBL_Str_ReporteVentasSatelite</mca:CSharpValue>
                                   </InArgument>
                                 </ueab:ExcelApplicationCard.WorkbookPath>
                               </ueab:ExcelApplicationCard>
@@ -1301,7 +1297,7 @@
                                       </ueab:WriteRangeX>
                                       <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="439.333333333333,52.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                                         <ui:CommentOut.Body>
-                                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="552,274" sap2010:WorkflowViewState.IdRef="Sequence_127">
+                                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="552,276" sap2010:WorkflowViewState.IdRef="Sequence_127">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1326,7 +1322,7 @@
                                                   <ActivityAction.Argument2>
                                                     <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                                                   </ActivityAction.Argument2>
-                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,354" sap2010:WorkflowViewState.IdRef="Sequence_76">
+                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,356" sap2010:WorkflowViewState.IdRef="Sequence_76">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1392,7 +1388,7 @@
                                 </sap:WorkflowViewStateService.ViewState>
                                 <ueab:ExcelApplicationCard.WorkbookPath>
                                   <InArgument x:TypeArguments="x:String">
-                                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_218">In_GBL_Str_ReporteVentasSalesforce</mca:CSharpValue>
+                                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_405">In_GBL_Str_CarpetaTemporales+In_GBL_Str_ReporteVentasSalesforce</mca:CSharpValue>
                                   </InArgument>
                                 </ueab:ExcelApplicationCard.WorkbookPath>
                               </ueab:ExcelApplicationCard>
@@ -1462,7 +1458,7 @@
                                       </ueab:WriteRangeX>
                                       <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="439.333333333333,52.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_3">
                                         <ui:CommentOut.Body>
-                                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="552,723.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_128">
+                                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="552,737.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_128">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1553,7 +1549,7 @@
                                 </sap:WorkflowViewStateService.ViewState>
                                 <ueab:ExcelApplicationCard.WorkbookPath>
                                   <InArgument x:TypeArguments="x:String">
-                                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_223">In_GBL_Str_ReporteVentasSatelite</mca:CSharpValue>
+                                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_406">In_GBL_Str_CarpetaTemporales+In_GBL_Str_ReporteVentasSatelite</mca:CSharpValue>
                                   </InArgument>
                                 </ueab:ExcelApplicationCard.WorkbookPath>
                               </ueab:ExcelApplicationCard>
@@ -1882,7 +1878,7 @@
                                                   <ueab:SaveExcelFileAsX sap2010:Annotation.AnnotationText="Guardado de archivo en ruta configurada" DisplayName="Save Excel File As" sap:VirtualizedContainerService.HintSize="512.666666666667,241.333333333333" sap2010:WorkflowViewState.IdRef="SaveExcelFileAsX_1" ReplaceExisting="False" SaveAsFileType="OpenXmlWorkbook">
                                                     <ueab:SaveExcelFileAsX.FilePath>
                                                       <InArgument x:TypeArguments="x:String">
-                                                        <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_380">In_GBL_Str_CarpetaTemporales+"Reportes ventas Inconsistentes\\"+Str_ValidacionMes+".xlsx"</mca:CSharpValue>
+                                                        <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_400">In_GBL_Str_CarpetaCompartida+"Reportes ventas Inconsistentes\\"+Str_ValidacionMes+".xlsx"</mca:CSharpValue>
                                                       </InArgument>
                                                     </ueab:SaveExcelFileAsX.FilePath>
                                                     <sap:WorkflowViewStateService.ViewState>
@@ -1915,7 +1911,7 @@
                                             </sap:WorkflowViewStateService.ViewState>
                                             <ueab:ExcelApplicationCard.WorkbookPath>
                                               <InArgument x:TypeArguments="x:String">
-                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_296">In_GBL_Str_PlantillaNovedades</mca:CSharpValue>
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_407">In_GBL_Str_CarpetaEntrada+In_GBL_Str_PlantillaNovedades</mca:CSharpValue>
                                               </InArgument>
                                             </ueab:ExcelApplicationCard.WorkbookPath>
                                           </ueab:ExcelApplicationCard>
@@ -2324,7 +2320,7 @@
                                                   <ueab:SaveExcelFileAsX sap2010:Annotation.AnnotationText="Guardado de archivo en la ruta especificada " DisplayName="Save Excel File As" sap:VirtualizedContainerService.HintSize="512.666666666667,241.333333333333" sap2010:WorkflowViewState.IdRef="SaveExcelFileAsX_2" SaveAsFileType="OpenXmlWorkbook">
                                                     <ueab:SaveExcelFileAsX.FilePath>
                                                       <InArgument x:TypeArguments="x:String">
-                                                        <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_381">In_GBL_Str_CarpetaTemporales+"Reportes ventas Inconsistentes\\"+Str_ValidacionMes+".xlsx"</mca:CSharpValue>
+                                                        <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_402">In_GBL_Str_CarpetaCompartida+"Reportes ventas Inconsistentes\\"+Str_ValidacionMes+".xlsx"</mca:CSharpValue>
                                                       </InArgument>
                                                     </ueab:SaveExcelFileAsX.FilePath>
                                                     <sap:WorkflowViewStateService.ViewState>
@@ -2357,7 +2353,7 @@
                                             </sap:WorkflowViewStateService.ViewState>
                                             <ueab:ExcelApplicationCard.WorkbookPath>
                                               <InArgument x:TypeArguments="x:String">
-                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_303">In_GBL_Str_CarpetaTemporales+"Reportes ventas Inconsistentes\\"+Str_ValidacionMes+".xlsx"</mca:CSharpValue>
+                                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_401">In_GBL_Str_CarpetaCompartida+"Reportes ventas Inconsistentes\\"+Str_ValidacionMes+".xlsx"</mca:CSharpValue>
                                               </InArgument>
                                             </ueab:ExcelApplicationCard.WorkbookPath>
                                           </ueab:ExcelApplicationCard>
@@ -2475,9 +2471,6 @@ Str_DtReporteSatelite</mca:CSharpValue>
                                 </ui:MultipleAssign>
                                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="envio de correo " DisplayName="Invoke Envio de Correo Email workflow" sap:VirtualizedContainerService.HintSize="430.666666666667,144.666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Libreria Común\\Envio de Correo Email.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
-                                    <InArgument x:TypeArguments="x:Int32" x:Key="In_Int_Timeout">
-                                      <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_334">In_GBL_Int_TiempoEsperaAplicaciones</mca:CSharpValue>
-                                    </InArgument>
                                     <InArgument x:TypeArguments="x:Int32" x:Key="In_Int_NumIntentos">
                                       <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_333">In_GBL_Int_NumIntentos</mca:CSharpValue>
                                     </InArgument>
@@ -2494,6 +2487,7 @@ Str_DtReporteSatelite</mca:CSharpValue>
                                     <InArgument x:TypeArguments="x:String" x:Key="In_Str_Documento2" />
                                     <InArgument x:TypeArguments="x:String" x:Key="In_Str_Documento3" />
                                     <InArgument x:TypeArguments="x:String" x:Key="In_Str_Documento4" />
+                                    <InArgument x:TypeArguments="x:String" x:Key="In_Str_Documento5" />
                                   </ui:InvokeWorkflowFile.Arguments>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
