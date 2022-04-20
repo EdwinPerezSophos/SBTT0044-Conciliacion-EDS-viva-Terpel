@@ -3,9 +3,10 @@
     <x:Property Name="In_GBL_Int_NumIntentos" Type="InArgument(x:Int32)" />
     <x:Property Name="In_GBL_Dt_Calendario_row" Type="InArgument(sd:DataTable)" />
     <x:Property Name="Out_GBL_Str_Query_Cierre" Type="OutArgument(x:String)" />
+    <x:Property Name="In_GBL_Str_NombreReporteFidelizacionesSF" Type="OutArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>987,1680</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1274,6254</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -86,9 +87,10 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Revisar si existen diferencias entre los reportes obtenidos en las actividades Extracción de ventas fidelización Salesforce y Extracción de ventas fidelización Satelite&#xA;&#xA;Precondicion:  documento: Reporte fidelizaciones Salesforce.xlsx -- Reporte fidelizaciones Satelite.xlsx&#xA;&#xA;Acciones:Comparaciones entre archivos y movimiento de datos a nuevos archivos consolidados" DisplayName="Generar__reporte_EDS_por_cerrar_depurado_" sap:VirtualizedContainerService.HintSize="724,1615" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Revisar si existen diferencias entre los reportes obtenidos en las actividades Extracción de ventas fidelización Salesforce y Extracción de ventas fidelización Satelite&#xA;&#xA;Precondicion:  documento: Reporte fidelizaciones Salesforce.xlsx -- Reporte fidelizaciones Satelite.xlsx&#xA;&#xA;Acciones:Comparaciones entre archivos y movimiento de datos a nuevos archivos consolidados" DisplayName="Generar__reporte_EDS_por_cerrar_depurado_" sap:VirtualizedContainerService.HintSize="994,6189" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Str_SystemException" />
       <Variable x:TypeArguments="x:String" Name="Str_Fecha_Inicio" />
@@ -105,49 +107,25 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="682,66" sap2010:WorkflowViewState.IdRef="Sequence_2">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,100" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
-        <ui:MultipleAssign.AssignOperations>
-          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:Int32">
-                  <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">In_GBL_Int_NumIntentos</mca:CSharpReference>
-                </OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:Int32">1</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-          </scg:List>
-        </ui:MultipleAssign.AssignOperations>
-      </ui:MultipleAssign>
-    </Sequence>
-    <Sequence sap:VirtualizedContainerService.HintSize="682,1315" sap2010:WorkflowViewState.IdRef="Sequence_11">
+    <Sequence sap:VirtualizedContainerService.HintSize="952,6010" sap2010:WorkflowViewState.IdRef="Sequence_11">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="De acuerdo al numero de reintentos estipulado se hacen las ejecuciones necesarias." DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="640,1223" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="De acuerdo al numero de reintentos estipulado se hacen las ejecuciones necesarias." DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="910,5918" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
         <ui:RepeatNumberOfTimesX.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="Intento" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="606,1037" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="876,5732" sap2010:WorkflowViewState.IdRef="Sequence_10">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage sap2010:Annotation.AnnotationText="Se imprime en logs para traza" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="564,82" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
+              <ui:LogMessage sap2010:Annotation.AnnotationText="Se imprime en logs para traza" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="834,82" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
                 <ui:LogMessage.Message>
                   <InArgument x:TypeArguments="x:Object">
                     <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">"Depurar reporte (Reporte fidelizaciones Satelite) - Intento: "+Intento</mca:CSharpValue>
@@ -161,9 +139,9 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="564,823" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="834,5518" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <TryCatch.Try>
-                  <Sequence sap:VirtualizedContainerService.HintSize="796,5352" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <Sequence sap:VirtualizedContainerService.HintSize="796,5291" sap2010:WorkflowViewState.IdRef="Sequence_6">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="Str_EDS_Ventas_SQL" />
                     </Sequence.Variables>
@@ -173,7 +151,7 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence sap2010:Annotation.AnnotationText="Asignacion de Fecha que depende de la info obtenida en el documento de Calendario " DisplayName="Validación de Fecha en Calendario.xlsx" sap:VirtualizedContainerService.HintSize="754,582" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                    <Sequence sap2010:Annotation.AnnotationText="Asignacion de Fecha que depende de la info obtenida en el documento de Calendario " DisplayName="Validación de Fecha en Calendario.xlsx" sap:VirtualizedContainerService.HintSize="754,521" sap2010:WorkflowViewState.IdRef="Sequence_17">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -181,14 +159,31 @@
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Validación de Fecha Actual workflow" sap:VirtualizedContainerService.HintSize="497,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Libreria Común\\Validación de Fecha Actual.xaml">
-                        <ui:InvokeWorkflowFile.Arguments>
-                          <OutArgument x:TypeArguments="sd:DataTable" x:Key="Out_Dt_Calendario_row">
-                            <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">In_GBL_Dt_Calendario_row</mca:CSharpReference>
-                          </OutArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="In_Str_ArchivoCalendario">Data\Input\Calendario.xlsx</InArgument>
-                        </ui:InvokeWorkflowFile.Arguments>
-                      </ui:InvokeWorkflowFile>
+                      <ui:CommentOut DisplayName="ELIMINAR" sap:VirtualizedContainerService.HintSize="497,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="411,204" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Validación de Fecha Actual workflow" sap:VirtualizedContainerService.HintSize="369,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Libreria Común\\Validación de Fecha Actual.xaml">
+                              <ui:InvokeWorkflowFile.Arguments>
+                                <OutArgument x:TypeArguments="sd:DataTable" x:Key="Out_Dt_Calendario_row">
+                                  <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">In_GBL_Dt_Calendario_row</mca:CSharpReference>
+                                </OutArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="In_Str_ArchivoCalendario">Data\Input\Calendario.xlsx</InArgument>
+                              </ui:InvokeWorkflowFile.Arguments>
+                            </ui:InvokeWorkflowFile>
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:CommentOut>
                       <ui:Comment sap:VirtualizedContainerService.HintSize="497,55" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Esta actividad se debe de ejecutar siempre" />
                       <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Todas las fechas se dan en formato yyyy-MM-dd (1987-04-26)" DisplayName="Asignación Fecha Inicial y Final" sap:VirtualizedContainerService.HintSize="497,212" sap2010:WorkflowViewState.IdRef="Switch`1_1">
                         <Switch.Expression>
@@ -368,7 +363,7 @@
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" sap2010:Annotation.AnnotationText="Abrir excel creado en anterior flujo de reporte de fidelizaciones Salesforce" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="678,618" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" WorkbookPath="Data\\Temp\\Reporte fidelizaciones Salesforce.xlsx">
+                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" sap2010:Annotation.AnnotationText="Abrir excel creado en anterior flujo de reporte de fidelizaciones Salesforce" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="678,618" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1">
                               <ueab:ExcelApplicationCard.Body>
                                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                                   <ActivityAction.Argument>
@@ -471,6 +466,11 @@
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
+                              <ueab:ExcelApplicationCard.WorkbookPath>
+                                <InArgument x:TypeArguments="x:String">
+                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_118">In_GBL_Str_NombreReporteFidelizacionesSF</mca:CSharpValue>
+                                </InArgument>
+                              </ueab:ExcelApplicationCard.WorkbookPath>
                             </ueab:ExcelApplicationCard>
                             <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" sap2010:Annotation.AnnotationText="Se toma archivo de reporte de ventas inconsistentes respectivo para la validación de fecha actual en el archivo" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="678,2423" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3">
                               <ueab:ExcelApplicationCard.Body>

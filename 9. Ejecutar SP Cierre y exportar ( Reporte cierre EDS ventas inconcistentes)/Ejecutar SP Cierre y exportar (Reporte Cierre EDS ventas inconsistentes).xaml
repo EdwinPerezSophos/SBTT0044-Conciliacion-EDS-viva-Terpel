@@ -4,7 +4,7 @@
     <x:Property Name="In_GBL_Str_Query_Cierre_Inco" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1274,2263</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1274,2000</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -90,49 +90,15 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Ejecutar SP de Cierre y obtener los resultados para enviarlos posteriormente, por lo que es necesario guardar estos resultados de SQL en un archivo de SQL de Reporte cierre Eds ventas inconsistentes&#xA;&#xA;Precondicion:  Query construido 'In_GBL_Str_Query_Cierre'&#xA;&#xA;Acciones: A partir del query concatenado previamente, se debe de hacer la ejecución del SP en SQL Management Studio" DisplayName="Ejecutar_SP_Cierre_y_exportar__Reporte_Cierre_EDS_ventas_inconsistentes_" sap:VirtualizedContainerService.HintSize="724,2198" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Ejecutar SP de Cierre y obtener los resultados para enviarlos posteriormente, por lo que es necesario guardar estos resultados de SQL en un archivo de SQL de Reporte cierre Eds ventas inconsistentes&#xA;&#xA;Precondicion:  Query construido 'In_GBL_Str_Query_Cierre'&#xA;&#xA;Acciones: A partir del query concatenado previamente, se debe de hacer la ejecución del SP en SQL Management Studio" DisplayName="Ejecutar_SP_Cierre_y_exportar__Reporte_Cierre_EDS_ventas_inconsistentes_" sap:VirtualizedContainerService.HintSize="724,1935" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Comment out" sap:VirtualizedContainerService.HintSize="682,223" sap2010:WorkflowViewState.IdRef="Sequence_2">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,131" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
-        <ui:MultipleAssign.AssignOperations>
-          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:Int32">
-                  <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">In_GBL_Int_NumIntentos</mca:CSharpReference>
-                </OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:Int32">1</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
-              <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="x:String">
-                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">In_GBL_Str_Query_Cierre_Inco</mca:CSharpReference>
-                </OutArgument>
-              </ui:AssignOperation.To>
-              <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">EXEC OT_CerrarDiaEDS_Externo 'EDS2222, EDS2223, EDS2224, EDS2225, EDS2226, EDS2227, EDS2228, EDS2229, EDS2230, EDS2231' , '2022-04-01' , '2022-04-07'</InArgument>
-              </ui:AssignOperation.Value>
-            </ui:AssignOperation>
-          </scg:List>
-        </ui:MultipleAssign.AssignOperations>
-      </ui:MultipleAssign>
-    </Sequence>
     <Sequence sap2010:Annotation.AnnotationText="Ingreso a SQL studio y descarga de los datos para guardar en excel.&#xA;" sap:VirtualizedContainerService.HintSize="682,1741" sap2010:WorkflowViewState.IdRef="Sequence_12">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="Str_SystemException" />
@@ -195,15 +161,9 @@
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Flujo para realizar el login en el servidor de base de datos y deja abierto un espacio para scripts SQL." DisplayName="Invoke LogIn SQLServer workflow" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Libreria Común\\LogIn SQLServer.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
-                              <InArgument x:TypeArguments="x:Int32" x:Key="In_Int_NumIntentos">
-                                <Literal x:TypeArguments="x:Int32" Value="2" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:Int32" x:Key="In_Int_Timeout">
-                                <Literal x:TypeArguments="x:Int32" Value="2000" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:Boolean" x:Key="In_Bool_Ejecucion_SP">
-                                <Literal x:TypeArguments="x:Boolean" Value="True" />
-                              </InArgument>
+                              <InArgument x:TypeArguments="x:Int32" x:Key="In_Int_NumIntentos">2</InArgument>
+                              <InArgument x:TypeArguments="x:Int32" x:Key="In_Int_Timeout">2000</InArgument>
+                              <InArgument x:TypeArguments="x:Boolean" x:Key="In_Bool_Ejecucion_SP">True</InArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -305,7 +265,7 @@
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                                 </ActivityAction.Argument>
-                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="604,1656" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="604,1645" sap2010:WorkflowViewState.IdRef="Sequence_6">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
