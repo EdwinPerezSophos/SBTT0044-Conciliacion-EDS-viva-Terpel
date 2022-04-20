@@ -15,7 +15,7 @@
     <x:Property Name="In_GBL_Str_NombreInformeVentas_Salesforce" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>986,10270</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>714,9474</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -111,11 +111,12 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Exportar el reporte de ventas de SalesForce diario &#xA;&#xA;Precondicion: Fecha actual / documento: Calendario.xlsx&#xA;&#xA;Acciones: Extracción de reporte de ventas en SalesForce hacia Excel" DisplayName="Exportar_reporte_ventas_SalesForce" sap:VirtualizedContainerService.HintSize="724.666666666667,10205.3333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Exportar el reporte de ventas de SalesForce diario &#xA;&#xA;Precondicion: Fecha actual / documento: Calendario.xlsx&#xA;&#xA;Acciones: Extracción de reporte de ventas en SalesForce hacia Excel" DisplayName="Exportar_reporte_ventas_SalesForce" sap:VirtualizedContainerService.HintSize="724,9409" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Str_SystemException" />
       <Variable x:TypeArguments="x:String" Name="Str_FechaInicio_SalesForce" />
       <Variable x:TypeArguments="x:String" Name="Str_FechaFinal_SalesForce" />
+      <Variable x:TypeArguments="x:String" Name="Str_MensajeError" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -124,16 +125,16 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="682.666666666667,1056" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="682,1049" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="515.333333333333,977.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_27">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="515,971" sap2010:WorkflowViewState.IdRef="Sequence_27">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:Comment sap:VirtualizedContainerService.HintSize="473.333333333333,55.3333333333333" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Variables de Prueba" />
-          <Sequence sap2010:Annotation.AnnotationText="Inicialización de Variables de Prueba&#xA;&#xA;Las variables luego serán remplazadas por los argumentos del sistema" DisplayName="Variables de Prueba" sap:VirtualizedContainerService.HintSize="473.333333333333,790" sap2010:WorkflowViewState.IdRef="Sequence_15">
+          <ui:Comment sap:VirtualizedContainerService.HintSize="473,55" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Variables de Prueba" />
+          <Sequence sap2010:Annotation.AnnotationText="Inicialización de Variables de Prueba&#xA;&#xA;Las variables luego serán remplazadas por los argumentos del sistema" DisplayName="Variables de Prueba" sap:VirtualizedContainerService.HintSize="473,784" sap2010:WorkflowViewState.IdRef="Sequence_15">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -141,7 +142,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MultipleAssign sap2010:Annotation.AnnotationText="Asignacion de variables de prueba" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431.333333333333,436.666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
+            <ui:MultipleAssign sap2010:Annotation.AnnotationText="Asignacion de variables de prueba" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,441" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
               <ui:MultipleAssign.AssignOperations>
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_33">
@@ -264,7 +265,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:MultipleAssign>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Workflow de validacion de fecha &#xA;" DisplayName="Invoke Validación de Fecha Actual workflow" sap:VirtualizedContainerService.HintSize="431.333333333333,159.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Libreria Común\\Validación de Fecha Actual.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Workflow de validacion de fecha &#xA;" DisplayName="Invoke Validación de Fecha Actual workflow" sap:VirtualizedContainerService.HintSize="431,154" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Libreria Común\\Validación de Fecha Actual.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <OutArgument x:TypeArguments="sd:DataTable" x:Key="Out_Dt_Calendario_row">
                   <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_60">In_GBL_Dt_Calendario_row</mca:CSharpReference>
@@ -284,7 +285,7 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <Sequence sap2010:Annotation.AnnotationText="Ingreso en Salefoce y aplicacion de filtros para extraccion de reporte de ventas " DisplayName="Busqueda de Informe de Ventas" sap:VirtualizedContainerService.HintSize="682.666666666667,8699.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <Sequence sap2010:Annotation.AnnotationText="Ingreso en Salefoce y aplicacion de filtros para extraccion de reporte de ventas " DisplayName="Busqueda de Informe de Ventas" sap:VirtualizedContainerService.HintSize="682,8141" sap2010:WorkflowViewState.IdRef="Sequence_5">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="Str_ValidacionNombreInforme" />
       </Sequence.Variables>
@@ -295,27 +296,27 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="640.666666666667,8576.66666666667" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+      <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="640,8018" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
         <ui:RepeatNumberOfTimesX.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="Intento" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="606.666666666667,8416" sap2010:WorkflowViewState.IdRef="Sequence_23">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="606,7863" sap2010:WorkflowViewState.IdRef="Sequence_23">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="564.666666666667,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Trace">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="564,91" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Trace">
                 <ui:LogMessage.Message>
                   <InArgument x:TypeArguments="x:Object">
                     <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_64">"Extraccion de ventas salesforce Intento:"+Intento</mca:CSharpValue>
                   </InArgument>
                 </ui:LogMessage.Message>
               </ui:LogMessage>
-              <Sequence sap2010:Annotation.AnnotationText="Asignacion de Fecha que depende de la info obtenida en el documento de Calendario " DisplayName="Validación de Fecha en Calendario.xlsx" sap:VirtualizedContainerService.HintSize="564.666666666667,1345.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <Sequence sap2010:Annotation.AnnotationText="Asignacion de Fecha que depende de la info obtenida en el documento de Calendario " DisplayName="Validación de Fecha en Calendario.xlsx" sap:VirtualizedContainerService.HintSize="564,531" sap2010:WorkflowViewState.IdRef="Sequence_6">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -324,7 +325,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:Comment sap:VirtualizedContainerService.HintSize="513.333333333333,55.3333333333333" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Esta actividad se debe de ejecutar siempre" />
-                <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="" DisplayName="Asignación Fecha Inicial y Final" sap:VirtualizedContainerService.HintSize="513.333333333333,1127.33333333333" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="" DisplayName="Asignación Fecha Inicial y Final" sap:VirtualizedContainerService.HintSize="513,313" sap2010:WorkflowViewState.IdRef="Switch`1_1">
                   <Switch.Expression>
                     <InArgument x:TypeArguments="x:String">
                       <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">In_GBL_Dt_Calendario_row.Rows[0][1].ToString()</mca:CSharpValue>
@@ -337,13 +338,13 @@
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence x:Key="Cierre" sap:VirtualizedContainerService.HintSize="473.333333333333,222" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <Sequence x:Key="Cierre" sap:VirtualizedContainerService.HintSize="473,223" sap2010:WorkflowViewState.IdRef="Sequence_7">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431.333333333333,130" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,131" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
                       <ui:MultipleAssign.AssignOperations>
                         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_26">
@@ -450,7 +451,7 @@
                   </Sequence>
                 </Switch>
               </Sequence>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="564.666666666667,6804" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="564,7069" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -458,13 +459,13 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <TryCatch.Try>
-                  <uix:NApplicationCard sap2010:Annotation.AnnotationText="navegación en Salesforce &#xA;" AttachMode="ByInstance" DisplayName="Busqueda y extracción de ventas SalesForce" sap:VirtualizedContainerService.HintSize="434,5861.33333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="b646890d-e415-484e-b581-328f74beaa8b" Version="V1">
+                  <uix:NApplicationCard sap2010:Annotation.AnnotationText="navegación en Salesforce &#xA;" AttachMode="ByInstance" DisplayName="Busqueda y extracción de ventas SalesForce" sap:VirtualizedContainerService.HintSize="434,5844" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="b646890d-e415-484e-b581-328f74beaa8b" Version="V1">
                     <uix:NApplicationCard.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,5598" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,5586" sap2010:WorkflowViewState.IdRef="Sequence_18">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="Str_ArchivoDescargado" />
                           </Sequence.Variables>
@@ -474,7 +475,7 @@
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NClick sap2010:Annotation.AnnotationText="Click en menu desplegable" ClickType="Single" DisplayName="Click 'Iniciador de'" sap:VirtualizedContainerService.HintSize="334,188.666666666667" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b646890d-e415-484e-b581-328f74beaa8b">
+                          <uix:NClick sap2010:Annotation.AnnotationText="Click en menu desplegable" ClickType="Single" DisplayName="Click 'Iniciador de'" sap:VirtualizedContainerService.HintSize="334,187" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b646890d-e415-484e-b581-328f74beaa8b">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable BrowserURL="https://terpel--fullcopy.lightning.force.com/lightning/page/home" DesignTimeRectangle="47, 290, 66, 56" FriendlyName="'Iniciador de aplicación'" FullSelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/navexContentRegionNavContainer:contentRegionNavContainer/navexStandardManager/oneAppNavContainer:appnav/auraIf/oneAppnav:oneAppNav' tag='ONE-APPNAV' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;one-appnav&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;one-app-launcher-header&amp;gt;button&amp;gt;div' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='oneOne/lafAppLayoutHost:host/navexDesktopLayoutContainer/navexContentRegionNavContainer:contentRegionNavContainer/navexStandardManager/oneAppNavContainer:appnav/auraIf/oneAppnav:oneAppNav' tag='ONE-APPNAV' /&gt;&lt;webctrl type='' tag='DIV' aaname='' check:text='Iniciador de aplicación' /&gt;" Guid="318cbb58-02ce-437d-9871-32e20f6984d7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD9SURBVFhH7ZVBCoRADAT30T5Bj/offZjXWSLbjSs9JCCBHKagD+6W0g4z5tOKMQp5sNB5nu04jrZtW5umqS3Lcl33yPJZaN/3S3zGfldk+Sw0z7O8wd5IkeWzkJIRhfIQhfKQO+4Krev6M/7J8uvuITsF9qc1NtHeqPdwI8tnoSqMQh6jkAcLZc0mEPVZyI6gic/0jnKWz0K9L+nb2QSiPgspGVEoD1EoD7njrtDb2QSift09lDWbQNRnoSqMQh6jkAcLZc0mEPVZyI6gic/0jnKWz0K9L+nb2QSiPgspGVEoD1EoD7njrtDb2QSift09lDWbQNRnoSoUK9TaF5eo4zCmlQTHAAAAAElFTkSuQmCC" InformativeScreenshot="9de828158679299a3c8159b43a54b58a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Inicio | Salesforce' /&gt;" SearchSteps="FuzzySelector, Image">
                                 <uix:TargetAnchorable.Anchors>
@@ -491,7 +492,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NClick>
-                          <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Buscar &quot;Informe&quot; en caja de busqueda" ClickBeforeMode="None" DisplayName="Type Into 'Iniciador de'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,250.666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_6" InteractionMode="WindowMessages" Text="Informe" Version="V1">
+                          <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Buscar &quot;Informe&quot; en caja de busqueda" ClickBeforeMode="None" DisplayName="Type Into 'Iniciador de'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,247" sap2010:WorkflowViewState.IdRef="NTypeInto_6" InteractionMode="WindowMessages" Text="Informe" Version="V1">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable BrowserURL="https://terpel--fullcopy.lightning.force.com/lightning/page/home" DesignTimeRectangle="61, 383, 444, 48" ElementType="InputBox" FriendlyName="'INPUT input-357'" FullSelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/uiPanel/oneAppLauncherMenu' tag='ONE-APP-LAUNCHER-MENU' /&gt;&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/uiPanel/oneAppLauncherMenu' tag='ONE-APP-LAUNCHER-MENU' /&gt;&lt;webctrl tag='INPUT' type='search' aaname='Buscar aplicaciones y elementos...' /&gt;" Guid="2a92c1e2-8d99-46cd-b4c5-bed6b91a65af" ImageBase64="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" InformativeScreenshot="879444a2474cece0f893e6564efcb276.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Inicio | Salesforce' /&gt;" SearchSteps="FuzzySelector, Image">
                                 <uix:TargetAnchorable.Anchors>
@@ -508,7 +509,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NTypeInto>
-                          <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" sap2010:Annotation.AnnotationText="Oprimir Enter&#xA;" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="334,229.333333333333" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" Shortcuts="[d(hk)][k(enter)][u(hk)]">
+                          <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" sap2010:Annotation.AnnotationText="Oprimir Enter&#xA;" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="334,220" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" Shortcuts="[d(hk)][k(enter)][u(hk)]">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -867,7 +868,7 @@
                           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Trace">
                             <ui:LogMessage.Message>
                               <InArgument x:TypeArguments="x:Object">
-                                <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_72">"Extraccion de reportes de venta ejecutado exitosamente"</mca:CSharpValue>
+                                <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_83">"Extracción de reportes de venta ejecutado exitosamente"</mca:CSharpValue>
                               </InArgument>
                             </ui:LogMessage.Message>
                           </ui:LogMessage>
@@ -893,7 +894,7 @@
                   </uix:NApplicationCard>
                 </TryCatch.Try>
                 <TryCatch.Catches>
-                  <Catch x:TypeArguments="uue:UiAutomationException" sap:VirtualizedContainerService.HintSize="530,160" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                  <Catch x:TypeArguments="uue:UiAutomationException" sap:VirtualizedContainerService.HintSize="530,452" sap2010:WorkflowViewState.IdRef="Catch`1_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -904,13 +905,42 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="uue:UiAutomationException" Name="exception" />
                       </ActivityAction.Argument>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Warn">
-                        <ui:LogMessage.Message>
-                          <InArgument x:TypeArguments="x:Object">
-                            <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_69" xml:space="preserve">"Error en la ejecuci{on de extraccion de ventas en SalesForce \n  excepción: "+exception.Message</mca:CSharpValue>
-                          </InArgument>
-                        </ui:LogMessage.Message>
-                      </ui:LogMessage>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,383" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Warn">
+                          <ui:LogMessage.Message>
+                            <InArgument x:TypeArguments="x:Object">
+                              <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_84" xml:space="preserve">"Error en la ejecución A. Extracción de ventas fidelización SalesForce \n  excepción: "+exception.Message</mca:CSharpValue>
+                            </InArgument>
+                          </ui:LogMessage.Message>
+                        </ui:LogMessage>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">
+                              <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_66">Str_MensajeError</mca:CSharpReference>
+                            </OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">
+                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_85" xml:space="preserve">"Error en la ejecución A. Extracción de ventas fidelización SalesForce, Exportar reporte ventas Salesforce \n  excepción: "+exception.Message</mca:CSharpValue>
+                            </InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">
+                              <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_67">Str_SystemException</mca:CSharpReference>
+                            </OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">Error</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
                     </ActivityAction>
                   </Catch>
                 </TryCatch.Catches>
@@ -944,9 +974,14 @@
                           <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1">
                             <TerminateWorkflow.Exception>
                               <InArgument x:TypeArguments="s:Exception">
-                                <mca:CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_55">new SystemException("Error en el LogIn")</mca:CSharpValue>
+                                <mca:CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_86">new SystemException("Error en la Tarea A Extracción de ventas fideliazción Salesforce, No se pudo realizar el reporte de ventas en SalesForce ")</mca:CSharpValue>
                               </InArgument>
                             </TerminateWorkflow.Exception>
+                            <TerminateWorkflow.Reason>
+                              <InArgument x:TypeArguments="x:String">
+                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_81">Str_MensajeError</mca:CSharpValue>
+                              </InArgument>
+                            </TerminateWorkflow.Reason>
                           </TerminateWorkflow>
                         </Sequence>
                       </If.Then>
@@ -978,26 +1013,6 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:RepeatNumberOfTimesX>
-    </Sequence>
-    <Sequence DisplayName="Extraccion de ventas" sap:VirtualizedContainerService.HintSize="682,183" sap2010:WorkflowViewState.IdRef="Sequence_3">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2">
-        <ui:LogMessage.Message>
-          <InArgument x:TypeArguments="x:Object">
-            <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32">"lol"</mca:CSharpValue>
-          </InArgument>
-        </ui:LogMessage.Message>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:LogMessage>
     </Sequence>
   </Sequence>
 </Activity>
