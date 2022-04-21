@@ -29,7 +29,7 @@
     <x:Property Name="GBL_Str_NombreReporteFidelizacionesSAT" Type="InOutArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1194,3273</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1014,3273</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -141,7 +141,7 @@
           <av:PointCollection x:Key="ConnectorLocation">340,75 335,75 335,101.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <State x:Name="__ReferenceID12" sap2010:Annotation.AnnotationText="Inicializacion de variables y arcivo de Configuración del robot &#xA;&#xA;Precondicion: ninguna&#xA;&#xA;Acciones: Lee el archivo Config y extrae rutas y variables del sistema" DisplayName="Inicialización" sap:VirtualizedContainerService.HintSize="547,1869" sap2010:WorkflowViewState.IdRef="State_1">
+      <State x:Name="__ReferenceID12" sap2010:Annotation.AnnotationText="Inicializacion de variables y arcivo de Configuración del robot &#xA;&#xA;Precondicion: ninguna&#xA;&#xA;Acciones: Lee el archivo Config y extrae rutas y variables del sistema" DisplayName="Inicialización" sap:VirtualizedContainerService.HintSize="421,187" sap2010:WorkflowViewState.IdRef="State_1">
         <State.Entry>
           <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="501,1112" sap2010:WorkflowViewState.IdRef="TryCatch_1">
             <sap:WorkflowViewStateService.ViewState>
@@ -700,9 +700,9 @@
               <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_145">Bool_ProcessStatus == true &amp;&amp; GBL_Str_EstadoActual == "B"</mca:CSharpValue>
             </Transition.Condition>
             <Transition.To>
-              <State x:Name="__ReferenceID10" sap2010:Annotation.AnnotationText="Ingreso a  Satelite para extraccion de reporte de ventas &#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Ingreso a SQLServer para extracción de ventas en Excel" DisplayName="B. Extracción de ventas fidelización Satelite" sap:VirtualizedContainerService.HintSize="429,155" sap2010:WorkflowViewState.IdRef="State_4">
+              <State x:Name="__ReferenceID10" sap2010:Annotation.AnnotationText="Ingreso a  Satelite para extraccion de reporte de ventas &#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Ingreso a SQLServer para extracción de ventas en Excel" DisplayName="B. Extracción de ventas fidelización Satelite" sap:VirtualizedContainerService.HintSize="467,950" sap2010:WorkflowViewState.IdRef="State_4">
                 <State.Entry>
-                  <Sequence sap:VirtualizedContainerService.HintSize="421,628" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                  <Sequence sap:VirtualizedContainerService.HintSize="421,476" sap2010:WorkflowViewState.IdRef="Sequence_21">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -725,16 +725,6 @@
                         </InArgument>
                         <InArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_NombreReporteFidelizacionesST">
                           <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_154">GBL_Str_NombreReporteFidelizacionesSAT</mca:CSharpValue>
-                        </InArgument>
-                      </ui:InvokeWorkflowFile.Arguments>
-                    </ui:InvokeWorkflowFile>
-                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Depurar reporte (Reporte fidelizaciones Satelite) workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="4. Depurar reporte (Reporte fidelizaciones Satelite)\\Depurar reporte (Reporte fidelizaciones Satelite).xaml">
-                      <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_NumIntentos">
-                          <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_81">GBL_Int_NumIntentos</mca:CSharpValue>
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_NombreReporteFidelizacionesST">
-                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_155">GBL_Str_NombreReporteFidelizacionesSAT</mca:CSharpValue>
                         </InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
