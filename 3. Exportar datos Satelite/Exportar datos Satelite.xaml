@@ -5,7 +5,7 @@
     <x:Property Name="In_GBL_Str_NombreReporteFidelizacionesST" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1274,8230</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1194,8376</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -96,6 +96,7 @@
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -103,7 +104,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Exportar datos satelite desde SQL Server mediante query&#xA;&#xA;Precondicion: Fecha actual / documento: Calendario.xlsx&#xA;&#xA;Acciones: Extracción de reporte  de datos satelite  desde SQL hacía Excel" DisplayName="Exportar_datos_Satelite" sap:VirtualizedContainerService.HintSize="878,8165" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Exportar datos satelite desde SQL Server mediante query&#xA;&#xA;Precondicion: Fecha actual / documento: Calendario.xlsx&#xA;&#xA;Acciones: Extracción de reporte  de datos satelite  desde SQL hacía Excel" DisplayName="Exportar_datos_Satelite" sap:VirtualizedContainerService.HintSize="878,8311" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Str_SystemException" />
       <Variable x:TypeArguments="x:String" Name="Str_Fecha_Fin" />
@@ -116,20 +117,20 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Ingreso a SQL studio y descarga de los datos para guardar en excel.&#xA;" sap:VirtualizedContainerService.HintSize="836,7986" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap2010:Annotation.AnnotationText="Ingreso a SQL studio y descarga de los datos para guardar en excel.&#xA;" sap:VirtualizedContainerService.HintSize="836,8132" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="De acuerdo al numero de reintentos estipulado se hacen las ejecuciones necesarias." DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="794,7852" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="De acuerdo al numero de reintentos estipulado se hacen las ejecuciones necesarias." DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="794,7998" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
         <ui:RepeatNumberOfTimesX.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="Intento" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="760,7666" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="760,7812" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -147,9 +148,9 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="718,7412" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="718,7558" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <TryCatch.Try>
-                  <Sequence sap:VirtualizedContainerService.HintSize="680,6172" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence sap:VirtualizedContainerService.HintSize="680,6318" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="Str_query_Datos_Satelite" />
                     </Sequence.Variables>
@@ -371,13 +372,13 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:SetToClipboard>
-                    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Se debe usar la aplicación de SQL Management para consultar y exportar datos basado en el query." AttachMode="ByInstance" DisplayName="Use Application: SQLQuery3.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (67))* - Microsoft SQL Server " sap:VirtualizedContainerService.HintSize="638,1791" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="f613a1ff-f1b5-493f-b833-4b316b8b8fc7" Version="V1">
+                    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Se debe usar la aplicación de SQL Management para consultar y exportar datos basado en el query." AttachMode="ByInstance" DisplayName="Use Application: SQLQuery3.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (67))* - Microsoft SQL Server " sap:VirtualizedContainerService.HintSize="638,1937" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="f613a1ff-f1b5-493f-b833-4b316b8b8fc7" Version="V1">
                       <uix:NApplicationCard.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1460" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1606" sap2010:WorkflowViewState.IdRef="Sequence_10">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -400,6 +401,18 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NKeyboardShortcuts>
+                            <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" DisplayName="Find Element 'text Query'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1" WaitVisible="True">
+                              <ui:WaitUiElementAppear.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="63a5ab1d-2a13-4bfb-a8c8-d34051b53bb5" InformativeScreenshot="caa88666f2f8a80d378c267f243d2927" Selector="&lt;wnd app='ssms.exe' cls='HwndWrapper*' title='SQLQuery1.sql - 10.250.0.40\EDS, 1433.GNCCentral (usr_vive_cons *' /&gt;&lt;wnd cls='GenericPane' title='SQLQuery1.sql - 10.250.0.40\EDS, 1433.GNCCentral (usr_vive_cons *' /&gt;&lt;wnd ctrlname='SqlScriptEditorControl' /&gt;&lt;wnd cls='WindowsForms10.Window.*' idx='13' /&gt;&lt;ctrl name='Query executed successfully.' role='text' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:WaitUiElementAppear.Target>
+                            </ui:WaitUiElementAppear>
                             <uix:NClick sap2010:Annotation.AnnotationText="Se selecciona todo el grid de ressultados." ClickType="Single" DisplayName="Click 'column header'" sap:VirtualizedContainerService.HintSize="334,187" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f613a1ff-f1b5-493f-b833-4b316b8b8fc7" Version="V1">
                               <uix:NClick.Target>
                                 <uix:TargetAnchorable DesignTimeRectangle="279, 606, 31, 18" FriendlyName="'column header'" FullSelectorArgument="&lt;wnd cls='GenericPane' title='SQLQuery4.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (66))*' /&gt;&lt;wnd ctrlname='SqlScriptEditorControl' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Results' /&gt;&lt;wnd cls='WindowsForms10.Window.*' idx='3' /&gt;&lt;ctrl name='GridControl' role='table' /&gt;&lt;ctrl name='Column # 0' role='column' /&gt;&lt;ctrl role='column header' /&gt;" FuzzySelectorArgument="&lt;wnd cls='GenericPane' title='SQLQuery4.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (66))*' /&gt;&lt;wnd ctrlname='SqlScriptEditorControl' /&gt;&lt;wnd cls='WindowsForms10.Window.*' title='Results' /&gt;&lt;wnd cls='WindowsForms10.Window.*' /&gt;&lt;ctrl name='GridControl' role='table' /&gt;&lt;ctrl name='Column # 0' role='column' /&gt;&lt;ctrl role='column header' automationid='' /&gt;" Guid="df4de101-86d6-466d-9286-efe5f8c0e5ca" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACMAAAAWCAYAAABKbiVHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVEhL7c6xCQAgDETR7L+KWDlTwEYILhDRQlC4Oinuw5EyTzxRB1NqS7GLiUxVzyXmjxgUMShiUMSgiEERgyIGlRtjZqETkRcT1f7dx/QF41266fPceakAAAAASUVORK5CYII=" InformativeScreenshot="3e9c10ed1b4d12fb8e12f6cf25ae5099.png" ScopeSelectorArgument="&lt;wnd app='ssms.exe' cls='HwndWrapper*' title='SQLQuery4.sql - COLBDGSRVBDQE01.GNCCentral (usr_bots (66))* - Mi*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
