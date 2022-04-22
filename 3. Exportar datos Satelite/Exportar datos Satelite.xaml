@@ -5,7 +5,7 @@
     <x:Property Name="In_GBL_Str_NombreReporteFidelizacionesST" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1030,3061</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1030,3286</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -27,6 +27,8 @@
       <x:String>System.Xml.Serialization</x:String>
       <x:String>UiPath.Excel.Activities</x:String>
       <x:String>UiPath.Database</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -82,7 +84,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Exportar datos satelite desde SQL Server mediante query&#xA;&#xA;Precondicion: Fecha actual / documento: Calendario.xlsx&#xA;&#xA;Acciones: Extracción de reporte  de datos satelite  desde SQL hacía Excel" DisplayName="Exportar_datos_Satelite" sap:VirtualizedContainerService.HintSize="724,2996" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Exportar datos satelite desde SQL Server mediante query&#xA;&#xA;Precondicion: Fecha actual / documento: Calendario.xlsx&#xA;&#xA;Acciones: Extracción de reporte  de datos satelite  desde SQL hacía Excel" DisplayName="Exportar_datos_Satelite" sap:VirtualizedContainerService.HintSize="724,3221" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Str_SystemException" />
       <Variable x:TypeArguments="x:String" Name="Str_Fecha_Fin" />
@@ -95,20 +97,20 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Ingreso a SQL studio y descarga de los datos para guardar en excel.&#xA;" sap:VirtualizedContainerService.HintSize="682,2817" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap2010:Annotation.AnnotationText="Ingreso a SQL studio y descarga de los datos para guardar en excel.&#xA;" sap:VirtualizedContainerService.HintSize="682,3042" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="De acuerdo al numero de reintentos estipulado se hacen las ejecuciones necesarias." DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="640,2683" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="De acuerdo al numero de reintentos estipulado se hacen las ejecuciones necesarias." DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="640,2908" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
         <ui:RepeatNumberOfTimesX.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="Intento" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="606,2497" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="606,2722" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -126,9 +128,9 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="564,2243" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="564,2468" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <TryCatch.Try>
-                  <Sequence sap:VirtualizedContainerService.HintSize="376,1003" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence sap:VirtualizedContainerService.HintSize="376,1228" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="Str_query_Datos_Satelite" />
                       <Variable x:TypeArguments="ui:DatabaseConnection" Name="Conn_SqlServer" />
@@ -307,14 +309,24 @@
                         <InArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_Query">
                           <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_95">Str_query_Datos_Satelite</mca:CSharpValue>
                         </InArgument>
-                        <InArgument x:TypeArguments="x:Boolean" x:Key="In_GBL_Bool_Exec_SP">
-                          <Literal x:TypeArguments="x:Boolean" />
-                        </InArgument>
+                        <InArgument x:TypeArguments="x:Boolean" x:Key="In_GBL_Bool_Exec_SP">False</InArgument>
                         <OutArgument x:TypeArguments="sd:DataTable" x:Key="Out_GBL_Dt_Resultados">
                           <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_38">Dt_Datos_Satelite</mca:CSharpReference>
                         </OutArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
+                    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Observación" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1">
+                      <ui:AddDataColumn.DataTable>
+                        <InArgument x:TypeArguments="sd:DataTable">
+                          <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_100">Dt_Datos_Satelite</mca:CSharpValue>
+                        </InArgument>
+                      </ui:AddDataColumn.DataTable>
+                      <ui:AddDataColumn.DefaultValue>
+                        <InArgument x:TypeArguments="x:Object">
+                          <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_101">"Existe en Satelite"</mca:CSharpValue>
+                        </InArgument>
+                      </ui:AddDataColumn.DefaultValue>
+                    </ui:AddDataColumn>
                     <ui:WriteRange AddHeaders="True" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Reporte ventas Satelite" StartingCell="A1">
                       <ui:WriteRange.DataTable>
                         <InArgument x:TypeArguments="sd:DataTable">

@@ -29,7 +29,7 @@
     <x:Property Name="GBL_Str_NombreReporteFidelizacionesSAT" Type="InOutArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>999,3273</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1030,3273</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -117,6 +117,7 @@
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>System.Data.Entity</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Proceso de Conciliacion EDS Viva Terpel&#xA;&#xA;Proceso de extracción de ventas realizadas de las Estaciones de Servicio de Terpel &#xA;&#xA;Creadores: Edwin Perez, Diego Solano&#xA;" DisplayName="Conciliacion EDS Viva Terpel" sap:VirtualizedContainerService.HintSize="1009,3208" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -2010,7 +2011,7 @@
               <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_143">Bool_ProcessStatus == true &amp;&amp; GBL_Str_EstadoActual == "A"</mca:CSharpValue>
             </Transition.Condition>
             <Transition.To>
-              <State x:Name="__ReferenceID11" sap2010:Annotation.AnnotationText="Ingreso a Salesforce para extraccion de reporte de ventas &#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Ingreso a Salesforce para extracción de ventas en Excel" DisplayName="A. Extracción de ventas fidelización Salesforce" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="State_2">
+              <State x:Name="__ReferenceID11" sap2010:Annotation.AnnotationText="Ingreso a Salesforce para extraccion de reporte de ventas &#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Ingreso a Salesforce para extracción de ventas en Excel" DisplayName="A. Extracción de ventas fidelización Salesforce" sap:VirtualizedContainerService.HintSize="509,1836" sap2010:WorkflowViewState.IdRef="State_2">
                 <State.Entry>
                   <Sequence sap:VirtualizedContainerService.HintSize="463,1362" sap2010:WorkflowViewState.IdRef="Sequence_23">
                     <sap:WorkflowViewStateService.ViewState>
@@ -2110,14 +2111,14 @@
                             <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_65">GBL_Int_NumIntentos</mca:CSharpValue>
                           </InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="In_NombreReporteVentasSalesForce">
-                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_68">Str_NombreReporteVentasSalesforce</mca:CSharpValue>
+                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_163">Str_NombreReporteVentasSalesforce</mca:CSharpValue>
                           </InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CarpetaTemporales">
                             <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_67">GBL_Str_CarpetaTemporales</mca:CSharpValue>
                           </InArgument>
-                          <OutArgument x:TypeArguments="x:String" x:Key="Out_GBL_Str_ReporteVentasSalesForce">
-                            <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_76">GBL_Str_ReporteVentasSalesforce</mca:CSharpReference>
-                          </OutArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_ReporteVentasSalesForce">
+                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_162">GBL_Str_ReporteVentasSalesforce</mca:CSharpValue>
+                          </InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </Sequence>
