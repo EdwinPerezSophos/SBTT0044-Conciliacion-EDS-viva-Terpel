@@ -15,7 +15,7 @@
     <x:Property Name="In_GBL_Str_PaginaSalesforce" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1542.66666666667,9764</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1542.66666666667,10234.6666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -111,7 +111,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Exportar el reporte de ventas de SalesForce diario &#xA;&#xA;Precondicion: Fecha actual / documento: Calendario.xlsx&#xA;&#xA;Acciones: Extracción de reporte de ventas en SalesForce hacia Excel" DisplayName="Exportar_reporte_ventas_SalesForce" sap:VirtualizedContainerService.HintSize="1552.66666666667,9699.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Exportar el reporte de ventas de SalesForce diario &#xA;&#xA;Precondicion: Fecha actual / documento: Calendario.xlsx&#xA;&#xA;Acciones: Extracción de reporte de ventas en SalesForce hacia Excel" DisplayName="Exportar_reporte_ventas_SalesForce" sap:VirtualizedContainerService.HintSize="1552.66666666667,10170" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Str_SystemException" />
       <Variable x:TypeArguments="x:String" Name="Str_FechaInicio_SalesForce" />
@@ -291,7 +291,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <Sequence sap2010:Annotation.AnnotationText="Ingreso en Salefoce y aplicacion de filtros para extraccion de reporte de ventas " DisplayName="Busqueda de Informe de Ventas" sap:VirtualizedContainerService.HintSize="1510.66666666667,9419.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <Sequence sap2010:Annotation.AnnotationText="Ingreso en Salefoce y aplicacion de filtros para extraccion de reporte de ventas " DisplayName="Busqueda de Informe de Ventas" sap:VirtualizedContainerService.HintSize="1510.66666666667,9890" sap2010:WorkflowViewState.IdRef="Sequence_5">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="Str_ValidacionNombreInforme" />
       </Sequence.Variables>
@@ -302,13 +302,13 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="1468.66666666667,9296.66666666667" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+      <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="1468.66666666667,9767.33333333333" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
         <ui:RepeatNumberOfTimesX.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="Intento" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1434.66666666667,9136" sap2010:WorkflowViewState.IdRef="Sequence_23">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1434.66666666667,9606.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_23">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -457,7 +457,7 @@
                   </Sequence>
                 </Switch>
               </Sequence>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1392.66666666667,8721.33333333333" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1392.66666666667,9192" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -465,13 +465,13 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <TryCatch.Try>
-                  <uix:NApplicationCard sap2010:Annotation.AnnotationText="navegación en Salesforce &#xA;" AttachMode="ByInstance" CloseMode="Always" DisplayName="Busqueda y extracción de ventas SalesForce" sap:VirtualizedContainerService.HintSize="1354,7477.33333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="b646890d-e415-484e-b581-328f74beaa8b" Version="V1" WindowResize="Maximize">
+                  <uix:NApplicationCard sap2010:Annotation.AnnotationText="navegación en Salesforce &#xA;" AttachMode="ByInstance" CloseMode="Always" DisplayName="Busqueda y extracción de ventas SalesForce" sap:VirtualizedContainerService.HintSize="1354,7948" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="b646890d-e415-484e-b581-328f74beaa8b" Version="V1" WindowResize="Maximize">
                     <uix:NApplicationCard.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1320,7214" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1320,7684.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_18">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="Str_ArchivoDescargado" />
                           </Sequence.Variables>
@@ -483,36 +483,12 @@
                           </sap:WorkflowViewStateService.ViewState>
                           <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State '0 Saved'" sap:VirtualizedContainerService.HintSize="1278,721.333333333333" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="b646890d-e415-484e-b581-328f74beaa8b" Version="V1">
                             <uix:NCheckState.IfExists>
-                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="418,332.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="250,86" sap2010:WorkflowViewState.IdRef="Sequence_34">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Sequence sap2010:Annotation.AnnotationText="Logeo en Salesforce" DisplayName="Log en Salesforce" sap:VirtualizedContainerService.HintSize="376,239.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_33">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke LogIn Saleforce workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Libreria Común\\LogIn Saleforce.xaml">
-                                    <ui:InvokeWorkflowFile.Arguments>
-                                      <InArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_NumIntentos">
-                                        <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_94">In_GBL_Int_NumIntentos</mca:CSharpValue>
-                                      </InArgument>
-                                      <InArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_TiempoEsperaAplicaciones">
-                                        <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_93">In_GBL_Int_TiempoEsperaAplicaciones</mca:CSharpValue>
-                                      </InArgument>
-                                      <InArgument x:TypeArguments="x:Int32" x:Key="In_GBL_int_TiempoMaxValidaciones">
-                                        <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_92">In_GBL_Int_TiempoMaxValidaciones</mca:CSharpValue>
-                                      </InArgument>
-                                      <InArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_PaginaSalesforce">
-                                        <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_91">In_GBL_Str_PaginaSalesforce</mca:CSharpValue>
-                                      </InArgument>
-                                    </ui:InvokeWorkflowFile.Arguments>
-                                  </ui:InvokeWorkflowFile>
-                                </Sequence>
                               </Sequence>
                             </uix:NCheckState.IfExists>
                             <uix:NCheckState.IfNotExists>
@@ -1026,7 +1002,7 @@
                               </uix:TargetAnchorable>
                             </uix:NSelectItem.Target>
                           </uix:NSelectItem>
-                          <uix:NClick ClickType="Single" DisplayName="Click 'Exportar'" sap:VirtualizedContainerService.HintSize="1278,197.333333333333" sap2010:WorkflowViewState.IdRef="NClick_28" KeyModifiers="None" MouseButton="Left">
+                          <uix:NClick ClickType="Single" DisplayName="Click 'Exportar'" sap:VirtualizedContainerService.HintSize="1278,158" sap2010:WorkflowViewState.IdRef="NClick_28" KeyModifiers="None" MouseButton="Left">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable BrowserURL="https://terpel--fullcopy.lightning.force.com/lightning/r/Report/00O04000000OGr0EAG/view?queryScope=userFolders" DesignTimeRectangle="934, 579, 44, 30" ElementType="Text" FriendlyName="'Exportar'" FullSelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/uiModal:modal/reportsExportDialog/reportsExportDialogFooter:export-dialog-footer/uiButton:export-report/auraIf/auraHtml:span' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/uiModal:modal/reportsExportDialog/reportsExportDialogFooter:export-dialog-footer/uiButton:export-report/auraIf/auraHtml:span' tag='SPAN' type='' aaname='Exportar' check:text='Exportar' /&gt;" Guid="361fe7e0-fe84-4d04-8b96-ee513300b8e5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAiCAYAAAAZHFoXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFJSURBVFhH7Zm9DoJADMd9DF/Ax3TzYVhMfAkSJgdHw+LMorCx1GuvB72DIDJQMW3yX67Xj9+1TOyapoEta3c57GHLMgBtGYC2DEBbBqAtA9DWPwFkUIO0J1Sn+PIvKgG4w0M419ERqtfyx/p/gFvxBCgzcccXw/O2yFxx3rgk9lHyMdorhxuf+7jcr2t5FfHOqE68ym1x9DlPObQuT0V5+1oT30C41L8QNlWf/X0CE9+JBKXmO+jY5+Mk7NQExKMigIsM9YPmrRAHp011r0MK8dhQmqfPPYwbAnjIYOzjCYRJBs38BtDnbAUAar6rI3zLAfokgxVKdjsU/rRCUwAY2/lp8l8BxIbNRs2IhNRIeferhRYlx6b4HC0BjQEYEA3rUA02N8l6/gS+01gjGjKAMd+aWgzwKzIAbRmAtgxAW9sHGPtpsB018AYivRafiV9UqwAAAABJRU5ErkJggg==" InformativeScreenshot="a63e20c4350b5cc54816d121b87dd51d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Validación ventas redenciones Robot | Salesforce' /&gt;" SearchSteps="FuzzySelector, Image">
                                 <uix:TargetAnchorable.Anchors>
@@ -1036,17 +1012,38 @@
                                 </uix:TargetAnchorable.Anchors>
                               </uix:TargetAnchorable>
                             </uix:NClick.Target>
-                            <uix:NClick.VerifyOptions>
-                              <uix:VerifyExecutionOptions DisplayName="Element 'Validación ventas'" Mode="Appears" Timeout="120">
-                                <uix:VerifyExecutionOptions.Retry>
-                                  <InArgument x:TypeArguments="x:Boolean" />
-                                </uix:VerifyExecutionOptions.Retry>
-                                <uix:VerifyExecutionOptions.Target>
-                                  <uix:TargetAnchorable DesignTimeRectangle="8, 679, 1366, 57" FriendlyName="'Validación ventas'" FullSelectorArgument="&lt;ctrl name='Validación ventas redenciones Robot | Salesforce - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Barra de descargas' role='grouping' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Validación ventas redenciones Robot | Salesforce - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Barra de descargas' role='grouping' automationid='' check:fulltext='Validación ventas redenciones Robot-2022-04-22-15-11-59.xlsx&amp;#xD;&amp;#xA;Abrir ahora&amp;#xD;&amp;#xA;Descargar&amp;#xD;&amp;#xA;Descartar&amp;#xD;&amp;#xA;' /&gt;" Guid="e748ec7b-9dab-46ea-96e3-2f3975290910" ImageBase64="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" InformativeScreenshot="86da81ff724ea6843f1538763a96b8de.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Validación ventas redenciones Robot | Salesforce - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
-                                </uix:VerifyExecutionOptions.Target>
-                              </uix:VerifyExecutionOptions>
-                            </uix:NClick.VerifyOptions>
                           </uix:NClick>
+                          <Delay Duration="00:00:20" sap:VirtualizedContainerService.HintSize="1278,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                          <uix:NCheckState Exists="{x:Null}" DelayBefore="60" DisplayName="Check App State 'chrome.exe Sin'" sap:VirtualizedContainerService.HintSize="1278,408" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="b646890d-e415-484e-b581-328f74beaa8b" Timeout="120" Version="V1">
+                            <uix:NCheckState.IfExists>
+                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="250,84.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Sequence>
+                            </uix:NCheckState.IfExists>
+                            <uix:NCheckState.IfNotExists>
+                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="376,188" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_20">
+                                  <ui:LogMessage.Message>
+                                    <InArgument x:TypeArguments="x:Object">
+                                      <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_96">"No Ha descargado"</mca:CSharpValue>
+                                    </InArgument>
+                                  </ui:LogMessage.Message>
+                                </ui:LogMessage>
+                              </Sequence>
+                            </uix:NCheckState.IfNotExists>
+                            <uix:NCheckState.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="11, 661, 1359, 72" FriendlyName="'chrome.exe Sin'" Guid="2dbfb79c-a7ad-4ac2-a33c-ce4e525bac40" ImageBase64="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" InformativeScreenshot="7cad8d443538543af6311fbe799e09bd.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Sin título - Google Chrome' /&gt;" SearchSteps="Image" TargetType="ImageBased" WaitForReadyArgument="Complete" />
+                            </uix:NCheckState.Target>
+                          </uix:NCheckState>
                           <uix:NGetText DisplayName="Get Text 'report1648771172549.xls…'" sap:VirtualizedContainerService.HintSize="1278,158" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="b646890d-e415-484e-b581-328f74beaa8b" Version="V1">
                             <uix:NGetText.Target>
                               <uix:TargetAnchorable DesignTimeRectangle="12, 680, 233, 56" FriendlyName="'report1648771172549.xls…'" FullSelectorArgument="&lt;ctrl name='Validación ventas redenciones Robot | Salesforce - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Barra de descargas' role='grouping' /&gt;&lt;ctrl name=' report1648771172549.xls' role='grouping' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Validación ventas redenciones Robot | Salesforce - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Barra de descargas' role='grouping' /&gt;&lt;ctrl role='grouping' automationid='' /&gt;" Guid="ad0d5b06-1245-412a-a2ac-ef4c4437219b" InformativeScreenshot="50c3862d7c7520bd8e79b5229f2df4b1.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Validación ventas redenciones Robot | Salesforce - Google Chrome' /&gt;" SearchSteps="FuzzySelector">
