@@ -117,6 +117,7 @@
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Proceso de Conciliacion EDS Viva Terpel&#xA;&#xA;Proceso de extracción de ventas realizadas de las Estaciones de Servicio de Terpel &#xA;&#xA;Creadores: Edwin Perez, Diego Solano&#xA;" DisplayName="Conciliacion EDS Viva Terpel" sap:VirtualizedContainerService.HintSize="1009.33333333333,3218.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -796,20 +797,20 @@
                     <Transition.To>
                       <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Ingreso a Salesforce y a Satelite para extraccion de reporte de ventas &#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Ingreso a Salesforce y SQL para extracción de ventas en Excel" DisplayName="C. Extracción y Consolidación ventas Inconsistentes" sap:VirtualizedContainerService.HintSize="423.333333333333,165.333333333333" sap2010:WorkflowViewState.IdRef="State_6">
                         <State.Entry>
-                          <Sequence sap:VirtualizedContainerService.HintSize="421,476" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                          <Sequence sap:VirtualizedContainerService.HintSize="421.333333333333,483.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_26">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="CV_EDS_Var_EstadoActual" DisplayName="Set Asset" sap:VirtualizedContainerService.HintSize="379,132" sap2010:WorkflowViewState.IdRef="SetAsset_1">
+                            <ui:SetAsset TimeoutMS="{x:Null}" AssetName="CV_EDS_Var_EstadoActual" DisplayName="Set Asset" sap:VirtualizedContainerService.HintSize="379.333333333333,135.333333333333" sap2010:WorkflowViewState.IdRef="SetAsset_1">
                               <ui:SetAsset.Value>
                                 <InArgument x:TypeArguments="x:Object">
                                   <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_108">"C"</mca:CSharpValue>
                                 </InArgument>
                               </ui:SetAsset.Value>
                             </ui:SetAsset>
-                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Extracción y consolidación ventas inconsistentes workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="5. Extracción y consolidcación ventas inconsistentes\\Extracción y consolidación ventas inconsistentes.xaml">
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Extracción y consolidación ventas inconsistentes workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="5. Extracción y consolidcación ventas inconsistentes\\Extracción y consolidación ventas inconsistentes.xaml">
                               <ui:InvokeWorkflowFile.Arguments>
                                 <InOutArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_ReporteVentasSalesforce">
                                   <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_183">GBL_Str_ReporteVentasSalesforce</mca:CSharpReference>
@@ -840,7 +841,7 @@
                                 </InOutArgument>
                               </ui:InvokeWorkflowFile.Arguments>
                             </ui:InvokeWorkflowFile>
-                            <Assign sap:VirtualizedContainerService.HintSize="379,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                            <Assign sap:VirtualizedContainerService.HintSize="379.333333333333,62" sap2010:WorkflowViewState.IdRef="Assign_3">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:Boolean">
                                   <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_77">Bool_ProcessStatus</mca:CSharpReference>
@@ -1132,7 +1133,7 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                     <Transition.To>
-                                                      <State x:Name="__ReferenceID6" sap2010:Annotation.AnnotationText="Notificación de EDS pendiente por cerrar&#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: ejecucion de QUERY en SQL, depuracion excel y envio de correo con documento de cierre" DisplayName="G. Notificación Eds pendientes por cerrar" sap:VirtualizedContainerService.HintSize="468,1146" sap2010:WorkflowViewState.IdRef="State_19">
+                                                      <State x:Name="__ReferenceID6" sap2010:Annotation.AnnotationText="Notificación de EDS pendiente por cerrar&#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: ejecucion de QUERY en SQL, depuracion excel y envio de correo con documento de cierre" DisplayName="G. Notificación Eds pendientes por cerrar" sap:VirtualizedContainerService.HintSize="428.666666666667,173.333333333333" sap2010:WorkflowViewState.IdRef="State_19">
                                                         <State.Entry>
                                                           <Sequence sap:VirtualizedContainerService.HintSize="421.333333333333,635.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_39">
                                                             <sap:WorkflowViewStateService.ViewState>
