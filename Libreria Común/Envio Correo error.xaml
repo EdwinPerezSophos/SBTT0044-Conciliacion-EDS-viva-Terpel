@@ -8,7 +8,7 @@
     <InArgument x:TypeArguments="x:String" />
   </this:Envio_Correo_error.In_GBL_Systemerror>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>825,1075</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1137,969</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -74,11 +74,11 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Envio_Correo_error" sap:VirtualizedContainerService.HintSize="539,1010" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Envio_Correo_error" sap:VirtualizedContainerService.HintSize="539,904" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Str_Subject" />
       <Variable x:TypeArguments="x:String" Name="Str_Body" />
@@ -96,7 +96,7 @@
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <Switch x:TypeArguments="x:String" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="497,464" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+    <Switch x:TypeArguments="x:String" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="497,358" sap2010:WorkflowViewState.IdRef="Switch`1_2">
       <Switch.Expression>
         <InArgument x:TypeArguments="x:String">
           <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">In_GBL_EstadoActual</mca:CSharpValue>
@@ -224,7 +224,7 @@
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
               <InArgument x:TypeArguments="x:String">
-                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">"Ocurrio un error en la actividad " + Str_Actividad_Fallo + "\n Descripción del error técnico: " + In_GBL_Systemerror + "\n Hora: " + DateTime.Now.ToString()</mca:CSharpValue>
+                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">"Ocurrio un error en la actividad: " + Str_Actividad_Fallo + "\n Descripción del error técnico: " + In_GBL_Systemerror + "\n Hora: " + DateTime.Now.ToString()</mca:CSharpValue>
               </InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
@@ -243,9 +243,7 @@
     </ui:MultipleAssign>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Envio de Correo Email workflow" sap:VirtualizedContainerService.HintSize="497,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Libreria Común\\Envio de Correo Email.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:Int32" x:Key="In_Int_NumIntentos">
-          <Literal x:TypeArguments="x:Int32" Value="1" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="In_Int_NumIntentos">1</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="In_Str_CorreoDestino">
           <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">In_GBL_Str_CorreoSoporte</mca:CSharpValue>
         </InArgument>
