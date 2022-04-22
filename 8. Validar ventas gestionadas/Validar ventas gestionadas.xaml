@@ -3,6 +3,7 @@
     <x:Property Name="In_GBL_Int_NumIntentos" Type="InArgument(x:Int32)" />
     <x:Property Name="In_GBL_Dt_Calendario_row" Type="InArgument(sd:DataTable)" />
     <x:Property Name="Out_GBL_Str_Query_Inconsistentes" Type="OutArgument(x:String)" />
+    <x:Property Name="In_GBL_Str_CarpetaCompartida" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
   <sap:VirtualizedContainerService.HintSize>1030,7813</sap:VirtualizedContainerService.HintSize>
@@ -27,6 +28,8 @@
       <x:String>UiPath.DataTableUtilities</x:String>
       <x:String>UiPath.Shared.Activities.Business</x:String>
       <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -69,6 +72,7 @@
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -337,7 +341,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <ui:ReadRange.WorkbookPath>
                           <InArgument x:TypeArguments="x:String">
-                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_124">"Data\\Out\\Reportes ventas Inconsistentes\\" + Str_Mes_Consulta + ".xlsx"</mca:CSharpValue>
+                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_141">In_GBL_Str_CarpetaCompartida + "Reportes ventas Inconsistentes\\" + Str_Mes_Consulta + ".xlsx"</mca:CSharpValue>
                           </InArgument>
                         </ui:ReadRange.WorkbookPath>
                       </ui:ReadRange>
@@ -751,7 +755,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <ui:WriteRange.WorkbookPath>
                           <InArgument x:TypeArguments="x:String">
-                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_134">"Data\\Out\\Reportes ventas Inconsistentes\\" + Str_Mes_Consulta + ".xlsx"</mca:CSharpValue>
+                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_142">In_GBL_Str_CarpetaCompartida + "Reportes ventas Inconsistentes\\" + Str_Mes_Consulta + ".xlsx"</mca:CSharpValue>
                           </InArgument>
                         </ui:WriteRange.WorkbookPath>
                       </ui:WriteRange>

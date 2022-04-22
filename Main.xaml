@@ -45,6 +45,9 @@
       <x:String>System.Runtime.InteropServices</x:String>
       <x:String>UiPath.Web.Activities</x:String>
       <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -88,6 +91,7 @@
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Proceso de Conciliacion EDS Viva Terpel&#xA;&#xA;Proceso de extracción de ventas realizadas de las Estaciones de Servicio de Terpel &#xA;&#xA;Creadores: Edwin Perez, Diego Solano&#xA;" DisplayName="Conciliacion EDS Viva Terpel" sap:VirtualizedContainerService.HintSize="1009,3208" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -670,7 +674,7 @@
           <Transition DisplayName="I-B" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Transition_39">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <av:PointCollection x:Key="ConnectorLocation">545.5,260.45 575.5,260.45 575.5,570.65 558,570.65</av:PointCollection>
+                <av:PointCollection x:Key="ConnectorLocation">545.5,260.45 575.5,260.45 575.5,566.25 558,566.25</av:PointCollection>
                 <x:Int32 x:Key="SrcConnectionPointIndex">64</x:Int32>
                 <x:Int32 x:Key="DestConnectionPointIndex">40</x:Int32>
               </scg:Dictionary>
@@ -679,7 +683,7 @@
               <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_145">Bool_ProcessStatus == true &amp;&amp; GBL_Str_EstadoActual == "B"</mca:CSharpValue>
             </Transition.Condition>
             <Transition.To>
-              <State x:Name="__ReferenceID10" sap2010:Annotation.AnnotationText="Ingreso a  Satelite para extraccion de reporte de ventas &#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Ingreso a SQLServer para extracción de ventas en Excel" DisplayName="B. Extracción de ventas fidelización Satelite" sap:VirtualizedContainerService.HintSize="428.666666666667,163.333333333333" sap2010:WorkflowViewState.IdRef="State_4">
+              <State x:Name="__ReferenceID10" sap2010:Annotation.AnnotationText="Ingreso a  Satelite para extraccion de reporte de ventas &#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Ingreso a SQLServer para extracción de ventas en Excel" DisplayName="B. Extracción de ventas fidelización Satelite" sap:VirtualizedContainerService.HintSize="429,155" sap2010:WorkflowViewState.IdRef="State_4">
                 <State.Entry>
                   <Sequence sap:VirtualizedContainerService.HintSize="421,476" sap2010:WorkflowViewState.IdRef="Sequence_21">
                     <sap:WorkflowViewStateService.ViewState>
@@ -722,7 +726,7 @@
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <av:Point x:Key="ShapeLocation">129,481</av:Point>
-                    <av:Size x:Key="ShapeSize">429,163</av:Size>
+                    <av:Size x:Key="ShapeSize">429,155</av:Size>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     <x:Double x:Key="StateContainerWidth">395</x:Double>
                     <x:Double x:Key="StateContainerHeight">32.000000000000114</x:Double>
@@ -733,7 +737,7 @@
                   <Transition DisplayName="F-B" sap:VirtualizedContainerService.HintSize="450,512" sap2010:WorkflowViewState.IdRef="Transition_37">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <av:PointCollection x:Key="ConnectorLocation">129,562.666666666667 99,562.666666666667 99,2717 138.5,2717</av:PointCollection>
+                        <av:PointCollection x:Key="ConnectorLocation">129,558.5 99,558.5 99,2717 138.5,2717</av:PointCollection>
                         <x:Int32 x:Key="SrcConnectionPointIndex">37</x:Int32>
                         <x:Int32 x:Key="DestConnectionPointIndex">41</x:Int32>
                       </scg:Dictionary>
@@ -759,13 +763,13 @@
                   <Transition DisplayName="B-C" sap:VirtualizedContainerService.HintSize="450,512" sap2010:WorkflowViewState.IdRef="Transition_2">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <av:PointCollection x:Key="ConnectorLocation">557.666666666667,611.666666666667 587.666666666667,611.666666666667 587.666666666667,702.6 558.333333333333,702.6</av:PointCollection>
+                        <av:PointCollection x:Key="ConnectorLocation">558,605 588,605 588,700.1 558,700.1</av:PointCollection>
                         <x:Int32 x:Key="SrcConnectionPointIndex">60</x:Int32>
                         <x:Int32 x:Key="DestConnectionPointIndex">20</x:Int32>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <Transition.To>
-                      <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Ingreso a Salesforce y a Satelite para extraccion de reporte de ventas &#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Ingreso a Salesforce y SQL para extracción de ventas en Excel" DisplayName="C. Extracción y Consolidación ventas Inconsistentes" sap:VirtualizedContainerService.HintSize="423.333333333333,165.333333333333" sap2010:WorkflowViewState.IdRef="State_6">
+                      <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Ingreso a Salesforce y a Satelite para extraccion de reporte de ventas &#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Ingreso a Salesforce y SQL para extracción de ventas en Excel" DisplayName="C. Extracción y Consolidación ventas Inconsistentes" sap:VirtualizedContainerService.HintSize="423,157" sap2010:WorkflowViewState.IdRef="State_6">
                         <State.Entry>
                           <Sequence sap:VirtualizedContainerService.HintSize="421.333333333333,483.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_26">
                             <sap:WorkflowViewStateService.ViewState>
@@ -826,7 +830,7 @@
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">135,653</av:Point>
-                            <av:Size x:Key="ShapeSize">423,165</av:Size>
+                            <av:Size x:Key="ShapeSize">423,157</av:Size>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             <x:Double x:Key="StateContainerWidth">389</x:Double>
                             <x:Double x:Key="StateContainerHeight">34</x:Double>
@@ -837,7 +841,7 @@
                           <Transition DisplayName="F-C" sap:VirtualizedContainerService.HintSize="450,512" sap2010:WorkflowViewState.IdRef="Transition_36">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <av:PointCollection x:Key="ConnectorLocation">135,735.666666666667 105,735.666666666667 105,2701.5 138.5,2701.5</av:PointCollection>
+                                <av:PointCollection x:Key="ConnectorLocation">135,731.5 105,731.5 105,2701.5 138.5,2701.5</av:PointCollection>
                                 <x:Int32 x:Key="SrcConnectionPointIndex">37</x:Int32>
                                 <x:Int32 x:Key="DestConnectionPointIndex">37</x:Int32>
                               </scg:Dictionary>
@@ -852,13 +856,13 @@
                           <Transition DisplayName="C-D" sap:VirtualizedContainerService.HintSize="450,512" sap2010:WorkflowViewState.IdRef="Transition_12">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <av:PointCollection x:Key="ConnectorLocation">558.333333333333,785.266666666667 588.333333333333,785.266666666667 588.333333333333,882.333333333333 559.666666666667,882.333333333333</av:PointCollection>
+                                <av:PointCollection x:Key="ConnectorLocation">558,778.6 588,778.6 588,878.5 560,878.5</av:PointCollection>
                                 <x:Int32 x:Key="SrcConnectionPointIndex">60</x:Int32>
                                 <x:Int32 x:Key="DestConnectionPointIndex">16</x:Int32>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <Transition.To>
-                              <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Revisar si existen diferencias entre los reportes obtenidos en las actividades Extracción de ventas fidelización Salesforce y Extracción de ventas fidelización Satelite&#xA;&#xA;Precondicion:  documento: Reporte fidelizaciones Salesforce.xlsx -- Reporte fidelizaciones Satelite.xlsx&#xA;&#xA;Acciones: Comparaciones entre archivos y movimiento de datos a nuevos archivos consolidados" DisplayName="D. Cierre día EDS Automático" sap:VirtualizedContainerService.HintSize="424.666666666667,223.333333333333" sap2010:WorkflowViewState.IdRef="State_9">
+                              <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Revisar si existen diferencias entre los reportes obtenidos en las actividades Extracción de ventas fidelización Salesforce y Extracción de ventas fidelización Satelite&#xA;&#xA;Precondicion:  documento: Reporte fidelizaciones Salesforce.xlsx -- Reporte fidelizaciones Satelite.xlsx&#xA;&#xA;Acciones: Comparaciones entre archivos y movimiento de datos a nuevos archivos consolidados" DisplayName="D. Cierre día EDS Automático" sap:VirtualizedContainerService.HintSize="425,208" sap2010:WorkflowViewState.IdRef="State_9">
                                 <State.Entry>
                                   <Sequence sap:VirtualizedContainerService.HintSize="421,628" sap2010:WorkflowViewState.IdRef="Sequence_32">
                                     <sap:WorkflowViewStateService.ViewState>
@@ -887,6 +891,9 @@
                                         <InArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_NombreReporteFidelizacionesSF">
                                           <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_156">GBL_Str_NombreReporteFidelizacionesSF</mca:CSharpValue>
                                         </InArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CarpetaCompartida">
+                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_164">GBL_Str_CarpetaCompartida</mca:CSharpValue>
+                                        </InArgument>
                                       </ui:InvokeWorkflowFile.Arguments>
                                     </ui:InvokeWorkflowFile>
                                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Ejecutar SP cierre y exportar (Reporte cierre EDS) workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="7. Ejecutar SP cierre y exportar (Reporte cierre EDS)\\Ejecutar SP cierre y exportar (Reporte cierre EDS).xaml">
@@ -914,7 +921,7 @@
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <av:Point x:Key="ShapeLocation">135,826.5</av:Point>
-                                    <av:Size x:Key="ShapeSize">425,223</av:Size>
+                                    <av:Size x:Key="ShapeSize">425,208</av:Size>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     <x:Double x:Key="StateContainerWidth">391</x:Double>
                                     <x:Double x:Key="StateContainerHeight">25.079999999999927</x:Double>
@@ -925,13 +932,13 @@
                                   <Transition DisplayName="D-E" sap:VirtualizedContainerService.HintSize="450,512" sap2010:WorkflowViewState.IdRef="Transition_13">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <av:PointCollection x:Key="ConnectorLocation">559.666666666667,1027.5 589.666666666667,1027.5 589.666666666667,1104 560.333333333333,1104</av:PointCollection>
+                                        <av:PointCollection x:Key="ConnectorLocation">560,1013.7 590,1013.7 590,1101.7 560,1101.7</av:PointCollection>
                                         <x:Int32 x:Key="SrcConnectionPointIndex">68</x:Int32>
                                         <x:Int32 x:Key="DestConnectionPointIndex">8</x:Int32>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                     <Transition.To>
-                                      <State x:Name="__ReferenceID4" sap2010:Annotation.AnnotationText="Revisar si existen diferencias entre los reportes obtenidos en las actividades Extracción de ventas fidelización Salesforce y Extracción de ventas fidelización Satelite&#xA;&#xA;Precondicion:  documento: Reporte fidelizaciones Salesforce.xlsx -- Reporte fidelizaciones Satelite.xlsx&#xA;&#xA;Acciones:Comparaciones entre archivos y movimiento de datos a nuevos archivos consolidados" DisplayName="E. Revalidación y cierre EDS inconsistentes" sap:VirtualizedContainerService.HintSize="425.333333333333,223.333333333333" sap2010:WorkflowViewState.IdRef="State_13">
+                                      <State x:Name="__ReferenceID4" sap2010:Annotation.AnnotationText="Revisar si existen diferencias entre los reportes obtenidos en las actividades Extracción de ventas fidelización Salesforce y Extracción de ventas fidelización Satelite&#xA;&#xA;Precondicion:  documento: Reporte fidelizaciones Salesforce.xlsx -- Reporte fidelizaciones Satelite.xlsx&#xA;&#xA;Acciones:Comparaciones entre archivos y movimiento de datos a nuevos archivos consolidados" DisplayName="E. Revalidación y cierre EDS inconsistentes" sap:VirtualizedContainerService.HintSize="467,1162" sap2010:WorkflowViewState.IdRef="State_13">
                                         <State.Entry>
                                           <Sequence sap:VirtualizedContainerService.HintSize="421,628" sap2010:WorkflowViewState.IdRef="Sequence_35">
                                             <sap:WorkflowViewStateService.ViewState>
@@ -957,6 +964,9 @@
                                                 <OutArgument x:TypeArguments="x:String" x:Key="Out_GBL_Str_Query_Inconsistentes">
                                                   <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_98">Str_Query_Inconsistentes</mca:CSharpReference>
                                                 </OutArgument>
+                                                <InArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_CarpetaCompartida">
+                                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_165">GBL_Str_CarpetaCompartida</mca:CSharpValue>
+                                                </InArgument>
                                               </ui:InvokeWorkflowFile.Arguments>
                                             </ui:InvokeWorkflowFile>
                                             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Ejecutar SP Cierre y exportar (Reporte Cierre EDS ventas inconsistentes) workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="9. Ejecutar SP Cierre y exportar ( Reporte cierre EDS ventas inconcistentes)\\Ejecutar SP Cierre y exportar (Reporte Cierre EDS ventas inconsistentes).xaml">
@@ -984,7 +994,7 @@
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <av:Point x:Key="ShapeLocation">135,1070.5</av:Point>
-                                            <av:Size x:Key="ShapeSize">425,223</av:Size>
+                                            <av:Size x:Key="ShapeSize">425,208</av:Size>
                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                             <x:Double x:Key="StateContainerWidth">391.33333333333303</x:Double>
                                             <x:Double x:Key="StateContainerHeight">25</x:Double>
@@ -995,7 +1005,7 @@
                                           <Transition DisplayName="F-E" sap:VirtualizedContainerService.HintSize="450,512" sap2010:WorkflowViewState.IdRef="Transition_34">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <av:PointCollection x:Key="ConnectorLocation">135,1171 105,1171 105,2670.5 138.5,2670.5</av:PointCollection>
+                                                <av:PointCollection x:Key="ConnectorLocation">135,1164.1 105,1164.1 105,2670.5 138.5,2670.5</av:PointCollection>
                                                 <x:Int32 x:Key="SrcConnectionPointIndex">33</x:Int32>
                                                 <x:Int32 x:Key="DestConnectionPointIndex">29</x:Int32>
                                               </scg:Dictionary>
@@ -1010,13 +1020,13 @@
                                           <Transition DisplayName="E-F" sap:VirtualizedContainerService.HintSize="450,512" sap2010:WorkflowViewState.IdRef="Transition_21">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <av:PointCollection x:Key="ConnectorLocation">560.333333333333,1249.16666666667 590.333333333333,1249.16666666667 590.333333333333,1371.83333333333 563.666666666666,1371.83333333333</av:PointCollection>
+                                                <av:PointCollection x:Key="ConnectorLocation">560,1236.9 590,1236.9 590,1368.73333333333 563.333333333333,1368.73333333333</av:PointCollection>
                                                 <x:Int32 x:Key="SrcConnectionPointIndex">60</x:Int32>
                                                 <x:Int32 x:Key="DestConnectionPointIndex">20</x:Int32>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                             <Transition.To>
-                                              <State x:Name="__ReferenceID5" sap2010:Annotation.AnnotationText="Cierre EDS por solicitud manual&#xA;&#xA;Precondicion: Variables Globales del proyecto, conexion al correo local&#xA;&#xA;Acciones: Revision de correo en busca de documento de reporte cierre eds manual y ejecucion de cierre por SP's en SQLServer" DisplayName="F. Cierre Eds por solicitud manual" sap:VirtualizedContainerService.HintSize="427.333333333333,173.333333333333" sap2010:WorkflowViewState.IdRef="State_17">
+                                              <State x:Name="__ReferenceID5" sap2010:Annotation.AnnotationText="Cierre EDS por solicitud manual&#xA;&#xA;Precondicion: Variables Globales del proyecto, conexion al correo local&#xA;&#xA;Acciones: Revision de correo en busca de documento de reporte cierre eds manual y ejecucion de cierre por SP's en SQLServer" DisplayName="F. Cierre Eds por solicitud manual" sap:VirtualizedContainerService.HintSize="427,163" sap2010:WorkflowViewState.IdRef="State_17">
                                                 <State.Entry>
                                                   <Sequence sap:VirtualizedContainerService.HintSize="421,476" sap2010:WorkflowViewState.IdRef="Sequence_37">
                                                     <sap:WorkflowViewStateService.ViewState>
@@ -1071,7 +1081,7 @@
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <av:Point x:Key="ShapeLocation">136.333333333333,1319.83333333333</av:Point>
-                                                    <av:Size x:Key="ShapeSize">427,173</av:Size>
+                                                    <av:Size x:Key="ShapeSize">427,163</av:Size>
                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                     <x:Double x:Key="StateContainerWidth">393.33333333333314</x:Double>
                                                     <x:Double x:Key="StateContainerHeight">25</x:Double>
@@ -1082,7 +1092,7 @@
                                                   <Transition DisplayName="F-F" sap:VirtualizedContainerService.HintSize="450,512" sap2010:WorkflowViewState.IdRef="Transition_33">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <av:PointCollection x:Key="ConnectorLocation">136.333333333333,1397.83333333333 106.333333333333,1397.83333333333 106.333333333333,2655 138.5,2655</av:PointCollection>
+                                                        <av:PointCollection x:Key="ConnectorLocation">136.333333333333,1393.18333333333 106.333333333333,1393.18333333333 106.333333333333,2655 138.5,2655</av:PointCollection>
                                                         <x:Int32 x:Key="SrcConnectionPointIndex">33</x:Int32>
                                                         <x:Int32 x:Key="DestConnectionPointIndex">25</x:Int32>
                                                       </scg:Dictionary>
@@ -1097,7 +1107,7 @@
                                                   <Transition DisplayName="F-G" sap:VirtualizedContainerService.HintSize="450,512" sap2010:WorkflowViewState.IdRef="Transition_24">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <av:PointCollection x:Key="ConnectorLocation">563.666666666666,1458.5 593.666666666666,1458.5 593.666666666666,1575.33333333333 564.333333333334,1575.33333333333</av:PointCollection>
+                                                        <av:PointCollection x:Key="ConnectorLocation">563.333333333333,1450.23333333333 593.333333333333,1450.23333333333 593.333333333333,1575.23333333333 564.666666666667,1575.23333333333</av:PointCollection>
                                                         <x:Int32 x:Key="SrcConnectionPointIndex">60</x:Int32>
                                                         <x:Int32 x:Key="DestConnectionPointIndex">20</x:Int32>
                                                       </scg:Dictionary>
@@ -1770,7 +1780,7 @@
                                   <Transition DisplayName="F-D" sap:VirtualizedContainerService.HintSize="450,512" sap2010:WorkflowViewState.IdRef="Transition_35">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <av:PointCollection x:Key="ConnectorLocation">135,938.166666666667 105,938.166666666667 105,2686 138.5,2686</av:PointCollection>
+                                        <av:PointCollection x:Key="ConnectorLocation">135,930.5 105,930.5 105,2686 138.5,2686</av:PointCollection>
                                         <x:Int32 x:Key="SrcConnectionPointIndex">37</x:Int32>
                                         <x:Int32 x:Key="DestConnectionPointIndex">33</x:Int32>
                                       </scg:Dictionary>
@@ -1830,7 +1840,7 @@
           <Transition DisplayName="I-C" sap:VirtualizedContainerService.HintSize="450,507" sap2010:WorkflowViewState.IdRef="Transition_40">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <av:PointCollection x:Key="ConnectorLocation">545.5,241.75 575.5,241.75 575.5,743.75 558,743.75</av:PointCollection>
+                <av:PointCollection x:Key="ConnectorLocation">545.5,241.75 575.5,241.75 575.5,739.35 558,739.35</av:PointCollection>
                 <x:Int32 x:Key="SrcConnectionPointIndex">56</x:Int32>
                 <x:Int32 x:Key="DestConnectionPointIndex">40</x:Int32>
               </scg:Dictionary>
@@ -1845,7 +1855,7 @@
           <Transition DisplayName="I-D" sap:VirtualizedContainerService.HintSize="450,507" sap2010:WorkflowViewState.IdRef="Transition_41">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <av:PointCollection x:Key="ConnectorLocation">545.5,223.05 575.5,223.05 575.5,938 560,938</av:PointCollection>
+                <av:PointCollection x:Key="ConnectorLocation">545.5,223.05 575.5,223.05 575.5,930.5 560,930.5</av:PointCollection>
                 <x:Int32 x:Key="SrcConnectionPointIndex">48</x:Int32>
                 <x:Int32 x:Key="DestConnectionPointIndex">36</x:Int32>
               </scg:Dictionary>
@@ -1860,7 +1870,7 @@
           <Transition DisplayName="I-E" sap:VirtualizedContainerService.HintSize="450,507" sap2010:WorkflowViewState.IdRef="Transition_42">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <av:PointCollection x:Key="ConnectorLocation">545.5,204.35 575.5,204.35 575.5,1204.3 560,1204.3</av:PointCollection>
+                <av:PointCollection x:Key="ConnectorLocation">545.5,204.35 575.5,204.35 575.5,1195.3 560,1195.3</av:PointCollection>
                 <x:Int32 x:Key="SrcConnectionPointIndex">40</x:Int32>
                 <x:Int32 x:Key="DestConnectionPointIndex">44</x:Int32>
               </scg:Dictionary>
@@ -1875,7 +1885,7 @@
           <Transition DisplayName="I-F" sap:VirtualizedContainerService.HintSize="450,507" sap2010:WorkflowViewState.IdRef="Transition_43">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <av:PointCollection x:Key="ConnectorLocation">545.5,185.65 575.5,185.65 575.5,1414.98333333333 563.333333333333,1414.98333333333</av:PointCollection>
+                <av:PointCollection x:Key="ConnectorLocation">545.5,185.65 575.5,185.65 575.5,1409.48333333333 563.333333333333,1409.48333333333</av:PointCollection>
                 <x:Int32 x:Key="SrcConnectionPointIndex">32</x:Int32>
                 <x:Int32 x:Key="DestConnectionPointIndex">40</x:Int32>
               </scg:Dictionary>
@@ -2131,7 +2141,7 @@
                   <Transition DisplayName="A-B" sap:VirtualizedContainerService.HintSize="450,512" sap2010:WorkflowViewState.IdRef="Transition_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <av:PointCollection x:Key="ConnectorLocation">559,425.1 589,425.1 589,529.9 558,529.9</av:PointCollection>
+                        <av:PointCollection x:Key="ConnectorLocation">559,425.1 589,425.1 589,527.5 558,527.5</av:PointCollection>
                         <x:Int32 x:Key="SrcConnectionPointIndex">60</x:Int32>
                         <x:Int32 x:Key="DestConnectionPointIndex">20</x:Int32>
                       </scg:Dictionary>
