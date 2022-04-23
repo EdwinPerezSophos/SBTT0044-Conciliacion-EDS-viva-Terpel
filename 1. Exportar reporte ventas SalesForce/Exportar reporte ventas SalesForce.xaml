@@ -15,7 +15,7 @@
     <x:Property Name="In_GBL_Str_PaginaSalesforce" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1542,10017</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1542,10316</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -111,7 +111,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Exportar el reporte de ventas de SalesForce diario &#xA;&#xA;Precondicion: Fecha actual / documento: Calendario.xlsx&#xA;&#xA;Acciones: Extracción de reporte de ventas en SalesForce hacia Excel" DisplayName="Exportar_reporte_ventas_SalesForce" sap:VirtualizedContainerService.HintSize="1552,9952" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Exportar el reporte de ventas de SalesForce diario &#xA;&#xA;Precondicion: Fecha actual / documento: Calendario.xlsx&#xA;&#xA;Acciones: Extracción de reporte de ventas en SalesForce hacia Excel" DisplayName="Exportar_reporte_ventas_SalesForce" sap:VirtualizedContainerService.HintSize="1552,10251" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Str_SystemException" />
       <Variable x:TypeArguments="x:String" Name="Str_FechaInicio_SalesForce" />
@@ -125,7 +125,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Ingreso en Salefoce y aplicacion de filtros para extraccion de reporte de ventas " DisplayName="Busqueda de Informe de Ventas" sap:VirtualizedContainerService.HintSize="1510,9773" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <Sequence sap2010:Annotation.AnnotationText="Ingreso en Salefoce y aplicacion de filtros para extraccion de reporte de ventas " DisplayName="Busqueda de Informe de Ventas" sap:VirtualizedContainerService.HintSize="1510,10072" sap2010:WorkflowViewState.IdRef="Sequence_5">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="Str_ValidacionNombreInforme" />
       </Sequence.Variables>
@@ -136,13 +136,13 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="1468,9650" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+      <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="1468,9949" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
         <ui:RepeatNumberOfTimesX.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="Intento" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1434,9495" sap2010:WorkflowViewState.IdRef="Sequence_23">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1434,9794" sap2010:WorkflowViewState.IdRef="Sequence_23">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -291,7 +291,7 @@
                   </Sequence>
                 </Switch>
               </Sequence>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1392,9094" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1392,9393" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -299,13 +299,13 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <TryCatch.Try>
-                  <uix:NApplicationCard sap2010:Annotation.AnnotationText="navegación en Salesforce &#xA;" AttachMode="ByInstance" CloseMode="Always" DisplayName="Busqueda y extracción de ventas SalesForce" sap:VirtualizedContainerService.HintSize="1354,7865" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="b646890d-e415-484e-b581-328f74beaa8b" Version="V1" WindowResize="Maximize">
+                  <uix:NApplicationCard sap2010:Annotation.AnnotationText="navegación en Salesforce &#xA;" AttachMode="ByInstance" CloseMode="Always" DisplayName="Busqueda y extracción de ventas SalesForce" sap:VirtualizedContainerService.HintSize="1354,8164" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="b646890d-e415-484e-b581-328f74beaa8b" Version="V1" WindowResize="Maximize">
                     <uix:NApplicationCard.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1320,7607" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1320,7906" sap2010:WorkflowViewState.IdRef="Sequence_18">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="Str_ArchivoDescargado" />
                           </Sequence.Variables>
@@ -830,17 +830,30 @@
                               </uix:TargetAnchorable>
                             </uix:NSelectItem.Target>
                           </uix:NSelectItem>
-                          <uix:NClick ClickType="Single" DisplayName="Click 'Exportar'" sap:VirtualizedContainerService.HintSize="1278,156" sap2010:WorkflowViewState.IdRef="NClick_28" KeyModifiers="None" MouseButton="Left">
-                            <uix:NClick.Target>
-                              <uix:TargetAnchorable BrowserURL="https://terpel--fullcopy.lightning.force.com/lightning/r/Report/00O04000000OGr0EAG/view?queryScope=userFolders" DesignTimeRectangle="934, 579, 44, 30" ElementType="Text" FriendlyName="'Exportar'" FullSelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/uiModal:modal/reportsExportDialog/reportsExportDialogFooter:export-dialog-footer/uiButton:export-report/auraIf/auraHtml:span' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/uiModal:modal/reportsExportDialog/reportsExportDialogFooter:export-dialog-footer/uiButton:export-report/auraIf/auraHtml:span' tag='SPAN' type='' aaname='Exportar' check:text='Exportar' /&gt;" Guid="361fe7e0-fe84-4d04-8b96-ee513300b8e5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAiCAYAAAAZHFoXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFJSURBVFhH7Zm9DoJADMd9DF/Ax3TzYVhMfAkSJgdHw+LMorCx1GuvB72DIDJQMW3yX67Xj9+1TOyapoEta3c57GHLMgBtGYC2DEBbBqAtA9DWPwFkUIO0J1Sn+PIvKgG4w0M419ERqtfyx/p/gFvxBCgzcccXw/O2yFxx3rgk9lHyMdorhxuf+7jcr2t5FfHOqE68ym1x9DlPObQuT0V5+1oT30C41L8QNlWf/X0CE9+JBKXmO+jY5+Mk7NQExKMigIsM9YPmrRAHp011r0MK8dhQmqfPPYwbAnjIYOzjCYRJBs38BtDnbAUAar6rI3zLAfokgxVKdjsU/rRCUwAY2/lp8l8BxIbNRs2IhNRIeferhRYlx6b4HC0BjQEYEA3rUA02N8l6/gS+01gjGjKAMd+aWgzwKzIAbRmAtgxAW9sHGPtpsB018AYivRafiV9UqwAAAABJRU5ErkJggg==" InformativeScreenshot="a63e20c4350b5cc54816d121b87dd51d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Validación ventas redenciones Robot | Salesforce' /&gt;" SearchSteps="FuzzySelector, Image">
-                                <uix:TargetAnchorable.Anchors>
-                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                    <uix:Target DesignTimeRectangle="917, 578, 78, 32" ElementType="Button" FriendlyName="'Exportar'" FullSelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/uiModal:modal/reportsExportDialog/reportsExportDialogFooter:export-dialog-footer/uiButton:export-report/auraHtml:button' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/uiModal:modal/reportsExportDialog/reportsExportDialogFooter:export-dialog-footer/uiButton:export-report/auraHtml:button' tag='BUTTON' type='button' aaname='Exportar' check:text='Exportar' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFIAAAAkCAYAAAAaV21HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHqSURBVGhD7Zq/TsMwEId5DF4AiQEkkBhA8ET8EUgFwdKtD9MFiQXKC1QqrcTQsQpIncvQNluXI2c7qR07rQqXQqrfSd8S++z489mTt+I4JvB7IFIIR+TX5wf1Hm6odbJPTzvbIAC76d1fK1e2u0wkN7yeHQaTgU/r9MCRmYlky6EEUEy3du6LfDneC3YGxbAzT2SoI1gORAoBkUJApBAQKQRECgGRQkCkECWJbNKU7BjTqBHqtzmUKHJAw2BbmdRpNPmbTYNIIdYqst8ZE0VNq49eNH+fdZqJBHMT5HKHkfnMMWlT33zXeW19jUTvVn4Sah73ipl16nrMRptmyTgjNa7Mhpco0o70Z+cVw3Kmj7q/Emzdo7ZwJTGT77bpPFvEooq0NpdFJpnp/BKUKLJgp80i8nKyalGk+SwmP858bD/PF6llp2HaTEWmlS3B+kWqtiTWIFJJzOax2qovcr4Y72jn7r5UwLKjvUgk52bt6iRUUqQbLM2RYi1MCYkG+shzOItkOeY7R064K9KI5uB51BwmksqeVq8iVyMkpGpApBAQKcS/ELkJQKQQECkERArhicQDgdUJPhB4u70MdgbFdGsXvkh+EPR8tBtMAD7sKviIKpXZvbvCs74FsBuuRFsi44gEPwciRYjpG8hg0bXNy7wYAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
-                                  </scg:List>
-                                </uix:TargetAnchorable.Anchors>
-                              </uix:TargetAnchorable>
-                            </uix:NClick.Target>
-                          </uix:NClick>
+                          <ui:GetLastDownloadedFile File="{x:Null}" Timeout="{x:Null}" DisplayName="Wait for Download" DownloadFolder="C:\\Users\\robot.10\\Downloads" sap:VirtualizedContainerService.HintSize="1278,455" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_1">
+                            <ui:GetLastDownloadedFile.Body>
+                              <ActivityAction>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,248" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NClick ClickType="Single" DisplayName="Click 'Exportar'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_28" KeyModifiers="None" MouseButton="Left">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://terpel--fullcopy.lightning.force.com/lightning/r/Report/00O04000000OGr0EAG/view?queryScope=userFolders" DesignTimeRectangle="934, 579, 44, 30" ElementType="Text" FriendlyName="'Exportar'" FullSelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/uiModal:modal/reportsExportDialog/reportsExportDialogFooter:export-dialog-footer/uiButton:export-report/auraIf/auraHtml:span' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/uiModal:modal/reportsExportDialog/reportsExportDialogFooter:export-dialog-footer/uiButton:export-report/auraIf/auraHtml:span' tag='SPAN' type='' aaname='Exportar' check:text='Exportar' /&gt;" Guid="361fe7e0-fe84-4d04-8b96-ee513300b8e5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAiCAYAAAAZHFoXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFJSURBVFhH7Zm9DoJADMd9DF/Ax3TzYVhMfAkSJgdHw+LMorCx1GuvB72DIDJQMW3yX67Xj9+1TOyapoEta3c57GHLMgBtGYC2DEBbBqAtA9DWPwFkUIO0J1Sn+PIvKgG4w0M419ERqtfyx/p/gFvxBCgzcccXw/O2yFxx3rgk9lHyMdorhxuf+7jcr2t5FfHOqE68ym1x9DlPObQuT0V5+1oT30C41L8QNlWf/X0CE9+JBKXmO+jY5+Mk7NQExKMigIsM9YPmrRAHp011r0MK8dhQmqfPPYwbAnjIYOzjCYRJBs38BtDnbAUAar6rI3zLAfokgxVKdjsU/rRCUwAY2/lp8l8BxIbNRs2IhNRIeferhRYlx6b4HC0BjQEYEA3rUA02N8l6/gS+01gjGjKAMd+aWgzwKzIAbRmAtgxAW9sHGPtpsB018AYivRafiV9UqwAAAABJRU5ErkJggg==" InformativeScreenshot="a63e20c4350b5cc54816d121b87dd51d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Validación ventas redenciones Robot | Salesforce' /&gt;" SearchSteps="FuzzySelector, Image">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="917, 578, 78, 32" ElementType="Button" FriendlyName="'Exportar'" FullSelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/uiModal:modal/reportsExportDialog/reportsExportDialogFooter:export-dialog-footer/uiButton:export-report/auraHtml:button' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl sfl-path='uiPanelManager2/uiModal:modal/reportsExportDialog/reportsExportDialogFooter:export-dialog-footer/uiButton:export-report/auraHtml:button' tag='BUTTON' type='button' aaname='Exportar' check:text='Exportar' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFIAAAAkCAYAAAAaV21HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHqSURBVGhD7Zq/TsMwEId5DF4AiQEkkBhA8ET8EUgFwdKtD9MFiQXKC1QqrcTQsQpIncvQNluXI2c7qR07rQqXQqrfSd8S++z489mTt+I4JvB7IFIIR+TX5wf1Hm6odbJPTzvbIAC76d1fK1e2u0wkN7yeHQaTgU/r9MCRmYlky6EEUEy3du6LfDneC3YGxbAzT2SoI1gORAoBkUJApBAQKQRECgGRQkCkECWJbNKU7BjTqBHqtzmUKHJAw2BbmdRpNPmbTYNIIdYqst8ZE0VNq49eNH+fdZqJBHMT5HKHkfnMMWlT33zXeW19jUTvVn4Sah73ipl16nrMRptmyTgjNa7Mhpco0o70Z+cVw3Kmj7q/Emzdo7ZwJTGT77bpPFvEooq0NpdFJpnp/BKUKLJgp80i8nKyalGk+SwmP858bD/PF6llp2HaTEWmlS3B+kWqtiTWIFJJzOax2qovcr4Y72jn7r5UwLKjvUgk52bt6iRUUqQbLM2RYi1MCYkG+shzOItkOeY7R064K9KI5uB51BwmksqeVq8iVyMkpGpApBAQKcS/ELkJQKQQECkERArhicQDgdUJPhB4u70MdgbFdGsXvkh+EPR8tBtMAD7sKviIKpXZvbvCs74FsBuuRFsi44gEPwciRYjpG8hg0bXNy7wYAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                </Sequence>
+                              </ActivityAction>
+                            </ui:GetLastDownloadedFile.Body>
+                          </ui:GetLastDownloadedFile>
                           <Delay Duration="00:01:00" sap:VirtualizedContainerService.HintSize="1278,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
                           <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Validación ventas'" sap:VirtualizedContainerService.HintSize="1278,401" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="b646890d-e415-484e-b581-328f74beaa8b" Version="V1">
                             <uix:NCheckState.IfExists>
