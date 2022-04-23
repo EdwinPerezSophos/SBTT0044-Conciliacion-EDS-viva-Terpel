@@ -7,7 +7,7 @@
     <x:Property Name="In_GBL_Str_CarpetaCompartida" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>874,6825</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1137,6825</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -133,7 +133,7 @@
               </ui:LogMessage>
               <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="724,6034" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <TryCatch.Try>
-                  <Sequence sap:VirtualizedContainerService.HintSize="686,4705" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <Sequence sap:VirtualizedContainerService.HintSize="686,4707" sap2010:WorkflowViewState.IdRef="Sequence_6">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="Str_EDS_Ventas_SQL" />
                     </Sequence.Variables>
@@ -318,7 +318,7 @@
                         </Sequence>
                       </Switch>
                     </Sequence>
-                    <Sequence DisplayName="Guardar Datatables" sap:VirtualizedContainerService.HintSize="644,3912" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                    <Sequence DisplayName="Guardar Datatables" sap:VirtualizedContainerService.HintSize="644,3914" sap2010:WorkflowViewState.IdRef="Sequence_29">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -399,13 +399,13 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:RemoveDuplicateRows>
-                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Por cada posición de la tabla de datos a eliminar se verifica si es necesario eliminar este dato de la tabla de reporte ventas EDS" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="602,1467" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Por cada posición de la tabla de datos a eliminar se verifica si es necesario eliminar este dato de la tabla de reporte ventas EDS" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="602,1469" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
                         <ui:ForEachRow.Body>
                           <ActivityAction x:TypeArguments="sd:DataRow">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRowEliminar" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="568,1306" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="568,1307" sap2010:WorkflowViewState.IdRef="Sequence_33">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:Int32" Name="RowIndex" />
                               </Sequence.Variables>
@@ -414,7 +414,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Sequence sap:VirtualizedContainerService.HintSize="526,1214" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                              <Sequence sap:VirtualizedContainerService.HintSize="526,1215" sap2010:WorkflowViewState.IdRef="Sequence_32">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="sd:DataRow" Name="DataRow_ReporteNovedades" />
                                   <Variable x:TypeArguments="x:String" Name="Str_Validación" />
@@ -469,10 +469,10 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:LookupDataTable>
-                                <If sap2010:Annotation.AnnotationText="Se verifica si la validación dio algun resultado en alguno de los datos y entonce s en esta posición se debe borrar el dato" sap:VirtualizedContainerService.HintSize="484,547" sap2010:WorkflowViewState.IdRef="If_3">
+                                <If sap2010:Annotation.AnnotationText="Se verifica si la validación dio algun resultado en alguno de los datos y entonce s en esta posición se debe borrar el dato" sap:VirtualizedContainerService.HintSize="484,548" sap2010:WorkflowViewState.IdRef="If_3">
                                   <If.Condition>
                                     <InArgument x:TypeArguments="x:Boolean">
-                                      <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_135">Str_Validación != null</mca:CSharpValue>
+                                      <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_158">Str_Validación != "" &amp;&amp; Str_Validación != null</mca:CSharpValue>
                                     </InArgument>
                                   </If.Condition>
                                   <sap:WorkflowViewStateService.ViewState>
