@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Finalización_conciliación" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Finalización_conciliación" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="In_GBL_Str_ReporteVentasSalesforce" Type="InOutArgument(x:String)" />
     <x:Property Name="In_GBL_Str_CarpetaCompartida" Type="InOutArgument(x:String)" />
@@ -11,10 +11,10 @@
     <x:Property Name="In_GBL_Str_ReporteCierreEDSAutomatico" Type="InOutArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1340,1677</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1502,5863</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="35">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -50,10 +50,10 @@
       <x:String>UiPath.Shared.Activities.Business</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>System.Linq.Expressions</x:String>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="36">
       <AssemblyReference>Microsoft.CSharp</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
@@ -90,14 +90,14 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
     <scg:Dictionary x:TypeArguments="x:String, x:Object">
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Finalización conciliación EDS &#xA;&#xA;Precondicion:Documento de reporte de ventas SalesForce, Documento de reporte de fidelizaciones Satelite, Documento Cruze Salesforce, Directorio Ventas Inconsistentes&#xA;&#xA;Acciones: Movimiento de documentos, envio de correo de conciliación y borrado de documentos temporales &#xA;" DisplayName="Finalización_conciliación" sap:VirtualizedContainerService.HintSize="699,1612" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Finalización conciliación EDS &#xA;&#xA;Precondicion:Documento de reporte de ventas SalesForce, Documento de reporte de fidelizaciones Satelite, Documento Cruze Salesforce, Directorio Ventas Inconsistentes&#xA;&#xA;Acciones: Movimiento de documentos, envio de correo de conciliación y borrado de documentos temporales &#xA;" DisplayName="Finalización_conciliación" sap:VirtualizedContainerService.HintSize="1512,5798" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Str_FechaFin" />
       <Variable x:TypeArguments="x:String" Name="Str_FechaInicio" />
@@ -117,7 +117,7 @@
         <x:Boolean x:Key="IsPinned">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Movimiento de documentos del proceso" DisplayName="Finalización de proceso de conciliación " sap:VirtualizedContainerService.HintSize="657,1403" sap2010:WorkflowViewState.IdRef="Sequence_65">
+    <Sequence sap2010:Annotation.AnnotationText="Movimiento de documentos del proceso" DisplayName="Finalización de proceso de conciliación " sap:VirtualizedContainerService.HintSize="1470,5604" sap2010:WorkflowViewState.IdRef="Sequence_65">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -125,20 +125,20 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="Sistema de reintentos en caso de fallo " DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="615,1280" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="Sistema de reintentos en caso de fallo " DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="1428,5481" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
         <ui:RepeatNumberOfTimesX.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="Intento" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="581,1094" sap2010:WorkflowViewState.IdRef="Sequence_64">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1394,5295" sap2010:WorkflowViewState.IdRef="Sequence_64">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage sap2010:Annotation.AnnotationText="Traza inicial" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="539,122" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
+              <ui:LogMessage sap2010:Annotation.AnnotationText="Traza inicial" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1352,122" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
                 <ui:LogMessage.Message>
                   <InArgument x:TypeArguments="x:Object">
                     <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_128">"Finalización Conciliación EDS Intento:"+Intento</mca:CSharpValue>
@@ -151,7 +151,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <Sequence sap2010:Annotation.AnnotationText="Asignacion de Fecha que depende de la info obtenida en el documento de Calendario " DisplayName="Validación de Fecha en Calendario.xlsx" sap:VirtualizedContainerService.HintSize="539,430" sap2010:WorkflowViewState.IdRef="Sequence_80">
+              <Sequence sap2010:Annotation.AnnotationText="Asignacion de Fecha que depende de la info obtenida en el documento de Calendario " DisplayName="Validación de Fecha en Calendario.xlsx" sap:VirtualizedContainerService.HintSize="1352,430" sap2010:WorkflowViewState.IdRef="Sequence_80">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -173,7 +173,7 @@
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence x:Key="Cierre" sap:VirtualizedContainerService.HintSize="473,315" sap2010:WorkflowViewState.IdRef="Sequence_77">
+                  <Sequence x:Key="Cierre" sap:VirtualizedContainerService.HintSize="473,317" sap2010:WorkflowViewState.IdRef="Sequence_77">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -238,7 +238,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:MultipleAssign>
                   </Sequence>
-                  <Sequence x:Key="N" sap:VirtualizedContainerService.HintSize="473,315" sap2010:WorkflowViewState.IdRef="Sequence_78">
+                  <Sequence x:Key="N" sap:VirtualizedContainerService.HintSize="473,317" sap2010:WorkflowViewState.IdRef="Sequence_78">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -303,7 +303,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:MultipleAssign>
                   </Sequence>
-                  <Sequence x:Key="Y" sap:VirtualizedContainerService.HintSize="473,315" sap2010:WorkflowViewState.IdRef="Sequence_79">
+                  <Sequence x:Key="Y" sap:VirtualizedContainerService.HintSize="473,317" sap2010:WorkflowViewState.IdRef="Sequence_79">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -370,7 +370,7 @@
                   </Sequence>
                 </Switch>
               </Sequence>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="539,370" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1352,4571" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsPinned">True</x:Boolean>
@@ -378,7 +378,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <TryCatch.Try>
-                  <Sequence sap2010:Annotation.AnnotationText="Finalización de Proceso Conciliación EDS" sap:VirtualizedContainerService.HintSize="1314,2980" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                  <Sequence sap2010:Annotation.AnnotationText="Finalización de Proceso Conciliación EDS" sap:VirtualizedContainerService.HintSize="1314,4344" sap2010:WorkflowViewState.IdRef="Sequence_59">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -386,7 +386,7 @@
                         <x:Boolean x:Key="IsPinned">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence sap2010:Annotation.AnnotationText="Movimiento de documentos de la carpeta de Temporales a la carpeta de Salida" sap:VirtualizedContainerService.HintSize="1272,2366" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                    <Sequence sap2010:Annotation.AnnotationText="Movimiento de documentos de la carpeta de Temporales a la carpeta de Salida" sap:VirtualizedContainerService.HintSize="1272,2320" sap2010:WorkflowViewState.IdRef="Sequence_73">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -394,7 +394,7 @@
                           <x:Boolean x:Key="IsPinned">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence sap2010:Annotation.AnnotationText="Validacion de documentos " sap:VirtualizedContainerService.HintSize="526,876" sap2010:WorkflowViewState.IdRef="Sequence_92">
+                      <Sequence sap2010:Annotation.AnnotationText="Validacion de documentos " sap:VirtualizedContainerService.HintSize="526,853" sap2010:WorkflowViewState.IdRef="Sequence_92">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -554,7 +554,7 @@
                             </If.Else>
                           </If>
                         </Sequence>
-                        <Sequence sap2010:Annotation.AnnotationText="Validacion de existencia documento Cierre EDS" sap:VirtualizedContainerService.HintSize="200,115" sap2010:WorkflowViewState.IdRef="Sequence_101">
+                        <Sequence sap2010:Annotation.AnnotationText="Validacion de existencia documento Cierre EDS" sap:VirtualizedContainerService.HintSize="200,108" sap2010:WorkflowViewState.IdRef="Sequence_101">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -630,7 +630,7 @@
                             </If.Else>
                           </If>
                         </Sequence>
-                        <Sequence sap2010:Annotation.AnnotationText="Validacion de existencia documento Ventas Inconsistentes" sap:VirtualizedContainerService.HintSize="200,131.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_87">
+                        <Sequence sap2010:Annotation.AnnotationText="Validacion de existencia documento Ventas Inconsistentes" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="Sequence_87">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -656,7 +656,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:FileExistsX>
-                          <If sap:VirtualizedContainerService.HintSize="484,461" sap2010:WorkflowViewState.IdRef="If_15">
+                          <If sap:VirtualizedContainerService.HintSize="484,460" sap2010:WorkflowViewState.IdRef="If_15">
                             <If.Condition>
                               <InArgument x:TypeArguments="x:Boolean">
                                 <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_150">!Bool_ExisteReporteSalesforce</mca:CSharpValue>
@@ -712,7 +712,7 @@
                             </If.Else>
                           </If>
                         </Sequence>
-                        <Sequence sap2010:Annotation.AnnotationText="Validacion de existencia documento Cruce SAP vs Salesforce" sap:VirtualizedContainerService.HintSize="200,131.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_91">
+                        <Sequence sap2010:Annotation.AnnotationText="Validacion de existencia documento Cruce SAP vs Salesforce" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="Sequence_91">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -795,7 +795,7 @@
                           </If>
                         </Sequence>
                       </Sequence>
-                      <Sequence sap2010:Annotation.AnnotationText="Movimiento de documentos a carpeta de Salida" sap:VirtualizedContainerService.HintSize="526,1327.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_102">
+                      <Sequence sap2010:Annotation.AnnotationText="Movimiento de documentos a carpeta de Salida" sap:VirtualizedContainerService.HintSize="526,1304" sap2010:WorkflowViewState.IdRef="Sequence_102">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -803,7 +803,7 @@
                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:MoveFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Movimiento de documento ReporteVentasSalesforce" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="484,192.666666666667" sap2010:WorkflowViewState.IdRef="MoveFile_4" Overwrite="True">
+                        <ui:MoveFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Movimiento de documento ReporteVentasSalesforce" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="484,188" sap2010:WorkflowViewState.IdRef="MoveFile_4" Overwrite="True">
                           <ui:MoveFile.Destination>
                             <InArgument x:TypeArguments="x:String">
                               <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_166">In_GBL_Str_CarpetaCompartida+In_GBL_Str_ReporteVentasSalesforce</mca:CSharpValue>
@@ -822,7 +822,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:MoveFile>
-                        <ui:MoveFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Movimiento de documento ReporteVentasSatelite" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="484,192.666666666667" sap2010:WorkflowViewState.IdRef="MoveFile_5" Overwrite="True">
+                        <ui:MoveFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Movimiento de documento ReporteVentasSatelite" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="484,188" sap2010:WorkflowViewState.IdRef="MoveFile_5" Overwrite="True">
                           <ui:MoveFile.Destination>
                             <InArgument x:TypeArguments="x:String">
                               <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_168">In_GBL_Str_CarpetaCompartida+In_GBL_Str_ReporteVentasSatelite</mca:CSharpValue>
@@ -841,7 +841,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:MoveFile>
-                        <ui:MoveFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Movimiento de documento ReporteCierreEDSAutomatico" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="484,192.666666666667" sap2010:WorkflowViewState.IdRef="MoveFile_7" Overwrite="True">
+                        <ui:MoveFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Movimiento de documento ReporteCierreEDSAutomatico" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="484,188" sap2010:WorkflowViewState.IdRef="MoveFile_7" Overwrite="True">
                           <ui:MoveFile.Destination>
                             <InArgument x:TypeArguments="x:String">
                               <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_211">In_GBL_Str_CarpetaCompartida+In_GBL_Str_ReporteCierreEDSAutomatico</mca:CSharpValue>
@@ -860,7 +860,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:MoveFile>
-                        <If sap:VirtualizedContainerService.HintSize="484,506.666666666667" sap2010:WorkflowViewState.IdRef="If_17">
+                        <If sap:VirtualizedContainerService.HintSize="484,497" sap2010:WorkflowViewState.IdRef="If_17">
                           <If.Condition>
                             <InArgument x:TypeArguments="x:Boolean">
                               <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_157">!!Bool_IncluirSAP</mca:CSharpValue>
@@ -873,7 +873,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <If.Then>
-                            <Sequence sap2010:Annotation.AnnotationText="Movimiento de archivos" sap:VirtualizedContainerService.HintSize="426,315.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_93">
+                            <Sequence sap2010:Annotation.AnnotationText="Movimiento de archivos" sap:VirtualizedContainerService.HintSize="426,311" sap2010:WorkflowViewState.IdRef="Sequence_93">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -881,7 +881,7 @@
                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:MoveFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Movimiento de documento Cruce SAP vs Salesforce" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="384,192.666666666667" sap2010:WorkflowViewState.IdRef="MoveFile_3" Overwrite="True">
+                              <ui:MoveFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Movimiento de documento Cruce SAP vs Salesforce" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="384,188" sap2010:WorkflowViewState.IdRef="MoveFile_3" Overwrite="True">
                                 <ui:MoveFile.Destination>
                                   <InArgument x:TypeArguments="x:String">
                                     <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_164">In_GBL_Str_CarpetaCompartida+In_GBL_Str_ReporteSAPvsSalesforce</mca:CSharpValue>
@@ -915,7 +915,7 @@
                         </If>
                       </Sequence>
                     </Sequence>
-                    <Sequence sap2010:Annotation.AnnotationText="Envio de correo de confirmación Finalización conciliacion EDS" sap:VirtualizedContainerService.HintSize="1272,803" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                    <Sequence sap2010:Annotation.AnnotationText="Envio de correo de confirmación Finalización conciliacion EDS" sap:VirtualizedContainerService.HintSize="1272,806" sap2010:WorkflowViewState.IdRef="Sequence_72">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="Str_Subject" />
                         <Variable x:TypeArguments="x:String" Name="Str_Body" />
@@ -927,7 +927,7 @@
                           <x:Boolean x:Key="IsPinned">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:MultipleAssign sap2010:Annotation.AnnotationText="Asignación de Asunto y Cuerpo del correo a enviar" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1227.33333333333,160.666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_13">
+                      <ui:MultipleAssign sap2010:Annotation.AnnotationText="Asignación de Asunto y Cuerpo del correo a enviar" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1230,162" sap2010:WorkflowViewState.IdRef="MultipleAssign_13">
                         <ui:MultipleAssign.AssignOperations>
                           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_38">
@@ -965,7 +965,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:MultipleAssign>
-                      <If sap2010:Annotation.AnnotationText="Validación de estado en SAP" sap:VirtualizedContainerService.HintSize="1230,479" sap2010:WorkflowViewState.IdRef="If_18">
+                      <If sap2010:Annotation.AnnotationText="Validación de estado en SAP" sap:VirtualizedContainerService.HintSize="1230,481" sap2010:WorkflowViewState.IdRef="If_18">
                         <If.Condition>
                           <InArgument x:TypeArguments="x:Boolean">
                             <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_175">!!Bool_IncluirSAP</mca:CSharpValue>
@@ -978,14 +978,14 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <If.Then>
-                          <Sequence sap:VirtualizedContainerService.HintSize="943,291" sap2010:WorkflowViewState.IdRef="Sequence_97">
+                          <Sequence sap:VirtualizedContainerService.HintSize="943,293" sap2010:WorkflowViewState.IdRef="Sequence_97">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Switch x:TypeArguments="x:Boolean" sap2010:Annotation.AnnotationText="Envio de correo en caso de existencia de documentos&#xA;" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="901,199" sap2010:WorkflowViewState.IdRef="Switch`1_6">
+                            <Switch x:TypeArguments="x:Boolean" sap2010:Annotation.AnnotationText="Envio de correo en caso de existencia de documentos&#xA;" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="901,201" sap2010:WorkflowViewState.IdRef="Switch`1_6">
                               <Switch.Expression>
                                 <InArgument x:TypeArguments="x:Boolean">
                                   <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_216">Bool_ExisteReporteSalesforce &amp;&amp; Bool_ExisteReporteSatelite &amp;&amp; Bool_ExisteReporteCierreEDSAutomatico &amp;&amp; Bool_ExisteReporteVentasInconsistentes</mca:CSharpValue>
@@ -998,7 +998,7 @@
                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="True" DisplayName="Invoke Envio de Correo Email workflow" sap:VirtualizedContainerService.HintSize="340.666666666667,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Libreria Común\\Envio de Correo Email.xaml">
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="True" DisplayName="Invoke Envio de Correo Email workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Libreria Común\\Envio de Correo Email.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
                                   <InArgument x:TypeArguments="x:Int32" x:Key="In_Int_NumIntentos">
                                     <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_176">In_GBL_Int_NumIntentos</mca:CSharpValue>
@@ -1034,7 +1034,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:InvokeWorkflowFile>
-                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="False" DisplayName="Invoke Envio de Correo Email workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Libreria Común\\Envio de Correo Email.xaml">
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="False" DisplayName="Invoke Envio de Correo Email workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Libreria Común\\Envio de Correo Email.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
                                   <InArgument x:TypeArguments="x:Int32" x:Key="In_Int_NumIntentos">
                                     <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_189">In_GBL_Int_NumIntentos</mca:CSharpValue>
@@ -1070,14 +1070,14 @@
                           </Sequence>
                         </If.Then>
                         <If.Else>
-                          <Sequence sap:VirtualizedContainerService.HintSize="242,190" sap2010:WorkflowViewState.IdRef="Sequence_98">
+                          <Sequence sap:VirtualizedContainerService.HintSize="242,185" sap2010:WorkflowViewState.IdRef="Sequence_98">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Switch x:TypeArguments="x:Boolean" sap2010:Annotation.AnnotationText="Envio de correo en caso de existencia de documentos" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="200,98" sap2010:WorkflowViewState.IdRef="Switch`1_7">
+                            <Switch x:TypeArguments="x:Boolean" sap2010:Annotation.AnnotationText="Envio de correo en caso de existencia de documentos" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="Switch`1_7">
                               <Switch.Expression>
                                 <InArgument x:TypeArguments="x:Boolean">
                                   <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_217">Bool_ExisteReporteSalesforce &amp;&amp; Bool_ExisteReporteSatelite &amp;&amp; Bool_ExisteReporteCierreEDSAutomatico &amp;&amp; Bool_ExisteReporteVentasInconsistentes</mca:CSharpValue>
@@ -1161,15 +1161,80 @@
                         </If.Else>
                       </If>
                     </Sequence>
-                    <Sequence sap2010:Annotation.AnnotationText="Borrado de documentos Temporales" sap:VirtualizedContainerService.HintSize="1272,108" sap2010:WorkflowViewState.IdRef="Sequence_71">
+                    <Sequence sap2010:Annotation.AnnotationText="Borrado de documentos Temporales" sap:VirtualizedContainerService.HintSize="1272,691" sap2010:WorkflowViewState.IdRef="Sequence_71">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:ForEachFileX sap2010:Annotation.AnnotationText="Busqueda de todos los Archivos de tipo .xlsx" DisplayName="For Each File in Folder" Filter="*.xlsx" sap:VirtualizedContainerService.HintSize="460,442" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst">
+                      <Sequence sap2010:Annotation.AnnotationText="Validacion de SAP Depurado" sap:VirtualizedContainerService.HintSize="460,97" sap2010:WorkflowViewState.IdRef="Sequence_109">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:Boolean" Name="bol_Existe_Archivo_SAP" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:FileExistsX sap2010:Annotation.AnnotationText="Se verifica si el archivo ya existe para eliminarlo y poder crearlo de nuevo" DisplayName="File Exists" sap:VirtualizedContainerService.HintSize="484,174" sap2010:WorkflowViewState.IdRef="FileExistsX_8" Path="Data\\Temp\\SAP\\Reporte_SAP_Depurado.xlsx">
+                          <ui:FileExistsX.Exists>
+                            <OutArgument x:TypeArguments="x:Boolean">
+                              <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_85">bol_Existe_Archivo_SAP</mca:CSharpReference>
+                            </OutArgument>
+                          </ui:FileExistsX.Exists>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:FileExistsX>
+                        <If sap2010:Annotation.AnnotationText="Si el archivo existe se debe borrar antes de renombarar porque genera problemas si ya existe" sap:VirtualizedContainerService.HintSize="484,428" sap2010:WorkflowViewState.IdRef="If_21">
+                          <If.Condition>
+                            <InArgument x:TypeArguments="x:Boolean">
+                              <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_222">!!bol_Existe_Archivo_SAP</mca:CSharpValue>
+                            </InArgument>
+                          </If.Condition>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <If.Then>
+                            <Sequence sap:VirtualizedContainerService.HintSize="242,200" sap2010:WorkflowViewState.IdRef="Sequence_107">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:DeleteFileX sap2010:Annotation.AnnotationText="Se elimina el archivo si existe para poder renombrar sin problemas" DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="200,108" sap2010:WorkflowViewState.IdRef="DeleteFileX_3" Path="Data\\Temp\\SAP\\Reporte_SAP_Depurado.xlsx">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:DeleteFileX>
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_108">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                      </Sequence>
+                      <ui:ForEachFileX sap2010:Annotation.AnnotationText="Busqueda de todos los Archivos de tipo .xlsx" DisplayName="For Each File in Folder" Filter="*.xlsx" sap:VirtualizedContainerService.HintSize="460,431" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst">
                         <ui:ForEachFileX.Body>
                           <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
                             <ActivityAction.Argument1>
@@ -1178,14 +1243,14 @@
                             <ActivityAction.Argument2>
                               <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                             </ActivityAction.Argument2>
-                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="426,172.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_103">
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="426,171" sap2010:WorkflowViewState.IdRef="Sequence_103">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="384,80.6666666666667" sap2010:WorkflowViewState.IdRef="DeleteFileX_1">
+                              <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="384,79" sap2010:WorkflowViewState.IdRef="DeleteFileX_1">
                                 <ui:DeleteFileX.Path>
                                   <InArgument x:TypeArguments="x:String">
                                     <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_219">CurrentFile.FullName</mca:CSharpValue>
