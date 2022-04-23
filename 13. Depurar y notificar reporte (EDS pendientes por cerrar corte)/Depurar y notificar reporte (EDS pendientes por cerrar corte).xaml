@@ -7,7 +7,7 @@
     <x:Property Name="In_GBL_Str_CorreoEDSsinCerrar" Type="InOutArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1713,8806</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1715.33333333333,8894</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -113,7 +113,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Depuracr y notificar EDS pendientes por cerrar&#xA;&#xA;Precondicion: Archivo &quot;EDS sin cerrar.xlsx&quot;&#xA;&#xA;Acciones: depuracion de documento y envio de correo en caso de requerirlo" DisplayName="Depurar_y_notificar_reporte__EDS_pendientes_por_cerrar_corte_" sap:VirtualizedContainerService.HintSize="1723,8741" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Depuracr y notificar EDS pendientes por cerrar&#xA;&#xA;Precondicion: Archivo &quot;EDS sin cerrar.xlsx&quot;&#xA;&#xA;Acciones: depuracion de documento y envio de correo en caso de requerirlo" DisplayName="Depurar_y_notificar_reporte__EDS_pendientes_por_cerrar_corte_" sap:VirtualizedContainerService.HintSize="1725.33333333333,8829.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Str_ValidacionMes" />
       <Variable x:TypeArguments="sd:DataTable" Name="Dt_EDSSinCerrar" />
@@ -130,7 +130,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Depuracion y envio de correo para notificacio de EDS sin cerrar" DisplayName="Depuracion de reporte &quot;EDS sin cerrar&quot;" sap:VirtualizedContainerService.HintSize="1681,8562" sap2010:WorkflowViewState.IdRef="Sequence_42">
+    <Sequence sap2010:Annotation.AnnotationText="Depuracion y envio de correo para notificacio de EDS sin cerrar" DisplayName="Depuracion de reporte &quot;EDS sin cerrar&quot;" sap:VirtualizedContainerService.HintSize="1683.33333333333,8642" sap2010:WorkflowViewState.IdRef="Sequence_42">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -138,20 +138,20 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="Sistema de reintentos en caso de fallo " DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="1639,8439" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="Sistema de reintentos en caso de fallo " DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="1641.33333333333,8519.33333333333" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
         <ui:RepeatNumberOfTimesX.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="Intento" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1605,8253" sap2010:WorkflowViewState.IdRef="Sequence_41">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1607.33333333333,8328" sap2010:WorkflowViewState.IdRef="Sequence_41">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage sap2010:Annotation.AnnotationText="Traza inicial" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1563,122" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
+              <ui:LogMessage sap2010:Annotation.AnnotationText="Traza inicial" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1565.33333333333,125.333333333333" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
                 <ui:LogMessage.Message>
                   <InArgument x:TypeArguments="x:Object">
                     <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">"Cierre EDS por solicitud manual Intento:"+Intento</mca:CSharpValue>
@@ -164,7 +164,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1563,7999" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1565.33333333333,8070.66666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -172,13 +172,13 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <TryCatch.Try>
-                  <Sequence sap:VirtualizedContainerService.HintSize="1525,6717" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                  <Sequence sap:VirtualizedContainerService.HintSize="1526.66666666667,6778.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_51">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence sap2010:Annotation.AnnotationText="Asignacion de Fecha que depende de la info obtenida en el documento de Calendario " DisplayName="Validación de Fecha en Calendario.xlsx" sap:VirtualizedContainerService.HintSize="1483,1434" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                    <Sequence sap2010:Annotation.AnnotationText="Asignacion de Fecha que depende de la info obtenida en el documento de Calendario " DisplayName="Validación de Fecha en Calendario.xlsx" sap:VirtualizedContainerService.HintSize="1484.66666666667,1437.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_50">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -186,8 +186,8 @@
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:Comment sap:VirtualizedContainerService.HintSize="513,55" sap2010:WorkflowViewState.IdRef="Comment_4" Text="// siempre se debe ejecutar este script" />
-                      <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Asignación de fecha Actual en documento Calendario.xlsx" DisplayName="Asignación Fecha Inicial y Final" sap:VirtualizedContainerService.HintSize="513,1216" sap2010:WorkflowViewState.IdRef="Switch`1_3">
+                      <ui:Comment sap:VirtualizedContainerService.HintSize="513.333333333333,55.3333333333333" sap2010:WorkflowViewState.IdRef="Comment_4" Text="// siempre se debe ejecutar este script" />
+                      <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Asignación de fecha Actual en documento Calendario.xlsx" DisplayName="Asignación Fecha Inicial y Final" sap:VirtualizedContainerService.HintSize="513.333333333333,1219.33333333333" sap2010:WorkflowViewState.IdRef="Switch`1_3">
                         <Switch.Expression>
                           <InArgument x:TypeArguments="x:String">
                             <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_63">In_GBL_Dt_Calendario_row.Rows[0][1].ToString()</mca:CSharpValue>
@@ -200,13 +200,13 @@
                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Sequence x:Key="Cierre" sap:VirtualizedContainerService.HintSize="473,254" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                        <Sequence x:Key="Cierre" sap:VirtualizedContainerService.HintSize="473.333333333333,252.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_47">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,162" sap2010:WorkflowViewState.IdRef="MultipleAssign_8">
+                          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431.333333333333,160.666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_8">
                             <ui:MultipleAssign.AssignOperations>
                               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_22">
@@ -249,13 +249,13 @@
                             </ui:MultipleAssign.AssignOperations>
                           </ui:MultipleAssign>
                         </Sequence>
-                        <Sequence x:Key="N" sap:VirtualizedContainerService.HintSize="473,254" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                        <Sequence x:Key="N" sap:VirtualizedContainerService.HintSize="473.333333333333,252.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_48">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,162" sap2010:WorkflowViewState.IdRef="MultipleAssign_11">
+                          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431.333333333333,160.666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_11">
                             <ui:MultipleAssign.AssignOperations>
                               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_27">
@@ -298,13 +298,13 @@
                             </ui:MultipleAssign.AssignOperations>
                           </ui:MultipleAssign>
                         </Sequence>
-                        <Sequence x:Key="Y" sap:VirtualizedContainerService.HintSize="473,254" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                        <Sequence x:Key="Y" sap:VirtualizedContainerService.HintSize="473.333333333333,252.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_49">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,162" sap2010:WorkflowViewState.IdRef="MultipleAssign_12">
+                          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431.333333333333,160.666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_12">
                             <ui:MultipleAssign.AssignOperations>
                               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_30">
@@ -349,7 +349,7 @@
                         </Sequence>
                       </Switch>
                     </Sequence>
-                    <Sequence sap2010:Annotation.AnnotationText="Validacion de Documento EDS sin cerrar" sap:VirtualizedContainerService.HintSize="1483,4827" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                    <Sequence sap2010:Annotation.AnnotationText="Validacion de Documento EDS sin cerrar" sap:VirtualizedContainerService.HintSize="1484.66666666667,4885.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_52">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -357,7 +357,7 @@
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:FileExistsX sap2010:Annotation.AnnotationText="Validacion de archivo &quot;EDS sin cerrar.xlsx&quot;" DisplayName="File Exists" sap:VirtualizedContainerService.HintSize="1441,163" sap2010:WorkflowViewState.IdRef="FileExistsX_1">
+                      <ui:FileExistsX sap2010:Annotation.AnnotationText="Validacion de archivo &quot;EDS sin cerrar.xlsx&quot;" DisplayName="File Exists" sap:VirtualizedContainerService.HintSize="1442.66666666667,166" sap2010:WorkflowViewState.IdRef="FileExistsX_1">
                         <ui:FileExistsX.Exists>
                           <OutArgument x:TypeArguments="x:Boolean">
                             <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_41">Bool_ExisteEDSSinCerrar</mca:CSharpReference>
@@ -374,7 +374,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:FileExistsX>
-                      <If sap2010:Annotation.AnnotationText="Validacion de existencia del documento &#xA;" sap:VirtualizedContainerService.HintSize="1441,4501" sap2010:WorkflowViewState.IdRef="If_4">
+                      <If sap2010:Annotation.AnnotationText="Validacion de existencia del documento &#xA;" sap:VirtualizedContainerService.HintSize="1442.66666666667,4556.66666666667" sap2010:WorkflowViewState.IdRef="If_4">
                         <If.Condition>
                           <InArgument x:TypeArguments="x:Boolean">
                             <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_68">!!Bool_ExisteEDSSinCerrar</mca:CSharpValue>
@@ -388,13 +388,13 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <If.Then>
-                          <Sequence sap:VirtualizedContainerService.HintSize="1020,4302" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                          <Sequence sap:VirtualizedContainerService.HintSize="1020.66666666667,4350.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_53">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Sequence sap2010:Annotation.AnnotationText="Apertura de documento &quot;Eds sin cerrar.xlsx&quot; y documento de Novedades" sap:VirtualizedContainerService.HintSize="978,901" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                            <Sequence sap2010:Annotation.AnnotationText="Apertura de documento &quot;Eds sin cerrar.xlsx&quot; y documento de Novedades" sap:VirtualizedContainerService.HintSize="978.666666666667,910" sap2010:WorkflowViewState.IdRef="Sequence_57">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -402,14 +402,19 @@
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:ReadRange DataTable="{x:Null}" Range="{x:Null}" AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="EDS sin Cerrar">
+                              <ui:ReadRange Range="{x:Null}" AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,86.6666666666667" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="EDS sin Cerrar">
+                                <ui:ReadRange.DataTable>
+                                  <OutArgument x:TypeArguments="sd:DataTable">
+                                    <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_70">Dt_EDSSinCerrar</mca:CSharpReference>
+                                  </OutArgument>
+                                </ui:ReadRange.DataTable>
                                 <ui:ReadRange.WorkbookPath>
                                   <InArgument x:TypeArguments="x:String">
                                     <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_124">In_GBL_Str_CarpetaTemporales+"EDS sin cerrar.xlsx"</mca:CSharpValue>
                                   </InArgument>
                                 </ui:ReadRange.WorkbookPath>
                               </ui:ReadRange>
-                              <ui:FilterDataTable sap2010:Annotation.AnnotationText="Borrado de filas vacias" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="334,191" sap2010:WorkflowViewState.IdRef="FilterDataTable_5" SelectColumnsMode="Keep">
+                              <ui:FilterDataTable sap2010:Annotation.AnnotationText="Borrado de filas vacias" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="334,193.333333333333" sap2010:WorkflowViewState.IdRef="FilterDataTable_5" SelectColumnsMode="Keep">
                                 <ui:FilterDataTable.DataTable>
                                   <InArgument x:TypeArguments="sd:DataTable">
                                     <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_120">Dt_EDSSinCerrar</mca:CSharpValue>
@@ -442,14 +447,19 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:FilterDataTable>
-                              <ui:ReadRange DataTable="{x:Null}" Range="{x:Null}" AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Diferencias Salesforce - Sateli">
+                              <ui:ReadRange Range="{x:Null}" AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,86.6666666666667" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Diferencias Salesforce - Sateli">
+                                <ui:ReadRange.DataTable>
+                                  <OutArgument x:TypeArguments="sd:DataTable">
+                                    <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_71">Dt_DocumentoNovedades</mca:CSharpReference>
+                                  </OutArgument>
+                                </ui:ReadRange.DataTable>
                                 <ui:ReadRange.WorkbookPath>
                                   <InArgument x:TypeArguments="x:String">
                                     <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_125">In_GBL_Str_CarpetaCompartida+"Reportes ventas Inconsistentes\\"+Str_ValidacionMes+".xlsx"</mca:CSharpValue>
                                   </InArgument>
                                 </ui:ReadRange.WorkbookPath>
                               </ui:ReadRange>
-                              <ui:FilterDataTable sap2010:Annotation.AnnotationText="quitar Filas vacias " DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="334,191" sap2010:WorkflowViewState.IdRef="FilterDataTable_6" SelectColumnsMode="Keep">
+                              <ui:FilterDataTable sap2010:Annotation.AnnotationText="quitar Filas vacias " DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="334,193.333333333333" sap2010:WorkflowViewState.IdRef="FilterDataTable_6" SelectColumnsMode="Keep">
                                 <ui:FilterDataTable.DataTable>
                                   <InArgument x:TypeArguments="sd:DataTable">
                                     <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_122">Dt_DocumentoNovedades</mca:CSharpValue>
@@ -482,15 +492,15 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:FilterDataTable>
-                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                                 <ui:CommentOut.Body>
-                                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,318" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="638,1181.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_72">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" sap2010:Annotation.AnnotationText="Apertura de documento EDS sin cerrar" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+                                    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" sap2010:Annotation.AnnotationText="Apertura de documento EDS sin cerrar" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="596,98" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
                                       <ueab:ExcelProcessScopeX.Body>
                                         <ActivityAction x:TypeArguments="ui:IExcelProcess">
                                           <ActivityAction.Argument>
@@ -589,7 +599,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ueab:ExcelProcessScopeX>
-                                    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" sap2010:Annotation.AnnotationText="Apertura de documento Novedades" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+                                    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" sap2010:Annotation.AnnotationText="Apertura de documento Novedades" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="596,98" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
                                       <ueab:ExcelProcessScopeX.Body>
                                         <ActivityAction x:TypeArguments="ui:IExcelProcess">
                                           <ActivityAction.Argument>
@@ -688,7 +698,7 @@
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:CommentOut>
                             </Sequence>
-                            <Sequence sap2010:Annotation.AnnotationText="Filtrado en las Dt's" sap:VirtualizedContainerService.HintSize="978,717" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                            <Sequence sap2010:Annotation.AnnotationText="Filtrado en las Dt's" sap:VirtualizedContainerService.HintSize="978.666666666667,730" sap2010:WorkflowViewState.IdRef="Sequence_58">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -696,7 +706,7 @@
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filtro de filas por registros que contengan &quot;Dia no Cerrado&quot; en la columna &quot;Estado&quot;" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="334,202" sap2010:WorkflowViewState.IdRef="FilterDataTable_4" SelectColumnsMode="Keep">
+                              <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filtro de filas por registros que contengan &quot;Dia no Cerrado&quot; en la columna &quot;Estado&quot;" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="334,208" sap2010:WorkflowViewState.IdRef="FilterDataTable_4" SelectColumnsMode="Keep">
                                 <ui:FilterDataTable.DataTable>
                                   <InArgument x:TypeArguments="sd:DataTable">
                                     <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_78">Dt_EDSSinCerrar</mca:CSharpValue>
@@ -704,7 +714,7 @@
                                 </ui:FilterDataTable.DataTable>
                                 <ui:FilterDataTable.Filters>
                                   <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-                                    <ui:FilterOperationArgument BooleanOperator="And" Operator="STARTSWITH">
+                                    <ui:FilterOperationArgument BooleanOperator="And" Operator="NOTSTARTSWITH">
                                       <ui:FilterOperationArgument.Column>
                                         <InArgument x:TypeArguments="x:String">
                                           <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_79">"Estado"</mca:CSharpValue>
@@ -734,7 +744,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:FilterDataTable>
-                              <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filtro de filas por registros que contengan &quot;No Existe&quot; en la columna &quot;Validación&quot;" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="334,202" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" SelectColumnsMode="Keep">
+                              <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filtro de filas por registros que contengan &quot;No Existe&quot; en la columna &quot;Validación&quot;" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="334,208" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" SelectColumnsMode="Keep">
                                 <ui:FilterDataTable.DataTable>
                                   <InArgument x:TypeArguments="sd:DataTable">
                                     <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_81">Dt_DocumentoNovedades</mca:CSharpValue>
@@ -777,7 +787,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:FilterDataTable>
-                              <ui:RemoveDuplicateRows sap2010:Annotation.AnnotationText="Quitar filas repetidas" DisplayName="Remove Duplicate Rows" sap:VirtualizedContainerService.HintSize="334,110" sap2010:WorkflowViewState.IdRef="RemoveDuplicateRows_1">
+                              <ui:RemoveDuplicateRows sap2010:Annotation.AnnotationText="Quitar filas repetidas" DisplayName="Remove Duplicate Rows" sap:VirtualizedContainerService.HintSize="334,111.333333333333" sap2010:WorkflowViewState.IdRef="RemoveDuplicateRows_1">
                                 <ui:RemoveDuplicateRows.DataTable>
                                   <InArgument x:TypeArguments="sd:DataTable">
                                     <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_116">Dt_DocumentoNovedades</mca:CSharpValue>
@@ -795,7 +805,7 @@
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:RemoveDuplicateRows>
                             </Sequence>
-                            <Sequence sap2010:Annotation.AnnotationText="Extraccion de registros de la tabla Dt_EDSSinCerrar que se encuentren en la tabla Dt_DocumentoNovedades" sap:VirtualizedContainerService.HintSize="978,1263" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                            <Sequence sap2010:Annotation.AnnotationText="Extraccion de registros de la tabla Dt_EDSSinCerrar que se encuentren en la tabla Dt_DocumentoNovedades" sap:VirtualizedContainerService.HintSize="978.666666666667,1285.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_61">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -803,13 +813,13 @@
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Borrado de registros en e documento de Dt_EDSSinCerrar" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="560,1129" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Borrado de registros en e documento de Dt_EDSSinCerrar" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="560,1148" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                                 <ui:ForEachRow.Body>
                                   <ActivityAction x:TypeArguments="sd:DataRow">
                                     <ActivityAction.Argument>
                                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                                     </ActivityAction.Argument>
-                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,979" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,996.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_62">
                                       <Sequence.Variables>
                                         <Variable x:TypeArguments="x:String" Name="Str_Validacion" />
                                         <Variable x:TypeArguments="x:Int32" Name="Int_RowIndex" />
@@ -819,7 +829,7 @@
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" sap2010:Annotation.AnnotationText="busqueda de datos en tabla Dt_EDSSinCerrar" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="484,322" sap2010:WorkflowViewState.IdRef="LookupDataTable_1" LookupColumnName="CodigoUnico" TargetColumnName="CodigoUnico">
+                                      <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" sap2010:Annotation.AnnotationText="busqueda de datos en tabla Dt_EDSSinCerrar" DisplayName="Lookup Data Table" sap:VirtualizedContainerService.HintSize="484,330" sap2010:WorkflowViewState.IdRef="LookupDataTable_1" LookupColumnName="CodigoUnico" TargetColumnName="CodigoUnico">
                                         <ui:LookupDataTable.CellValue>
                                           <OutArgument x:TypeArguments="x:String">
                                             <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_49">Str_Validacion</mca:CSharpReference>
@@ -846,7 +856,7 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:LookupDataTable>
-                                      <If sap2010:Annotation.AnnotationText="Validacion de busqueda " sap:VirtualizedContainerService.HintSize="484,525" sap2010:WorkflowViewState.IdRef="If_5">
+                                      <If sap2010:Annotation.AnnotationText="Validacion de busqueda " sap:VirtualizedContainerService.HintSize="484,534.666666666667" sap2010:WorkflowViewState.IdRef="If_5">
                                         <If.Condition>
                                           <InArgument x:TypeArguments="x:Boolean">
                                             <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_87">Str_Validacion != null</mca:CSharpValue>
@@ -858,13 +868,13 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                         <If.Then>
-                                          <Sequence sap:VirtualizedContainerService.HintSize="343,308" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                                          <Sequence sap:VirtualizedContainerService.HintSize="345.333333333333,312.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_63">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:RemoveDataRow Row="{x:Null}" sap2010:Annotation.AnnotationText="eliminacion de fila en la tabla" DisplayName="Remove Data Row" sap:VirtualizedContainerService.HintSize="301,216" sap2010:WorkflowViewState.IdRef="RemoveDataRow_1">
+                                            <ui:RemoveDataRow Row="{x:Null}" sap2010:Annotation.AnnotationText="eliminacion de fila en la tabla" DisplayName="Remove Data Row" sap:VirtualizedContainerService.HintSize="303.333333333333,220.666666666667" sap2010:WorkflowViewState.IdRef="RemoveDataRow_1">
                                               <ui:RemoveDataRow.DataTable>
                                                 <InOutArgument x:TypeArguments="sd:DataTable">
                                                   <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_51">Dt_EDSSinCerrar</mca:CSharpReference>
@@ -908,7 +918,7 @@
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:ForEachRow>
                             </Sequence>
-                            <Sequence sap2010:Annotation.AnnotationText="Validacion de registros en la tabla Dt_EDSSinCerrar y envio de correo " sap:VirtualizedContainerService.HintSize="978,1209" sap2010:WorkflowViewState.IdRef="Sequence_67">
+                            <Sequence sap2010:Annotation.AnnotationText="Validacion de registros en la tabla Dt_EDSSinCerrar y envio de correo " sap:VirtualizedContainerService.HintSize="978.666666666667,1213.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_67">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -916,7 +926,7 @@
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <If sap2010:Annotation.AnnotationText="Validacion si hay dias sin cerrar que no esten en el documento de novedades " sap:VirtualizedContainerService.HintSize="936,1086" sap2010:WorkflowViewState.IdRef="If_6">
+                              <If sap2010:Annotation.AnnotationText="Validacion si hay dias sin cerrar que no esten en el documento de novedades " sap:VirtualizedContainerService.HintSize="936.666666666667,1090.66666666667" sap2010:WorkflowViewState.IdRef="If_6">
                                 <If.Condition>
                                   <InArgument x:TypeArguments="x:Boolean">
                                     <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_97">Dt_EDSSinCerrar.RowCount() &gt;0</mca:CSharpValue>
@@ -928,20 +938,20 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="515,898" sap2010:WorkflowViewState.IdRef="Sequence_71">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="514.666666666667,899.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_71">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Sequence sap2010:Annotation.AnnotationText="Actualización de documento de EDS sin cerrar" sap:VirtualizedContainerService.HintSize="473,329" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                                    <Sequence sap2010:Annotation.AnnotationText="Actualización de documento de EDS sin cerrar" sap:VirtualizedContainerService.HintSize="472.666666666667,330" sap2010:WorkflowViewState.IdRef="Sequence_65">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:WriteRange AddHeaders="True" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="EDS sin Cerrar" StartingCell="A1">
+                                      <ui:WriteRange AddHeaders="True" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,114.666666666667" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="EDS sin Cerrar" StartingCell="A1">
                                         <ui:WriteRange.DataTable>
                                           <InArgument x:TypeArguments="sd:DataTable">
                                             <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_126">Dt_EDSSinCerrar</mca:CSharpValue>
@@ -953,21 +963,21 @@
                                           </InArgument>
                                         </ui:WriteRange.WorkbookPath>
                                       </ui:WriteRange>
-                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_3">
                                         <ui:CommentOut.Body>
-                                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,185" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="638,1147.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_73">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" sap2010:Annotation.AnnotationText="Apertura de documento EDS sin cerrar" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
+                                            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" sap2010:Annotation.AnnotationText="Apertura de documento EDS sin cerrar" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="200,98" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
                                               <ueab:ExcelProcessScopeX.Body>
                                                 <ActivityAction x:TypeArguments="ui:IExcelProcess">
                                                   <ActivityAction.Argument>
                                                     <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                                                   </ActivityAction.Argument>
-                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="562,1009" sap2010:WorkflowViewState.IdRef="Sequence_69">
+                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="562,1009.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_69">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1061,7 +1071,7 @@
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:CommentOut>
                                     </Sequence>
-                                    <Sequence sap2010:Annotation.AnnotationText="Envio de correo para notificación de EDs sin Cerrar" sap:VirtualizedContainerService.HintSize="473,437" sap2010:WorkflowViewState.IdRef="Sequence_70">
+                                    <Sequence sap2010:Annotation.AnnotationText="Envio de correo para notificación de EDs sin Cerrar" sap:VirtualizedContainerService.HintSize="472.666666666667,437.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_70">
                                       <Sequence.Variables>
                                         <Variable x:TypeArguments="x:String" Name="Str_Subject" />
                                         <Variable x:TypeArguments="x:String" Name="Str_Body" />
@@ -1072,7 +1082,7 @@
                                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:MultipleAssign sap2010:Annotation.AnnotationText="Asignacion de datos para el correo " DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,162" sap2010:WorkflowViewState.IdRef="MultipleAssign_13">
+                                      <ui:MultipleAssign sap2010:Annotation.AnnotationText="Asignacion de datos para el correo " DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="430.666666666667,160.666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_13">
                                         <ui:MultipleAssign.AssignOperations>
                                           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                                             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_33">
@@ -1109,7 +1119,7 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:MultipleAssign>
-                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Envio de Correo Email workflow" sap:VirtualizedContainerService.HintSize="431,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Libreria Común\\Envio de Correo Email.xaml">
+                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Envio de Correo Email workflow" sap:VirtualizedContainerService.HintSize="430.666666666667,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Libreria Común\\Envio de Correo Email.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
                                           <InArgument x:TypeArguments="x:Int32" x:Key="In_Int_NumIntentos">
                                             <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_109">In_GBL_Int_NumIntentos</mca:CSharpValue>
@@ -1136,13 +1146,13 @@
                                   </Sequence>
                                 </If.Then>
                                 <If.Else>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="376,183" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="376,186.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_66">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_8">
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_8">
                                       <ui:LogMessage.Message>
                                         <InArgument x:TypeArguments="x:Object">
                                           <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_118">"No hay EDS sin cerrar por avisar "</mca:CSharpValue>
