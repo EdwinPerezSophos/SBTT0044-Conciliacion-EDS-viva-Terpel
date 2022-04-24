@@ -1,0 +1,171 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Pruebas" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1350,1287.33333333333" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.Entity</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Pruebas" sap:VirtualizedContainerService.HintSize="478.666666666667,1222.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="DtPruebas" />
+      <Variable x:TypeArguments="sd:DataTable" Name="varrara" />
+      <Variable x:TypeArguments="sd:DataTable" Name="DtPruebas2" />
+      <Variable x:TypeArguments="scg:IEnumerable(sd:DataRow)" Name="ListKey" />
+      <Variable x:TypeArguments="scg:IEnumerable(sd:DataColumn)" Name="pruebaColumna" />
+      <Variable x:TypeArguments="scg:List(x:String)" Name="PruebaLInq" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="436.666666666667,86.6666666666667" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Validación ventas redenciones R" WorkbookPath="Data\Temp\Documentos de Prueba\Datos Produccion\Reporte fidelizaciones Salesforce.xlsx">
+      <ui:ReadRange.DataTable>
+        <OutArgument x:TypeArguments="sd:DataTable">
+          <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">DtPruebas</mca:CSharpReference>
+        </OutArgument>
+      </ui:ReadRange.DataTable>
+    </ui:ReadRange>
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="436.666666666667,86.6666666666667" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Reporte ventas Satelite" WorkbookPath="Data\Temp\Documentos de Prueba\Datos Produccion\Reporte fidelizaciones Satelite.xlsx">
+      <ui:ReadRange.DataTable>
+        <OutArgument x:TypeArguments="sd:DataTable">
+          <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">DtPruebas2</mca:CSharpReference>
+        </OutArgument>
+      </ui:ReadRange.DataTable>
+    </ui:ReadRange>
+    <Assign sap:VirtualizedContainerService.HintSize="436.666666666667,62" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="scg:IEnumerable(sd:DataRow)">
+          <mca:CSharpReference x:TypeArguments="scg:IEnumerable(sd:DataRow)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">ListKey</mca:CSharpReference>
+        </OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="scg:IEnumerable(sd:DataRow)">
+          <mca:CSharpValue x:TypeArguments="scg:IEnumerable(sd:DataRow)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">DtPruebas.AsEnumerable().Where(p=&gt;p.Field&lt;string&gt;("Key").ToString().Contains("PC")).ToList()</mca:CSharpValue>
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="436.666666666667,62" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="scg:IEnumerable(sd:DataColumn)">
+          <mca:CSharpReference x:TypeArguments="scg:IEnumerable(sd:DataColumn)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">pruebaColumna</mca:CSharpReference>
+        </OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="scg:IEnumerable(sd:DataColumn)">
+          <mca:CSharpValue x:TypeArguments="scg:IEnumerable(sd:DataColumn)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">DtPruebas.AsEnumerable().Cast&lt;DataRow&gt;().Select(p=&gt;p.Field&lt;string&gt;("Venta: Código Unico PDV").Distinct()).Cast&lt;DataColumn&gt;()</mca:CSharpValue>
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="list = (from items in Dt.AsEnumerable() &#xD;&#xA;let subcad = items.Field&lt;string&gt;(&quot;Venta: Número Tiquete Venta&quot;).ToString().Contains(&quot;PC&quot;) ? items.Field&lt;string&gt;(&quot;Venta: Número Tiquete Venta&quot;).ToString().Substring(6) : items.Field&lt;string&gt;(&quot;Venta: Número Tiquete Venta&quot;).ToString() &#xD;&#xA;let concat = subcad+items.Field&lt;string&gt;(&quot;Venta: Código Unico PDV&quot;).ToString() &#xD;&#xA;select concat).ToList();" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="436.666666666667,164" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="Dt">
+          <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">DtPruebas</mca:CSharpValue>
+        </InArgument>
+        <OutArgument x:TypeArguments="scg:List(x:String)" x:Key="list">
+          <mca:CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">PruebaLInq</mca:CSharpReference>
+        </OutArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436.666666666667,334.666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,256" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeCode ContinueOnError="{x:Null}" Code="list = (from rSales in Dt.AsEnumerable() &#xD;&#xA;let key2 = Dt2.AsEnumerable().Select(p=&gt;p.Field&lt;string&gt;(&quot;Key&quot;).Distinct())&#xD;&#xA;let val = rSales.Field&lt;string&gt;(&quot;Key&quot;).Any(key2)? &quot;Existe en Satelite&quot;:&quot;No Existe en Satelite&quot;&#xD;&#xA;select val).ToList();&#xD;&#xA;" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_4" Language="CSharp">
+            <ui:InvokeCode.Arguments>
+              <InArgument x:TypeArguments="sd:DataTable" x:Key="Dt">
+                <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">DtPruebas</mca:CSharpValue>
+              </InArgument>
+              <InArgument x:TypeArguments="sd:DataTable" x:Key="Dt2">
+                <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">DtPruebas2</mca:CSharpValue>
+              </InArgument>
+              <OutArgument x:TypeArguments="scg:List(x:String)" x:Key="list">
+                <mca:CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">PruebaLInq</mca:CSharpReference>
+              </OutArgument>
+            </ui:InvokeCode.Arguments>
+          </ui:InvokeCode>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="436.666666666667,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">"Lol"</mca:CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+  </Sequence>
+</Activity>
