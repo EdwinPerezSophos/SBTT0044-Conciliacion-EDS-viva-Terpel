@@ -96,6 +96,7 @@
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
       <AssemblyReference>System.Configuration.Install</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Proceso de Conciliacion EDS Viva Terpel&#xA;&#xA;Proceso de extracción de ventas realizadas de las Estaciones de Servicio de Terpel &#xA;&#xA;Creadores: Edwin Perez, Diego Solano&#xA;" DisplayName="Conciliacion EDS Viva Terpel" sap:VirtualizedContainerService.HintSize="1048,3456" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -2039,9 +2040,9 @@
                   <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_143">Bool_ProcessStatus == true &amp;&amp; GBL_Str_EstadoActual == "A"</mca:CSharpValue>
                 </Transition.Condition>
                 <Transition.To>
-                  <State x:Name="__ReferenceID11" sap2010:Annotation.AnnotationText="Ingreso a Salesforce para extraccion de reporte de ventas &#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Ingreso a Salesforce para extracción de ventas en Excel" DisplayName="A. Extracción de ventas fidelización Salesforce" sap:VirtualizedContainerService.HintSize="510,1346" sap2010:WorkflowViewState.IdRef="State_2">
+                  <State x:Name="__ReferenceID11" sap2010:Annotation.AnnotationText="Ingreso a Salesforce para extraccion de reporte de ventas &#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Ingreso a Salesforce para extracción de ventas en Excel" DisplayName="A. Extracción de ventas fidelización Salesforce" sap:VirtualizedContainerService.HintSize="510,1622.66666666667" sap2010:WorkflowViewState.IdRef="State_2">
                     <State.Entry>
-                      <Sequence sap:VirtualizedContainerService.HintSize="463.333333333333,852" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                      <Sequence sap:VirtualizedContainerService.HintSize="463.333333333333,1128.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_23">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2054,6 +2055,30 @@
                             </InArgument>
                           </ui:SetAsset.Value>
                         </ui:SetAsset>
+                        <Sequence sap2010:Annotation.AnnotationText="Logeo en Salesforce" DisplayName="Log en Salesforce" sap:VirtualizedContainerService.HintSize="421.333333333333,236.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke LogIn Saleforce workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_29" UnSafe="False" WorkflowFileName="Libreria Común\\LogIn Saleforce.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_NumIntentos">
+                                <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_180">GBL_Int_NumIntentos</mca:CSharpValue>
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:Int32" x:Key="In_GBL_Int_TiempoEsperaAplicaciones">
+                                <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_179">GBL_Int_TiempoEsperaAplicaciones</mca:CSharpValue>
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:Int32" x:Key="In_GBL_int_TiempoMaxValidaciones">
+                                <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_178">GBL_Int_TiempoMaxValidaciones</mca:CSharpValue>
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="In_GBL_Str_PaginaSalesforce">
+                                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_177">GBL_Str_PaginaSalesforce</mca:CSharpValue>
+                              </InArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                          </ui:InvokeWorkflowFile>
+                        </Sequence>
                         <Sequence DisplayName="Extraccion de reporte " sap:VirtualizedContainerService.HintSize="421.333333333333,236.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_14">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
