@@ -6,7 +6,7 @@
     <x:Property Name="In_GBL_Str_CarpetaCompartida" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1340,3298</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>956,7714</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="70">
@@ -72,7 +72,6 @@
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -80,7 +79,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Revisar si existen diferencias entre los reportes obtenidos en las actividades Extracción de ventas fidelización Salesforce y Extracción de ventas fidelización Satelite&#xA;&#xA;Precondicion:  documento: Reporte fidelizaciones Salesforce.xlsx -- Reporte fidelizaciones Satelite.xlsx&#xA;&#xA;Acciones:Comparaciones entre archivos y movimiento de datos a nuevos archivos consolidados" DisplayName="Validar_ventas_gestionadas" sap:VirtualizedContainerService.HintSize="724,3233" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Revisar si existen diferencias entre los reportes obtenidos en las actividades Extracción de ventas fidelización Salesforce y Extracción de ventas fidelización Satelite&#xA;&#xA;Precondicion:  documento: Reporte fidelizaciones Salesforce.xlsx -- Reporte fidelizaciones Satelite.xlsx&#xA;&#xA;Acciones:Comparaciones entre archivos y movimiento de datos a nuevos archivos consolidados" DisplayName="Validar_ventas_gestionadas" sap:VirtualizedContainerService.HintSize="966,7649" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Str_SystemException" />
       <Variable x:TypeArguments="x:String" Name="Str_Exception" />
@@ -91,7 +90,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="682,3039" sap2010:WorkflowViewState.IdRef="Sequence_22">
+    <Sequence sap:VirtualizedContainerService.HintSize="924,7470" sap2010:WorkflowViewState.IdRef="Sequence_22">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="Str_Fecha_Inicio" />
         <Variable x:TypeArguments="x:String" Name="Str_Fecha_Fin" />
@@ -106,19 +105,19 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="De acuerdo al numero de reintentos estipulado se hacen las ejecuciones necesarias." DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="640,2947" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="De acuerdo al numero de reintentos estipulado se hacen las ejecuciones necesarias." DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="882,7378" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
         <ui:RepeatNumberOfTimesX.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="Intento" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="606,2761" sap2010:WorkflowViewState.IdRef="Sequence_21">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="848,7192" sap2010:WorkflowViewState.IdRef="Sequence_21">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage sap2010:Annotation.AnnotationText="Se imprime en logs para traza" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="564,122" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
+              <ui:LogMessage sap2010:Annotation.AnnotationText="Se imprime en logs para traza" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="806,122" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
                 <ui:LogMessage.Message>
                   <InArgument x:TypeArguments="x:Object">
                     <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_138">"E. Revalidación y cierre EDS inconsistentes, Validar ventas gestionadas - Intento: "+Intento</mca:CSharpValue>
@@ -132,9 +131,9 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="564,2507" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="806,6938" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <TryCatch.Try>
-                  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="376,1178" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="768,5609" sap2010:WorkflowViewState.IdRef="Sequence_17">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="sd:DataTable" Name="Dt_Key_Salesforce" />
                       <Variable x:TypeArguments="sd:DataTable" Name="Dt_Key_Satelite" />
@@ -145,7 +144,7 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence sap2010:Annotation.AnnotationText="Asignacion de Fecha que depende de la info obtenida en el documento de Calendario " DisplayName="Validación de Fecha en Calendario.xlsx" sap:VirtualizedContainerService.HintSize="334,138" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <Sequence sap2010:Annotation.AnnotationText="Asignacion de Fecha que depende de la info obtenida en el documento de Calendario " DisplayName="Validación de Fecha en Calendario.xlsx" sap:VirtualizedContainerService.HintSize="726,138" sap2010:WorkflowViewState.IdRef="Sequence_6">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -320,15 +319,15 @@
                         </Sequence>
                       </Switch>
                     </Sequence>
-                    <Sequence sap2010:Annotation.AnnotationText="Se deben crear datatables a partir de la información en el archivo del mes para poder hacer las comparaciones respectivas" DisplayName="Creación de tablas" sap:VirtualizedContainerService.HintSize="334,153" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                    <Sequence sap2010:Annotation.AnnotationText="Se deben crear datatables a partir de la información en el archivo del mes para poder hacer las comparaciones respectivas" DisplayName="Creación de tablas" sap:VirtualizedContainerService.HintSize="726,4189" sap2010:WorkflowViewState.IdRef="Sequence_41">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Ventas a validar obtenidas desde el rango de un archivo de ventas inconsistentes del mes correspondiente" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="434,129" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="B:E" SheetName="Diferencias Salesforce - Sateli">
+                      <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Ventas a validar obtenidas desde el rango de un archivo de ventas inconsistentes del mes correspondiente" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="684,129" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="B:E" SheetName="Diferencias Salesforce - Sateli">
                         <ui:ReadRange.DataTable>
                           <OutArgument x:TypeArguments="sd:DataTable">
                             <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_85">Dt_Ventas_a_Validar</mca:CSharpReference>
@@ -345,7 +344,7 @@
                           </InArgument>
                         </ui:ReadRange.WorkbookPath>
                       </ui:ReadRange>
-                      <ui:FilterDataTable sap2010:Annotation.AnnotationText="Se elimina el nombre de la EDS del datatable para hacer menos carga en memoria." DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="434,202" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" SelectColumnsMode="Keep">
+                      <ui:FilterDataTable sap2010:Annotation.AnnotationText="Se elimina el nombre de la EDS del datatable para hacer menos carga en memoria." DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="684,202" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" SelectColumnsMode="Keep">
                         <ui:FilterDataTable.DataTable>
                           <InArgument x:TypeArguments="sd:DataTable">
                             <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">Dt_Ventas_a_Validar</mca:CSharpValue>
@@ -386,7 +385,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:FilterDataTable>
-                      <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Se guardan todas las referencias de ventas de SALESFORCE" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="434,129" sap2010:WorkflowViewState.IdRef="ReadRange_2" Range="B:B" SheetName="Validación ventas redenciones R" WorkbookPath="Data\\Temp\\Reporte fidelizaciones Salesforce.xlsx">
+                      <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Se guardan todas las referencias de ventas de SALESFORCE" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="684,129" sap2010:WorkflowViewState.IdRef="ReadRange_2" Range="B:B" SheetName="Validación ventas redenciones R" WorkbookPath="Data\\Temp\\Reporte fidelizaciones Salesforce.xlsx">
                         <ui:ReadRange.DataTable>
                           <OutArgument x:TypeArguments="sd:DataTable">
                             <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_89">Dt_Key_Salesforce</mca:CSharpReference>
@@ -398,7 +397,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:ReadRange>
-                      <ui:FilterDataTable sap2010:Annotation.AnnotationText="Limpiar espacios en blanco" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="434,191" sap2010:WorkflowViewState.IdRef="FilterDataTable_7" SelectColumnsMode="Keep">
+                      <ui:FilterDataTable sap2010:Annotation.AnnotationText="Limpiar espacios en blanco" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="684,191" sap2010:WorkflowViewState.IdRef="FilterDataTable_7" SelectColumnsMode="Keep">
                         <ui:FilterDataTable.DataTable>
                           <InArgument x:TypeArguments="sd:DataTable">
                             <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_129">Dt_Key_Salesforce</mca:CSharpValue>
@@ -431,7 +430,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:FilterDataTable>
-                      <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Se guardan todas las referencias de ventas de SATELITE" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="434,118" sap2010:WorkflowViewState.IdRef="ReadRange_3" Range="B:B" SheetName="Reporte ventas Satelite" WorkbookPath="Data\\Temp\\Reporte fidelizaciones Satelite.xlsx">
+                      <ui:ReadRange AddHeaders="True" sap2010:Annotation.AnnotationText="Se guardan todas las referencias de ventas de SATELITE" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="684,118" sap2010:WorkflowViewState.IdRef="ReadRange_3" Range="B:B" SheetName="Reporte ventas Satelite" WorkbookPath="Data\\Temp\\Reporte fidelizaciones Satelite.xlsx">
                         <ui:ReadRange.DataTable>
                           <OutArgument x:TypeArguments="sd:DataTable">
                             <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_90">Dt_Key_Satelite</mca:CSharpReference>
@@ -443,7 +442,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:ReadRange>
-                      <ui:FilterDataTable sap2010:Annotation.AnnotationText="Limpiar espacios en blanco" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="434,191" sap2010:WorkflowViewState.IdRef="FilterDataTable_8" SelectColumnsMode="Keep">
+                      <ui:FilterDataTable sap2010:Annotation.AnnotationText="Limpiar espacios en blanco" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="684,191" sap2010:WorkflowViewState.IdRef="FilterDataTable_8" SelectColumnsMode="Keep">
                         <ui:FilterDataTable.DataTable>
                           <InArgument x:TypeArguments="sd:DataTable">
                             <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_131">Dt_Key_Satelite</mca:CSharpValue>
@@ -476,17 +475,17 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:FilterDataTable>
-                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Por cada registro de la tabla de inconsistencias se debe validar si esta inconsistente en Salesforce o en satelite, si esta gestionada no se hace nada" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,242" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Por cada registro de la tabla de inconsistencias se debe validar si esta inconsistente en Salesforce o en satelite, si esta gestionada no se hace nada" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="684,2866" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                         <ui:ForEachRow.Body>
                           <ActivityAction x:TypeArguments="sd:DataRow">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="FilaActualValidar" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Mapeo EDS gestionadas" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                            <Sequence DisplayName="Mapeo EDS gestionadas" sap:VirtualizedContainerService.HintSize="650,2705" sap2010:WorkflowViewState.IdRef="Sequence_24">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:MultipleAssign sap2010:Annotation.AnnotationText="Para cada una de las validaciones se verifica las coordenadas si se encuentra en la tablaya sea SF o ST por lo que es importante inicializar la variable antes de cada validación" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="608,188" sap2010:WorkflowViewState.IdRef="MultipleAssign_6">
@@ -520,7 +519,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:MultipleAssign>
-                              <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Se ferifica si tiene inconsistencias en SF o en ST y dependiendo de esto se toma un camino u otro, si es diferente a estos dos escenarios no se hace nada" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="608,2387" sap2010:WorkflowViewState.IdRef="Switch`1_3">
+                              <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Se ferifica si tiene inconsistencias en SF o en ST y dependiendo de esto se toma un camino u otro, si es diferente a estos dos escenarios no se hace nada" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="608,2385" sap2010:WorkflowViewState.IdRef="Switch`1_3">
                                 <Switch.Expression>
                                   <InArgument x:TypeArguments="x:String">
                                     <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">FilaActualValidar["Validación"].ToString()</mca:CSharpValue>
@@ -531,7 +530,7 @@
                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Sequence x:Key="No Existe en Salesforce" sap2010:Annotation.AnnotationText="Si la inconsistencia es que no existe en salesforce SF" DisplayName="SALEFORCE" sap:VirtualizedContainerService.HintSize="526,949" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                <Sequence x:Key="No Existe en Salesforce" sap2010:Annotation.AnnotationText="Si la inconsistencia es que no existe en salesforce SF" DisplayName="SALEFORCE" sap:VirtualizedContainerService.HintSize="526,948" sap2010:WorkflowViewState.IdRef="Sequence_33">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -560,7 +559,7 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </ui:LookupDataTable>
-                                  <If sap2010:Annotation.AnnotationText="Si encuentra una coordenada que sea diferente a -1 se realiza la asignación del estado &quot;Gestionada&quot; en la coumna 'Validación'" sap:VirtualizedContainerService.HintSize="484,423" sap2010:WorkflowViewState.IdRef="If_4">
+                                  <If sap2010:Annotation.AnnotationText="Si encuentra una coordenada que sea diferente a -1 se realiza la asignación del estado &quot;Gestionada&quot; en la coumna 'Validación'" sap:VirtualizedContainerService.HintSize="484,422" sap2010:WorkflowViewState.IdRef="If_4">
                                     <If.Condition>
                                       <InArgument x:TypeArguments="x:Boolean">
                                         <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_90">Int_Coor_Key_SF &gt;=0</mca:CSharpValue>
@@ -702,14 +701,14 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:ForEachRow>
                     </Sequence>
-                    <Sequence sap2010:Annotation.AnnotationText="Se actualiza el archivo excel del mes para enviar las 'Gestionadas' en el archivo original" DisplayName="Mapeo de datos en Excel" sap:VirtualizedContainerService.HintSize="334,138" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                    <Sequence sap2010:Annotation.AnnotationText="Se actualiza el archivo excel del mes para enviar las 'Gestionadas' en el archivo original" DisplayName="Mapeo de datos en Excel" sap:VirtualizedContainerService.HintSize="726,533" sap2010:WorkflowViewState.IdRef="Sequence_40">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="sd:DataTable" Name="Dt_Validacion_SF_ST" />
                       </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -742,7 +741,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:FilterDataTable>
-                      <ui:WriteRange AddHeaders="False" sap2010:Annotation.AnnotationText="Se pega el datatable en el rango de excel correspondiente a las validaciones" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Diferencias Salesforce - Sateli" StartingCell="C1">
+                      <ui:WriteRange AddHeaders="False" sap2010:Annotation.AnnotationText="Se pega el datatable en el rango de excel correspondiente a las validaciones" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Diferencias Salesforce - Sateli" StartingCell="C2">
                         <ui:WriteRange.DataTable>
                           <InArgument x:TypeArguments="sd:DataTable">
                             <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_133">Dt_Validacion_SF_ST</mca:CSharpValue>
@@ -760,7 +759,7 @@
                         </ui:WriteRange.WorkbookPath>
                       </ui:WriteRange>
                     </Sequence>
-                    <Sequence sap2010:Annotation.AnnotationText="Una vez actualizado el escel se procede a crear el query para ejecutar el SP con las eds que esten gestionadas y que no tengan ninguna otra incosistencia, ni en SF ni en ST si cumple con esto, se agregan al query sino, se omiten para cierre manual" DisplayName="Creación de QUERY" sap:VirtualizedContainerService.HintSize="334,213" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                    <Sequence sap2010:Annotation.AnnotationText="Una vez actualizado el escel se procede a crear el query para ejecutar el SP con las eds que esten gestionadas y que no tengan ninguna otra incosistencia, ni en SF ni en ST si cumple con esto, se agregan al query sino, se omiten para cierre manual" DisplayName="Creación de QUERY" sap:VirtualizedContainerService.HintSize="726,213" sap2010:WorkflowViewState.IdRef="Sequence_42">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="sd:DataTable" Name="Dt_EDS_Gestionadas" />
                         <Variable x:TypeArguments="sd:DataTable" Name="Dt_EDS_Inconsistentes" />
@@ -1093,7 +1092,7 @@
                         </If.Else>
                       </If>
                     </Sequence>
-                    <ui:LogMessage sap2010:Annotation.AnnotationText="Se imprime en logs para traza" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,122" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info">
+                    <ui:LogMessage sap2010:Annotation.AnnotationText="Se imprime en logs para traza" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="726,122" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info">
                       <ui:LogMessage.Message>
                         <InArgument x:TypeArguments="x:Object">
                           <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_139">"E. Revalidación y cierre EDS inconsistentes, Depurar reporte (Reporte fidelizaciones Satelite) finalizado exitosamente"</mca:CSharpValue>
