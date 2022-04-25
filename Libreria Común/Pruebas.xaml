@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Pruebas" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1010,1619" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Pruebas" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1010,1710" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -33,6 +33,7 @@
       <x:String>System.Linq.Expressions</x:String>
       <x:String>System.Collections.ObjectModel</x:String>
       <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -71,10 +72,9 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Pruebas" sap:VirtualizedContainerService.HintSize="479,1554" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Pruebas" sap:VirtualizedContainerService.HintSize="479,1645" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="DtPruebas" />
       <Variable x:TypeArguments="sd:DataTable" Name="varrara" />
@@ -104,6 +104,85 @@
         </OutArgument>
       </ui:ReadRange.DataTable>
     </ui:ReadRange>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="437,51" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="552,655" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Acciones para cada uno de los registros de la tabla Dt_ReporteSalesforce" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="510,563" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow.Body>
+              <ActivityAction x:TypeArguments="sd:DataRow">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,413" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="s:String[]" Name="Date_FechaDocumento" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="s:String[]">
+                        <mca:CSharpReference x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">Date_FechaDocumento</mca:CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="s:String[]">
+                        <mca:CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">(CurrentRow["Fecha de documento"]. ToString().Split(" ".ToCharArray())[0]).Split("/".ToCharArray())</mca:CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:UpdateRowItem ColumnIndex="{x:Null}" sap2010:Annotation.AnnotationText="Actualizar la columna de fecha sin la hora " ColumnName="Fecha de documento" DisplayName="Update Row Item" sap:VirtualizedContainerService.HintSize="434,221" sap2010:WorkflowViewState.IdRef="UpdateRowItem_1">
+                    <ui:UpdateRowItem.Row>
+                      <InArgument x:TypeArguments="sd:DataRow">
+                        <mca:CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">CurrentRow</mca:CSharpValue>
+                      </InArgument>
+                    </ui:UpdateRowItem.Row>
+                    <ui:UpdateRowItem.Value>
+                      <InArgument x:TypeArguments="x:Object">
+                        <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">Date_FechaDocumento[1]+"/"+Date_FechaDocumento[0]+"/"+Date_FechaDocumento[2]</mca:CSharpValue>
+                      </InArgument>
+                    </ui:UpdateRowItem.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:UpdateRowItem>
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEachRow.Body>
+            <ui:ForEachRow.DataTable>
+              <InArgument x:TypeArguments="sd:DataTable">
+                <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">Dt_ReporteSAP</mca:CSharpValue>
+              </InArgument>
+            </ui:ForEachRow.DataTable>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ForEachRow>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
     <Assign sap:VirtualizedContainerService.HintSize="437,60" sap2010:WorkflowViewState.IdRef="Assign_3">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:IEnumerable(sd:DataRow)">
@@ -129,7 +208,7 @@
       </Assign.Value>
     </Assign>
     <Assign sap:VirtualizedContainerService.HintSize="437,60" sap2010:WorkflowViewState.IdRef="Assign_4" />
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="dtOut = (from items in Dt.AsEnumerable() &#xD;&#xA;let subcad = items.Field&lt;string&gt;(&quot;Venta: Número Tiquete Venta&quot;).ToString().Contains(&quot;PC&quot;) ? items.Field&lt;string&gt;(&quot;Venta: Número Tiquete Venta&quot;).ToString().Substring(6) : items.Field&lt;string&gt;(&quot;Venta: Número Tiquete Venta&quot;).ToString() &#xD;&#xA;let concat = subcad+items.Field&lt;string&gt;(&quot;Venta: Código Unico PDV&quot;).ToString() &#xD;&#xA;select concat&#xD;&#xA;).ToList&lt;string&gt;();" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="437,164" sap2010:WorkflowViewState.IdRef="InvokeCode_5" Language="CSharp">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="dtOut = (from items in Dt.AsEnumerable() &#xA;let subcad = items.Field&lt;string&gt;(&quot;Venta: Número Tiquete Venta&quot;).ToString().Contains(&quot;PC&quot;) ? items.Field&lt;string&gt;(&quot;Venta: Número Tiquete Venta&quot;).ToString().Substring(6) : items.Field&lt;string&gt;(&quot;Venta: Número Tiquete Venta&quot;).ToString() &#xA;let concat = subcad+items.Field&lt;string&gt;(&quot;Venta: Código Unico PDV&quot;).ToString() &#xA;select concat&#xA;).ToList&lt;string&gt;();" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="437,164" sap2010:WorkflowViewState.IdRef="InvokeCode_5" Language="CSharp">
       <ui:InvokeCode.Arguments>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="Dt">
           <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">DtPruebas</mca:CSharpValue>
@@ -139,7 +218,7 @@
         </OutArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="dtOut = (from items in Dt.AsEnumerable() &#xD;&#xA;let subcad = items.Field&lt;string&gt;(&quot;Venta: Número Tiquete Venta&quot;).ToString().Contains(&quot;PC&quot;) ? items.Field&lt;string&gt;(&quot;Venta: Número Tiquete Venta&quot;).ToString().Substring(6) : items.Field&lt;string&gt;(&quot;Venta: Número Tiquete Venta&quot;).ToString() &#xD;&#xA;let concat = subcad+items.Field&lt;string&gt;(&quot;Venta: Código Unico PDV&quot;).ToString() &#xD;&#xA;select new{&#xD;&#xA;&#x9;Key =  (string)items.Field&lt;string&gt;(&quot;Key&quot;),&#xD;&#xA;     Concat = (string)concat&#xD;&#xA;}&#xD;&#xA;).Cast&lt;DataRow&gt;().CopyToDataTable();" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="437,164" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="dtOut = (from items in Dt.AsEnumerable() &#xA;let subcad = items.Field&lt;string&gt;(&quot;Venta: Número Tiquete Venta&quot;).ToString().Contains(&quot;PC&quot;) ? items.Field&lt;string&gt;(&quot;Venta: Número Tiquete Venta&quot;).ToString().Substring(6) : items.Field&lt;string&gt;(&quot;Venta: Número Tiquete Venta&quot;).ToString() &#xA;let concat = subcad+items.Field&lt;string&gt;(&quot;Venta: Código Unico PDV&quot;).ToString() &#xA;select new{&#xA;&#x9;Key =  (string)items.Field&lt;string&gt;(&quot;Key&quot;),&#xA;     Concat = (string)concat&#xA;}&#xA;).Cast&lt;DataRow&gt;().CopyToDataTable();" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="437,164" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
       <ui:InvokeCode.Arguments>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="Dt">
           <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">DtPruebas</mca:CSharpValue>
