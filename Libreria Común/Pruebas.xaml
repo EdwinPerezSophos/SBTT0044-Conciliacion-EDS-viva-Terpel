@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Pruebas" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1324,1320" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Pruebas" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1010,1619" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -71,9 +71,10 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Pruebas" sap:VirtualizedContainerService.HintSize="478.666666666667,1255.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Pruebas" sap:VirtualizedContainerService.HintSize="479,1554" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="DtPruebas" />
       <Variable x:TypeArguments="sd:DataTable" Name="varrara" />
@@ -81,27 +82,29 @@
       <Variable x:TypeArguments="scg:IEnumerable(sd:DataRow)" Name="ListKey" />
       <Variable x:TypeArguments="scg:IEnumerable(sd:DataColumn)" Name="pruebaColumna" />
       <Variable x:TypeArguments="scg:List(x:String)" Name="PruebaLInq" />
+      <Variable x:TypeArguments="sd:DataTable" Name="DtOut" />
+      <Variable x:TypeArguments="scg:IEnumerable(x:String)" Name="datarow" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="436.666666666667,86.6666666666667" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Validación ventas redenciones R" WorkbookPath="Data\Temp\Documentos de Prueba\Datos Produccion\Reporte fidelizaciones Salesforce.xlsx">
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="437,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Validación ventas redenciones R" WorkbookPath="Data\Temp\Documentos de Prueba\Datos Produccion\Reporte fidelizaciones Salesforce.xlsx">
       <ui:ReadRange.DataTable>
         <OutArgument x:TypeArguments="sd:DataTable">
           <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">DtPruebas</mca:CSharpReference>
         </OutArgument>
       </ui:ReadRange.DataTable>
     </ui:ReadRange>
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="436.666666666667,86.6666666666667" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Reporte ventas Satelite" WorkbookPath="Data\Temp\Documentos de Prueba\Datos Produccion\Reporte fidelizaciones Satelite.xlsx">
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="437,87" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Reporte ventas Satelite" WorkbookPath="Data\Temp\Documentos de Prueba\Datos Produccion\Reporte fidelizaciones Satelite.xlsx">
       <ui:ReadRange.DataTable>
         <OutArgument x:TypeArguments="sd:DataTable">
           <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">DtPruebas2</mca:CSharpReference>
         </OutArgument>
       </ui:ReadRange.DataTable>
     </ui:ReadRange>
-    <Assign sap:VirtualizedContainerService.HintSize="436.666666666667,62" sap2010:WorkflowViewState.IdRef="Assign_3">
+    <Assign sap:VirtualizedContainerService.HintSize="437,60" sap2010:WorkflowViewState.IdRef="Assign_3">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:IEnumerable(sd:DataRow)">
           <mca:CSharpReference x:TypeArguments="scg:IEnumerable(sd:DataRow)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">ListKey</mca:CSharpReference>
@@ -113,7 +116,7 @@
         </InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="436.666666666667,62" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign sap:VirtualizedContainerService.HintSize="437,60" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:IEnumerable(sd:DataColumn)">
           <mca:CSharpReference x:TypeArguments="scg:IEnumerable(sd:DataColumn)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">pruebaColumna</mca:CSharpReference>
@@ -125,17 +128,28 @@
         </InArgument>
       </Assign.Value>
     </Assign>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="list = (from items in Dt.AsEnumerable() &#xA;let subcad = items.Field&lt;string&gt;(&quot;Venta: Número Tiquete Venta&quot;).ToString().Contains(&quot;PC&quot;) ? items.Field&lt;string&gt;(&quot;Venta: Número Tiquete Venta&quot;).ToString().Substring(6) : items.Field&lt;string&gt;(&quot;Venta: Número Tiquete Venta&quot;).ToString() &#xA;let concat = subcad+items.Field&lt;string&gt;(&quot;Venta: Código Unico PDV&quot;).ToString() &#xA;select concat).ToList();" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="436.666666666667,164" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
+    <Assign sap:VirtualizedContainerService.HintSize="437,60" sap2010:WorkflowViewState.IdRef="Assign_4" />
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="dtOut = (from items in Dt.AsEnumerable() &#xD;&#xA;let subcad = items.Field&lt;string&gt;(&quot;Venta: Número Tiquete Venta&quot;).ToString().Contains(&quot;PC&quot;) ? items.Field&lt;string&gt;(&quot;Venta: Número Tiquete Venta&quot;).ToString().Substring(6) : items.Field&lt;string&gt;(&quot;Venta: Número Tiquete Venta&quot;).ToString() &#xD;&#xA;let concat = subcad+items.Field&lt;string&gt;(&quot;Venta: Código Unico PDV&quot;).ToString() &#xD;&#xA;select concat&#xD;&#xA;).ToList&lt;string&gt;();" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="437,164" sap2010:WorkflowViewState.IdRef="InvokeCode_5" Language="CSharp">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="Dt">
+          <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">DtPruebas</mca:CSharpValue>
+        </InArgument>
+        <OutArgument x:TypeArguments="scg:List(x:String)" x:Key="dtOut">
+          <mca:CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">PruebaLInq</mca:CSharpReference>
+        </OutArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="dtOut = (from items in Dt.AsEnumerable() &#xD;&#xA;let subcad = items.Field&lt;string&gt;(&quot;Venta: Número Tiquete Venta&quot;).ToString().Contains(&quot;PC&quot;) ? items.Field&lt;string&gt;(&quot;Venta: Número Tiquete Venta&quot;).ToString().Substring(6) : items.Field&lt;string&gt;(&quot;Venta: Número Tiquete Venta&quot;).ToString() &#xD;&#xA;let concat = subcad+items.Field&lt;string&gt;(&quot;Venta: Código Unico PDV&quot;).ToString() &#xD;&#xA;select new{&#xD;&#xA;&#x9;Key =  (string)items.Field&lt;string&gt;(&quot;Key&quot;),&#xD;&#xA;     Concat = (string)concat&#xD;&#xA;}&#xD;&#xA;).Cast&lt;DataRow&gt;().CopyToDataTable();" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="437,164" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
       <ui:InvokeCode.Arguments>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="Dt">
           <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">DtPruebas</mca:CSharpValue>
         </InArgument>
-        <OutArgument x:TypeArguments="scg:List(x:String)" x:Key="list">
-          <mca:CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">PruebaLInq</mca:CSharpReference>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="dtOut">
+          <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_14">DtOut</mca:CSharpReference>
         </OutArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="list = (from items in Dt.AsEnumerable() &#xD;&#xA;let key2 = Dt2.AsEnumerable().Select(p=&gt;p.Field&lt;string&gt;(&quot;Key&quot;)).Distinct().ToList()&#xD;&#xA;let val = key2.Any(p=&gt;p == items.Field&lt;string&gt;(&quot;Key&quot;).ToString())? &quot;Existe en Satelite&quot;:&quot;No Existe en Satelite&quot;&#xD;&#xA;select val).ToList();&#xD;&#xA;" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="436.666666666667,164" sap2010:WorkflowViewState.IdRef="InvokeCode_4" Language="CSharp">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="list = (from items in Dt.AsEnumerable() &#xA;let key2 = Dt2.AsEnumerable().Select(p=&gt;p.Field&lt;string&gt;(&quot;Key&quot;)).Distinct().ToList()&#xA;let val = key2.Any(p=&gt;p == items.Field&lt;string&gt;(&quot;Key&quot;).ToString())? &quot;Existe en Satelite&quot;:&quot;No Existe en Satelite&quot;&#xA;select val).ToList();&#xA;" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="437,164" sap2010:WorkflowViewState.IdRef="InvokeCode_4" Language="CSharp">
       <ui:InvokeCode.Arguments>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="Dt">
           <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">DtPruebas</mca:CSharpValue>
@@ -148,9 +162,9 @@
         </OutArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436.666666666667,163.333333333333" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="437,161" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="200,84.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>

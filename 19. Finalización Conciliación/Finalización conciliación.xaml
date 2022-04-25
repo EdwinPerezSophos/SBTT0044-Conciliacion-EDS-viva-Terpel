@@ -11,7 +11,7 @@
     <x:Property Name="In_GBL_Str_ReporteCierreEDSAutomatico" Type="InOutArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1502,5863</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1010,2057</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="35">
@@ -53,7 +53,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="36">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="72">
       <AssemblyReference>Microsoft.CSharp</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
@@ -90,6 +90,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -97,7 +98,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Finalización conciliación EDS &#xA;&#xA;Precondicion:Documento de reporte de ventas SalesForce, Documento de reporte de fidelizaciones Satelite, Documento Cruze Salesforce, Directorio Ventas Inconsistentes&#xA;&#xA;Acciones: Movimiento de documentos, envio de correo de conciliación y borrado de documentos temporales &#xA;" DisplayName="Finalización_conciliación" sap:VirtualizedContainerService.HintSize="1512,5798" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Finalización conciliación EDS &#xA;&#xA;Precondicion:Documento de reporte de ventas SalesForce, Documento de reporte de fidelizaciones Satelite, Documento Cruze Salesforce, Directorio Ventas Inconsistentes&#xA;&#xA;Acciones: Movimiento de documentos, envio de correo de conciliación y borrado de documentos temporales &#xA;" DisplayName="Finalización_conciliación" sap:VirtualizedContainerService.HintSize="724,1992" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Str_FechaFin" />
       <Variable x:TypeArguments="x:String" Name="Str_FechaInicio" />
@@ -117,7 +118,7 @@
         <x:Boolean x:Key="IsPinned">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Movimiento de documentos del proceso" DisplayName="Finalización de proceso de conciliación " sap:VirtualizedContainerService.HintSize="1470,5604" sap2010:WorkflowViewState.IdRef="Sequence_65">
+    <Sequence sap2010:Annotation.AnnotationText="Movimiento de documentos del proceso" DisplayName="Finalización de proceso de conciliación " sap:VirtualizedContainerService.HintSize="682,1783" sap2010:WorkflowViewState.IdRef="Sequence_65">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -125,23 +126,23 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="Sistema de reintentos en caso de fallo " DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="1428,5481" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="Sistema de reintentos en caso de fallo " DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="640,1660" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
         <ui:RepeatNumberOfTimesX.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="Intento" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1394,5295" sap2010:WorkflowViewState.IdRef="Sequence_64">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="606,1474" sap2010:WorkflowViewState.IdRef="Sequence_64">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage sap2010:Annotation.AnnotationText="Traza inicial" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1352,122" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
+              <ui:LogMessage sap2010:Annotation.AnnotationText="Traza inicial" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="564,122" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
                 <ui:LogMessage.Message>
                   <InArgument x:TypeArguments="x:Object">
-                    <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_128">"Finalización Conciliación EDS Intento:"+Intento</mca:CSharpValue>
+                    <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_223">"K. Finalización Conciliación EDS Intento:"+Intento</mca:CSharpValue>
                   </InArgument>
                 </ui:LogMessage.Message>
                 <sap:WorkflowViewStateService.ViewState>
@@ -151,7 +152,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <Sequence sap2010:Annotation.AnnotationText="Asignacion de Fecha que depende de la info obtenida en el documento de Calendario " DisplayName="Validación de Fecha en Calendario.xlsx" sap:VirtualizedContainerService.HintSize="1352,430" sap2010:WorkflowViewState.IdRef="Sequence_80">
+              <Sequence sap2010:Annotation.AnnotationText="Asignacion de Fecha que depende de la info obtenida en el documento de Calendario " DisplayName="Validación de Fecha en Calendario.xlsx" sap:VirtualizedContainerService.HintSize="564,430" sap2010:WorkflowViewState.IdRef="Sequence_80">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -370,7 +371,7 @@
                   </Sequence>
                 </Switch>
               </Sequence>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1352,4571" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="564,750" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsPinned">True</x:Boolean>
@@ -1305,7 +1306,7 @@
                   </Sequence>
                 </TryCatch.Try>
                 <TryCatch.Catches>
-                  <Catch x:TypeArguments="s:InvalidOperationException" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <Catch x:TypeArguments="s:InvalidOperationException" sap:VirtualizedContainerService.HintSize="530,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1316,26 +1317,27 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:InvalidOperationException" Name="exception" />
                       </ActivityAction.Argument>
-                      <Sequence sap:VirtualizedContainerService.HintSize="304,330" sap2010:WorkflowViewState.IdRef="Sequence_60">
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,340" sap2010:WorkflowViewState.IdRef="Sequence_60">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage sap2010:Annotation.AnnotationText="mensaje de warning cuando no se puede ejecutar correctamente el depurado del archivo excel&#xA;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="262,138" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Warn">
+                        <ui:LogMessage sap2010:Annotation.AnnotationText="mensaje de warning cuando no se puede ejecutar correctamente el depurado del archivo excel&#xA;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,148" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Warn">
                           <ui:LogMessage.Message>
                             <InArgument x:TypeArguments="x:Object">
-                              <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_116" xml:space="preserve">"Error en la ejecución de extraccion de ventas en SalesForce \n  excepción: "+exception.Message</mca:CSharpValue>
+                              <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_224" xml:space="preserve">"Error en la ejecución de  Finalización Conciliación EDS  \n  excepción: "+exception.Message</mca:CSharpValue>
                             </InArgument>
                           </ui:LogMessage.Message>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:LogMessage>
-                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_14">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:String">
                               <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_77">Str_SystemException</mca:CSharpReference>
@@ -1350,37 +1352,48 @@
                   </Catch>
                 </TryCatch.Catches>
                 <TryCatch.Finally>
-                  <Sequence sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                  <Sequence sap:VirtualizedContainerService.HintSize="526,523" sap2010:WorkflowViewState.IdRef="Sequence_63">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_12">
+                    <If sap:VirtualizedContainerService.HintSize="484,431" sap2010:WorkflowViewState.IdRef="If_12">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_117">(Str_SystemException == "Error") &amp;&amp; (Intento == In_GBL_Int_NumIntentos)</mca:CSharpValue>
                         </InArgument>
                       </If.Condition>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="376,248.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_61">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Fatal">
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Fatal">
                             <ui:LogMessage.Message>
                               <InArgument x:TypeArguments="x:Object">
-                                <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_118">"No se pudo realizar el reporte de ventas en SalesForce "</mca:CSharpValue>
+                                <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_225" xml:space="preserve">"No se pudo realizar  Finalización Conciliación EDS  "</mca:CSharpValue>
                               </InArgument>
                             </ui:LogMessage.Message>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
                           </ui:LogMessage>
                           <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1">
                             <TerminateWorkflow.Exception>
                               <InArgument x:TypeArguments="s:Exception">
-                                <mca:CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_119">new SystemException("Error en el LogIn")</mca:CSharpValue>
+                                <mca:CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_226" xml:space="preserve">new SystemException("Error en  Finalización Conciliación EDS ")</mca:CSharpValue>
                               </InArgument>
                             </TerminateWorkflow.Exception>
                           </TerminateWorkflow>
