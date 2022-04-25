@@ -9,7 +9,7 @@
     <x:Property Name="In_GBL_Str_ReporteSAP" Type="InOutArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1139,12722</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1139,12913</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -92,7 +92,6 @@
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -100,7 +99,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Cruce con SAP  y Salesforce, consolidacion de ventas y cruce acumulado entre SAP y Salesforce&#xA;&#xA;Precondicion: Documento de reporte SAP DEpurado &#xA;&#xA;Acciones: Cruce de documentos de SAP y Salesforce, mirar los acumilados de los EDS y tener un reporte de fechas individuales" DisplayName="Cruce_SAP_y_Salesforce" sap:VirtualizedContainerService.HintSize="1149,12657" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Cruce con SAP  y Salesforce, consolidacion de ventas y cruce acumulado entre SAP y Salesforce&#xA;&#xA;Precondicion: Documento de reporte SAP DEpurado &#xA;&#xA;Acciones: Cruce de documentos de SAP y Salesforce, mirar los acumilados de los EDS y tener un reporte de fechas individuales" DisplayName="Cruce_SAP_y_Salesforce" sap:VirtualizedContainerService.HintSize="1149,12848" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Str_FechaFin" />
       <Variable x:TypeArguments="x:String" Name="Str_FechaInicio" />
@@ -127,7 +126,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Depuracion de documentos SAP y Salesforce" DisplayName="Depuracion de documentos SAP y Salesforce" sap:VirtualizedContainerService.HintSize="1107,12478" sap2010:WorkflowViewState.IdRef="Sequence_38">
+    <Sequence sap2010:Annotation.AnnotationText="Depuracion de documentos SAP y Salesforce" DisplayName="Depuracion de documentos SAP y Salesforce" sap:VirtualizedContainerService.HintSize="1107,12669" sap2010:WorkflowViewState.IdRef="Sequence_38">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -135,13 +134,13 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="Sistema de reintentos en caso de fallo " DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="1065,12355" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="Sistema de reintentos en caso de fallo " DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="1065,12546" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
         <ui:RepeatNumberOfTimesX.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="Intento" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1031,12169" sap2010:WorkflowViewState.IdRef="Sequence_37">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1031,12360" sap2010:WorkflowViewState.IdRef="Sequence_37">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -161,7 +160,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="989,11915" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="989,12106" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsPinned">True</x:Boolean>
@@ -169,14 +168,14 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <TryCatch.Try>
-                  <Sequence sap:VirtualizedContainerService.HintSize="951,11688" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                  <Sequence sap:VirtualizedContainerService.HintSize="951,11879" sap2010:WorkflowViewState.IdRef="Sequence_32">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence sap2010:Annotation.AnnotationText="Apertura del documento de Excel" sap:VirtualizedContainerService.HintSize="909,11272" sap2010:WorkflowViewState.IdRef="Sequence_106">
+                    <Sequence sap2010:Annotation.AnnotationText="Apertura del documento de Excel" sap:VirtualizedContainerService.HintSize="909,11463" sap2010:WorkflowViewState.IdRef="Sequence_106">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -526,7 +525,7 @@
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:CommentOut>
                       </Sequence>
-                      <Sequence sap2010:Annotation.AnnotationText="Validación de columnas fecha en las Dt's y valores de Dt_ReporteSalesforce" sap:VirtualizedContainerService.HintSize="867,1180" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                      <Sequence sap2010:Annotation.AnnotationText="Validación de columnas fecha en las Dt's y valores de Dt_ReporteSalesforce" sap:VirtualizedContainerService.HintSize="867,1371" sap2010:WorkflowViewState.IdRef="Sequence_66">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -605,28 +604,43 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:ForEachRow>
-                        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Acciones para cada uno de los registros de la tabla Dt_ReporteSalesforce" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="510,463" sap2010:WorkflowViewState.IdRef="ForEachRow_12">
+                        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Acciones para cada uno de los registros de la tabla Dt_ReporteSalesforce" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="510,563" sap2010:WorkflowViewState.IdRef="ForEachRow_22">
                           <ui:ForEachRow.Body>
                             <ActivityAction x:TypeArguments="sd:DataRow">
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,313" sap2010:WorkflowViewState.IdRef="Sequence_125">
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,413" sap2010:WorkflowViewState.IdRef="Sequence_193">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="s:String[]" Name="Date_FechaDocumento" />
+                                </Sequence.Variables>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:UpdateRowItem ColumnIndex="{x:Null}" sap2010:Annotation.AnnotationText="Actualizar la columna de fecha sin la hora " ColumnName="Fecha de documento" DisplayName="Update Row Item" sap:VirtualizedContainerService.HintSize="434,221" sap2010:WorkflowViewState.IdRef="UpdateRowItem_7">
+                                <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_33">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="s:String[]">
+                                      <mca:CSharpReference x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_253">Date_FechaDocumento</mca:CSharpReference>
+                                    </OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="s:String[]">
+                                      <mca:CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_535">(CurrentRow["Fecha de documento"]. ToString().Split(" ".ToCharArray())[0]).Split("/".ToCharArray())</mca:CSharpValue>
+                                    </InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <ui:UpdateRowItem ColumnIndex="{x:Null}" sap2010:Annotation.AnnotationText="Actualizar la columna de fecha sin la hora " ColumnName="Fecha de documento" DisplayName="Update Row Item" sap:VirtualizedContainerService.HintSize="434,221" sap2010:WorkflowViewState.IdRef="UpdateRowItem_13">
                                   <ui:UpdateRowItem.Row>
                                     <InArgument x:TypeArguments="sd:DataRow">
-                                      <mca:CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_283">CurrentRow</mca:CSharpValue>
+                                      <mca:CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_537">CurrentRow</mca:CSharpValue>
                                     </InArgument>
                                   </ui:UpdateRowItem.Row>
                                   <ui:UpdateRowItem.Value>
                                     <InArgument x:TypeArguments="x:Object">
-                                      <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_282">CurrentRow["Fecha de documento"]. ToString().Split(" ".ToCharArray())[0]</mca:CSharpValue>
+                                      <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_536">Date_FechaDocumento[1]+"/"+Date_FechaDocumento[0]+"/"+Date_FechaDocumento[2]</mca:CSharpValue>
                                     </InArgument>
                                   </ui:UpdateRowItem.Value>
                                   <sap:WorkflowViewStateService.ViewState>
@@ -641,7 +655,7 @@
                           </ui:ForEachRow.Body>
                           <ui:ForEachRow.DataTable>
                             <InArgument x:TypeArguments="sd:DataTable">
-                              <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_281">Dt_ReporteSAP</mca:CSharpValue>
+                              <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_534">Dt_ReporteSAP</mca:CSharpValue>
                             </InArgument>
                           </ui:ForEachRow.DataTable>
                           <sap:WorkflowViewStateService.ViewState>
@@ -652,6 +666,59 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:ForEachRow>
+                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="510,51" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                          <ui:CommentOut.Body>
+                            <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_194">
+                              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Acciones para cada uno de los registros de la tabla Dt_ReporteSalesforce" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="510,463" sap2010:WorkflowViewState.IdRef="ForEachRow_12">
+                                <ui:ForEachRow.Body>
+                                  <ActivityAction x:TypeArguments="sd:DataRow">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,313" sap2010:WorkflowViewState.IdRef="Sequence_125">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:UpdateRowItem ColumnIndex="{x:Null}" sap2010:Annotation.AnnotationText="Actualizar la columna de fecha sin la hora " ColumnName="Fecha de documento" DisplayName="Update Row Item" sap:VirtualizedContainerService.HintSize="434,221" sap2010:WorkflowViewState.IdRef="UpdateRowItem_7">
+                                        <ui:UpdateRowItem.Row>
+                                          <InArgument x:TypeArguments="sd:DataRow">
+                                            <mca:CSharpValue x:TypeArguments="sd:DataRow" sap2010:WorkflowViewState.IdRef="CSharpValue`1_283">CurrentRow</mca:CSharpValue>
+                                          </InArgument>
+                                        </ui:UpdateRowItem.Row>
+                                        <ui:UpdateRowItem.Value>
+                                          <InArgument x:TypeArguments="x:Object">
+                                            <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_282">CurrentRow["Fecha de documento"]. ToString().Split(" ".ToCharArray())[0]</mca:CSharpValue>
+                                          </InArgument>
+                                        </ui:UpdateRowItem.Value>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:UpdateRowItem>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </ui:ForEachRow.Body>
+                                <ui:ForEachRow.DataTable>
+                                  <InArgument x:TypeArguments="sd:DataTable">
+                                    <mca:CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_281">Dt_ReporteSAP</mca:CSharpValue>
+                                  </InArgument>
+                                </ui:ForEachRow.DataTable>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:ForEachRow>
+                            </Sequence>
+                          </ui:CommentOut.Body>
+                        </ui:CommentOut>
                       </Sequence>
                       <Sequence sap2010:Annotation.AnnotationText="Escritura de registros en el documento " DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="867,8573" sap2010:WorkflowViewState.IdRef="Sequence_191">
                         <sap:WorkflowViewStateService.ViewState>
