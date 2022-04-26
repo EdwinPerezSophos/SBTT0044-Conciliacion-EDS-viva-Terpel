@@ -1,16 +1,1 @@
-select oe.CodigoUnico, ee.IdEstacion 
-from OT_EDS oe 
-
-INNER JOIN (SELECT CAST(pd.Valor AS INT) AS IdEstacion 
-
-                    FROM OT_InterfazMovParametros AS p 
-
-                    INNER JOIN OT_InterfazMovParametros_Details AS pd 
-
-                    ON pd.IdParametro = p.IdParametro 
-
-                 WHERE p.Aplicacion = 'InterfacesReNew' 
-
-                 AND p.Nombre = 'Stations_ReNew') AS ee 
-
-          ON EE.IdEstacion = oe.IdEstacion
+select oe.CodigoUnico, ee.IdEstacion from OT_EDS oe INNER JOIN (SELECT CAST(pd.Valor AS INT) AS IdEstacion FROM OT_InterfazMovParametros AS p INNER JOIN OT_InterfazMovParametros_Details AS pd ON pd.IdParametro = p.IdParametro WHERE p.Aplicacion = 'InterfacesReNew' AND p.Nombre = 'Stations_ReNew') AS ee ON EE.IdEstacion = oe.IdEstacion
