@@ -7,7 +7,7 @@
     <InArgument x:TypeArguments="x:Boolean" />
   </this:Generar_Código_único_EDS.In_Bool_EjecutarSAP>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1137,3190</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1571,3795</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -32,6 +32,7 @@
       <x:String>UiPath.Excel.Activities</x:String>
       <x:String>UiPath.Core</x:String>
       <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -78,9 +79,10 @@
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>System.Configuration.Install</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="A partir del archivo SAP se obtienen los Ids y se hace la busqueda de cada uno de los codigos para agregarlo en frente de cada id en el archivo Excel de SAP.&#xA;&#xA;Precondicion:  Arcvhivo SAP 'EXPORT.XLSX' y la relación en SQL actualizada&#xA;&#xA;Acciones: Medainte consulta en SQL se obtiene la relación ids vs codigos y se hace la asignación de cada codigo a los ids correspondientes en el archivo excel de SAP" DisplayName="Generar_Código_único_EDS" sap:VirtualizedContainerService.HintSize="844,3125" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="A partir del archivo SAP se obtienen los Ids y se hace la busqueda de cada uno de los codigos para agregarlo en frente de cada id en el archivo Excel de SAP.&#xA;&#xA;Precondicion:  Arcvhivo SAP 'EXPORT.XLSX' y la relación en SQL actualizada&#xA;&#xA;Acciones: Medainte consulta en SQL se obtiene la relación ids vs codigos y se hace la asignación de cada codigo a los ids correspondientes en el archivo excel de SAP" DisplayName="Generar_Código_único_EDS" sap:VirtualizedContainerService.HintSize="844,3690" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Str_SystemException" />
       <Variable x:TypeArguments="x:String" Name="Str_Exception" />
@@ -91,7 +93,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Ingreso a SQL studio y descarga de los datos para guardar en excel, relación EDS ids vs EDS codigos.&#xA;" DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="802,2916" sap2010:WorkflowViewState.IdRef="Sequence_14">
+    <Sequence sap2010:Annotation.AnnotationText="Ingreso a SQL studio y descarga de los datos para guardar en excel, relación EDS ids vs EDS codigos.&#xA;" DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="802,3481" sap2010:WorkflowViewState.IdRef="Sequence_14">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -99,13 +101,13 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="De acuerdo al numero de reintentos estipulado se hacen las ejecuciones necesarias." DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="760,2782" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="De acuerdo al numero de reintentos estipulado se hacen las ejecuciones necesarias." DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="760,3347" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
         <ui:RepeatNumberOfTimesX.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="Intento" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="726,2596" sap2010:WorkflowViewState.IdRef="Sequence_13">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="726,3161" sap2010:WorkflowViewState.IdRef="Sequence_13">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -123,9 +125,9 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="684,2342" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="684,2907" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <TryCatch.Try>
-                  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="646,2115" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="646,2680" sap2010:WorkflowViewState.IdRef="Sequence_9">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="sd:DataTable" Name="Dt_Reporte_SAP" />
                       <Variable x:TypeArguments="sd:DataTable" Name="Dt_Relacion_EDS" />
@@ -136,14 +138,14 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If sap:VirtualizedContainerService.HintSize="604,1699" sap2010:WorkflowViewState.IdRef="If_5">
+                    <If sap:VirtualizedContainerService.HintSize="604,2264" sap2010:WorkflowViewState.IdRef="If_5">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_100">!!In_Bool_EjecutarSAP</mca:CSharpValue>
                         </InArgument>
                       </If.Condition>
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="568,1513" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                        <Sequence sap:VirtualizedContainerService.HintSize="568,2078" sap2010:WorkflowViewState.IdRef="Sequence_45">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -225,13 +227,13 @@
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:RenameFileX>
                           </Sequence>
-                          <Sequence DisplayName="Obtener Relación EDS" sap:VirtualizedContainerService.HintSize="526,66" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                          <Sequence DisplayName="Obtener Relación EDS" sap:VirtualizedContainerService.HintSize="526,631" sap2010:WorkflowViewState.IdRef="Sequence_25">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Name="Str_Query_Relacion" />
                             </Sequence.Variables>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
