@@ -313,15 +313,15 @@
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="797,633" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="797,618" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                         <ui:CommentOut.Body>
-                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="426,555" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="418,540" sap2010:WorkflowViewState.IdRef="Sequence_30">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Sequence sap2010:Annotation.AnnotationText="escritura de Query para no demorarse tanto" sap:VirtualizedContainerService.HintSize="384,244" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                            <Sequence sap2010:Annotation.AnnotationText="escritura de Query para no demorarse tanto" sap:VirtualizedContainerService.HintSize="376,244" sap2010:WorkflowViewState.IdRef="Sequence_8">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -358,7 +358,7 @@
                                 </ui:GetFromClipboard.Result>
                               </ui:GetFromClipboard>
                             </Sequence>
-                            <Assign sap:VirtualizedContainerService.HintSize="384,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                            <Assign sap:VirtualizedContainerService.HintSize="376,60" sap2010:WorkflowViewState.IdRef="Assign_7">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">
                                   <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_34">Str_QueryInput</mca:CSharpReference>
@@ -370,36 +370,15 @@
                                 </InArgument>
                               </Assign.Value>
                             </Assign>
-                            <ui:ReadTextFile DisplayName="Read Text File" sap:VirtualizedContainerService.HintSize="384,79" sap2010:WorkflowViewState.IdRef="ReadTextFile_1">
-                              <ui:ReadTextFile.Content>
+                            <Assign sap:VirtualizedContainerService.HintSize="376,64" sap2010:WorkflowViewState.IdRef="Assign_5">
+                              <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">
-                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_35">Str_QueryInput</mca:CSharpReference>
+                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_32">Str_QueryInput</mca:CSharpReference>
                                 </OutArgument>
-                              </ui:ReadTextFile.Content>
-                              <ui:ReadTextFile.FileName>
+                              </Assign.To>
+                              <Assign.Value>
                                 <InArgument x:TypeArguments="x:String">
-                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_67">In_GBL_Str_QueryEDSnoIncluidas</mca:CSharpValue>
-                                </InArgument>
-                              </ui:ReadTextFile.FileName>
-                            </ui:ReadTextFile>
-                          </Sequence>
-                        </ui:CommentOut.Body>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </ui:CommentOut>
-                      <Assign sap:VirtualizedContainerService.HintSize="797,64" sap2010:WorkflowViewState.IdRef="Assign_5">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">
-                            <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_32">Str_QueryInput</mca:CSharpReference>
-                          </OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:String">
-                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_69" xml:space="preserve">"select oe.CodigoUnico, ee.IdEstacion "+"\n"+
+                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_69" xml:space="preserve">"select oe.CodigoUnico, ee.IdEstacion "+"\n"+
 "from OT_EDS oe "+"\n"+
 
 "INNER JOIN (SELECT CAST(pd.Valor AS INT) AS IdEstacion "+"\n"+
@@ -415,9 +394,30 @@
                  "AND p.Nombre = 'Stations_ReNew') AS ee "+"\n"+
 
           "ON EE.IdEstacion = oe.IdEstacion"</mca:CSharpValue>
+                                </InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:CommentOut>
+                      <ui:ReadTextFile DisplayName="Read Text File" sap:VirtualizedContainerService.HintSize="797,79" sap2010:WorkflowViewState.IdRef="ReadTextFile_1">
+                        <ui:ReadTextFile.Content>
+                          <OutArgument x:TypeArguments="x:String">
+                            <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_35">Str_QueryInput</mca:CSharpReference>
+                          </OutArgument>
+                        </ui:ReadTextFile.Content>
+                        <ui:ReadTextFile.FileName>
+                          <InArgument x:TypeArguments="x:String">
+                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_67">In_GBL_Str_QueryEDSnoIncluidas</mca:CSharpValue>
                           </InArgument>
-                        </Assign.Value>
-                      </Assign>
+                        </ui:ReadTextFile.FileName>
+                      </ui:ReadTextFile>
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Se envia el SP para ejecución en SQL y obtener la tabla resultado de la ejecución exitosa" DisplayName="Invoke Execute ODBC workflow" sap:VirtualizedContainerService.HintSize="797,154" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Libreria Común\\Execute ODBC.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <OutArgument x:TypeArguments="x:String" x:Key="Out_Str_SystemException">
@@ -481,7 +481,7 @@
                             </ui:WriteRange>
                             <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_3">
                               <ui:CommentOut.Body>
-                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,185" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="633,1843" sap2010:WorkflowViewState.IdRef="Sequence_33">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
