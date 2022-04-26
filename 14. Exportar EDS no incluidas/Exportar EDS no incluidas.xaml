@@ -313,15 +313,15 @@
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="797,618" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="797,633" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                         <ui:CommentOut.Body>
-                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="418,540" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="426,555" sap2010:WorkflowViewState.IdRef="Sequence_30">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Sequence sap2010:Annotation.AnnotationText="escritura de Query para no demorarse tanto" sap:VirtualizedContainerService.HintSize="376,244" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                            <Sequence sap2010:Annotation.AnnotationText="escritura de Query para no demorarse tanto" sap:VirtualizedContainerService.HintSize="384,244" sap2010:WorkflowViewState.IdRef="Sequence_8">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -331,7 +331,7 @@
                               <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="SetToClipboard_1">
                                 <ui:SetToClipboard.Text>
                                   <InArgument x:TypeArguments="x:String">
-                                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_66" xml:space="preserve">"select oe.CodigoUnico, ee.IdEstacion "+"\n"+
+                                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_68" xml:space="preserve">"select oe.CodigoUnico, ee.IdEstacion "+"\n"+
 "from OT_EDS oe "+"\n"+
 
 "INNER JOIN (SELECT CAST(pd.Valor AS INT) AS IdEstacion "+"\n"+
@@ -358,144 +358,7 @@
                                 </ui:GetFromClipboard.Result>
                               </ui:GetFromClipboard>
                             </Sequence>
-                            <Assign sap:VirtualizedContainerService.HintSize="376,64" sap2010:WorkflowViewState.IdRef="Assign_5">
-                              <Assign.To>
-                                <OutArgument x:TypeArguments="x:String">
-                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_32">Str_QueryInput</mca:CSharpReference>
-                                </OutArgument>
-                              </Assign.To>
-                              <Assign.Value>
-                                <InArgument x:TypeArguments="x:String">
-                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_64" xml:space="preserve">"DECLARE @FechaInicio DATE = '"+ Str_FechaInicio+"',"+"\n"+
-
-             "@FechaFin DATE = '"+Str_FechaFin+"', "+"\n"+
-
-             "@idEstacion INT = null, -- si se desea friltrar por alguna estación "+"\n"+
-
-            " @CodigoUnico VARCHAR(10) = null, -- si se desea filtra por codigo unico "+"\n"+
-
-            " @dias INT "+"\n"+
-
- 
-
-"SET @dias = DATEDIFF (DAY, @FechaInicio, @FechaFin) + 1 "+"\n"+
-
- 
-
-"IF OBJECT_ID(N'tempdb..#Ventas') IS NOT NULL "+"\n"+
-
-"BEGIN "+"\n"+
-
-       "DROP TABLE #Ventas "+"\n"+
-
-"END "+"\n"+
-
- 
-
- 
-
-"IF OBJECT_ID(N'tempdb..#EDS_Completas') IS NOT NULL "+"\n"+
-
-"BEGIN "+"\n"+
-
-       "DROP TABLE #EDS_Completas "+"\n"+
-
-"END "+"\n"+
-
- 
-
- 
-
-"SELECT vpvg.IdEstacion, oe.CodigoUnico, vvg.FechaTurnoVenta, COUNT(*) CantidadVentas, SUM(vpvg.Valor) ValorVentas "+"\n"+
-
-"INTO #Ventas "+"\n"+
-
-"FROM VNT_VENTAGAS vvg WITH(NOLOCK) "+"\n"+
-
-       "INNER JOIN VNT_PagosVentaGas vpvg WITH(NOLOCK) on vpvg.IdVenta = vvg.IdVenta "+"\n"+
-
-       "INNER JOIN OT_EDS oe ON oe.IdEstacion = vvg.IdEstacion "+"\n"+
-
-"WHERE vvg.FechaTurnoVenta BETWEEN @FechaInicio and @FechaFin "+"\n"+
-
-       "AND vpvg.IdFormaPago in (253,254) "+"\n"+
-
-      " AND  vvg.IdEstacion = ISNULL(@idEstacion, vvg.IdEstacion) "+"\n"+
-
-       "AND oe.Sociedad = '1000' "+"\n"+
-
-       "and oe.CodigoUnico = ISNULL(@CodigoUnico, oe.CodigoUnico) "+"\n"+
-
-"GROUP BY vpvg.IdEstacion, oe.CodigoUnico, vvg.FechaTurnoVenta "+"\n"+
-
-"ORDER BY 1 "+"\n"+
-
- 
-
-"select Registros.Eds, Registros.FechaInterfaz, Registros.Enviado "+"\n"+
-
-"into #EDS_Completas "+"\n"+
-
-"from ( "+"\n"+
-
-            " select i.Eds, i.FechaInterfaz, i.Enviado, count(*) as cantidadXMlEnviados "+"\n"+
-
-             "from OT_RegistroInterfacesSAP_armado i with(nolock) "+"\n"+
-
-             "inner join OT_EDS ote on ote.IdEstacion = i.Eds "+"\n"+
-
-             "where i.FechaInterfaz between @FechaInicio and @FechaFin "+"\n"+
-
-                    "--and i.Enviado = 1 "+"\n"+
-
-                   " and ote.Sociedad = '1000' "+"\n"+
-
-                  "  and i.Eds = ISNULL(@idEstacion,i.Eds) "+"\n"+
-
-             "GROUP by i.Eds, i.FechaInterfaz, i.Enviado "+"\n"+
-
-     "  ) as Registros "+"\n"+
-
-"--group by Registros.Eds "+"\n"+
-
-"--having count(Registros.FechaInterfaz) = @dias "+"\n"+
-
-        
-
- 
-
- 
-
-"SELECT V.IdEstacion, V.CodigoUnico, EE.NombreEstacion, v.FechaTurnoVenta, V.CantidadVentas, V.ValorVentas,  "+"\n"+
-
-       "CASE WHEN E.eds is null and cd.IdEDS is not NULL then 'Día Cerrado' ELSE "+"\n"+
-
-             "CASE WHEN  E.eds is not null and cd.IdEDS is not NULL and E.Enviado = 0 then 'Día Armando' ELSE "+"\n"+
-
-                    "CASE WHEN  E.eds is not null and cd.IdEDS is not NULL and E.Enviado = 1 then 'Día Enviado' ELSE 'Día no Cerrado' END  "+"\n"+
-             "END "+"\n"+
-
-       "END as Estado "+"\n"+
-
-"FROM #Ventas V "+"\n"+
-
-"LEFT JOIN #EDS_Completas E ON V.IdEstacion = e.Eds and v.FechaTurnoVenta = cast(e.FechaInterfaz as date) "+"\n"+
-
-"LEFT JOIN VNT_CierreDia CD ON CD.IdEDS = V.IdEstacion AND CD.Fecha = V.FechaTurnoVenta "+"\n"+
-
-"INNER JOIN EDS_Estaciones EE ON EE.IdEstacion = V.IdEstacion "+"\n"+
-
-"order by 1, 4 "+"\n"+
-
- 
-
-"drop table #Ventas "+"\n"+
-
-"drop table #EDS_Completas"</mca:CSharpValue>
-                                </InArgument>
-                              </Assign.Value>
-                            </Assign>
-                            <Assign sap:VirtualizedContainerService.HintSize="376,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                            <Assign sap:VirtualizedContainerService.HintSize="384,60" sap2010:WorkflowViewState.IdRef="Assign_7">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">
                                   <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_34">Str_QueryInput</mca:CSharpReference>
@@ -507,6 +370,18 @@
                                 </InArgument>
                               </Assign.Value>
                             </Assign>
+                            <ui:ReadTextFile DisplayName="Read Text File" sap:VirtualizedContainerService.HintSize="384,79" sap2010:WorkflowViewState.IdRef="ReadTextFile_1">
+                              <ui:ReadTextFile.Content>
+                                <OutArgument x:TypeArguments="x:String">
+                                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_35">Str_QueryInput</mca:CSharpReference>
+                                </OutArgument>
+                              </ui:ReadTextFile.Content>
+                              <ui:ReadTextFile.FileName>
+                                <InArgument x:TypeArguments="x:String">
+                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_67">In_GBL_Str_QueryEDSnoIncluidas</mca:CSharpValue>
+                                </InArgument>
+                              </ui:ReadTextFile.FileName>
+                            </ui:ReadTextFile>
                           </Sequence>
                         </ui:CommentOut.Body>
                         <sap:WorkflowViewStateService.ViewState>
@@ -516,18 +391,33 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:CommentOut>
-                      <ui:ReadTextFile DisplayName="Read Text File" sap:VirtualizedContainerService.HintSize="797,79" sap2010:WorkflowViewState.IdRef="ReadTextFile_1">
-                        <ui:ReadTextFile.Content>
+                      <Assign sap:VirtualizedContainerService.HintSize="797,64" sap2010:WorkflowViewState.IdRef="Assign_5">
+                        <Assign.To>
                           <OutArgument x:TypeArguments="x:String">
-                            <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_35">Str_QueryInput</mca:CSharpReference>
+                            <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_32">Str_QueryInput</mca:CSharpReference>
                           </OutArgument>
-                        </ui:ReadTextFile.Content>
-                        <ui:ReadTextFile.FileName>
+                        </Assign.To>
+                        <Assign.Value>
                           <InArgument x:TypeArguments="x:String">
-                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_67">In_GBL_Str_QueryEDSnoIncluidas</mca:CSharpValue>
+                            <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_69" xml:space="preserve">"select oe.CodigoUnico, ee.IdEstacion "+"\n"+
+"from OT_EDS oe "+"\n"+
+
+"INNER JOIN (SELECT CAST(pd.Valor AS INT) AS IdEstacion "+"\n"+
+
+                    "FROM OT_InterfazMovParametros AS p "+"\n"+
+
+                    "INNER JOIN OT_InterfazMovParametros_Details AS pd "+"\n"+
+
+                    "ON pd.IdParametro = p.IdParametro "+"\n"+
+
+                 "WHERE p.Aplicacion = 'InterfacesReNew' "+"\n"+
+
+                 "AND p.Nombre = 'Stations_ReNew') AS ee "+"\n"+
+
+          "ON EE.IdEstacion = oe.IdEstacion"</mca:CSharpValue>
                           </InArgument>
-                        </ui:ReadTextFile.FileName>
-                      </ui:ReadTextFile>
+                        </Assign.Value>
+                      </Assign>
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Se envia el SP para ejecución en SQL y obtener la tabla resultado de la ejecución exitosa" DisplayName="Invoke Execute ODBC workflow" sap:VirtualizedContainerService.HintSize="797,154" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Libreria Común\\Execute ODBC.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <OutArgument x:TypeArguments="x:String" x:Key="Out_Str_SystemException">
