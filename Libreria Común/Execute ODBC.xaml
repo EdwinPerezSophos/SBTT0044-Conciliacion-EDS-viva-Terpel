@@ -7,7 +7,7 @@
     <x:Property Name="Out_GBL_Dt_Resultados" Type="OutArgument(sd:DataTable)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1030,3009</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1010,3009</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -27,6 +27,7 @@
       <x:String>UiPath.Shared.Activities.Business</x:String>
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Security</x:String>
+      <x:String>UiPath.Core</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -73,7 +74,6 @@
       <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Exec ODBC" sap:VirtualizedContainerService.HintSize="851,2944" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -294,7 +294,7 @@
                       </OutArgument>
                     </ui:DatabaseConnect.DatabaseConnection>
                   </ui:DatabaseConnect>
-                  <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Ejecutar query y obtener la datatable" CommandType="Text" DisplayName="Run query" sap:VirtualizedContainerService.HintSize="653,119" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1">
+                  <ui:ExecuteQuery ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Ejecutar query y obtener la datatable" CommandType="Text" DisplayName="Run query" sap:VirtualizedContainerService.HintSize="653,119" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" TimeoutMS="120000">
                     <ui:ExecuteQuery.DataTable>
                       <OutArgument x:TypeArguments="sd:DataTable">
                         <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">Out_GBL_Dt_Resultados</mca:CSharpReference>
