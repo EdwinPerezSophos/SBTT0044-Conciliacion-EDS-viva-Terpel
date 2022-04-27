@@ -9,7 +9,7 @@
     <x:Property Name="In_GBL_Str_ReporteSAP" Type="InOutArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1139,12913</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1139,13013</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -100,7 +100,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Cruce con SAP  y Salesforce, consolidacion de ventas y cruce acumulado entre SAP y Salesforce&#xA;&#xA;Precondicion: Documento de reporte SAP DEpurado &#xA;&#xA;Acciones: Cruce de documentos de SAP y Salesforce, mirar los acumilados de los EDS y tener un reporte de fechas individuales" DisplayName="Cruce_SAP_y_Salesforce" sap:VirtualizedContainerService.HintSize="1149,12848" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Cruce con SAP  y Salesforce, consolidacion de ventas y cruce acumulado entre SAP y Salesforce&#xA;&#xA;Precondicion: Documento de reporte SAP DEpurado &#xA;&#xA;Acciones: Cruce de documentos de SAP y Salesforce, mirar los acumilados de los EDS y tener un reporte de fechas individuales" DisplayName="Cruce_SAP_y_Salesforce" sap:VirtualizedContainerService.HintSize="1149,12948" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Str_FechaFin" />
       <Variable x:TypeArguments="x:String" Name="Str_FechaInicio" />
@@ -119,6 +119,7 @@
       <Variable x:TypeArguments="x:Int32" Name="Int_TotalFecha" />
       <Variable x:TypeArguments="x:String" Name="Str_Fecha" />
       <Variable x:TypeArguments="x:String" Name="Str_Exception" />
+      <Variable x:TypeArguments="x:Int32" Name="Int_PrimeraFila" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -127,7 +128,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Depuracion de documentos SAP y Salesforce" DisplayName="Depuracion de documentos SAP y Salesforce" sap:VirtualizedContainerService.HintSize="1107,12669" sap2010:WorkflowViewState.IdRef="Sequence_38">
+    <Sequence sap2010:Annotation.AnnotationText="Depuracion de documentos SAP y Salesforce" DisplayName="Depuracion de documentos SAP y Salesforce" sap:VirtualizedContainerService.HintSize="1107,12769" sap2010:WorkflowViewState.IdRef="Sequence_38">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -135,13 +136,13 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="Sistema de reintentos en caso de fallo " DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="1065,12546" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="Sistema de reintentos en caso de fallo " DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="1065,12746" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
         <ui:RepeatNumberOfTimesX.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="Intento" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1031,12360" sap2010:WorkflowViewState.IdRef="Sequence_37">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1031,12560" sap2010:WorkflowViewState.IdRef="Sequence_37">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -161,7 +162,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="989,12106" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="989,12306" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsPinned">True</x:Boolean>
@@ -169,14 +170,14 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <TryCatch.Try>
-                  <Sequence sap:VirtualizedContainerService.HintSize="951,11879" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                  <Sequence sap:VirtualizedContainerService.HintSize="951,12079" sap2010:WorkflowViewState.IdRef="Sequence_32">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence sap2010:Annotation.AnnotationText="Apertura del documento de Excel" sap:VirtualizedContainerService.HintSize="909,11463" sap2010:WorkflowViewState.IdRef="Sequence_106">
+                    <Sequence sap2010:Annotation.AnnotationText="Apertura del documento de Excel" sap:VirtualizedContainerService.HintSize="909,11663" sap2010:WorkflowViewState.IdRef="Sequence_106">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -721,7 +722,7 @@
                           </ui:CommentOut.Body>
                         </ui:CommentOut>
                       </Sequence>
-                      <Sequence sap2010:Annotation.AnnotationText="Escritura de registros en el documento " DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="867,8573" sap2010:WorkflowViewState.IdRef="Sequence_191">
+                      <Sequence sap2010:Annotation.AnnotationText="Escritura de registros en el documento " DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="867,8773" sap2010:WorkflowViewState.IdRef="Sequence_191">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1194,7 +1195,7 @@
                             </ui:AppendRange>
                           </Sequence>
                         </Sequence>
-                        <Sequence sap2010:Annotation.AnnotationText="Validacion de datos para total de eds y diferencias por dia" sap:VirtualizedContainerService.HintSize="825,6508" sap2010:WorkflowViewState.IdRef="Sequence_190">
+                        <Sequence sap2010:Annotation.AnnotationText="Validacion de datos para total de eds y diferencias por dia" sap:VirtualizedContainerService.HintSize="825,6708" sap2010:WorkflowViewState.IdRef="Sequence_190">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1752,7 +1753,7 @@
                               </ui:WriteRange.WorkbookPath>
                             </ui:WriteRange>
                           </Sequence>
-                          <Sequence sap2010:Annotation.AnnotationText="Arreglos para tabla &quot;Detalle Diferencias por dia&quot;" sap:VirtualizedContainerService.HintSize="783,4017" sap2010:WorkflowViewState.IdRef="Sequence_188">
+                          <Sequence sap2010:Annotation.AnnotationText="Arreglos para tabla &quot;Detalle Diferencias por dia&quot;" sap:VirtualizedContainerService.HintSize="783,4217" sap2010:WorkflowViewState.IdRef="Sequence_188">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1830,13 +1831,13 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:MultipleAssign>
-                            <ui:ForEach x:TypeArguments="scg:IEnumerable(sd:DataRow)" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Agrupacion de datos por codigo EDS" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="741,3127" sap2010:WorkflowViewState.IdRef="ForEach`1_9">
+                            <ui:ForEach x:TypeArguments="scg:IEnumerable(sd:DataRow)" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Agrupacion de datos por codigo EDS" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="741,3327" sap2010:WorkflowViewState.IdRef="ForEach`1_9">
                               <ui:ForEach.Body>
                                 <ActivityAction x:TypeArguments="scg:IEnumerable(sd:DataRow)">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="scg:IEnumerable(sd:DataRow)" Name="item" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="705,2973" sap2010:WorkflowViewState.IdRef="Sequence_186">
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="705,3173" sap2010:WorkflowViewState.IdRef="Sequence_186">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1865,13 +1866,23 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:MultipleAssign>
-                                    <ui:ForEach x:TypeArguments="scg:IEnumerable(sd:DataRow)" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="663,2098" sap2010:WorkflowViewState.IdRef="ForEach`1_8">
+                                    <Assign sap:VirtualizedContainerService.HintSize="663,60" sap2010:WorkflowViewState.IdRef="Assign_34">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">
+                                          <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_255">Int_PrimeraFila</mca:CSharpReference>
+                                        </OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <ui:ForEach x:TypeArguments="scg:IEnumerable(sd:DataRow)" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="663,2198" sap2010:WorkflowViewState.IdRef="ForEach`1_8">
                                       <ui:ForEach.Body>
                                         <ActivityAction x:TypeArguments="scg:IEnumerable(sd:DataRow)">
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="scg:IEnumerable(sd:DataRow)" Name="item2" />
                                           </ActivityAction.Argument>
-                                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="627,1975" sap2010:WorkflowViewState.IdRef="Sequence_184">
+                                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="627,2075" sap2010:WorkflowViewState.IdRef="Sequence_184">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1888,23 +1899,23 @@
                                                 <InArgument x:TypeArguments="x:Int32">0</InArgument>
                                               </Assign.Value>
                                             </Assign>
-                                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="585,1171" sap2010:WorkflowViewState.IdRef="ForEachRow_21">
+                                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="585,1271" sap2010:WorkflowViewState.IdRef="ForEachRow_21">
                                               <ui:ForEachRow.Body>
                                                 <ActivityAction x:TypeArguments="sd:DataRow">
                                                   <ActivityAction.Argument>
                                                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                                                   </ActivityAction.Argument>
-                                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="551,1052" sap2010:WorkflowViewState.IdRef="Sequence_182">
+                                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="551,1152" sap2010:WorkflowViewState.IdRef="Sequence_182">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                         <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                    <If sap:VirtualizedContainerService.HintSize="509,696" sap2010:WorkflowViewState.IdRef="If_9">
+                                                    <If sap:VirtualizedContainerService.HintSize="509,796" sap2010:WorkflowViewState.IdRef="If_9">
                                                       <If.Condition>
                                                         <InArgument x:TypeArguments="x:Boolean">
-                                                          <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_538">Int_TotalFecha == 0</mca:CSharpValue>
+                                                          <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_542">Int_PrimeraFila== 0</mca:CSharpValue>
                                                         </InArgument>
                                                       </If.Condition>
                                                       <sap:WorkflowViewStateService.ViewState>
@@ -1914,7 +1925,7 @@
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
                                                       <If.Then>
-                                                        <Sequence sap:VirtualizedContainerService.HintSize="473,510" sap2010:WorkflowViewState.IdRef="Sequence_180">
+                                                        <Sequence sap:VirtualizedContainerService.HintSize="473,610" sap2010:WorkflowViewState.IdRef="Sequence_180">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1986,6 +1997,16 @@
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
                                                           </ui:AddDataRow>
+                                                          <Assign sap:VirtualizedContainerService.HintSize="431,60" sap2010:WorkflowViewState.IdRef="Assign_35">
+                                                            <Assign.To>
+                                                              <OutArgument x:TypeArguments="x:Int32">
+                                                                <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_256">Int_PrimeraFila</mca:CSharpReference>
+                                                              </OutArgument>
+                                                            </Assign.To>
+                                                            <Assign.Value>
+                                                              <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                                                            </Assign.Value>
+                                                          </Assign>
                                                         </Sequence>
                                                       </If.Then>
                                                       <If.Else>
@@ -2165,7 +2186,7 @@
                                       </ui:ForEach.Body>
                                       <ui:ForEach.Values>
                                         <InArgument x:TypeArguments="sc:IEnumerable">
-                                          <mca:CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_484" xml:space="preserve">item.AsEnumerable()	
+                                          <mca:CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_543" xml:space="preserve">item.AsEnumerable()	
 .GroupBy(p =&gt; p.Field&lt;string&gt;("Fecha de documento"))
 .OrderBy(p  =&gt; p.Key)
 .ToList()</mca:CSharpValue>
