@@ -1189,22 +1189,55 @@
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
                                                         <Transition.To>
-                                                          <State x:Name="__ReferenceID6" sap2010:Annotation.AnnotationText="Notificación de EDS pendiente por cerrar&#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: ejecucion de QUERY en SQL, depuracion excel y envio de correo con documento de cierre" DisplayName="G. Notificación Eds pendientes por cerrar" sap:VirtualizedContainerService.HintSize="429,163" sap2010:WorkflowViewState.IdRef="State_19">
+                                                          <State x:Name="__ReferenceID6" sap2010:Annotation.AnnotationText="Notificación de EDS pendiente por cerrar&#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: ejecucion de QUERY en SQL, depuracion excel y envio de correo con documento de cierre" DisplayName="G. Notificación Eds pendientes por cerrar" sap:VirtualizedContainerService.HintSize="467,1250" sap2010:WorkflowViewState.IdRef="State_19">
                                                             <State.Entry>
-                                                              <Sequence sap:VirtualizedContainerService.HintSize="421.333333333333,635.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                                                              <Sequence sap:VirtualizedContainerService.HintSize="421,761" sap2010:WorkflowViewState.IdRef="Sequence_39">
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                <ui:SetAsset TimeoutMS="{x:Null}" AssetName="CV_EDS_Var_EstadoActual" DisplayName="Set Asset" sap:VirtualizedContainerService.HintSize="379.333333333333,135.333333333333" sap2010:WorkflowViewState.IdRef="SetAsset_7">
+                                                                <ui:SetAsset TimeoutMS="{x:Null}" AssetName="CV_EDS_Var_EstadoActual" DisplayName="Set Asset" sap:VirtualizedContainerService.HintSize="379,132" sap2010:WorkflowViewState.IdRef="SetAsset_7">
                                                                   <ui:SetAsset.Value>
                                                                     <InArgument x:TypeArguments="x:Object">
                                                                       <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_116">"G"</mca:CSharpValue>
                                                                     </InArgument>
                                                                   </ui:SetAsset.Value>
                                                                 </ui:SetAsset>
-                                                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Ejecutar Script y exportar resultado workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="12. Ejecutar Script y exportar resultado\\Ejecutar Script y exportar resultado.xaml">
+                                                                <TryCatch sap2010:Annotation.AnnotationText="Borrado de documento G&#xD;&#xA;" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="379,93" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                    </scg:Dictionary>
+                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                  <TryCatch.Try>
+                                                                    <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="384,79" sap2010:WorkflowViewState.IdRef="DeleteFileX_1">
+                                                                      <ui:DeleteFileX.Path>
+                                                                        <InArgument x:TypeArguments="x:String">
+                                                                          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_182">GBL_Str_CarpetaTemporales+"G. Reporte EDS sin cerrar.xlsx"</mca:CSharpValue>
+                                                                        </InArgument>
+                                                                      </ui:DeleteFileX.Path>
+                                                                    </ui:DeleteFileX>
+                                                                  </TryCatch.Try>
+                                                                  <TryCatch.Catches>
+                                                                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                                                                      <sap:WorkflowViewStateService.ViewState>
+                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                        </scg:Dictionary>
+                                                                      </sap:WorkflowViewStateService.ViewState>
+                                                                      <ActivityAction x:TypeArguments="s:Exception">
+                                                                        <ActivityAction.Argument>
+                                                                          <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                                                        </ActivityAction.Argument>
+                                                                      </ActivityAction>
+                                                                    </Catch>
+                                                                  </TryCatch.Catches>
+                                                                </TryCatch>
+                                                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Ejecutar Script y exportar resultado workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="12. Ejecutar Script y exportar resultado\\Ejecutar Script y exportar resultado.xaml">
                                                                   <ui:InvokeWorkflowFile.Arguments>
                                                                     <InOutArgument x:TypeArguments="sd:DataTable" x:Key="In_GBL_Dt_Calendario_row">
                                                                       <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_136">GBL_Dt_Calendario_row</mca:CSharpReference>
@@ -1223,7 +1256,7 @@
                                                                     </InOutArgument>
                                                                   </ui:InvokeWorkflowFile.Arguments>
                                                                 </ui:InvokeWorkflowFile>
-                                                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Depurar y notificar reporte (EDS pendientes por cerrar corte) workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="13. Depurar y notificar reporte (EDS pendientes por cerrar corte)\\Depurar y notificar reporte (EDS pendientes por cerrar corte).xaml">
+                                                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Depurar y notificar reporte (EDS pendientes por cerrar corte) workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="13. Depurar y notificar reporte (EDS pendientes por cerrar corte)\\Depurar y notificar reporte (EDS pendientes por cerrar corte).xaml">
                                                                   <ui:InvokeWorkflowFile.Arguments>
                                                                     <InOutArgument x:TypeArguments="sd:DataTable" x:Key="In_GBL_Dt_Calendario_row">
                                                                       <mca:CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_141">GBL_Dt_Calendario_row</mca:CSharpReference>
@@ -1289,9 +1322,9 @@
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
                                                                 <Transition.To>
-                                                                  <State x:Name="__ReferenceID7" sap2010:Annotation.AnnotationText="Notificación EDS no incluidas en la interfaz&#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: ejecucion de QUERY en SQL, depuracion excel y envio de correo con documento de cierre" DisplayName="H. Notificación Eds no incluidas en la interfaz" sap:VirtualizedContainerService.HintSize="741,1479" sap2010:WorkflowViewState.IdRef="State_18">
+                                                                  <State x:Name="__ReferenceID7" sap2010:Annotation.AnnotationText="Notificación EDS no incluidas en la interfaz&#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: ejecucion de QUERY en SQL, depuracion excel y envio de correo con documento de cierre" DisplayName="H. Notificación Eds no incluidas en la interfaz" sap:VirtualizedContainerService.HintSize="429,175" sap2010:WorkflowViewState.IdRef="State_18">
                                                                     <State.Entry>
-                                                                      <Sequence sap:VirtualizedContainerService.HintSize="695,978" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                                                      <Sequence sap:VirtualizedContainerService.HintSize="695,1366" sap2010:WorkflowViewState.IdRef="Sequence_38">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1304,6 +1337,37 @@
                                                                             </InArgument>
                                                                           </ui:SetAsset.Value>
                                                                         </ui:SetAsset>
+                                                                        <TryCatch sap2010:Annotation.AnnotationText="Borrado de documento H&#xA;" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="653,348" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+                                                                          <sap:WorkflowViewStateService.ViewState>
+                                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                                            </scg:Dictionary>
+                                                                          </sap:WorkflowViewStateService.ViewState>
+                                                                          <TryCatch.Try>
+                                                                            <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="384,79" sap2010:WorkflowViewState.IdRef="DeleteFileX_2">
+                                                                              <ui:DeleteFileX.Path>
+                                                                                <InArgument x:TypeArguments="x:String">
+                                                                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_183">GBL_Str_CarpetaTemporales+"H. Reporte EDS no Incluidas.xlsx"</mca:CSharpValue>
+                                                                                </InArgument>
+                                                                              </ui:DeleteFileX.Path>
+                                                                            </ui:DeleteFileX>
+                                                                          </TryCatch.Try>
+                                                                          <TryCatch.Catches>
+                                                                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+                                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                </scg:Dictionary>
+                                                                              </sap:WorkflowViewStateService.ViewState>
+                                                                              <ActivityAction x:TypeArguments="s:Exception">
+                                                                                <ActivityAction.Argument>
+                                                                                  <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                                                                </ActivityAction.Argument>
+                                                                              </ActivityAction>
+                                                                            </Catch>
+                                                                          </TryCatch.Catches>
+                                                                        </TryCatch>
                                                                         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Exportar EDS no incluidas workflow" sap:VirtualizedContainerService.HintSize="653,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="14. Exportar EDS no incluidas\\Exportar EDS no incluidas.xaml">
                                                                           <ui:InvokeWorkflowFile.Arguments>
                                                                             <InOutArgument x:TypeArguments="sd:DataTable" x:Key="In_GBL_Dt_Calendario_row">

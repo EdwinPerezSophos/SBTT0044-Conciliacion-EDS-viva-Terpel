@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Pruebas" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1010,1710" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Pruebas" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1010,1906" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -72,9 +72,10 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Pruebas" sap:VirtualizedContainerService.HintSize="479,1645" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Pruebas" sap:VirtualizedContainerService.HintSize="479,1841" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="DtPruebas" />
       <Variable x:TypeArguments="sd:DataTable" Name="varrara" />
@@ -84,6 +85,7 @@
       <Variable x:TypeArguments="scg:List(x:String)" Name="PruebaLInq" />
       <Variable x:TypeArguments="sd:DataTable" Name="DtOut" />
       <Variable x:TypeArguments="scg:IEnumerable(x:String)" Name="datarow" />
+      <Variable x:TypeArguments="x:String" Name="Query" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -183,6 +185,20 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" Value="{x:Null}" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="437,137" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+      <ui:GetRobotAsset.AssetName>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ui:GetRobotAsset.AssetName>
+    </ui:GetRobotAsset>
+    <ui:ReadTextFile DisplayName="Read Text File" FileName="Data\\Input\\QueryEDSnoIncluidas.txt" sap:VirtualizedContainerService.HintSize="437,79" sap2010:WorkflowViewState.IdRef="ReadTextFile_1">
+      <ui:ReadTextFile.Content>
+        <OutArgument x:TypeArguments="x:String">
+          <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">Query</mca:CSharpReference>
+        </OutArgument>
+      </ui:ReadTextFile.Content>
+    </ui:ReadTextFile>
     <Assign sap:VirtualizedContainerService.HintSize="437,60" sap2010:WorkflowViewState.IdRef="Assign_3">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:IEnumerable(sd:DataRow)">
@@ -207,7 +223,6 @@
         </InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="437,60" sap2010:WorkflowViewState.IdRef="Assign_4" />
     <ui:InvokeCode ContinueOnError="{x:Null}" Code="dtOut = (from items in Dt.AsEnumerable() &#xA;let subcad = items.Field&lt;string&gt;(&quot;Venta: Número Tiquete Venta&quot;).ToString().Contains(&quot;PC&quot;) ? items.Field&lt;string&gt;(&quot;Venta: Número Tiquete Venta&quot;).ToString().Substring(6) : items.Field&lt;string&gt;(&quot;Venta: Número Tiquete Venta&quot;).ToString() &#xA;let concat = subcad+items.Field&lt;string&gt;(&quot;Venta: Código Unico PDV&quot;).ToString() &#xA;select concat&#xA;).ToList&lt;string&gt;();" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="437,164" sap2010:WorkflowViewState.IdRef="InvokeCode_5" Language="CSharp">
       <ui:InvokeCode.Arguments>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="Dt">
