@@ -11,7 +11,7 @@
     <x:Property Name="In_GBL_Str_ReporteCierreEDSAutomatico" Type="InOutArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1502,7800</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1502,8478</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="35">
@@ -90,7 +90,6 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -98,7 +97,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Finalización conciliación EDS &#xA;&#xA;Precondicion:Documento de reporte de ventas SalesForce, Documento de reporte de fidelizaciones Satelite, Documento Cruze Salesforce, Directorio Ventas Inconsistentes&#xA;&#xA;Acciones: Movimiento de documentos, envio de correo de conciliación y borrado de documentos temporales &#xA;" DisplayName="Finalización_conciliación" sap:VirtualizedContainerService.HintSize="1512,7735" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Finalización conciliación EDS &#xA;&#xA;Precondicion:Documento de reporte de ventas SalesForce, Documento de reporte de fidelizaciones Satelite, Documento Cruze Salesforce, Directorio Ventas Inconsistentes&#xA;&#xA;Acciones: Movimiento de documentos, envio de correo de conciliación y borrado de documentos temporales &#xA;" DisplayName="Finalización_conciliación" sap:VirtualizedContainerService.HintSize="1512,8413" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Str_FechaFin" />
       <Variable x:TypeArguments="x:String" Name="Str_FechaInicio" />
@@ -118,7 +117,7 @@
         <x:Boolean x:Key="IsPinned">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Movimiento de documentos del proceso" DisplayName="Finalización de proceso de conciliación " sap:VirtualizedContainerService.HintSize="1470,7541" sap2010:WorkflowViewState.IdRef="Sequence_65">
+    <Sequence sap2010:Annotation.AnnotationText="Movimiento de documentos del proceso" DisplayName="Finalización de proceso de conciliación " sap:VirtualizedContainerService.HintSize="1470,8219" sap2010:WorkflowViewState.IdRef="Sequence_65">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -126,13 +125,13 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="Sistema de reintentos en caso de fallo " DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="1428,7418" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
+      <ui:RepeatNumberOfTimesX sap2010:Annotation.AnnotationText="Sistema de reintentos en caso de fallo " DisplayName="Repeat Number of Times" sap:VirtualizedContainerService.HintSize="1428,8096" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" StartAt="1">
         <ui:RepeatNumberOfTimesX.Body>
           <ActivityAction x:TypeArguments="x:Int32">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="Intento" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1394,7232" sap2010:WorkflowViewState.IdRef="Sequence_64">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1394,7910" sap2010:WorkflowViewState.IdRef="Sequence_64">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -371,7 +370,7 @@
                   </Sequence>
                 </Switch>
               </Sequence>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1352,6508" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1352,7186" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsPinned">True</x:Boolean>
@@ -379,7 +378,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <TryCatch.Try>
-                  <Sequence sap2010:Annotation.AnnotationText="Finalización de Proceso Conciliación EDS" sap:VirtualizedContainerService.HintSize="901,6281" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                  <Sequence sap2010:Annotation.AnnotationText="Finalización de Proceso Conciliación EDS" sap:VirtualizedContainerService.HintSize="901,6959" sap2010:WorkflowViewState.IdRef="Sequence_59">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -387,7 +386,7 @@
                         <x:Boolean x:Key="IsPinned">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence sap2010:Annotation.AnnotationText="Movimiento de documentos de la carpeta de Temporales a la carpeta de Salida" sap:VirtualizedContainerService.HintSize="859,2983" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                    <Sequence sap2010:Annotation.AnnotationText="Movimiento de documentos de la carpeta de Temporales a la carpeta de Salida" sap:VirtualizedContainerService.HintSize="859,3661" sap2010:WorkflowViewState.IdRef="Sequence_73">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -395,7 +394,7 @@
                           <x:Boolean x:Key="IsPinned">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence sap2010:Annotation.AnnotationText="Validacion de documentos " sap:VirtualizedContainerService.HintSize="568,1516" sap2010:WorkflowViewState.IdRef="Sequence_92">
+                      <Sequence sap2010:Annotation.AnnotationText="Validacion de documentos " sap:VirtualizedContainerService.HintSize="568,2194" sap2010:WorkflowViewState.IdRef="Sequence_92">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -555,11 +554,11 @@
                             </If.Else>
                           </If>
                         </Sequence>
-                        <Sequence sap2010:Annotation.AnnotationText="Validacion de existencia documento Cierre EDS" sap:VirtualizedContainerService.HintSize="526,108" sap2010:WorkflowViewState.IdRef="Sequence_101">
+                        <Sequence sap2010:Annotation.AnnotationText="Validacion de existencia documento Cierre EDS" sap:VirtualizedContainerService.HintSize="526,786" sap2010:WorkflowViewState.IdRef="Sequence_101">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
@@ -581,7 +580,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:FileExistsX>
-                          <If sap:VirtualizedContainerService.HintSize="484,431" sap2010:WorkflowViewState.IdRef="If_19">
+                          <If sap:VirtualizedContainerService.HintSize="484,460" sap2010:WorkflowViewState.IdRef="If_19">
                             <If.Condition>
                               <InArgument x:TypeArguments="x:Boolean">
                                 <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_205">!Bool_ExisteReporteCierreEDSAutomatico</mca:CSharpValue>
@@ -593,7 +592,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <If.Then>
-                              <Sequence sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_99">
+                              <Sequence sap:VirtualizedContainerService.HintSize="376,274" sap2010:WorkflowViewState.IdRef="Sequence_99">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -612,11 +611,17 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:LogMessage>
-                                <Throw sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Throw_5">
-                                  <InArgument x:TypeArguments="s:Exception">
-                                    <mca:CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_207">new NullReferenceException("No existe el documento de ReporteCierreEDSAutomatico en la ruta Especificada")</mca:CSharpValue>
-                                  </InArgument>
-                                </Throw>
+                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                                  <ui:CommentOut.Body>
+                                    <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_112">
+                                      <Throw sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Throw_5">
+                                        <InArgument x:TypeArguments="s:Exception">
+                                          <mca:CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_207">new NullReferenceException("No existe el documento de ReporteCierreEDSAutomatico en la ruta Especificada")</mca:CSharpValue>
+                                        </InArgument>
+                                      </Throw>
+                                    </Sequence>
+                                  </ui:CommentOut.Body>
+                                </ui:CommentOut>
                               </Sequence>
                             </If.Then>
                             <If.Else>
