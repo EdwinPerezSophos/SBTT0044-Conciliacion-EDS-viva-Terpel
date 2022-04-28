@@ -759,7 +759,7 @@
                   <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_145">Bool_ProcessStatus == true &amp;&amp; GBL_Str_EstadoActual == "B"</mca:CSharpValue>
                 </Transition.Condition>
                 <Transition.To>
-                  <State x:Name="__ReferenceID10" sap2010:Annotation.AnnotationText="Ingreso a  Satelite para extraccion de reporte de ventas &#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Ingreso a SQLServer para extracción de ventas en Excel" DisplayName="B. Extracción de ventas fidelización Satelite" sap:VirtualizedContainerService.HintSize="429,155" sap2010:WorkflowViewState.IdRef="State_4">
+                  <State x:Name="__ReferenceID10" sap2010:Annotation.AnnotationText="Ingreso a  Satelite para extraccion de reporte de ventas &#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Ingreso a SQLServer para extracción de ventas en Excel" DisplayName="B. Extracción de ventas fidelización Satelite" sap:VirtualizedContainerService.HintSize="467,950" sap2010:WorkflowViewState.IdRef="State_4">
                     <State.Entry>
                       <Sequence sap:VirtualizedContainerService.HintSize="421,476" sap2010:WorkflowViewState.IdRef="Sequence_21">
                         <sap:WorkflowViewStateService.ViewState>
@@ -1598,7 +1598,7 @@
                                                                                   </scg:Dictionary>
                                                                                 </sap:WorkflowViewStateService.ViewState>
                                                                                 <Transition.To>
-                                                                                  <State x:Name="__ReferenceID9" sap2010:Annotation.AnnotationText="Cruce SAP vs Salesforce&#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Depuracion y acciones para cruce de totales e inconsistencias en ventas entre SAP y Salesforce" DisplayName="J. Cruce SAP vs Salesforce" sap:VirtualizedContainerService.HintSize="467,1113" sap2010:WorkflowViewState.IdRef="State_21">
+                                                                                  <State x:Name="__ReferenceID9" sap2010:Annotation.AnnotationText="Cruce SAP vs Salesforce&#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Depuracion y acciones para cruce de totales e inconsistencias en ventas entre SAP y Salesforce" DisplayName="J. Cruce SAP vs Salesforce" sap:VirtualizedContainerService.HintSize="429,163" sap2010:WorkflowViewState.IdRef="State_21">
                                                                                     <State.Entry>
                                                                                       <Sequence sap:VirtualizedContainerService.HintSize="421,624" sap2010:WorkflowViewState.IdRef="Sequence_40">
                                                                                         <sap:WorkflowViewStateService.ViewState>
@@ -2156,7 +2156,7 @@
                 <Transition.To>
                   <State x:Name="__ReferenceID11" sap2010:Annotation.AnnotationText="Ingreso a Salesforce para extraccion de reporte de ventas &#xA;&#xA;Precondicion: Variables Globales del proyecto&#xA;&#xA;Acciones: Ingreso a Salesforce para extracción de ventas en Excel" DisplayName="A. Extracción de ventas fidelización Salesforce" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="State_2">
                     <State.Entry>
-                      <Sequence sap:VirtualizedContainerService.HintSize="463,843" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                      <Sequence sap:VirtualizedContainerService.HintSize="463,991" sap2010:WorkflowViewState.IdRef="Sequence_23">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2169,6 +2169,39 @@
                             </InArgument>
                           </ui:SetAsset.Value>
                         </ui:SetAsset>
+                        <TryCatch sap2010:Annotation.AnnotationText="Borrado de documento Salesforce&#xA;" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="421,108" sap2010:WorkflowViewState.IdRef="TryCatch_8">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <TryCatch.Try>
+                            <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="384,79" sap2010:WorkflowViewState.IdRef="DeleteFileX_5">
+                              <ui:DeleteFileX.Path>
+                                <InArgument x:TypeArguments="x:String">
+                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_186">GBL_Str_CarpetaTemporales+"Reporte fidelizaciones Salesforce.xlsx"</mca:CSharpValue>
+                                </InArgument>
+                              </ui:DeleteFileX.Path>
+                            </ui:DeleteFileX>
+                          </TryCatch.Try>
+                          <TryCatch.Catches>
+                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_8">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ActivityAction x:TypeArguments="s:Exception">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                </ActivityAction.Argument>
+                              </ActivityAction>
+                            </Catch>
+                          </TryCatch.Catches>
+                        </TryCatch>
                         <Sequence DisplayName="Extraccion de reporte " sap:VirtualizedContainerService.HintSize="421,235" sap2010:WorkflowViewState.IdRef="Sequence_14">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
